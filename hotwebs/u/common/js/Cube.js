@@ -2,9 +2,6 @@
 /// <reference path="json.js" />
 /*
 File: Cube.js
-Author:fjf
-Company:yonyou
-Version:1.0
 */
 
 var Cube = cb = {};
