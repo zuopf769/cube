@@ -1,0 +1,78 @@
+﻿<div data-controller="OrderListController">
+    <div class="pages">
+        <div data-page="orderLists" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="back link"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center">
+                        <a href="#" class="link open-popover popover-orders-links" style="color:#999;" data-ordertype="salesOrder">销售订单</a>
+                    </div>
+                    <div class="right">
+                        <a href="#" class="link"><i class="icon icon-search"></i></a>
+                    </div>
+                    <!-- 二级导航 -->
+                    <div class="subnavbar" style="background-color:#FFF;">
+                        <div class="buttons-row row orderlist-filter">
+                            <a href="#" data-filter="all" class="col-20 nav-bar tab-link active">全部</a>
+                            <a href="#" data-filter="CONFIRMORDER" class="col-20 nav-bar tab-link ">待确认</a>
+                            <a href="#" data-filter="PAYMONEY" class="col-20 nav-bar tab-link">待付款</a>
+                            <a href="#" data-filter="DELIVERGOODS" class="col-20 nav-bar tab-link">待发货</a>
+                            <a href="#" data-filter="TAKEDELIVERY" class="col-20 nav-bar tab-link">待收货</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content infinite-scroll pull-to-refresh-content orderList-container" data-distance="50" data-ptr-distance="55" style="margin:3rem auto;background-color:#F1F1F1;">
+                <div class="pull-to-refresh-layer">
+                    <div class="preloader"></div>
+                    <div class="pull-to-refresh-arrow"></div>
+                </div>
+                <div class="order-list">
+                </div>
+                <!-- 加载提示符 -->
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/template7" id="orderItemTpl">
+        {{#each data.orders}}
+        <a href="pages/orderInfo.html?oid={{cOrderNo}}">
+            <div class="list-wrap">
+                <ul class="order-info">
+                    <h4 class="clear"><strong class="fl">{{cOrderNo}}</strong><em class="fr"> {{cNextStatusName}}</em></h4>
+                    <li>
+                        <span>下单时间 : </span><span> {{dOrderDate}}</span>
+                    </li>
+                    <li>
+                        <span>商品数量 : </span><span> {{oOrderDetails.length}}</span>
+                    </li>
+                    <li>
+                        <span>商品价格 : </span><span class="font-red"> ￥{{fTotalMoney}}</span>
+                    </li>
+                </ul>
+                <div class="order-btn">
+                    <div class="fr" data-oid="{{cOrderNo}}">
+                        <a href="#" class="btn btn-red" data-btntype="received">确认收货</a>
+                        <a href="#" class="btn " data-btntype="payfor">付款</a>
+                        <a href="pages/logisticsInfo.html?oid={{cOrderNo}}" class="btn " data-btntype="logistics">查看物流</a>
+                        <a href="#" class="btn " data-btntype="del">删除订单</a>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {{else}}
+            <div class="orderNone">
+                <div class="orderNone-info">
+                    <h5>您还没有相关订单</h5>
+                    <p>可以看看有没有想买的</p>
+                    <a href="pages/home.html" class="button orderNone-btn">随便逛逛</a>
+                </div>
+            </div>
+        {{/each}}
+    </script>
+    <script type="text/javascript" src="../js/pages/OrderListController.js"></script>
+</div>

@@ -1,0 +1,132 @@
+﻿<div data-controller="DeliveryInfoController">
+    <div class="pages">
+        <div data-page="deliveryInfo" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a class="back link" href="#"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center">发货单详情</div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content ">
+                <div class="orderstatu-title">
+                    <a href="#" style="color:#FFF;">
+                        <p class="title ">{{deliveryDetail.cDeliveryNo}}</p>
+                        <p class="time">发货时间：{{deliveryDetail.dSendDate}}</p>
+                    </a>
+                    <span class="sign">
+                        {{#js_compare "this.deliveryDetail.cStatusCode==='DELIVERED'"}}
+                        <i class="icon icon-finish"></i>
+                        {{else}}
+                        {{#js_compare "this.deliveryDetail.cStatusCode==='DELIVERING'"}}
+                        已发货
+                        {{else}}
+                        未发货
+                        {{/js_compare}}
+                        {{/js_compare}}
+                    </span>
+                </div>
+                <div class="list-block media-list orderInfo">
+                    <ul>
+                        <li class="align-top">
+                            <a href="#" class="item-link item-content">
+                                <div class="item-media"><i class="icon order-addr"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">收货人: {{deliveryDetail.cReceiveContacter}}</div>
+                                        <div class="item-after">{{deliveryDetail.cReceiveContacterPhone}}</div>
+                                    </div>
+                                    <div class="item-text">收货地址: {{deliveryDetail.cReceiveAddress}}</div>
+                                </div>
+                            </a>
+                        </li>
+                        <!--<li class="align-top">
+                            <a href="pages/logisticsInfo.html?oid={{deliveryDetail.cOrderNo}}" class="item-link item-content">
+                                <div class="item-media"><i class="icon order-logistics"></i></div>
+                                <div class="item-inner bg-arrow">
+                                    <div class="item-title-row">
+                                        <div class="item-title">{{#if deliveryDetail.oShippingChoice}}{{deliveryDetail.oShippingChoice.cName}}{{else}}无{{/if}}</div>
+                                        <div class="item-after blue">物流状态位</div>
+                                    </div>
+                                    <div class="item-text">2015-11-10 10:20:26</div>
+                                </div>
+                            </a>
+                        </li>-->
+                    </ul>
+                </div>
+                <div class="list-block media-list confirmList m-b-0">
+                    <ul>
+                        <li>
+                            <a href="#" class="item-link item-content productsList title-border-bottom">
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">货品清单（{{deliveryDetail.oDeliveryDetails.length}}）</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="list-block media-list m-t-0 cartList m-b-0">
+                                <ul class="no-border productDetailContainer">
+                                    {{#each deliveryDetail.oDeliveryDetails}}
+                                    <li class="none-border">
+                                        <a href="pages/productDetail.html?pid={{iProductId}}">
+                                            <div class="label-checkbox item-content">
+                                                <div class="item-media">
+                                                    <img data-src="{{@root.serverhost}}{{oSKU.oProduct.oDefaultAlbum.cFolder}}s_{{oSKU.oProduct.oDefaultAlbum.cImgName}}" width="62" class="lazy">
+                                                </div>
+                                                <div class="item-inner  no-border">
+                                                    <div class="item-title-row">
+                                                        <div class="item-text">{{cProductName}}</div>
+                                                    </div>
+                                                    <div class="item-subtitle">
+                                                        <span class="m-l-10">{{oSKU.cSpecDescription}}  <span>发货/总数量:</span><span>{{iSendQuantity}}/{{oOrderDetail.iQuantity}}({{cProductUnitName}})</span></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                {{#if deliveryDetail.oCorpLogistics}}
+                <div class="orderstatu-title">
+                    <span class="icon-log"> <i class="icon logistics-icon"></i></span>
+                    <p class="m-l-70">{{deliveryDetail.oCorpLogistics.cFullName}}</p>
+                    <p class="m-l-70 time">{{deliveryDetail.cLogisticsBillNo}}</p>
+                </div>
+                {{/if}}
+                {{#if deliveryDetail.cLogisticsUserName}}
+                <div class="courier">
+                    <div class="courier-infor">
+                        <i class="icon icon-courier"></i>
+                        <div class="infor-name">
+                            <p>{{deliveryDetail.cLogisticsUserName}}</p>
+                            <p class="no">{{deliveryDetail.cLogisticsCarNum}}</p>
+                        </div>
+                    </div>
+                    {{#if deliveryDetail.cLogisticsUserPhone}}
+                    <div class="courier-phone">
+                        <a href="tel:{{deliveryDetail.cLogisticsUserPhone}}" class="external"><i class="icon icon-courier-phone"></i></a>
+                    </div>
+                    {{/if}}
+                </div>
+                {{/if}}
+            </div>
+            <div class="toolbar ">
+                <div class="order-btn fr m-t-10" data-orderno="{{deliveryDetail.cDeliveryNo}}">
+                    <!--<a href="pages/logisticsInfo.html?oid={{cOrderNo}}" class="btn" data-btntype="logistics" style="display:none;">查看物流</a>-->
+                    <!--收货-->
+                    {{#js_compare "this.deliveryDetail.cStatusCode==='DELIVERING'"}}
+                    <a href="#" class="btn btn-red" data-btntype="received">确认收货</a>
+                    {{/js_compare}}
+                    <!--<a href="#" class="btn btn-red" data-btntype="SaleReturn">退货</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/pages/DeliveryInfoController.js "></script>
+</div>

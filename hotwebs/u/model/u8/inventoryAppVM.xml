@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<applications>
+  <application name="inventoryApp" title="存货卡片" moduleName="u8" symbol="u8.inventory">
+    <viewmodel name="inventoryViewModel" extendName="inventoryViewModel_Extend" title="存货卡片" tplName="archive_min.js.tpl">
+      <entity name="inventory" title="存货" isMain="true">
+        <fields>
+          <field name="pk_inventory" title="存货pk" modelType="SimpleModel" ctrlType="TextBox" isNecessary="true" isVisible="true" isKey="true" iLength="20"/>
+          <field name="pk_inventory_b" title="换算率pk" modelType="Model3D" ctrlType="DataGrid" isVisible="true" iLength="0" refKey="pk_invcomputationexch" refEntity="InvComputationExchb"/>
+          <field name="pk_inventory_c" title="文件pk" modelType="Model3D" ctrlType="DataGrid" isVisible="true" iLength="0" refKey="pk_file" refEntity="u8invfile"/>
+          <field name="code" title="存货编码" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="name" title="存货名称" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="maketime" title="制单时间" modelType="SimpleModel" ctrlType="DateTimeBox" isNecessary="true" isVisible="true" iLength="19"/>
+          <field name="pk_group" title="集团" modelType="SimpleModel" ctrlType="Refer" isNecessary="true" isVisible="true" iLength="20" refId="600001" refKey="pk_group" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="pk_org" title="所属权限组" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600015" refKey="pk_org" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="pk_org_v" title="组织版本" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600700" refKey="pk_vid" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="creator" title="创建人" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name"/>
+          <field name="creationtime" title="创建时间" modelType="SimpleModel" ctrlType="DateTimeBox" isVisible="true" iLength="19"/>
+          <field name="modifier" title="修改人" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name"/>
+          <field name="modifiedtime" title="修改时间" modelType="SimpleModel" ctrlType="DateTimeBox" isVisible="true" iLength="19"/>
+          <field name="cinvstd" title="规格型号" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="cinvaddcode" title="存货代码" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="cinvmnemcode" title="助记码" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="cinvccode" title="存货大类" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="inventoryclass" refKey="pk_inventoryclass" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="bsale" title="是否内销" modelType="SimpleModel" ctrlType="CheckBox" isVisible="true" iLength="1"/>
+          <field name="bservice" title="是否应税劳务" modelType="SimpleModel" ctrlType="CheckBox" isVisible="true" iLength="1"/>
+          <field name="itaxrate" title="项税率%" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="iinvweight" title="净重" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="ivolume" title="单位体积" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="iinvrcost" title="计划价/售价" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="iinvsprice" title="参考成本" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="bpurchase" title="是否采购" modelType="SimpleModel" ctrlType="CheckBox" isVisible="true" iLength="1"/>
+          <field name="iinvscost" title="参考售价" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="iinvlscost" title="最低售价" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="iinvncost" title="最新成本" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="binvbatch" title="是否批次管理" modelType="SimpleModel" ctrlType="CheckBox" isVisible="true" iLength="1"/>
+          <field name="binvquality" title="是否保质期管理" modelType="SimpleModel" ctrlType="CheckBox" isVisible="true" iLength="1"/>
+          <field name="dsdate" title="启用日期" modelType="SimpleModel" ctrlType="DateTimeBox" isVisible="true" iLength="19"/>
+          <field name="dedate" title="停用日期" modelType="SimpleModel" ctrlType="DateTimeBox" isVisible="true" iLength="19"/>
+          <field name="binvtype" title="是否折扣" modelType="SimpleModel" ctrlType="CheckBox" isVisible="true" iLength="1"/>
+          <field name="ccreateperson" title="建档人" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name"/>
+          <field name="dinvcreatedatetime" title="建档日期" modelType="SimpleModel" ctrlType="DateTimeBox" isVisible="true" iLength="19"/>
+          <field name="cmodifyperson" title="变更人" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name"/>
+          <field name="dmodifydate" title="变更日期" modelType="SimpleModel" ctrlType="DateTimeBox" isVisible="true" iLength="19"/>
+          <field name="foutexcess" title="出库超额上限" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="imassdate" title="保质期" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="0" iScale="0" iPrecision="0"/>
+          <field name="iexpiratdatecalcu" title="有效期推算方式" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="iwarndays" title="保质期预警天数" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="0" iScale="0" iPrecision="0"/>
+          <field name="cbarcode" title="对应条形码" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="bspecchang" title="是否特定换算" modelType="SimpleModel" ctrlType="CheckBox" isVisible="true" iLength="1"/>
+          <field name="cgroupcode" title="计量单位组" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="ComputationGroup" refKey="id" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="igrouptype" title="计量单位组类别" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="ccomunitcode" title="主计量单位" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="Computation" refKey="id" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="csacomunitcode" title="销售默认计量单位" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="Computation" refKey="id" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="cstcomunitcode" title="库存默认计量单位" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="Computation" refKey="id" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="forderuplimit" title="订货超额上限" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="finvoutuplimit" title="发货允超上限" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="cdefwarehouse" title="默认仓库" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="warehouse" refKey="wh_pk" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="pictureguid" title="图片" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="def1" title="自定义项1" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def2" title="自定义项2" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def3" title="自定义项3" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def4" title="自定义项4" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def5" title="自定义项5" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def6" title="自定义项6" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def7" title="自定义项7" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def8" title="自定义项8" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def9" title="自定义项9" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def10" title="自定义项10" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def11" title="自定义项11" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def12" title="自定义项12" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def13" title="自定义项13" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def14" title="自定义项14" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def15" title="自定义项15" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def16" title="自定义项16" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="bfree1" title="@存货.自由项1" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="bfree2" title="@存货.自由项2" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="bfree3" title="@存货.自由项3" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="bfree4" title="@存货.自由项4" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="bfree5" title="@存货.自由项5" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="bfree6" title="@存货.自由项6" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="bfree7" title="@存货.自由项7" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="bfree8" title="@存货.自由项8" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="bfree9" title="@存货.自由项9" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="bfree10" title="@存货.自由项10" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="dr" title="删除标记" modelType="SimpleModel" ctrlType="TextBox" isNecessary="true" isReadOnly="true" isVisible="false"/>
+          <field name="ts" title="时间戳" modelType="SimpleModel" ctrlType="DateTimeBox" isNecessary="true" isReadOnly="true" isSyncKey="true" isVisible="false"/>
+        </fields>
+      </entity>
+      <entity name="u8invfile" title="存货附件">
+        <fields>
+          <field name="pk_file" title="文件pk" modelType="SimpleModel" ctrlType="TextBox" isNecessary="true" isVisible="true" isKey="true" iLength="20"/>
+          <field name="invfiletype" title="存货附件类型" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="name" title="文件名" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="filesize" title="文件大小" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="filetype" title="文件类型" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="filedesc" title="文件描述" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="dr" title="删除标记" modelType="SimpleModel" ctrlType="TextBox" isNecessary="true" isReadOnly="true" isVisible="false"/>
+          <field name="ts" title="时间戳" modelType="SimpleModel" ctrlType="DateTimeBox" isNecessary="true" isReadOnly="true" isSyncKey="true" isVisible="false"/>
+        </fields>
+      </entity>
+      <entity name="InvComputationExchb" title="换算率">
+        <fields>
+          <field name="pk_invcomputationexch" title="换算率pk" modelType="SimpleModel" ctrlType="TextBox" isNecessary="true" isVisible="true" isKey="true" iLength="20"/>
+          <field name="ccomunitscode" title="计量单位" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="Computation" refKey="id" refName="name" refCode="code"/>
+          <field name="ichangrate" title="换算率" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="ccomunittcode" title="目标计量单位" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="Computation" refKey="id" refName="name" refCode="code"/>
+          <field name="ichangtype" title="换算类型" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="ichangacc" title="换算精度" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="0" iScale="0" iPrecision="0"/>
+          <field name="def1" title="自定义项1" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def2" title="自定义项2" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def3" title="自定义项3" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def4" title="自定义项4" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def5" title="自定义项5" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="dr" title="删除标记" modelType="SimpleModel" ctrlType="TextBox" isNecessary="true" isReadOnly="true" isVisible="false"/>
+          <field name="ts" title="时间戳" modelType="SimpleModel" ctrlType="DateTimeBox" isNecessary="true" isReadOnly="true" isSyncKey="true" isVisible="false"/>
+        </fields>
+      </entity>
+      <entity name="Toolbar" title="功能">
+        <fields>
+          <field name="editAction" title="编辑" modelType="SimpleModel" ctrlType="Button" />
+          <field name="copyAction" title="复制" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="deleteAction" title="删除" modelType="SimpleModel" ctrlType="Button" />
+          <field name="relatedAction" title="相关业务" modelType="SimpleModel" ctrlType="Button" />
+          <field name="setAction" title="设置" modelType="SimpleModel" ctrlType="Button" />
+          <field name="outputAction" title="输出" modelType="SimpleModel" ctrlType="Button" />
+          <field name="cancelAction" title="取消" modelType="SimpleModel" ctrlType="Button" />
+          <field name="saveAction" title="保存" modelType="SimpleModel" ctrlType="Button" />
+          <field name="insertLineAction" title="插行" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="copyLineAction" title="复制行" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="divideLineAction" title="拆分行" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="deleteLineAction" title="删行" modelType="SimpleModel" ctrlType="Button"/>
+        </fields>
+      </entity>
+      <actions>
+        <action name="editAction" entity="Toolbar" field="editAction" eventName="click" functionName="editAction" defaultImpl="Edit"/>
+        <action name="copyAction" entity="Toolbar" field="copyAction" eventName="click" functionName="copyAction" defaultImpl="Copy"/>
+        <action name="deleteAction" entity="Toolbar" field="deleteAction" eventName="click" functionName="deleteAction" defaultImpl="Delete"/>
+        <action name="relatedAction" entity="Toolbar" field="relatedAction" eventName="click" functionName="relatedAction" defaultImpl="//默认实现"/>
+        <action name="setAction" entity="Toolbar" field="setAction" eventName="click" functionName="setAction" defaultImpl="//默认实现"/>
+        <action name="outputAction" entity="Toolbar" field="outputAction" eventName="click" functionName="outputAction" defaultImpl="//默认实现"/>
+        <action name="cancelAction" entity="Toolbar" field="cancelAction" eventName="click" functionName="cancelAction" defaultImpl="Cancel"/>
+        <action name="saveAction" entity="Toolbar" field="saveAction" eventName="click" functionName="saveAction" defaultImpl="Save"/>
+        <action name="insertLineAction" entity="Toolbar" field="insertLineAction" eventName="click" functionName="insertLineAction" defaultImpl="InsertLine"/>
+        <action name="copyLineAction" entity="Toolbar" field="copyLineAction" eventName="click" functionName="copyLineAction" defaultImpl="CopyLine"/>
+        <action name="divideLineAction" entity="Toolbar" field="divideLineAction" eventName="click" functionName="divideLineAction" defaultImpl="//默认实现"/>
+        <action name="deleteLineAction" entity="Toolbar" field="deleteLineAction" eventName="click" functionName="deleteLineAction" defaultImpl="DeleteLine"/>
+      </actions>
+    </viewmodel>
+  </application>
+</applications>

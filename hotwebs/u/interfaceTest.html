@@ -1,0 +1,290 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>接口测试</title>
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+	<script src="./jquery/jquery-ui.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(document).ready( $(function (){
+    	getServiceDetailInfo();
+   	}));
+	function getServiceDetailInfo(){
+		debugger;
+		var obj = null;
+		var strUrl = location.protocol + "//" + location.host+"/";
+		var id  = getUrlVar("id");
+		var token = getUrlVar("token")
+		strUrl += "classes/InterFaceTest/UAP/LoadServiceInfo?token=" + token + "&id=" + id;
+		jQuery.ajax({  
+	   		url: strUrl, async : false,type: "GET",
+	   		data: null,
+			contentType:"application/json; charset=utf-8",
+	       	success: function(response) {
+	       		if(response.data==''||response.data==null){
+			   	}else{	   
+					obj = response.data.success;
+				}
+	       	},
+			error: function(e){
+				//debugger;
+				errobj = e;
+			}
+	 	});
+	 	if(obj != null){
+	 		$("#serviceflag").val(obj[0].serviceFlag);
+			//$("#mnemonic").val("PU0103");
+  			$("#actionname").val(obj[0].action);
+  			$("#classname").val(obj[0].servicesName);
+  			$("#methodname").val(obj[0].methodName);
+  			//$("#h1title").val("接口["+obj[0].methodName+"测试");
+  			document.getElementById('h1title').innerHTML = "接口测试【" + obj[0].serviceDesc + "】";
+  			if(obj[0].requestType == "POST"){
+  				$("#requesttype").val("0");
+  				$("#requestdata").val(obj[0].defaultParam);
+  			}else{
+  				$("#requesttype").val("1");
+  				$("#geturl").val(obj[0].defaultParam);
+  			}
+  			urlChange();
+  			typeChange();
+		}
+	}
+	
+	function doService(){
+		debugger;
+		var obj = null;
+		var urlType = document.getElementById("urltype").value;
+		var serviceFlag = document.getElementById("serviceflag").value;
+		var mnemonic = document.getElementById("mnemonic").value;
+		var actionName = document.getElementById("actionname").value;
+		var className = document.getElementById("classname").value;
+		var methodName = document.getElementById("methodname").value;
+		var requestType = document.getElementById('requesttype').value;
+		var requestData = document.getElementById('requestdata').value;
+		var getUrl = document.getElementById('geturl').value;
+		
+		if(urlType == "0"){
+			if(!mnemonic || !actionName){
+				alert("助记符和Action不能为空！");
+				return;
+			}
+		}else{
+			if(!className || !methodName){
+				alert("请求服务名和方法名不能为空！");
+				return;
+			}
+		}
+		
+		var token = null;
+		var strUrl = location.protocol + "//" + location.host+"/";
+		debugger;
+		token = getUrlVar("token");
+		if(urlType == "0"){
+			strUrl += "classes" + "/" + serviceFlag + "/" + mnemonic + "/" +  actionName + "?" + "token=" + token;
+		}else{
+			strUrl += "/u8services/classes/UAP/" + className + "?" + "method=" + methodName + "&token=" + token;
+		}
+		if(requestType == "0"){
+			jQuery.ajax({  
+	   			url: strUrl, async : false,type: "POST",
+	   			data: requestData,
+				contentType:"application/json; charset=utf-8",
+	       		success: function(response) {
+			   		obj = response;	
+	       		} ,
+				error: function(e){
+					//debugger;
+					obj = e;
+				}
+	 		}); 
+		}else{
+			jQuery.ajax({  
+	   			url: strUrl + getUrl , async : false,type: "GET",
+	   			data: requestData,
+				//data : pk,
+	       		success: function(response) {
+			   		obj = response;	
+	       		} ,
+				error: function(e){
+					//debugger;
+					obj = e;
+				}
+	 		}); 
+		}
+		//debugger;
+		if(obj != null){
+			var jsonStr = JSON.stringify(obj);
+			debugger;
+			jsonStr=jsonStr.replace(/\r\n/ig,"<br/>")
+			$("#resultdata").html(jsonStr);
+		}
+	}
+	function getUrlVars(){
+    	var vars = [], hash;
+    	var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    	for(var i = 0; i < hashes.length; i++)
+    	{
+     	 	hash = hashes[i].split('=');
+      		vars.push(hash[0]);
+      		vars[hash[0]] = hash[1];
+    	}
+    	return vars;
+  	}
+  	function getUrlVar(name){
+    	return getUrlVars()[name];
+  	}
+  	
+  	function urlChange(){
+  		//debugger;
+  		var urlType = document.getElementById('urltype').value;
+  		if(urlType == "0"){
+  			 $("#serviceflag_lr").show();
+  			 $("#serviceflag_l").show();
+  			 $("#serviceflag").show();
+  			 $("#mnemonic_lr").show();
+  			 $("#mnemonic_l").show();
+  			 $("#mnemonic").show();
+  			 $("#actionname_lr").show();
+  			 $("#actionname_l").show();
+  			 $("#actionname").show();
+  			 
+  			 $("#classname_lr").hide();
+  			 $("#classname_l").hide();
+  			 $("#classname").hide();
+  			 $("#methodname_lr").hide();
+  			 $("#methodname_l").hide();
+  			 $("#methodname").hide();
+  		}else if(urlType == "1"){
+  			 $("#serviceflag_lr").hide();
+  			 $("#serviceflag_l").hide();
+  			 $("#serviceflag").hide();
+  			 $("#mnemonic_lr").hide();
+  			 $("#mnemonic_l").hide();
+  			 $("#mnemonic").hide();
+  			 $("#actionname_lr").hide();
+  			 $("#actionname_l").hide();
+  			 $("#actionname").hide();
+  			 
+  			 $("#classname_lr").show();
+  			 $("#classname_l").show();
+  			 $("#classname").show();
+  			 $("#methodname_lr").show();
+  			 $("#methodname_l").show();
+  			 $("#methodname").show();
+  		}
+  	}
+  	
+  	function typeChange(){
+  		var requestType = document.getElementById('requesttype').value;
+  	  	if(requestType == "0"){
+  			 $("#requestdata_lr").show();
+  			 $("#requestdata_l").show();
+  			 $("#requestdata").show();
+  			 $("#geturl_lr").hide();
+  			 $("#geturl_l").hide();
+  			 $("#geturl").hide();
+  		}else if(requestType == "1"){
+  			 $("#requestdata_lr").hide();
+  			 $("#requestdata_l").hide();
+  			 $("#requestdata").hide();
+  			 $("#geturl_lr").show();
+  			 $("#geturl_l").show();
+  			 $("#geturl").show();
+  		}
+  	}
+  	
+  	function formload(){
+  		urlChange();
+  		typeChange();
+  	}
+  	
+  	function doReset(){
+  		debugger;
+  		$("#serviceflag").val("");
+  		$("#mnemonic").val("");
+  		$("#actionname").val("");
+  		$("#classname").val("");
+  		$("#methodname").val("");
+  		$("#requestdata").val("");
+  		$("#geturl").val("");
+  		$("#resultdata").html("");
+  	}
+  </script>
+</head>
+<body onload="formload()">
+
+	<h1 id="h1title">接口测试</h1>
+    <!--页面-->
+<!--
+<form id="postform" name="postform" method="post" action="" onSubmit="doService()">
+-->
+  <p>
+    <label for="urltype">&nbsp;URL类型：</label>
+    <select name="urltype" id="urltype" onchange="urlChange()">
+    	<option value="0">Action映射方式：classes/General/助记符/请求Action</option>
+      	<option value="1">请求服务名方式：/u8services/classes/UAP/接口名?method=方法名</option>
+    </select>
+  </p>
+  <p>
+    <label for="serviceflag" id="serviceflag_l">服务类型：</label>
+    <input type="text" name="serviceflag" id="serviceflag" size="40" value=""/>
+    <label for="serviceflag" id="serviceflag_lr">例：General，通用单据服务</label>
+  </p>
+  <p>
+    <label for="mnemonic" id="mnemonic_l">&nbsp;&nbsp;助记符：</label>
+    <input type="text" name="mnemonic" id="mnemonic" size="40" value=""/>
+    <label for="mnemonic" id="mnemonic_lr">例：sa.Delivery，调用该服务的轻量级应用ID，记录在表UPUap_AppFuncInfo。如果是参照类的公共服务，输入UAP。</label>
+  </p>
+  <p>
+    <label for="actionname" id="actionname_l">&nbsp;&nbsp;Action：</label>
+    <input type="text" name="actionname" id="actionname" size="40" value=""/>
+    <label for="actionname" id="actionname_lr">例：Save，Action对应服务类在UPUAP_ServiceMap表映射</label>
+  </p>
+  <p>
+    <label for="classname" id="classname_l" style="display:none">&nbsp;&nbsp;接口名：</label>
+    <input type="text" name="classname" id="classname" size="65" value="" />
+    <label for="classname" id="classname_lr">例：u8.itf.uap.query.IU8PageQueryService，请求的服务名，包括名称空间</label>
+  </p>
+  <p>
+    <label for="methodname" id="methodname_l" style="display:none">&nbsp;&nbsp;方法名：</label>
+    <input type="text" name="methodname" id="methodname" size="65" value="" />
+    <label for="methodname" id="methodname_lr">例：Query，请求的方法名</label>
+  </p>
+  <p>
+    <label for="requesttype">请求方式：</label>
+    <select name="requesttype" id="requesttype" onchange="typeChange()">
+    	<option value="0">post方式</option>
+      	<option value="1">get方式</option>
+    </select>
+  </p>
+  <p>
+    <label for="geturl" id="geturl_l">&nbsp;URL参数：</label>
+    <input type="text" name="geturl" id="geturl" size="40" value=""/>
+    <label for="geturl" id="geturl_lr">例：&id=1001A110000000005GRD&type=0</label>
+  </p>
+  <p>
+    <label for="requestdata" id="requestdata_l">请求数据：</label><label for="requestdata" id="requestdata_lr">&nbsp;例：{"id":"1001A110000000005GRD","name":"Jhon"}</label><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <textarea name="requestdata" id="requestdata" cols="60" rows="10"></textarea>
+  </p>
+  <p>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button" name="submit" id="submit" value="提交" onClick="doService()"/>
+    <input type="button" name="reset" id="reset" value="重置" onClick="doReset()"/>
+  </p>
+<!--
+</form>
+-->
+<hr />
+<p>返回结果：</p>
+<div id="resultdata"></div>
+<p>&nbsp;</p>
+
+</body>
+</html>

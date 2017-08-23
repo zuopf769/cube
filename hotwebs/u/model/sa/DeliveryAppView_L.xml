@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application name="DeliveryApp" title="发货单" moduleName="sa" symbol="sa.Delivery" uiType="vouchers">
+  <references>
+    <reference name="../sa/DeliveryAppVM.xml"/>
+  </references>
+  <view name="DeliveryView" title="发货单" layoutMode="Fluid" appId="sa.DeliveryApp" viewModel="sa.DeliveryApp.DeliveryViewModel" screenSize="L" tplName="vouchers_L.tpl">
+    <container name="DeliveryView_Body" title="发货单列表表体" type="Grid">
+      <controls>
+        <control name="Delivery_iPad" title="发货单iPad" ctrlType="DataGrid" field="deliverys" entity="Delivery">
+          <columns>
+            <column name="customer" title="客户名称" field="customer" ctrlType="TextBox" />
+            <column name="money" title="订单总额" field="money" ctrlType="TextBox" />
+            <column name="vbillno" title="订单编码" field="vbillno" ctrlType="TextBox" />
+            <column name="billdate" title="订单日期" field="billdate" ctrlType="TextBox" />
+            <column name="approvestatus" title="审批状态" field="approvestatus" ctrlType="TextBox" />
+          </columns>
+        </control>
+      </controls>
+    </container>
+    <container name="Toolbar" type="Toolbar">
+      <controls>
+        <control name="addAction" title="增加" group="add" ctrlType="Button" css="add-icon" field="addAction" entity="Toolbar" />
+        <control name="submitAction" title="提交" group="workflow1" ctrlType="Button" css="submit-icon" field="submitAction" entity="Toolbar" />
+        <control name="withdrawAction" title="收回" group="workflow1" ctrlType="Button" css="withdraw-icon" field="withdrawAction" entity="Toolbar" />
+        <control name="approveAction" title="审核" group="workflow2" ctrlType="Button" css="approve-icon" field="approveAction" entity="Toolbar" />
+        <control name="unapproveAction" title="弃审" group="workflow2" ctrlType="Button" css="unapprove-icon" field="unapproveAction" entity="Toolbar" />
+        <control name="closeAction" title="终止" group="close" ctrlType="Button" css="close-icon" field="closeAction" entity="Toolbar" />
+        <control name="inventoryAction" title="供货安排" group="business" ctrlType="Button" css="inventory-icon" field="inventoryAction" entity="Toolbar" />
+        <control name="deliveryAction" title="发货" group="business" ctrlType="Button" css="delivery-icon" field="deliveryAction" entity="Toolbar" />
+        <control name="outboundAction" title="出库" group="business" ctrlType="Button" css="outbound-icon" field="outboundAction" entity="Toolbar" />
+        <control name="deleteAction" title="删除" group="delete" ctrlType="Button" css="delete-icon" field="deleteAction" entity="Toolbar" />
+        <control name="bizAction" title="业务操作" group="biz" ctrlType="Button" css="biz-icon" field="bizAction" entity="Toolbar" />
+        <control name="printAction" title="打印" group="device" ctrlType="Button" css="print-icon" field="printAction" entity="Toolbar" />
+        <control name="outputAction" title="输出" group="device" ctrlType="Button" css="output-icon" field="outputAction" entity="Toolbar" />
+        <control name="sortAction" title="排序" isNavigate="true" ctrlType="Button" css="sort-icon" field="sortAction" entity="Toolbar" />
+        <control name="filterAction" title="过滤" isNavigate="true" ctrlType="Button" css="filter-icon" field="filterAction" entity="Toolbar" />
+        <control name="refreshAction" title="刷新" isNavigate="true" ctrlType="Button" css="refresh-icon" field="refreshAction" entity="Toolbar" />
+        <control name="setAction" title="设置" isNavigate="true" ctrlType="ButtonGroup" css="set-icon" field="setAction" entity="Toolbar"  />        
+      </controls>
+    </container>
+  </view>
+</application>

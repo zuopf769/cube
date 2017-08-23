@@ -1,0 +1,35 @@
+﻿.scaleBar {
+	text-align: center;
+	margin-right:20px;
+    color:#999999;
+}
+.scaleBar  .barList,.scaleBar  .descriptionList {
+	position:relative;
+}
+.scaleBar  .barList div {
+	border-radius: 4px;
+	height: 10px;
+	background-color: #D7D7D7;
+}
+.scaleBar  .barList .part {
+	position: absolute;
+	top: 0px;
+	background-color: #4BB304;
+	width: 0;   
+}
+
+.scaleBar  .descriptionList div {
+	position: relative;
+}
+.scaleBar  .descriptionList .part {
+	position: absolute;
+	top:0;
+	left:0;
+    color:#157DFB;
+}
+.scaleBar  .descriptionList span {
+	position:relative;
+	width:100%;
+	left:50%;
+	margin-left:-5px;
+}

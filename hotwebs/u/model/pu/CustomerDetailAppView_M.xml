@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application name="CustomerDetailApp" title="客户档案详情" moduleName="pu" appId="pu.Customer" uiType="archive">
+  <references>
+    <reference name="../pu/CustomerDetailAppVM.xml"/>
+  </references>
+  <view name="CustomerDetailView" title="客户档案详情" layoutMode="Fluid" appId="pu.CustomerDetailApp" viewModel="pu.CustomerDetailApp.CustomerDetailViewModel" screenSize="M" tplName="archive_M.tpl">
+    <container name="Abstract" title="概要" type="Card">
+      <controls>
+        <control name="ccusabbname" title="客户简称" placeHolder="true" ctrlType="TextBox" position="top-left" field="ccusabbname" entity="CustomerDetail" />
+        <control name="code" title="客户编码" placeHolder="true" ctrlType="TextBox" position="bottom-left" field="code" entity="CustomerDetail" />
+        <control name="toolbar" title="工具栏" ctrlType="Button" position="bottom-right" />
+      </controls>
+    </container>
+    <container name="Toolbar" title="工具栏" type="Toolbar">
+      <controls>
+        <control name="deleteAction" title="删除" ctrlType="Button" css="delete-icon" field="deleteAction" entity="Toolbar" />
+        <control name="relatedAction" title="相关业务" ctrlType="Button" css="related-icon" field="relatedAction" entity="Toolbar" />
+        <control name="setAction" title="设置" ctrlType="Button" css="set-icon" field="setAction" entity="Toolbar" />
+        <control name="outputAction" title="输出" ctrlType="Button" css="output-icon" field="outputAction" entity="Toolbar" />
+        <control name="editAction" title="编辑" ctrlType="Button" css="tb-edit-icon" field="editAction" entity="Toolbar" />
+      </controls>
+    </container>
+    <container name="Tab" title="页签" mode="slide" type="Toolbar">
+      <controls>
+        <control name="baseinfo" title="基本信息" ctrlType="Button" />
+        <control name="linkman" title="联系人" ctrlType="Button" content="common.contact.Contact" />
+        <control name="bankinfo" title="客户银行档案" ctrlType="Button" />
+        <control name="addrinfo" title="客户地址档案" ctrlType="Button" />
+      </controls>
+    </container>
+    <container name="baseinfo" title="基本信息" type="TabPage">
+      <controls>
+        <control name="name" title="客户名称"  field="name" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="ccusmnemcode" title="助记码"  field="ccusmnemcode" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="cuscode" title="客户分类编码"  field="cuscode" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="bcusdomestic" title="国内"  field="bcusdomestic" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="bcusoverseas" title="国外"  field="bcusoverseas" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="cdccode" title="地区编码"  field="cdccode" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="ccusaddress" title="地址"  field="ccusaddress" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="ccuspostcode" title="邮政编码"  field="ccuspostcode" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="ccusregcode" title="纳税人登记号"  field="ccusregcode" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="dcusdevdate" title="发展日期"  field="dcusdevdate" ctrlType="DateTimeBox" defaultValue="@SYSDATE" entity="CustomerDetail" />
+        <control name="ccuslperson" title="法人"  field="ccuslperson" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="ccusemail" title="Email地址"  field="ccusemail" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="ccusoaddress" title="发货地址"  field="ccusoaddress" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="ccusperson" title="联系人"  field="ccusperson" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="ccusphone" title="联系电话"  field="ccusphone" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="ccusfax" title="传真"  field="ccusfax" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="ccushand" title="手机"  field="ccushand" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="ccuspperson" title="专营业务员编码"  field="ccuspperson" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="icusdisrate" title="扣率"  field="icusdisrate" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="ccusotype" title="发货方式编码"  field="ccusotype" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="ccuswhcode" title="发货仓库编码"  field="ccuswhcode" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="cdepname" title="分管部门名称"  field="cdepname" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="dlastdate" title="最后交易日期"  field="dlastdate" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="ilastmoney" title="最后交易金额"  field="ilastmoney" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="denddate" title="停用日期"  field="" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="dcuscreatedatetime" title="建档日期"  field="dcuscreatedatetime" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="ccreateperson" title="建档人"  field="ccreateperson" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="cmodifyperson" title="变更人"  field="cmodifyperson" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="dmodifydate" title="变更日期"  field="dmodifydate" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="cmemo" title="备注"  field="cmemo" ctrlType="TextBox" entity="CustomerDetail" />
+        <control name="cancelAction" title="取消" ctrlType="Button" css="cancel-icon" field="cancelAction" entity="Toolbar" />
+        <control name="saveAction" title="保存" ctrlType="Button" css="search-icon" field="saveAction" entity="Toolbar" />
+      </controls>
+    </container>
+  </view>
+</application>

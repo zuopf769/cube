@@ -1,0 +1,72 @@
+<application name="DispatchlistApp" title="发货单" moduleName="u8" symbol="u8.Dispatchlist">
+  <references reference="../u8/DispatchlistAppVM.xml" />
+  <view name="DispatchlistView" title="发货单" layoutMode="Fluid" appId="u8.DispatchlistApp" viewModel="u8.DispatchlistApp.DispatchlistViewModel" screenSize="L" tplName="voucher_L.html.tpl">
+    <container name="Abstract" title="概要" type="Abstract">
+		  <control name="approvestatus" title="单据状态" ctrlType="Status" defaultValue="-1" position="status" field="approvestatus" entity="somain" />
+		  <control name="ccusname" title="客户名称" placeHolder="true" ctrlType="TextBox" position="top" field="ccusname" entity="somain" />
+		  <control name="creationtime" title="制单时间" placeHolder="true" ctrlType="TextBox" position="bottom" field="creationtime" entity="somain" />
+    </container>
+    <container name="Toolbar" title="工具栏" type="Toolbar">
+		  <control name="addAction" title="增加" ctrlType="DropDownButton" css="add-icon" field="addAction" entity="Toolbar" />
+      <control name="saveAction" title="保存" ctrlType="Button" css="save-icon" field="saveAction" entity="Toolbar" />
+      <control name="approveAction" title="审批" ctrlType="Button" css="check-icon" field="approveAction" entity="Toolbar" />
+      <control name="outboundAction" title="出库" ctrlType="Button" css="send-icon" field="outboundAction" entity="Toolbar" />
+      <control name="copyAction" title="复制" group="temp" ctrlType="Button" css="copy-icon" field="copyAction" entity="Toolbar" />
+      <control name="draftAction" title="草稿" group="temp" ctrlType="Button" css="draft-icon" field="draftAction" entity="Toolbar" />
+      <control name="editAction" title="修改" group="edit" ctrlType="Button" css="tb-edit-icon" field="editAction" entity="Toolbar" />
+      <control name="deleteAction" title="删除" group="edit" ctrlType="Button" css="delete-icon" field="deleteAction" entity="Toolbar" />
+      <control name="cancelAction" title="放弃" group="edit" ctrlType="Button" css="cancel-icon" field="cancelAction" entity="Toolbar" />
+      <control name="submitAction" title="提交" group="workflow1" ctrlType="Button" css="submit-icon" field="submitAction" entity="Toolbar" />
+      <control name="withdrawAction" title="收回" group="workflow1" ctrlType="Button" css="withdraw-icon" field="withdrawAction" entity="Toolbar" />
+      <control name="unapproveAction" title="弃审" group="workflow2" ctrlType="Button" css="unapprove-icon" field="unapproveAction" entity="Toolbar" />
+      <control name="relatedAction" title="业务操作" group="biz" ctrlType="Button" css="related-icon" field="relatedAction" entity="Toolbar" />
+      <control name="nextAction" title="" isNavigate="true" css="next-icon" ctrlType="Button" field="nextAction" entity="Toolbar" />
+      <control name="prevAction" title="" isNavigate="true" css="prev-icon" ctrlType="Button" field="prevAction" entity="Toolbar" />      
+      <control name="refreshAction" title="刷新"  css="refresh-icon" ctrlType="Button" field="refreshAction" entity="Toolbar" />
+    </container>
+    <container name="baseinfo" title="基本信息" type="TabPage"  iCols="3">
+      <container name="header" title="表头" type="Card" iCols="3">
+        <control name="billno" title="单据号" ctrlType="TextBox" field="billno" entity="Dispatchlist" />
+        <control name="billdate" title="单据日期" ctrlType="DateTimeBox" field="billdate" entity="Dispatchlist" defaultValue="@SYSDATE" />
+        <control name="ccuscode" title="客户编码" ctrlType="Refer" field="ccuscode" entity="Dispatchlist" refId="customer" refRelation="ccusname=name,ccusabbname=ccusabbname,cvconperson=ccusperson,cvshipaddress=ccusoaddress" refShowMode="Code" />
+        <control name="ccusabbname" title="客户简称" ctrlType="TextBox" field="ccusabbname" entity="Dispatchlist" />
+        <control name="pk_dept" title="部门" ctrlType="Refer" field="pk_dept" entity="Dispatchlist" refId="600905" refShowMode="Name" />
+        <control name="cpersoncode" title="业务员编码" ctrlType="Refer" field="cpersoncode" entity="Dispatchlist" refId="person" refShowMode="Code" />
+        <control name="cexch_name" title="币种" ctrlType="Refer" field="cexch_name" entity="Dispatchlist" refId="foreigncurrency" refShowMode="Name" />
+        <control name="iexchrate" title="汇率" ctrlType="NumberBox" field="iexchrate" entity="Dispatchlist" />
+        <control name="cmemo" title="备注" ctrlType="TextBox" field="cmemo" entity="Dispatchlist" />        
+		    <control name="pk_group" title="集团" ctrlType="Refer" field="pk_group" entity="Dispatchlist" refId="600001" refShowMode="Name" />
+        <control name="pk_org" title="组织" ctrlType="Refer" field="pk_org" entity="Dispatchlist" refId="600015" refShowMode="Name" />   
+		  </container>
+		<container name="pk_ap_closebill_b" title="收款单表体" type="Grid">
+		  <control name="addLineAction" title="增行" group="line" ctrlType="Button" css="insert-icon" field="addLineAction" entity="Toolbar" />
+      <control name="insertLineAction" title="插行" group="line" ctrlType="Button" css="insert-icon" field="insertLineAction" entity="Toolbar" />
+      <control name="copyLineAction" title="复制行" group="line" ctrlType="Button" css="copy-icon" field="copyLineAction" entity="Toolbar" />
+      <control name="divideLineAction" title="拆分行" group="line" ctrlType="Button" css="divide-icon" field="divideLineAction" entity="Toolbar" />
+      <control name="deleteLineAction" title="删行" group="line" ctrlType="Button" css="delete-icon" field="deleteLineAction" entity="Toolbar" />
+      <control name="batchEditAction" title="批改" group="batch" ctrlType="Button" css="edit-icon" field="batchEditAction" entity="Toolbar" />
+      <control name="stockAction" title="存量" group="biz" ctrlType="Button" css="stock-icon" field="stockAction" entity="Toolbar" />
+      <control name="priceAction" title="价格" group="biz" ctrlType="Button" css="price-icon" field="priceAction" entity="Toolbar" />
+      <control name="discountAction" title="折扣" group="biz" ctrlType="Button" css="discount-icon" field="discountAction" entity="Toolbar" />
+      <control name="creditAction" title="信用" isNavigate="biz" ctrlType="Button" css="credit-icon" field="creditAction" entity="Toolbar" />
+      <control name="optionalPopAction" title="POP选配" group="biz" ctrlType="Button" css="pop-icon" field="optionalPopAction" entity="Toolbar" />
+      <control name="setLineAction" title="设置" group="set" ctrlType="Button" css="set-icon" field="setLineAction" entity="Toolbar" />
+      <control name="fullScreenAction" title="" isNavigate="true" group="set" ctrlType="Button" css="fullscreen-icon" field="fullScreenAction" entity="Toolbar" />
+		  <control name="pk_dispatchlist_b" title="表体_发货单子表" ctrlType="DataGrid" field="pk_dispatchlist_b" entity="Dispatchlist">
+        <column name="cinvname" title="存货名称" field="cinvname" ctrlType="TextBox"  />
+			  <column name="crowno" title="行号" field="crowno" ctrlType="TextBox"  />
+        <column name="iquantity" title="数量" field="iquantity" ctrlType="TextBox"  />
+			  <column name="isum" title="价税合计" field="isum" ctrlType="TextBox" />
+       </control>
+		</container>
+		<container name="footer" title="表尾" type="Card" iCols="4">
+		  <control name="billmaker" title="制单人" ctrlType="Refer" field="billmaker" entity="Dispatchlist" refId="600026" refShowMode="Name" />
+      <control name="creationtime" title="制单时间" ctrlType="DateTimeBox" field="creationtime" entity="Dispatchlist" />        
+    </container>
+    </container>
+	  <container name="history" title="历史状态" type="TabPage" content="common.historystatus.Status"></container>
+    <container name="logistics" title="物流信息" type="TabPage"></container>
+    <container name="business" title="商务信息" type="TabPage"></container>
+    <container name="collaboration" title="协作" type="TabPage"></container>
+  </view>
+</application>

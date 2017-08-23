@@ -1,0 +1,35 @@
+﻿    .cube-main .cube-main-content .cube-content-page .cube-header-tool {
+        border:0px solid white;       
+        }
+        .increased {
+        margin-right:10px;
+        }
+        .saved {
+        margin-right:10px;
+        }
+        .cube-main .cube-main-content .cube-content-page div[data-controltype='SearchBox'] {
+        width:22%;
+        margin:0px;
+        padding:0px;
+        height:28px;
+        position:relative;
+        left:200%;
+        }
+       .cube-content-page div[data-controltype='ToolBar'].cube-bar-modeltxt div[class='queried'] {
+        border:0px solid white;
+        color:#25f;
+        font-size:15px;
+        position:relative;
+        left:405px;
+        margin:0px;
+        padding:0px;
+        }
+        .grid-wrapper {
+        padding-top:60px;
+        }
+         div[data-controltype='ImageButton'] span[class*='edit-icon'] {
+    content: url(../../../pc/images/ToolBar/add.png);
+    width: 16px;
+    height: 16px;
+    margin: 0 3px -3px 0;
+}

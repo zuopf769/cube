@@ -1,0 +1,519 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>组织管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link href="pc/css/Cube.Form.css" rel="stylesheet"/>
+    <link href="pc/css/kendoctrl/Cube.Control.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Tab.css" rel="stylesheet"/>
+    <link href="pc/css/Cube.ToolBar.css" rel="stylesheet"/>
+    <link href="pc/css/Cube.Icon.css" rel="stylesheet"/>
+    <link data-config="MessageBox" />
+    <link data-config="DataGrid" />
+    <link href="apps/common/sysmanager/Cube.System.css" rel="Stylesheet" type="text/css"/>
+    <style>
+        .organizetitle {
+            border-bottom: 1px solid #D0C8C8;
+            border-top: 1px solid #D0C8C8;
+            background-color: #F2F2F2;
+            padding: 10px 20px;
+            height: 38px;
+            line-height: 18px;
+            margin-top: 10px;
+        }
+        .organizetitle_1 {
+            float: left;
+            font-weight: 700;
+            font-size: 14px;
+            color: #898989;
+        }
+        .organizetitle_bt1 {
+            float: right;
+            margin-right: 0;
+        }
+        .organizetitle_bt2 {
+            float: right;
+            margin-right: 10px;
+        }
+        .organizetitle_bt2 img, .organizetitle_bt1 img {
+            width: 15px;
+        }
+        .border-d3 {
+            border: 1px solid #d3d3d3;
+        }
+        .border-tb-d3 {
+            /*border-top: 1px solid #d3d3d3;
+            border-bottom: 1px solid #d3d3d3;
+            */
+           height: 800px;
+           overflow-y: auto;
+        }
+        .org-title {
+            padding: 0 12px;
+            margin: 10px 0;
+        }
+       .account-s {
+            width: 200px;
+            border: 1px solid #d3d3d3;
+            padding: 2px 6px;
+        }
+        .account-s input:focus, .account-s input {
+            border: none;
+            outline: none
+        }
+        .border-l-blue{ border-left:2px solid #3E94FE; margin-left: 15px; padding-left: 12px; }
+        /*div[data-controltype='ToolBar'].cube-bar-modelicon{ margin: 0 20px 0 0; vertical-align: middle}*/
+        .editor-combobox, .editor-refer{ width: 90%;}
+        .p-10-15{padding:10px 15px;}
+        .k-datetimepicker {
+            width: 100%;
+        }
+        .account-set {
+            border: 1px solid #e4e4e4;overflow:hidden;margin:10px 0 20px; padding-bottom:6px;
+        }
+        .account-set .navbar-pc-strip{background:#fff; border:none; padding:0; border-bottom:1px solid #e4e4e4; margin-bottom:15px;}
+        .account-set .navbar-pc-strip li.active, .account-set .navbar-pc-strip li:hover{
+                border-bottom: 2px solid #339EE2;
+                background: #fff;
+                padding-bottom: 33px;
+                color: #333;
+                margin-bottom: -1px;
+        }
+        .account-set .navbar-pc-strip li{
+            padding:0 15px;
+        }
+    </style>
+</head>
+<body>
+<div id="OrganizationManageView" data-page="common.sysmanager.OrganizationManageApp" data-title="组织管理" data-viewmodel="OrganizationManageViewModel">
+    <div class="col-lg-2 p-r-0 p-l-0 border-tb-d3">
+        <div data-propertyname="OrganizationTitle" class="org-title" data-controltype="Label"></div>
+        <div class="organizetitle">
+            <span class="organizetitle_1">组织架构 </span>
+            <div data-propertyname="deleteAction" data-controltype="ImageButton" data-name="delete">
+                <span class="organizetitle_bt1"><img src="common/images/ImageButton/u1200.png" /></span>
+            </div>
+        </div>
+        <div class="p-10-15">
+            <div data-propertyname="OrganizationMenus" data-controltype="TreeView"> </div>
+        </div>
+    </div>
+<div class="col-lg-10 p-l-0 p-r-0 border-d3" id="cube-main-right">
+<div class="cube-content-page">
+<div class="cube-content-content">
+<!--  内容块 多页签       Start-->
+<div>
+    <ul data-controltype="TabContent" data-propertyname="tabMenu" class="navbar-pc-strip">
+        <li class="ui-text active" data-content="">业务单元</li>
+        <li class="ui-text" data-content="addApplication">业务期初区间</li>
+        <li class="ui-text" data-content="user">用户</li>
+        <li class="ui-text" data-content="role">角色</li>
+    </ul>
+</div>
+<!--  内容块 多页签       End-->
+<div data-related="tabMenu">
+<div class="cube-detail-content m-l-20" data-content="baseinfo" >
+    <div  data-controltype="ToolBar" class="cube-bar-modeltxt">
+        <li>
+            <div data-propertyname="addAction" data-controltype="ImageButton" data-name="add">
+                <span class="add-icon"></span>
+                <span>增加</span>
+            </div>
+        </li>
+        <li>
+            <div data-propertyname="editAction" data-controltype="ImageButton" data-name="edit">
+                <span class="edit-icon"></span>
+                <span>编辑</span>
+            </div>
+        </li>
+        <li>
+            <div data-propertyname="saveAction" data-controltype="ImageButton" data-name="save">
+                <span class="save-icon"></span>
+                <span>保存</span>
+            </div>
+        </li>
+        <li>
+            <div data-propertyname="cancelAction" data-controltype="ImageButton" data-name="cancel">
+                <span class="save-icon"></span>
+                <span>取消</span>
+            </div>
+        </li>
+        <li class="m-l-20 m-r-20">
+            <div data-propertyname="deleteAction" data-controltype="ImageButton" data-name="delete">
+                <span>删除</span>
+            </div>
+        </li>
+        <li>
+            <div data-propertyname="startAction" data-controltype="ImageButton" data-name="start">
+                <span>启用</span>
+            </div>
+        </li>
+        <li>
+            <div data-propertyname="stopAction" data-controltype="ImageButton" data-name="stop">
+                <span>停用</span>
+            </div>
+        </li>
+        <li class="m-l-20">
+            <div data-propertyname="changeAction" data-controltype="ImageButton" data-name="change">
+                <span>变更</span>
+            </div>
+        </li>
+    </div>
+    <div class="row p-r-15">
+        <h4 class="col-lg-12 border-l-blue">基本信息</h4>
+        <div class="col-lg-4">
+            <label class="col-lg-4">编码</label>
+            <div class="col-lg-8 p-0">
+                <input data-propertyname="code" data-controltype="TextBox"/>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <label class="col-lg-4 ">名称</label>
+            <div class="col-lg-8 p-0">
+                <input data-propertyname="name" data-controltype="TextBox"/>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <label class="col-lg-4">简称</label>
+            <div class="col-lg-8 p-0">
+                <input data-propertyname="shortname" data-controltype="TextBox"/>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <label class="col-lg-4">组织形态</label>
+            <div class="col-lg-8" data-propertyname="entitytype" data-controltype="Refer">
+                <input type="text" />
+                <div>
+                <img src="pc/images/Ref-close.png" />
+                <img src="pc/images/Ref.png" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <label class="col-lg-4">类别</label>
+            <div class="col-lg-8 p-0">
+                <div data-propertyname="type" data-controltype="ComboBox" style="width:100%"></div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <label class="col-lg-4">工作日历</label>
+            <div class="col-lg-8" data-propertyname="workcalendar" data-controltype="Refer">
+                <input type="text" />
+                <div>
+                <img src="pc/images/Ref-close.png" />
+                <img src="pc/images/Ref.png" />
+                </div>
+            </div>
+        </div>
+        <h4 class="col-lg-12 border-l-blue">工商注册信息</h4>
+
+        <div class="col-lg-4">
+            <label class="col-lg-4">法人公司</label>
+
+            <div class="col-lg-8 p-0 m-t-10">
+                <input type="checkbox" data-propertyname="orgtype2" data-controltype="CheckBox" />
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <label class="col-lg-4">法人代表</label>
+
+            <div class="col-lg-8 p-0">
+                <input data-propertyname="legalbodycode" data-controltype="TextBox"/>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <label class="col-lg-4">办公地址</label>
+
+            <div class="col-lg-8 p-0">
+                <input data-propertyname="postaddr" data-controltype="TextBox"/>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <label class="col-lg-4">成立日期</label>
+
+            <div class="col-lg-8 p-0">
+                <input data-propertyname="createdate" data-controltype="DateBox" style="width:100%" />
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <label class="col-lg-4">邮政编码</label>
+
+            <div class="col-lg-8 p-0">
+                <input data-propertyname="zipcode" data-controltype="TextBox"/>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <label class="col-lg-4">网站</label>
+            <div class="col-lg-8 p-0">
+                <input data-propertyname="url" data-controltype="TextBox"/>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <label class="col-lg-4 ">联系人</label>
+            <div class="col-lg-8 p-0">
+                <input data-propertyname="linkman" data-controltype="TextBox"/>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <label class="col-lg-4">联系电话</label>
+            <div class="col-lg-8 p-0">
+                <input data-propertyname="phone" data-controltype="TextBox"/>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <label class="col-lg-4">传真</label>
+            <div class="col-lg-8 p-0">
+                <input data-propertyname="fax" data-controltype="TextBox"/>
+            </div>
+        </div>
+        <h4 class="col-lg-12 border-l-blue">组织职能</h4>
+        <!--<div class="col-lg-12">
+            <label class="col-lg-1">
+                <input type="checkbox" data-propertyname="salesorganization" data-controltype="CheckBox"/>
+                <label>销售</label>
+            </label>
+            <label class="col-lg-1">
+                <input type="checkbox" data-propertyname="purchasingorganization" data-controltype="CheckBox"/>
+                <label>采购</label>
+            </label>
+            <label class="col-lg-1">
+                <input type="checkbox" data-propertyname="inventoryorganization" data-controltype="CheckBox"/>
+                <label>库存</label>
+            </label>
+            <label class="col-lg-1">
+                <input type="checkbox" data-propertyname="factoryorganization" data-controltype="CheckBox"/>
+                <label>工厂</label>
+            </label>
+            <label class="col-lg-1">
+                <input type="checkbox" data-propertyname="financialorganization" data-controltype="CheckBox"/>
+                <label>财务</label>
+            </label>
+        </div>-->
+       <div class="col-lg-12">
+           <div data-propertyname="orgBox" data-controltype="OrgBox"></div>
+       </div>
+        <h4 class="col-lg-12 border-l-blue">组织隶属关系</h4>
+        <div class="col-lg-4">
+            <label class="col-lg-4 p-r-0">隶属法人组织</label>
+            <div class="col-lg-8" data-propertyname="owncorp" data-controltype="Refer">
+                <input type="text"/>
+                <div>
+                <img src="pc/images/Ref-close.png" />
+                <img src="pc/images/Ref.png" />
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <label class="col-lg-4 p-r-0">上级行政组织</label>
+
+            <div class="col-lg-8" data-propertyname="fatherorg" data-controltype="Refer">
+                <input type="text" />
+                <div>
+                <img src="pc/images/Ref-close.png" />
+                <img src="pc/images/Ref.png" />
+                </div>
+            </div>
+        </div>
+        <h4 class="col-lg-12 border-l-blue">组织状态</h4>
+        <div class="col-lg-1">
+            <label class="col-lg-12" data-propertyname="enablestate" data-controltype="Label">未启用</label>
+        </div>
+            <div class="col-lg-4">
+                <label class="col-lg-4">
+                    <!--<input type="checkbox" data-controltype="CheckBox"/>-->
+                    日期
+                </label>
+                <div class="col-lg-8 p-0">
+                    <input data-propertyname="enabledate" data-controltype="DateBox" style="width:100%" />
+                </div>
+            </div>
+            <!--parametersetting-->
+            <div class="col-lg-12">
+                <div class="account-set">
+                    <div>
+                        <ul data-controltype="TabContent" data-propertyname="parameterSettingMenu" class="navbar-pc-strip">
+                            <li class="ui-text active" data-content="financialContent">财务参数设置</li>
+                            <li class="ui-text" data-content="salesContent">销售参数设置</li>
+                        </ul>
+                    </div>
+                    <div data-related="parameterSettingMenu">
+                        <div data-content="financialContent">
+                            <div class="col-lg-12">
+                                <input type="checkbox" data-propertyname="multiaccountingrecords" data-controltype="CheckBox" />
+                                <label>多账簿</label>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="col-lg-4">会计期间</label>
+                                <div class="col-lg-8" data-propertyname="accperiodscheme" data-controltype="Refer">
+                                    <input type="text" />
+                                    <div>
+                                        <img src="pc/images/Ref-close.png" />
+                                        <img src="pc/images/Ref.png" />
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <label class="col-lg-4">本位币</label>
+                                <div class="col-lg-8" data-propertyname="currencytype" data-controltype="Refer">
+                                    <input type="text" />
+                                    <div>
+                                        <img src="pc/images/Ref-close.png" />
+                                        <img src="pc/images/Ref.png" />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div data-content="salesContent">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<div class="cube-detail-content m-l-20" data-content="addApplication">
+    <div data-controltype="ToolBar" class="cube-bar-modeltxt">
+        <li>
+            <div data-propertyname="appSaveAction" data-controltype="ImageButton">
+                <span class="save-icon"></span>
+                <span>保存</span>
+            </div>
+        </li>
+        <li class="m-l-20">
+            <div data-propertyname="allNullAction" data-controltype="ImageButton">
+                <span>批量设置为空</span>
+            </div>
+        </li>
+        <li class="m-l-20">
+            <div data-propertyname="DateStartAction" data-controltype="ImageButton">
+                <span>批量设置为年初期间</span>
+            </div>
+        </li>
+        <li class="m-l-20">
+            <div data-propertyname="DateNowAction" data-controltype="ImageButton">
+                <span>批量设置为当前期间</span>
+            </div>
+        </li>
+    </div>
+    <div class="m-r-20" data-propertyname="ApplicationGrid" data-controltype="DataGrid"></div>
+    <div class="pager1"></div>
+</div>
+<div class="cube-detail-content m-l-20" data-content="user">
+    <div data-controltype="ToolBar" class="cube-bar-modeltxt">
+        <li>
+            <div data-propertyname="editUserAction" data-controltype="ImageButton" data-name="edit">
+                <span class="edit-icon"></span>
+                <span>编辑</span>
+            </div>
+        </li>
+        <li>
+            <div data-propertyname="saveUserAction" data-controltype="ImageButton" data-name="save">
+                <span class="save-icon"></span>
+                <span>保存</span>
+            </div>
+        </li>
+        <li class="m-l-20">
+            <div data-propertyname="deleteUserAction" data-controltype="ImageButton" data-name="delete">
+                <span>删除</span>
+            </div>
+        </li>
+
+        <div class="cube-bar-modelicon"  data-controltype="ToolBar">
+            <span class="refresh-icon  pull-right m-l-20  m-t-2" data-propertyname="AppRefresh"
+                 data-controltype="ImageButton"></span>
+            <span class="filter-icon  pull-right m-l-20  m-t-2" data-propertyname="AppFilter"
+                 data-controltype="ImageButton"></span>
+            <div class="account-s pull-right" data-propertyname="AppSearch" data-controltype="SearchBox">
+                <input type="text" placeholder="请输入关键字"><span class="search-icon pull-right"></span>
+            </div>
+        </div>
+    </div>
+    <div class="m-r-20" data-propertyname="UserGrid" data-controltype="DataGrid"></div>
+    <div class="pager2"></div>
+</div>
+<div class="cube-detail-content m-l-20" data-content="role">
+    <div data-controltype="ToolBar" class="cube-bar-modeltxt">
+        <li>
+            <div data-propertyname="editRoleAction" data-controltype="ImageButton" data-name="edit">
+                <span class="edit-icon"></span>
+                <span>编辑</span>
+            </div>
+        </li>
+        <li>
+            <div data-propertyname="saveRoleAction" data-controltype="ImageButton" data-name="save">
+                <span class="save-icon"></span>
+                <span>保存</span>
+            </div>
+        </li>
+        <li class="m-l-20">
+            <div data-propertyname="deleteRoleAction" data-controltype="ImageButton" data-name="delete">
+                <span>删除</span>
+            </div>
+        </li>
+        <li class="m-l-20">
+            <div data-propertyname="lookRoleAction" data-controltype="ImageButton" data-name="delete">
+                <span>查看</span>
+            </div>
+        </li>
+        <div class="cube-bar-modelicon"  data-controltype="ToolBar">
+            <span class="refresh-icon  pull-right m-l-20 m-t-2" data-propertyname="AppRefresh"
+                  data-controltype="ImageButton"></span>
+            <span class="filter-icon  pull-right m-l-20  m-t-2" data-propertyname="AppFilter"
+                  data-controltype="ImageButton"></span>
+            <div class="account-s pull-right" data-propertyname="AppSearch" data-controltype="SearchBox">
+                <input type="text" placeholder="请输入关键字"><span class="search-icon pull-right"></span>
+            </div>
+        </div>
+    </div>
+    <div class="m-r-20" data-propertyname="RoleGrid" data-controltype="DataGrid"></div>
+    <div class="pager3"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="jquery/jquery-1.11.1.js" type="text/javascript"></script>
+<script src="jquery/jquery-ui.js" type="text/javascript"></script>
+<script src="common/js/Animation.js" type="text/javascript"></script>
+<script src="common/js/Cube.js" type="text/javascript"></script>
+<script src="pc/js/cube.pc.js" type="text/javascript"></script>
+<script src="common/js/Cube.bindings.js" type="text/javascript"></script>
+<script src="common/js/Control.js" type="text/javascript"></script>
+<script src="common/js/CommonProxy.js" type="text/javascript"></script>
+<script src="common/js/CommonCRUD.js" type="text/javascript"></script>
+<script src="common/js/Button.js" type="text/javascript"></script>
+<script src="common/js/ImageButton.js" type="text/javascript"></script>
+<script src="common/js/ToolBar.js" type="text/javascript"></script>
+<script src="common/js/Label.js" type="text/javascript"></script>
+<script src="common/js/ListControl.js" type="text/javascript"></script>
+<script src="common/js/ListBox.js" type="text/javascript"></script>
+<script src="pc/js/TabContent.js" type="text/javascript"></script>
+<script src="common/js/TimeLine.js" type="text/javascript"></script>
+<script data-config="NumberBox"></script>
+<script data-config="CheckBox"></script>
+<script data-config="Refer"></script>
+<script src="common/js/Button.js" type="text/javascript"></script>
+<script src="common/js/Radio.js" type="text/javascript"></script>
+<script src="common/js/ImageButton.js" type="text/javascript"></script>
+<script src="common/js/SearchBox.js" type="text/javascript"></script>
+<script data-config="MessageBox"></script>
+<script data-config="DataGrid"></script>
+<script data-config="TextBox"></script>
+<script data-config="Tree"></script>
+<script data-config="ComboBox"></script>
+<script data-config="DateBox"></script>
+<script data-config="DateTimeBox"></script>
+    <script src="apps/common/sysmanager/OrgBox.js" type="text/javascript"></script>
+<script src="apps/common/sysmanager/OrganizationManage_L.js" type="text/javascript"></script>
+<script src="apps/common/sysmanager/OrganizationManage_Extend.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    cb.viewbinding.create("OrganizationManageView");
+</script>
+
+</body>
+</html>

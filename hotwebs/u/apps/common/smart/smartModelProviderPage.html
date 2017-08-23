@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>smartModelProviderPage</title>
+    <link rel="stylesheet" href="styles/kendo.common.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../kendoui/trial/styles/kendo.bootstrap.min.css" rel="stylesheet" />
+	<!--
+		<link rel="stylesheet" href="styles/kendo.dataviz.min.css" />
+		<link rel="stylesheet" href="styles/kendo.dataviz.default.min.css" />
+	-->
+	
+	<script src="../../../jquery/jquery-1.11.1.min.js"></script>
+	<script src="js/kendo.all.min.js"></script>
+	<script src="token.js"></script>
+	<script src="smartModelProviderPage.js"></script>
+</head>
+<body>
+	<div id="Container">
+		<div id="Header">
+			<div id="titlediv"><strong style="clear: both; font-family: 'Microsoft YaHei UI'; color: lightblue;font-size:20px">语义模型设计向导</strong></div>
+			<div id="topbuttons">
+				<button id="providerButton" class="k-primary" style="width:80px">选择表</button> <img align="center" style="height:18px" src="icon/a.ico"></img>
+				<button id="joinButton" style="width:80px">连接条件</button> <img align="center" style="height:18px" src="icon/a.ico"></img>
+				<button id="fieldButton" style="width:80px">选择字段</button> <img align="center" style="height:18px" src="icon/a.ico"></img>
+				<button id="descriptorButton" style="width:80px">描述器</button> <img align="center" style="height:18px" src="icon/a.ico"></img>
+				<button id="otherButton" style="width:80px">其他</button>
+			</div>
+		</div>
+		<div id="Center">
+			<div id="buttons">
+				<br></br>
+				<p>
+					<button id="addButton" class="editButton">增加</button>
+				</p>
+			</div>
+			<div id="gridArea">
+				<div id="grid"></div>
+			</div>
+		</div>
+		<div id="Footer">
+			<button id="nextButton" style="width:70px">下一步</button>
+			<button id="saveButton" style="width:70px">保存</button>
+			<button id="cancleButton" style="width:70px">取消</button>
+			<button id="finishButton" style="width:70px">完成</button>
+		</div>
+	</div>
+	<style scoped>
+		#Container{
+			width:100%;
+			margin:0 auto;/*设置整个容器在浏览器中水平居中*/
+		}
+		#Header {
+			margin:10px;
+			overflow:hidden;
+		}
+		#titlediv {
+			width:20%
+			text-align: left;
+			float:left;
+		}
+		#topbuttons {
+			width:75%
+			text-align: right;
+			float:right;
+		}
+		#Center {
+			/*处理左右多列等高*/
+			overflow:hidden;
+			margin-right:10px;
+			border:1px solid #d3d3d3;
+		}
+		#buttons {
+		    width:8%;
+		    float:right;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+			text-align: center;		
+		}
+		#gridArea{
+			width:92%;
+			float:right;			
+		}
+		#grid {   
+		    margin:10px;/*设置元素跟其他元素的距离为20像素*/
+		    /*设置浮动，实现多列效果，div+Css布局中很重要的*/
+		}
+		#Footer {
+			margin:10px;
+			text-align: right;
+			padding-top:10px;/*本div上边距100*/
+		}
+	</style>
+</body>
+</html>

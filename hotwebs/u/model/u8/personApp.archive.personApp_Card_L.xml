@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application id="8d597299-3575-45af-9eb8-4da57d2e9297" name="personApp" title="u8person" domainName="uap" moduleName="u8" symbol="u8.person" ts="2015-04-29 15:17:43" dr="0" tplName_viewModel="archive" tplName="archive_L.tpl">
+  <references>
+    <reference name="../u8/personApp.archive.VM.xml"/>
+  </references>
+  <view id="b3896cc6-667e-4974-ad25-11963757e3cb" name="personApp_Card" title="业务员卡片" viewModelId="8d597299-3575-45af-9eb8-4da57d2e9297" layoutMode="Fluid" screenSize="L" tplName="archive_L.html.tpl" viewModel="personAppViewModel_archive" isDefault="true" ts="2015-04-29 15:18:48" dr="0" appId="u8.personApp_Card">
+    <container id="2ce1bb9a-1a4d-490e-b682-2d89dcbe6723" name="Toolbar" title="工具栏" type="Toolbar" iCols="0" ts="2015-04-29 15:18:07" dr="0" hasQueryScheme="true">
+      <control entity="Toolbar" id="cee9fb22-53e4-40b9-b66c-6259db8004fc" name="returnAction" title="返回" field="returnAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:44:33" dr="0" vmfield="returnAction"/>
+      <control entity="Toolbar" id="2fbe0c62-5160-478a-a1eb-6d773fe5b1e0" name="addAction" title="增加" field="addAction" ctrlType="DropDownButton" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:44:32" dr="0" vmfield="addAction"/>
+      <control entity="Toolbar" id="74ef11b0-ee08-4ea2-bee2-495ff20be1f6" name="saveAction" title="保存" field="saveAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:44:32" dr="0" vmfield="saveAction"/>
+      <control entity="Toolbar" id="a8484acc-2ebe-4915-8a75-708e22746e12" name="editAction" title="修改" field="editAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:44:33" dr="0" vmfield="editAction"/>
+      <control entity="Toolbar" id="8403c027-104e-4917-b43c-45da38c9fe76" name="deleteAction" title="删除" field="deleteAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:44:33" dr="0" vmfield="deleteAction"/>
+      <control entity="Toolbar" id="13a4e77b-ffe7-483d-b085-5a3e2e9313cd" name="cancelAction" title="放弃" field="cancelAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:44:33" dr="0" vmfield="cancelAction"/>
+      <control entity="Toolbar" id="b604ad9a-b8b5-4259-b44b-ab389bfdaf40" name="printAction" title="打印" field="printAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:44:33" dr="0" vmfield="printAction"/>
+      <control entity="Toolbar" id="8667097b-0d88-49ec-b74a-8e428b3bc313" name="nextAction" css="next-icon" position="right" field="nextAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:44:33" dr="0" vmfield="nextAction"/>
+      <control entity="Toolbar" id="84091aec-23bc-4a23-8367-b6d3a6adcfc0" name="prevAction" css="prev-icon" position="right" field="prevAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:44:33" dr="0" vmfield="prevAction"/>
+    </container>
+    <container id="ab7d4bcf-b6a5-49d0-9d05-abb29f3572cc" name="Abstract" title="概要" type="Abstract" iCols="1" ts="2015-04-29 15:18:07" dr="0" hasQueryScheme="true">
+      <control entity="person" id="cd2c2745-1033-4d94-9097-f5ce2340cdf1" name="code" title="业务员编码" position="top" field="code" ctrlType="Label" iLength="50" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:21:53" dr="0" vmfield="code"/>
+      <control entity="person" id="0cea2d8c-cd9e-423b-bda1-db401f103aaa" name="name" title="业务员名称" position="right" field="name" ctrlType="Label" iLength="50" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:21:53" dr="0" vmfield="name"/>
+      <control entity="person" id="732f2da9-4175-4e61-a8e0-8462d243e373" name="pk_dep" title="部门" position="bottom" field="pk_dep" ctrlType="Label" iLength="20" isNullable="true" isVisible="true" refCode="code" refId="600905" refKey="pk_dept" refName="name" isPlaceHolder="false" ts="2015-04-29 15:21:53" dr="0" vmfield="pk_dep"/>
+    </container>
+    <container id="dcfb3c88-829b-4282-941e-ed337f4482ec" name="baseinfo" title="基本信息" type="TabPage" iCols="0" ts="2015-04-29 15:18:07" dr="0" hasQueryScheme="true">
+      <container id="2f4d7cd5-d317-4114-bf0e-a4e46975b804" name="BaseInfo" title="基本信息" type="Group" iCols="3" ts="2015-04-29 15:18:07" dr="0" hasQueryScheme="true">
+        <control entity="person" id="31a28ecb-6377-497a-bc1a-aa4904fa5573" name="name" title="业务员名称" field="name" ctrlType="TextBox" iLength="50" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:28:04" dr="0" vmfield="name"/>
+        <control entity="person" id="05d90db9-f09f-41ab-9a4c-618e050f5041" name="code" title="业务员编码" field="code" ctrlType="TextBox" iLength="50" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:28:04" dr="0" vmfield="code"/>
+        <control entity="person" id="7b9dd315-fdbd-4f24-9bd8-e5a45a5d353f" name="pk_dep" title="部门" field="pk_dep" ctrlType="Refer" iLength="20" isNullable="true" isVisible="true" refCode="code" refId="600905" refKey="pk_dept" refName="name" isPlaceHolder="false" ts="2015-04-29 15:28:04" dr="0" vmfield="pk_dep"/>
+        <control entity="person" id="1d6eea1d-e6fe-4875-a107-6326882542ee" name="pk_group" title="集团" field="pk_group" ctrlType="Refer" iLength="20" isNullable="false" isVisible="true" refCode="code" refId="600001" refKey="pk_group" refName="name" isPlaceHolder="false" ts="2015-04-29 15:28:04" dr="0" vmfield="pk_group"/>
+        <control entity="person" id="e29d87a3-01ed-44ff-90a9-87ca02f5658f" name="pk_org" title="组织" field="pk_org" ctrlType="Refer" iLength="20" isNullable="true" isVisible="true" refCode="code" refId="600015" refKey="pk_org" refName="name" isPlaceHolder="false" ts="2015-04-29 15:28:04" dr="0" vmfield="pk_org"/>
+      </container>
+      <container id="d0135c26-9836-4a1e-8139-f79f0a815677" name="Other1" title="辅助信息" type="Group" iCols="0" ts="2015-04-29 15:18:07" dr="0" hasQueryScheme="true">
+        <control entity="person" id="5d0268a1-91f8-4c88-8753-8e1497860ec1" name="cpersonprop" title="业务员属性" field="cpersonprop" ctrlType="TextBox" iLength="50" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:28:04" dr="0" vmfield="cpersonprop"/>
+        <control entity="person" id="7f224937-5a8e-4bdf-aa54-ae9ab610e0a2" name="cpersonemail" title="Email地址" field="cpersonemail" ctrlType="TextBox" iLength="50" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:28:04" dr="0" vmfield="cpersonemail"/>
+        <control entity="person" id="259582ae-3eec-4cce-be51-acead4cc91bc" name="cpersonphone" title="手机号" field="cpersonphone" ctrlType="TextBox" iLength="50" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:28:04" dr="0" vmfield="cpersonphone"/>
+        <control entity="person" id="762ebd24-1d3f-487d-8148-18fa366c6455" name="dpinvaliddate" title="失效日期" field="dpinvaliddate" ctrlType="DateBox" iLength="19" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:28:04" dr="0" vmfield="dpinvaliddate"/>
+        <control entity="person" id="e7993cc0-5a0c-4163-bd3a-3d8e9fd9c161" name="dpvaliddate" title="生效日期" field="dpvaliddate" ctrlType="DateBox" iLength="19" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:28:04" dr="0" vmfield="dpvaliddate"/>
+      </container>
+      <container id="35ee76a8-d7bf-43cf-8642-c7a6ceafaec6" name="Other2" title="其它信息" type="Group" iCols="4" ts="2015-04-29 15:18:07" dr="0" hasQueryScheme="true">
+        <control entity="person" id="aa1d9526-eafc-4b66-83e7-a3e9492e8a56" name="def1" title="自定义项1" field="def1" ctrlType="TextBox" iLength="100" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:23:25" dr="0" vmfield="def1"/>
+        <control entity="person" id="a305ac97-0d20-4df1-a785-de4c9487346a" name="def2" title="自定义项2" field="def2" ctrlType="TextBox" iLength="100" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:23:25" dr="0" vmfield="def2"/>
+        <control entity="person" id="88f398a3-6dfe-4017-9650-1b4ad2b7892b" name="def3" title="自定义项3" field="def3" ctrlType="TextBox" iLength="100" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:23:25" dr="0" vmfield="def3"/>
+        <control entity="person" id="cc1b37d6-535b-4ba4-aabb-cf3f7b217e8d" name="def4" title="自定义项4" field="def4" ctrlType="TextBox" iLength="100" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:23:25" dr="0" vmfield="def4"/>
+        <control entity="person" id="114eacc8-0bbe-4520-888b-7bcd18e5d084" name="def5" title="自定义项5" field="def5" ctrlType="TextBox" iLength="100" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-29 15:23:25" dr="0" vmfield="def5"/>
+      </container>
+    </container>
+    <container id="48379104-7361-4cb3-9237-caf605a74f1c" name="history" title="历史状态" type="TabPage" iCols="0" content="common.historystatus.Status" ts="2015-04-29 15:18:07" dr="0" hasQueryScheme="true"/>
+    <container id="55079141-cd8f-474a-af96-719fdc2b0102" name="logistics" title="物流信息" type="TabPage" iCols="0" ts="2015-04-29 15:18:07" dr="0" hasQueryScheme="true"/>
+    <container id="eec88a8e-4843-4676-9e3d-473ea35af849" name="business" title="商务信息" type="TabPage" iCols="0" ts="2015-04-29 15:18:07" dr="0" hasQueryScheme="true"/>
+    <container id="adce262b-a1bb-4339-83d0-6dbbadc9dc91" name="collaboration" title="协作" type="TabPage" iCols="0" ts="2015-04-29 15:18:07" dr="0" hasQueryScheme="true"/>
+  </view>
+</application>

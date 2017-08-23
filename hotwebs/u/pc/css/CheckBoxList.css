@@ -1,0 +1,63 @@
+﻿.CheckBoxList {
+    width: 100%;
+    height: 460px;
+    overflow-y: auto;
+}
+
+.CheckBoxList ul.sortable {
+    list-style: none;
+}
+
+.CheckBoxList ul.sortable li {
+    height: 39px;
+    line-height: 39px;
+    background: #FFF;
+}
+
+.CheckBoxList ul.sortable li span {
+	display: inline-block;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.CheckBoxList ul.sortable li label {
+	display: inline-block;
+    padding: 0 0 0 10px;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-size: 14px;
+    color: #333333;
+    cursor:move;
+}
+
+.CheckBoxList ul.sortable li:hover {
+    background: #339EE2;
+}
+
+.CheckBoxList ul.sortable li:hover label {
+    color: #FFF;
+}
+
+.CheckBoxList ul.sortable li span.checked {
+    background: url('../../common/images/checkbox_on.png') top left no-repeat;
+}
+
+.CheckBoxList ul.sortable li span.unchecked {
+    background: url('../../common/images/checkbox_off.png') top left no-repeat;
+}
+
+.CheckBoxList ul.sortable li.sortable-placeholder {
+	border: 1px dashed #CCC;
+	background: none;
+}
+
+.CheckBoxList ul.sortable li.sortable-dragging {
+	border: 1px solid #CCC;
+	background: #FFF;
+}
+
+.CheckBoxList ul.sortable li.sortable-dragging label{
+	 color: #333333;
+}

@@ -1,0 +1,91 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title><#=title#></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./pad/css/Document.css" rel="stylesheet" />
+    <link rel="stylesheet" media="screen and (min-width:900px)" href="./pad/css/cube.form.big.css" type="text/css" />
+    <link rel="stylesheet" media="only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape)" href="./pad/css/cube.form.landscape.css" type="text/css" />
+    <link rel="stylesheet" media="only screen and (max-device-width:768px) and (max-device-width:1024px) and (orientation:portrait)" href="./pad/css/cube.form.portrait.css" type="text/css" />
+    <link href="./pad/css/dropdown.css" rel="stylesheet" />
+    <link href="./pad/css/SearchBox.css" rel="stylesheet" />
+    <link href="./pad/css/ListCard.css" rel="stylesheet" />
+    <link href="./pad/css/TimeLine.css" rel="stylesheet" />
+    <link href="./common/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./common/css/Cube.Icon.css" rel="stylesheet" />
+    <#@LinkBuilder#>
+</head>
+<body>
+    <#*(view:views){#>
+	<div id="<#=name#>" data-page="<#=appId#>" data-viewmodel="<#=viewModel#>">
+        <div class="document-wrapper">
+            <div class="cube-main document-scroller">
+                <div class="class-part"></div>
+	            <div class="master-part">
+                    <div class="cube-main-header">
+                        <label><#=title#></label>
+                        <div data-propertyname="cardAction" data-controltype="ImageButton"><span class="add-icon"></span><span></span></div>
+                    </div>
+                    <div class="action-section">
+                        <div class="dropdown" style="width:80%;background-color: #ffffff;border-radius: 4px;padding: 4px 10px;" data-propertyname="queryScheme" data-controltype="DropDown" title="查询方案"></div>
+                        
+                        <div data-propertyname="queryAction" data-controltype="ImageButton"><span class="img-query"></span><span></span></div>
+                    </div>
+                    <div class="content-section">
+                        <div class="content-wrapper">
+                            <div class="content-scroller">
+                                <div class="main-content">
+                                    <div class="list-card">
+                                        <#*(container:containers)?(type!=Toolbar) {#>
+				                            <#*(control:controls)?(isVisible==null || isVisible==true){#>
+					                            <#@ControlBuilder#>
+				                            <#}#>
+			                            <#}#>
+                                    </div>
+                                    <div class="time-line">
+                                        <div data-propertyname="timeLine" data-controltype="TimeLine"></div>
+                                    </div>
+                                </div>
+                                <div class="query-scheme"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="related-part"></div>
+        <div class="detail-wrapper">
+            <div class="detail-scroller">
+                <div class="detail-part"></div>
+            </div>
+        </div>
+	</div>
+    <#}#>
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./jquery/iscroll-probe.js" type="text/javascript"></script>
+    <script src="./common/js/Animation.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./pad/js/cube.pad.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/Button.js" type="text/javascript"></script>
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>
+    <script src="./common/js/dropDown.js" type="text/javascript"></script>
+    <script src="./common/js/SearchBox.js" type="text/javascript"></script>
+    <script src="./common/js/ListCard.js" type="text/javascript"></script>
+    <script src="./common/js/TimeLine.js" type="text/javascript"></script>
+    <script src="./common/js/CommonProxy.js" type="text/javascript"></script>
+    <script src="./common/js/CommonCRUD.js" type="text/javascript"></script>
+	<#@ScriptBuilder#>
+	<script src="apps/<#=moduleName#>/MockData.js" type="text/javascript"></script>
+    <script src="apps/<#=moduleName#>/<#=name#>_<#=screenSize#>.js" type="text/javascript"></script>
+	<script src="apps/<#=moduleName#>/<#=name#>_Extend.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        <#*(view:views){#>
+		cb.viewbinding.create("<#=name#>");
+	    <#}#>
+	</script>
+</body>
+</html>

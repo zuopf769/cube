@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator" content=
+    "HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>语义模型设计器</title>
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link href="./pc/css/SlickGridWrapper.css" rel="stylesheet" />
+    <link href="./pc/css/SlickGridSource.css" rel="stylesheet" />
+	<link href="./apps/common/smartmodel/css/SmartModelGenral.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="SmartModelJoinStepView" data-page="common.smartmodel.SmartModelJoinStepApp" data-viewmodel=
+    "SmartModelJoinStepViewModel">
+        <div data-propertyname="smartModelFootTab" data-controltype="TabContent" class="navbar-pc-slide" style="width:90%">
+            <!--连接条件页签头-->
+
+            <div class="cube-bar-open-container">
+                <ul>
+                    <li class="ui-text active" data-content="classicMode">典型模式</li>
+
+                    <li class="ui-text" data-content="expertMode">高级模式</li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-related="smartModelFootTab" class="mainTable">
+            <!--连接条件页签体-->
+
+            <div data-content="classicMode" data-propertyname="classicMode">
+                <!--典型模式-->
+
+                <div class="dataTable">
+                    <div class="grid-wrapper">
+                        <!--典型模式-表格-->
+
+                        <div data-propertyname="classicJoinForm" data-controltype="DataGrid" class="grid"></div>
+
+                        <div class="grid-pager"></div>
+                    </div>
+                </div>
+
+                <div class="buttonGroup">
+                    <!--典型模式-按钮组-->
+
+                    <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="addClassicJoinButton">
+                        <span>增加</span>
+                    </div>
+
+                    <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="deleteClassicJoinButton">
+                        <span>删除</span>
+                    </div>
+
+                    <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="upClassicJoinButton">
+                        <span>上移</span>
+                    </div>
+
+                    <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="downClassicJoinButton">
+                        <span>下移</span>
+                    </div>
+
+                    <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="exchangeJoinButton">
+                        <span>互换</span>
+                    </div>
+                </div>
+            </div>
+
+            <div data-content="expertMode" data-propertyname="expertMode">
+                <!--高级模式-->
+
+                <div class="dataTable">
+                    <div class="grid-wrapper">
+                        <!--高级模式-表格-->
+
+                        <div data-propertyname="expertJoinForm" data-controltype="DataGrid" class="grid"></div>
+
+                        <div class="grid-pager"></div>
+                    </div>
+                </div>
+
+                <div class="buttonGroup">
+                    <!--典型模式-按钮组-->
+
+                    <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="addExpertJoinButton">
+                        <span>增加</span>
+                    </div>
+
+                    <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="deleteExpertJoinButton">
+                        <span>删除</span>
+                    </div>
+
+                    <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="upExpertJoinButton">
+                        <span>上移</span>
+                    </div>
+
+                    <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="downExpertJoinButton">
+                        <span>下移</span>
+                    </div>
+
+                    <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="connectButton">
+                        <span>关联</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

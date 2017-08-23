@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<applications>
+  <application name="CustomerApp" title="客户档案" moduleName="pu" tplName="archives_min.tpl">
+    <viewmodel name="CustomerViewModel" extendName="CustomerViewModel_Extend" title="客户档案">
+      <entity name="CustomerDetail" title="客户档案">
+        <fields>
+          <field name="name" title="客户名称" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="code" title="联系人姓名" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="ccuscode_pk" title="单据编码" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="telephone" title="联系人电话" modelType="SimpleModel" ctrlType="TextBox" />
+        </fields>
+      </entity>
+      <entity name="Customer" title="客户档案列表" isMain="true">
+        <fields>
+          <field name="customers" title="客户集合" modelType="Model3D" ctrlType="DataGrid" refEntity="CustomerDetail"/>
+        </fields>
+      </entity>
+      <entity name="Toolbar" title="功能">
+        <fields>
+          <field name="addAction" title="增加" modelType="SimpleModel" ctrlType="Button" />
+          <field name="editAction" title="修改" modelType="SimpleModel" ctrlType="Button" />
+          <field name="batchAction" title="批改" modelType="SimpleModel" ctrlType="Button" />
+          <field name="deleteAction" title="删除" modelType="SimpleModel" ctrlType="Button" />
+          <field name="mergeAction" title="并户" modelType="SimpleModel" ctrlType="Button" />
+          <field name="creditAction" title="信用" modelType="SimpleModel" ctrlType="Button" />
+          <field name="checkAction" title="查重" modelType="SimpleModel" ctrlType="Button" />
+          <field name="printAction" title="打印" modelType="SimpleModel" ctrlType="Button" />
+          <field name="outputAction" title="输出" modelType="SimpleModel" ctrlType="Button" />
+          <field name="bizAction" title="业务操作" modelType="SimpleModel" ctrlType="Button" />
+          <field name="filterAction" title="过滤" modelType="SimpleModel" ctrlType="Button" />
+          <field name="refreshAction" title="刷新" modelType="SimpleModel" ctrlType="Button" />
+          <field name="setAction" title="设置" modelType="SimpleModel" ctrlType="Button" />
+        </fields>
+      </entity>
+      <actions>
+        <action name="itemClick" entity="Customer" field="customers" eventName="click" functionName="itemClick" defaultImpl="//默认实现"/>
+        <action name="activeRowClick" entity="Customer" field="customers" eventName="onActiveRowClick" functionName="activeRowClick" defaultImpl="//默认实现"/>
+        <action name="changePage" entity="Customer" field="customers" eventName="changePage" functionName="changePage" defaultImpl="//默认实现"/>
+        <action name="addAction" entity="Toolbar" field="addAction" eventName="click" functionName="addAction" defaultImpl="//默认实现"/>
+        <action name="editAction" entity="Toolbar" field="editAction" eventName="click" functionName="editAction" defaultImpl="//默认实现"/>
+        <action name="batchAction" entity="Toolbar" field="batchAction" eventName="click" functionName="batchAction" defaultImpl="//默认实现"/>
+        <action name="deleteAction" entity="Toolbar" field="deleteAction" eventName="click" functionName="deleteAction" defaultImpl="//默认实现"/>
+        <action name="mergeAction" entity="Toolbar" field="mergeAction" eventName="click" functionName="mergeAction" defaultImpl="//默认实现"/>
+        <action name="creditAction" entity="Toolbar" field="creditAction" eventName="click" functionName="creditAction" defaultImpl="//默认实现"/>
+        <action name="checkAction" entity="Toolbar" field="checkAction" eventName="click" functionName="checkAction" defaultImpl="//默认实现"/>
+        <action name="printAction" entity="Toolbar" field="printAction" eventName="click" functionName="printAction" defaultImpl="//默认实现"/>
+        <action name="outputAction" entity="Toolbar" field="outputAction" eventName="click" functionName="outputAction" defaultImpl="//默认实现"/>
+        <action name="bizAction" entity="Toolbar" field="bizAction" eventName="click" functionName="bizAction" defaultImpl="//默认实现"/>
+        <action name="filterAction" entity="Toolbar" field="filterAction" eventName="click" functionName="filterAction" defaultImpl="//默认实现"/>
+        <action name="refreshAction" entity="Toolbar" field="refreshAction" eventName="click" functionName="refreshAction" defaultImpl="//默认实现"/>
+        <action name="setAction" entity="Toolbar" field="setAction" eventName="click" functionName="setAction" defaultImpl="//默认实现"/>
+      </actions>
+    </viewmodel>
+  </application>
+</applications>

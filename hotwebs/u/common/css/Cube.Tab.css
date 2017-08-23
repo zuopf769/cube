@@ -1,0 +1,134 @@
+﻿/***********条状展示 多页签 Start**************/
+.navbar-strip.ui-controlgroup-controls .ui-menu {
+    -webkit-border-radius: inherit;
+    border-radius: inherit;
+    margin: 0 auto;
+    width: 98%;
+    background: #FFF;
+    position: relative;
+    overflow: hidden;
+}
+
+    .navbar-strip.ui-controlgroup-controls .ui-menu .ui-btn {
+        float: left;
+        clear: none;
+        height: 25px;
+        line-height: 25px;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        border: 1px solid #0094ff;
+        background: #ffffff;
+        text-align: center;
+        cursor: pointer;
+    }
+
+        .navbar-strip.ui-controlgroup-controls .ui-menu .ui-btn[data-touchable='true']:hover {
+            background-color: #157EFB;
+            color: #ffffff;
+        }
+
+        .navbar-strip.ui-controlgroup-controls .ui-menu .ui-btn.ui-text {
+            font-family: '微软雅黑 Regular', '微软雅黑';
+            font-size: 14px;
+            color: #157EFB;
+        }
+
+        .navbar-strip.ui-controlgroup-controls .ui-menu .ui-btn:first-child {
+            /* Gecko browsers */
+            -moz-border-top-left-radius: .3em;
+            -moz-border-bottom-left-radius: .3em;
+            /* Webkit browsers */
+            -webkit-border-top-left-radius: .3em;
+            -webkit-border-bottom-left-radius: .3em;
+            /* IE browsers */
+            border-top-left-radius: .3em;
+            border-bottom-left-radius: .3em;
+        }
+
+        .navbar-strip.ui-controlgroup-controls .ui-menu .ui-btn:last-child {
+            /* Gecko browsers*/
+            -moz-border-top-right-radius: .3em;
+            -moz-border-bottom-right-radius: .3em;
+            /* Webkit browsers*/
+            -webkit-border-top-right-radius: .3em;
+            -webkit-border-bottom-right-radius: .3em;
+            /* IE browsers*/
+            border-top-right-radius: .3em;
+            border-bottom-right-radius: .3em;
+        }
+
+        .navbar-strip.ui-controlgroup-controls .ui-menu .ui-btn[class*='active'] {
+            background-color: #157EFB;
+            color: #ffffff;
+        }
+/***********条状展示 多页签 End**************/
+
+/***********可滑动 多页签 Start**************/
+.navbar-slide.ui-controlgroup-controls {
+    -webkit-border-radius: inherit;
+    border-radius: inherit;
+    display: block;
+    vertical-align: middle;
+    zoom: 1;
+    margin: 0 auto;
+    width: 98%;
+    height: 6%;
+    background: #EFEFF4;
+    position: relative;
+    overflow: hidden;
+}
+
+    .navbar-slide.ui-controlgroup-controls .ui-menu {
+        width: 300%;
+        position: relative;
+        top: 5px;
+        left: 0px;
+    }
+
+    .navbar-slide.ui-controlgroup-controls .ui-btn {
+        float: left;
+        -webkit-border-radius: 0;
+        border-radius: 0;
+        background: #EFEFF4;
+        text-align: center;
+        cursor: pointer;
+        width: 120px;
+        height: 25px;
+    }
+
+        .navbar-slide.ui-controlgroup-controls .ui-btn.ui-text {
+            font-family: '微软雅黑 Regular', '微软雅黑';
+            font-size: 14px;
+            color: #333333;
+            line-height: 160%;
+        }
+
+        .navbar-slide.ui-controlgroup-controls .ui-btn:first-child {
+            /* Gecko browsers */
+            -moz-border-top-left-radius: .3em;
+            -moz-border-bottom-left-radius: .3em;
+            /* Webkit browsers */
+            -webkit-border-top-left-radius: .3em;
+            -webkit-border-bottom-left-radius: .3em;
+            /* IE browsers */
+            border-top-left-radius: .3em;
+            border-bottom-left-radius: .3em;
+        }
+
+        .navbar-slide.ui-controlgroup-controls .ui-btn:last-child {
+            /* Gecko browsers*/
+            -moz-border-top-right-radius: .3em;
+            -moz-border-bottom-right-radius: .3em;
+            /* Webkit browsers*/
+            -webkit-border-top-right-radius: .3em;
+            -webkit-border-bottom-right-radius: .3em;
+            /* IE browsers*/
+            border-top-right-radius: .3em;
+            border-bottom-right-radius: .3em;
+        }
+
+        .navbar-slide.ui-controlgroup-controls .ui-btn[class*='active'] {
+            color: #157EFB;
+            font-size: 16px;
+        }
+/***********可滑动 多页签 End**************/

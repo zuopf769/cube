@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<applications>
+  <application name="DeliveryApp" title="发货单" moduleName="sa" tplName="vouchers_min.tpl">
+    <viewmodel name="DeliveryViewModel" extendName="DeliveryViewModel_Extend" title="发货单">
+      <entity name="DeliveryDetail" title="发货单">
+        <fields>
+          <field name="customer" title="客户名称" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="money" title="订单总额" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="vbillno" title="订单编码" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="billdate" title="订单日期" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="approvestatus" title="审批状态" modelType="SimpleModel" ctrlType="TextBox" />
+        </fields>
+      </entity>
+      <entity name="Delivery" title="发货单列表" isMain="true">
+        <fields>
+          <field name="deliverys" title="发货单集合" modelType="Model3D" ctrlType="DataGrid" refEntity="DeliveryDetail"/>
+        </fields>
+      </entity>
+      <entity name="Toolbar" title="功能">
+        <fields>
+          <field name="addAction" title="增加" modelType="SimpleModel" ctrlType="Button" />
+          <field name="submitAction" title="提交" modelType="SimpleModel" ctrlType="Button" />
+          <field name="withdrawAction" title="收回" modelType="SimpleModel" ctrlType="Button" />
+          <field name="approveAction" title="审核" modelType="SimpleModel" ctrlType="Button" />
+          <field name="unapproveAction" title="弃审" modelType="SimpleModel" ctrlType="Button" />
+          <field name="closeAction" title="终止" modelType="SimpleModel" ctrlType="Button" />
+          <field name="inventoryAction" title="供货安排" modelType="SimpleModel" ctrlType="Button" />
+          <field name="deliveryAction" title="发货" modelType="SimpleModel" ctrlType="Button" />
+          <field name="outboundAction" title="出库" modelType="SimpleModel" ctrlType="Button" />
+          <field name="deleteAction" title="删除" modelType="SimpleModel" ctrlType="Button" />
+          <field name="bizAction" title="业务操作" modelType="SimpleModel" ctrlType="Button" />
+          <field name="printAction" title="打印" modelType="SimpleModel" ctrlType="Button" />
+          <field name="outputAction" title="输出" modelType="SimpleModel" ctrlType="Button" />    
+          <field name="setAction" title="设置" modelType="SimpleModel" ctrlType="Button" />
+          <field name="refreshAction" title="刷新" modelType="SimpleModel" ctrlType="Button" />        
+        </fields>
+      </entity>
+      <actions>
+        <action name="itemClick" entity="Delivery" field="deliverys" eventName="click" functionName="itemClick" defaultImpl="//默认实现"/>
+        <action name="activeRowClick" entity="Delivery" field="deliverys" eventName="onActiveRowClick" functionName="activeRowClick" defaultImpl="activeRowClick"/>
+        <action name="changePage" entity="Delivery" field="deliverys" eventName="changePage" functionName="changePage" defaultImpl="//默认实现"/>
+        <action name="addAction" entity="Toolbar" field="addAction" eventName="click" functionName="addAction" defaultImpl="linkOpen"/>
+        <action name="submitAction" entity="Toolbar" field="submitAction" eventName="click" functionName="submitAction" defaultImpl="batchSubmit"/>
+        <action name="withdrawAction" entity="Toolbar" field="withdrawAction" eventName="click" functionName="withdrawAction" defaultImpl="batchWithDraw"/>
+        <action name="approveAction" entity="Toolbar" field="approveAction" eventName="click" functionName="approveAction" defaultImpl="batchApprove"/>
+        <action name="unapproveAction" entity="Toolbar" field="unapproveAction" eventName="click" functionName="unapproveAction" defaultImpl="batchUnApprove"/>
+        <action name="closeAction" entity="Toolbar" field="closeAction" eventName="click" functionName="closeAction" defaultImpl="//默认实现"/>
+        <action name="inventoryAction" entity="Toolbar" field="inventoryAction" eventName="click" functionName="inventoryAction" defaultImpl="//默认实现"/>
+        <action name="deliveryAction" entity="Toolbar" field="deliveryAction" eventName="click" functionName="deliveryAction" defaultImpl="//默认实现"/>
+        <action name="outboundAction" entity="Toolbar" field="outboundAction" eventName="click" functionName="outboundAction" defaultImpl="//默认实现"/>
+        <action name="deleteAction" entity="Toolbar" field="deleteAction" eventName="click" functionName="deleteAction" defaultImpl="batchDelete"/>
+        <action name="bizAction" entity="Toolbar" field="bizAction" eventName="click" functionName="bizAction" defaultImpl="//默认实现"/>
+        <action name="printAction" entity="Toolbar" field="printAction" eventName="click" functionName="printAction" defaultImpl="//默认实现"/>
+        <action name="outputAction" entity="Toolbar" field="outputAction" eventName="click" functionName="outputAction" defaultImpl="//默认实现"/>        
+        <action name="setAction" entity="Toolbar" field="setAction" eventName="click" functionName="setAction" defaultImpl="config"/>
+        <action name="refreshAction" entity="Toolbar" field="refreshAction" eventName="click" functionName="refreshAction" defaultImpl="refresh"/>
+      </actions>
+    </viewmodel>
+  </application>
+</applications>

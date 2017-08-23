@@ -1,0 +1,43 @@
+<div data-controller="FundController">
+    <div class="pages">
+        <div data-page="Fund" class="page no-tabbar navbar-fixed toolbar-fixed fund-page">
+            <div class="navbar no-border">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a class="back link" href="#">
+                            <i class="icon icon-return-arrow-white"></i>
+                        </a>
+                    </div>
+                    <div class="center">
+                        我的资金
+                    </div>
+                    <div class="right">
+                        <a class="link" href="pages/bill.html">
+                            <i class="icon icon-bill"></i> &nbsp;账单
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="fund-header">
+                    <p>总余额(元)</p>
+                    <h2>{{total}}</h2>
+                </div>
+                <div class="row fund-title">
+                    <div class="col-50 link-rebate">
+                        <i class="icon yu-balance"></i>
+                        <span>返利余额(元)</span>
+                        <h3>{{iRebateNotUsedAmount}}</h3>
+                    </div>
+                    <div class="col-50">
+                        <i class="icon fan-balance"></i>
+                        <span>预付款余额(元)</span>
+                        <h3>{{iPayNotUsedAmount}}</h3>
+                    </div>
+                </div>
+                <p><a href="pages/newpaybill.html" class="button button-big active">去预付 </a></p>
+            </div>
+        </div>
+    </div>
+    <script src="../js/pages/FundController.js"></script>
+</div>

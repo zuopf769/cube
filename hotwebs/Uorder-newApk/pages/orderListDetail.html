@@ -1,0 +1,49 @@
+﻿<div data-controller="OrderListDetailController">
+    <div class="pages ">
+        <div data-page="OrderListDetail" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="back link"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center navtitleName">
+                    </div>
+                    <div class="right link color-white">共<span class="listQuantity"></span>件</div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="list-block media-list product-title m-t-0">
+                    <ul class="productList_ul"></ul>
+                </div>
+            </div>
+        </div>
+        <script type="text/template7" id="orderProductTpl">
+            {{#each data}}
+            <li>
+                <div class="item-content">
+                    <div class="item-media border-lightestgray-u">
+                        <img {{#if this[3]}} data-src="{{@root.serverhost}}{{this[3]}}" {{else}} src="img/nopic.jpg" {{/if}} width="80" class="lazy">
+                    </div>
+                    <div class="item-inner">
+                        <div class="item-title-row">
+                            <div class="item-text">{{cProductName}}</div>
+                        </div>
+                        <!--<div class="item-subtitle">Beatles</div>-->
+                        <div class="item-text font-12">
+                            <span class="font-12">{{cProductCode}}</span><br>
+                            <span class="font-12">{{cSpecDescription}}</span>
+                        </div>
+                        <div class="item-price">
+                            <span class="color-orange-u">￥{{fSalePrice}}</span>
+                        </div>
+                    </div>
+                    <div class="item-after">
+                        <span> X{{iQuantity}}</span>
+                    </div>
+                </div>
+            </li>
+            {{/each}}
+        </script>
+        <script src="../js/pages/OrderListDetailController.js"></script>
+    </div>
+</div>

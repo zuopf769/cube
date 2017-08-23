@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>方案管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./bootstrap/css/bootstrap.css" rel="Stylesheet" type="text/css" />
+    <link href="./pc/css/scheme.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.ToolBar.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="SchemeListManageView" class="container" data-title="方案管理" data-page="common.commonscheme.SchemeListManageApp" data-viewmodel="SchemeListManageViewModel">
+        <div class="common-list ui-content row" style="height:502px;overflow-y: auto;">
+            <div data-propertyname="schemelist" data-controltype="SchemeList">
+
+            </div>
+        </div>
+    </div>
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/Button.js" type="text/javascript"></script>
+    <script src="./common/js/ListControl.js" type="text/javascript"></script>
+    <script src="./pc/js/SchemeList.js" type="text/javascript"></script>
+    <script src="./apps/common/commonscheme/SchemeListManageApp_L.js"></script>
+    <script src="./apps/common/commonscheme/SchemeListManageApp_Extend.js"></script>
+    <script type="text/javascript">
+        cb.viewbinding.create("SchemeListManageView");
+    </script>
+</body>
+</html>

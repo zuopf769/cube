@@ -1,0 +1,42 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>联系人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="ContactDetailView" data-page="common.contact.ContactDetailApp" data-viewmodel="ContactDetailViewModel">
+        <div class="info-part-item">
+            <img />
+            <div class="part-item">
+                <div class="part-title">
+                    <span><label data-controltype="Label" data-propertyname="name"></label></span><span><label data-controltype="Label" data-propertyname="position"></label></span>
+                </div>
+                <div class="part-content">
+                    <span>手机：<label data-controltype="Label" data-propertyname="phone"></label></span><span>电话：<label data-controltype="Label" data-propertyname="tel"></label></span>
+                </div>
+                <div class="part-footer">
+                    <div data-controltype="ImageButton" data-propertyname="msgAction"><span class="msg-icon"></span><span></span></div>
+                    <div data-controltype="ImageButton" data-propertyname="sinaAction"><span class="sina-icon"></span><span></span></div>
+                    <div data-controltype="ImageButton" data-propertyname="uuAction"><span class="uu-icon"></span><span></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./jquery/iscroll-probe.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/Button.js"></script>
+    <script src="./common/js/ImageButton.js"></script>
+    <script src="./common/js/Label.js"></script>
+    <script src="apps/common/contact/ContactDetailApp_L.js" type="text/javascript"></script>
+    <script src="apps/common/contact/ContactDetailApp_Extend.js" type="text/javascript"></script>
+	<script type="text/javascript">
+        cb.viewbinding.create("ContactDetailView");
+	</script>
+</body>
+</html>

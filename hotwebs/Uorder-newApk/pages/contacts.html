@@ -1,0 +1,80 @@
+﻿<div data-controller="ContactsController">
+    <div class="pages">
+        <div data-page="contactsListPage" class="page no-tabbar">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="link back">
+                            <i class="icon icon-backgray"></i>
+                        </a>
+                    </div>
+                    <div class="center">联系人</div>
+                    <div class="right">
+                        <a class="link" href="pages/contactsNew.html">新增</a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="user-list m-t-0">
+                    <div class="list-block  all-order  m-b-0 media-list contacts contactsListPage-container">                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script id="contactItemTpl" type="text/template7">
+        {{#each contacts}}
+        {{#if bDefault}}
+        <ul>
+            <li class="item-content contactsPage-item" data-id="{{id}}">
+                <div class="item-media contacts-item-area">
+                    <!--此处可以有四种颜色可选，color-1 color-2 color-3 color-4-->
+                    <span class="grid color-{{colorId}}">{{cAbbr}}</span>
+                </div>
+                <div class="item-inner no-border contacts-item-area">
+                    <div class="item-title-row ">
+                        <div class="item-title">
+                            <span>{{cFullName}}</span>  <span class="default">[默认]</span>
+                        </div>
+                        <div class="item-after">
+                        </div>
+                    </div>
+                    <div class="item-subtitle">{{#if cPosition}}{{cPosition}}{{/if}}</div>
+                </div>
+                <div class="item-media last-icon deviceManageContainer" data-id="{{id}}">
+                    <a href="sms:{{cMobile}}" class="external"><i class="icon icon-message"></i></a>
+                    <a href="tel:{{cMobile}}" class="external"><i class="icon icon-phone"></i></a>
+                </div>
+            </li>
+        </ul>
+        {{/if}}
+        {{/each}}
+        <ul class="m-t-10">
+            {{#each contacts}}
+            {{#unless bDefault}}
+            <li class="item-content contactsPage-item" data-id="{{id}}">
+                <div class="item-media contacts-item-area">
+                    <!--此处可以有四种颜色可选，color-1 color-2 color-3 color-4-->
+                    <span class="grid color-{{colorId}}">{{cAbbr}}</span>
+                </div>
+                <div class="item-inner no-border contacts-item-area">
+                    <div class="item-title-row ">
+                        <div class="item-title">
+                            <span>{{cFullName}}</span>
+                        </div>
+                        <div class="item-after">
+                        </div>
+                    </div>
+                    <div class="item-subtitle">{{#if cPosition}}{{cPosition}}{{/if}}</div>
+                </div>
+                <div class="item-media last-icon deviceManageContainer" data-id="{{id}}">
+                    <a href="sms:{{cMobile}}" class="external"><i class="icon icon-message"></i></a>
+                    <a href="tel:{{cMobile}}" class="external"><i class="icon icon-phone"></i></a>
+                </div>
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </script>
+    <script type="text/javascript" src="../js/pages/ContactsController.js"></script>
+</div>

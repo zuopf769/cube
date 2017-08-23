@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application name="closebillListApp" title="收款单主表列表" moduleName="u8" symbol="u8.closebill">
+  <references reference="../u8/closebillListAppVM.xml"/>
+  <view name="closebillListView" title="收款单主表列表" layoutMode="Fluid" appId="u8.closebillListApp" viewModel="u8.closebillListApp.closebillListViewModel" screenSize="L" tplName="vouchers_L.html.tpl">
+    <container name="Toolbar" title="工具栏" type="Toolbar">
+      <control name="addAction" title="增加" group="add" ctrlType="Button" css="add-icon" field="addAction" entity="Toolbar"/>
+      <control name="editAction" title="编辑" group="add" ctrlType="Button" css="add-icon" field="editAction" entity="Toolbar"/>
+      <control ctrlType="separator"/>
+      <control name="submitAction" title="提交" group="workflow1" ctrlType="Button" css="submit-icon" field="submitAction" entity="Toolbar"/>
+      <control name="withdrawAction" title="收回" group="workflow1" ctrlType="Button" css="withdraw-icon" field="withdrawAction" entity="Toolbar"/>
+      <control ctrlType="separator"/>
+      <control name="approveAction" title="审核" group="workflow2" ctrlType="Button" css="approve-icon" field="approveAction" entity="Toolbar"/>
+      <control name="unapproveAction" title="弃审" group="workflow2" ctrlType="Button" css="unapprove-icon" field="unapproveAction" entity="Toolbar"/>
+      <control ctrlType="separator"/>
+      <control name="closeAction" title="终止" group="close" ctrlType="Button" css="close-icon" field="closeAction" entity="Toolbar"/>
+      <control ctrlType="separator"/>
+      <control name="inventoryAction" title="供货安排" group="business" ctrlType="Button" css="inventory-icon" field="inventoryAction" entity="Toolbar"/>
+      <control ctrlType="separator"/>
+      <control name="deliveryAction" title="发货" group="business" ctrlType="Button" css="delivery-icon" field="deliveryAction" entity="Toolbar"/>
+      <control name="outboundAction" title="出库" group="business" ctrlType="Button" css="outbound-icon" field="outboundAction" entity="Toolbar"/>
+      <control ctrlType="separator"/>
+      <control name="deleteAction" title="删除" group="delete" ctrlType="Button" css="delete-icon" field="deleteAction" entity="Toolbar"/>
+      <control ctrlType="separator"/>
+      <control name="bizAction" title="业务操作" group="biz" ctrlType="Button" css="biz-icon" field="bizAction" entity="Toolbar"/>
+      <control ctrlType="separator"/>
+      <control name="printAction" title="打印" group="device" ctrlType="Button" css="print-icon" field="printAction" entity="Toolbar"/>
+      <control name="outputAction" title="输出" group="device" ctrlType="Button" css="output-icon" field="outputAction" entity="Toolbar"/>
+      <control name="sortAction" title="排序" isNavigate="true" ctrlType="Button" css="sort-icon" field="sortAction" entity="Toolbar"/>
+      <control name="filterAction" title="过滤" isNavigate="true" ctrlType="Button" css="filter-icon" field="filterAction" entity="Toolbar"/>
+      <control name="setAction" title="设置" isNavigate="true" ctrlType="Button" css="set-icon" field="setAction" entity="Toolbar"/>
+    </container>
+    <container name="closebillListView_body" title="收款单主表列表" type="Grid">
+      <control name="closebills" title="收款单主表列表" ctrlType="DataGrid" field="closebills" entity="closebillList">
+        <column name="billno" title="单据号" field="billno" ctrlType="TextBox" position="leftTop"/>
+        <column name="ccusname" title="客户全称" field="ccusname" ctrlType="TextBox" position="rightTop"/>
+        <column name="creationtime" title="制单时间" field="creationtime" ctrlType="DateTimeBox" position="leftBottom"/>
+        <column name="cvshipaddress" title="联系地址" field="cvshipaddress" ctrlType="TextBox" position="rightBottom"/>
+        <column name="approvestatus" title="单据状态" field="approvestatus" ctrlType="TextBox" position="status"/>
+      </control>
+    </container>
+  </view>
+</application>

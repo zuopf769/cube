@@ -1,0 +1,95 @@
+﻿<div data-controller="ProductPageController">
+    <div class="pages">
+        <div data-page="protDetailPage" class="page no-tabbar navbar-fixed toolbar-fixed proDetail">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="close-popup link"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center">商品详情</div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content hide-toolbar-on-scroll" style="background: #fff;">
+                <div class="productList ">
+                    <div class="row product-title">
+                        <div class="col-33">
+                            <img src="{{product.productImgUrl}}" width="75" height="75">
+                        </div>
+                        <div class="col-66">
+                            <p>
+                                {{product.cName}}
+                            </p>
+                            <p class="color-lightestgray-u">{{product.cCode}}</p>
+                            <p class="color-orange-u">￥<span>{{product.fSalePrice}}</span></p>
+                        </div>
+                    </div>
+                    <form id="ProductId" style="display: none">
+                        <input type="hidden" name="productId" value="{{product.id}}">
+                    </form>
+                    {{#if product.lsSpecsLength}}
+                    <form id="SpecsDetail">
+                        <div class="row attrs">
+                            {{#each product.lsSpecs}}
+                            <div class="col-20">{{cName}}</div>
+                            <div class="col-80">
+                                {{#each lsSpecItem}}
+                                <div class="attrItem">
+                                    <input type="radio" name="{{iSpecId}}" value="{{id}}" {{#if @first}} checked {{/if}} />
+                                    <span>{{cSpecItemName}}</span>
+                                </div>
+                                {{/each}}
+                            </div>
+                            {{/each}}
+                        </div>
+                    </form>
+                    {{/if}}
+                    <form id="sku">
+                        <div class="list-block accordion-list m-t-0 " id="SUKInfo">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="toolbar-inner producttoolbar">
+                    <a href="#" class="button updateCancel">加入购物车</a>
+                    <a href="#" class="button updateOk">立即订购</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/template7" id="SUKTemplate">
+        <ul>
+            {{#each SKUDetails}}
+            <li class="accordion-item">
+                <input type="hidden" name="iSKUId_{{@index}}" value={{id}}>
+                <a href="#" class="item-link item-content item-a">
+
+                    <div class="item-inner">
+                        <div class="item-title">{{#each lsSkuSpecItems}}{{cSpecItemName}};{{/each}}</div>
+                    </div>
+                </a>
+                <span style="font-size:12px;">{{iMinOrderQuantity}}{{@root.unit}}起</span>
+                <input type="hidden" name="iMinOrderQuantity_{{@index}}" value="{{iMinOrderQuantity}}" />
+                <div class="item-number no-bg">
+                    <div class="item-title">
+                        <i class="icon icon-less" data-skuid="{{id}}"></i>
+                        <input type="number" name="iQuantity_{{@index}}" data-price="{{fSalePrice}}" value="0" data-skuid="{{id}}">
+                        <i class="icon icon-add" data-skuid="{{id}}"></i>
+                    </div>
+                </div>
+                <div class="accordion-item-content item-number-content">
+                    {{#each lsPriceJustifyItems}}
+                    <dl>
+                        <dt>≥{{iLowerlimit}}{{@root.unit}}</dt>
+                        <dd class="color-orange-u">￥{{iPrice}}</dd>
+                    </dl>
+                    {{/each}}
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+    <script type="text/javascript" src="../js/pages/ProductPageController.js"></script>
+</div>
+

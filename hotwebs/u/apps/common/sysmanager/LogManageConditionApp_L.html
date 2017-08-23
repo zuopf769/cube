@@ -1,0 +1,108 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>系统启用</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="pc/css/kendoctrl/Cube.Control.css" rel="stylesheet"/>
+     <link href="pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="pc/css/Cube.ToolBar.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link data-config="MessageBox" />
+	<style>
+		.input{
+			font-family:'微软雅黑 Regular', '微软雅黑';
+			font-size:12px;
+			//font-weight:500;
+			color:#333333;
+		}
+		.label{
+			font-family:'微软雅黑 Regular', '微软雅黑';
+			font-size:12px;
+			//font-weight:500;
+			color:#999999;
+		}
+	</style>
+</head>
+<body>
+<div id="LogManageConditionView" data-page="common.sysmanager.LogManageConditionApp" data-title="系统启用" data-viewmodel="LogManageConditionViewModel"style="height:250px;">
+      <div class="row">
+          <div class="col-lg-12 p-0"style="margin-top:50px;margin-left:20px">
+               <div class="col-lg-2">
+                    <input data-propertyname="ManageDate_textbox" data-controltype="TextBox"style="text-align:center;" class="label" />
+               </div>
+              <div class="col-lg-3 p-0 combobox">
+                    <input data-propertyname="ManageDate_combobox" data-controltype="ComboBox" class="input" />
+              </div>
+              <div class="col-lg-3 p-0 datebox m-0">
+                    <input data-propertyname="ManageDate_datebox" data-controltype="DateBox" class="input"  />
+              </div>
+                <div class="col-lg-3 p-0 datebox m-0">
+                    <input data-propertyname="ManageDate_datebox1" data-controltype="DateBox"  class="input" />
+              </div>
+           </div>
+          <div class="col-lg-12 p-0 m-t-10 m-l-20">
+               <div class="col-lg-2">
+                    <input data-propertyname="User_textbox" data-controltype="TextBox"style="text-align:center;" class="label"  />
+               </div>
+              <div class="col-lg-3 p-0 combobox">
+                    <input data-propertyname="User_combobox" data-controltype="ComboBox" class="input"  />
+              </div>
+              <div class="col-lg-3 p-0" data-propertyname="User_refer" data-controltype="Refer">
+              <input type="text" class="input"  />
+              <div>
+                    <img src="pc/images/Ref-close.png" />
+                    <img src="pc/images/Ref.png" />
+              </div>
+    </div>
+           </div>
+          <div class="col-lg-12 p-0 m-t-10 m-l-20">
+               <div class="col-lg-2">
+                    <input data-propertyname="ButtonName_textbox" data-controltype="TextBox" style="text-align:center;" class="label"  />
+               </div>
+              <div class="col-lg-3 p-0 combobox">
+                    <input data-propertyname="ButtonName_combobox" data-controltype="ComboBox" class="input"  />
+              </div>
+              <div class="col-lg-3 p-0 datebox m-0">
+                    <input data-propertyname="ButtonName_textbox1" data-controltype="TextBox" class="input"  />
+              </div>
+           </div>
+ <div data-propertyname="leftToolbar" data-controltype="ToolBar" class="cube-bar-modeltxt col-lg-12" style="margin-top:30px;overflow:inherit">
+                   <li class="col-lg-2 m-t-3"style="float:right">
+                        <div data-propertyname="cancelAction" data-controltype="ImageButton">
+                            <span></span>
+                            <span>取消</span>
+                        </div>
+                    </li>                         
+                    <li class="col-lg-2 m-t-3" style="float:right">
+                          <div data-propertyname="confirmAction" data-controltype="ImageButton">
+                               <span></span>
+                               <span>确认</span>
+                           </div>
+                    </li> 
+                    </div>
+       </div>
+ </div>
+<script src="jquery/jquery-1.11.1.js" type="text/javascript"></script>
+<script src="jquery/jquery-ui.js" type="text/javascript"></script>
+<script src="common/js/Animation.js" type="text/javascript"></script>
+<script src="common/js/Cube.js" type="text/javascript"></script>
+<script src="common/js/Button.js" type="text/javascript"></script>
+<script src="common/js/ImageButton.js" type="text/javascript"></script>
+<script src="common/js/Cube.bindings.js" type="text/javascript"></script>
+<script src="common/js/Control.js" type="text/javascript"></script>
+<script data-config="Refer"></script>
+<script src="common/js/ToolBar.js" type="text/javascript"></script>
+<script data-config="DateBox"></script>
+<script data-config="TextBox"></script>
+<script src="pc/js/cube.pc.js" type="text/javascript"></script>
+<script data-config="MessageBox"></script>
+<script src="apps/common/sysmanager/LogManageCondition.js"></script>
+<script src="apps/common/sysmanager/LogManageCondition_Extend.js"></script>
+<script type="text/javascript">
+    cb.viewbinding.create("LogManageConditionView");
+</script>
+</body>
+</html>

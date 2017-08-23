@@ -1,0 +1,172 @@
+﻿<div data-controller="productDetailController">
+    <div class="pages">
+        <div data-page="productDetail" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="back link"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center sliding">商品详情</div>
+                    <div class="right">
+                        <a href="#" class="link"><i class="icon icon-collect" data-id="{{productInfo.id}}"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content hide-toolbar-on-scroll" style="background: #fff;">
+                <!-- 轮播图 start-->
+                <div class="swiper-container product-swiper swiper-container-horizontal">
+                    <div class="swiper-wrapper">
+                        {{#each productInfo.lsAlbums}}
+                        <div class="swiper-slide u-slide swiper-slide-active" style="width: 414px;">
+                            <img data-src="{{@root.serverhost}}{{cFolder}}m_{{cImgName}}" class="swiper-lazy">
+                            <div class="preloader"></div>
+                        </div>
+
+                        {{/each}}
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- 轮播图 end -->
+                <div class="content-title list-block m-t-0 m-b-0">
+                    <div class="item-inner">
+                        <div class="item-title color-lightergray-u">{{productInfo.cCode}}</div>
+                        <div class="item-after">库存量：{{productInfo.cInventoryDisplay}}</div>
+                    </div>
+                    <div class="title">
+                        {{productInfo.cName}}
+                    </div>
+                    <div class="prices color-orange-u ">
+                        <span class="font-14">￥</span>
+                        <span class="font-18">{{#if productInfo._Price}}{{productInfo.minPrice}}{{else}}{{productInfo.minPrice}}-{{productInfo.maxPrice}}{{/if}}</span>
+                    </div>
+                </div>
+                <!-- 标题 end -->
+                <div class="list-block m-t-0 m-b-0 productDetail-Clickli">
+                    <ul>
+                        <!--<li>
+                            <a href="#" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">优惠</div>
+                                    <div class="item-content"><i class="icon icon-cu"></i>200000元享受8折优惠</div>
+                                </div>
+                            </a>
+                        </li>-->
+                        {{#if productInfo.lsSpecs.length}}
+                        <li data-property="property" data-id="{{productInfo.id}}" data-contentlength="{{productInfo.lsSpecs.length}}">
+                            <a href="#" class="item-link item-content border-t">
+                                <div class="item-inner">
+                                    <div class="item-title">规格</div>
+                                    <div class="item-after">可选 {{productInfo.lsSpecs.length}} 种规格 </div>
+                                </div>
+                            </a>
+                        </li>
+                        {{else}}
+                        <li data-property="iMinOrderQuantity">
+                            <div class="item-content border-t">
+                                <div class="item-inner" style="background-image:none;">
+                                    <div class="item-title">起订量</div>
+                                    <div class="item-after">{{#if productInfo.iMinOrderQuantity>0}}{{productInfo.iMinOrderQuantity}}{{else}}大于0{{/if}} {{productInfo.oUnit.cName}}</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li data-property="number">
+                            <div class="item-link item-content">
+                                <div class="item-inner" style="background-image:none;">
+                                    <div class="item-title">数量</div>
+                                    <div class="item-after">
+                                        <div class="item-number" style="width: 100%;margin-top: -5px;">
+                                            <div class="item-title">
+                                                <i class="icon icon-less"></i>
+                                                <input type="number" name="pdt-iQuantity" value="{{#if productInfo.iMinOrderQuantity}}{{productInfo.iMinOrderQuantity}}{{else}}1{{/if}}">
+                                                <i class="icon icon-add"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {{/if}}
+                        <li data-property="attachment" data-id="{{productInfo.id}}" data-contentlength="{{productInfo.lsAttachments.length}}" class="item-content hidden">
+                            <div class="item-inner">
+                                <div class="item-title">附件</div>
+                                <div class="item-after">{{productInfo.lsAttachments.length}} 件</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 规格部分 end -->
+                <div class="tab-content  bg-white">
+                    <div class="buttons-row  tabbar-u">
+                        <!-- 关联到第一个tab, 默认激活 -->
+                        <a href="#productDescription" class="tab-link active button">商品详情</a>
+                        <!-- 关联到第二个tab -->
+                        <a href="#productParameters" class="tab-link  button">商品参数</a>
+                    </div>
+                    <div class="tabs">
+                        <!-- Tab 1, 默认激活 -->
+                        <div id="productDescription" class="tab active">
+                            <div class="content-block">
+                                {{#if productInfo.oProductSub.cDescription}}
+                                {{productInfo.oProductSub.cDescription}}
+                                {{else}}
+                                <div class="item-content">
+                                    <div class="item-inner" style="text-align:left;height:50px;font-size:17px;padding-top:10px;">
+                                        暂无相关描述信息
+                                    </div>
+                                </div>
+                                {{/if}}
+                            </div>
+                        </div>
+                        <!-- Tab 2 -->
+                        <div id="productParameters" class="tab">
+                            <div class="content-block m-t-0 p-0">
+                                <div class="list-block m-t-0 argument">
+                                    <ul>
+                                        {{#each productInfo.lsProductParameters}}
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-inner">
+                                                    <div class="item-title">
+                                                        {{oParameter.cName}}
+                                                    </div>
+                                                    <div class="item-after">
+                                                        {{cParamValue}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        {{else}}
+                                        <li>
+                                            <div class="item-content">
+                                                <div class="item-inner" style="text-align:center;">
+                                                    暂无相关参数信息
+                                                </div>
+                                            </div>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- tab end -->
+            </div>
+            <div class="toolbar">
+                <div class="toolbar-inner producttoolbar">
+                    <a href="#" class="productDetail-cart tab-link">
+                        <i class="icon icon-cart">
+                        </i>
+                    </a>
+                    <div class="tab-link">
+                        <a class="button border-green-u color-green-u productDetail-addCart1">加入购物车</a>
+                    </div>
+                    <div class="tab-link">
+                        <a class="button button-fill bg-green-u productDetail-addOrder">立即订购</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pages/productDetailController.js"></script>
+</div>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<applications>
+  <application id="17ab6b26-6601-496c-9d8a-1e0270607108" name="customerclassApp" title="u8customerclass" domainName="uap" moduleName="u8" symbol="u8.customerclass" ts="2015-04-22 17:03:33" dr="0" tplName_viewModel="catalogs" tplName="catalogs_min.tpl">
+    <viewmodel id="17ab6b26-6601-496c-9d8a-1e0270607108" name="customerclassAppViewModel_catalogs" title="u8customerclass" extendName="customerclassAppViewModel_catalogs_Extend" ts="2015-04-22 17:03:33" dr="0" tplName="catalogs_min.js.tpl">
+      <entity id="17ab6b26-6601-496c-9d8a-1e0270607108-toolbar" name="Toolbar" title="功能" entityId="6817d630-e9ea-4b3f-a010-65ee7a8399b8" isMain="true" ts="2015-04-22 17:03:33" dr="0">
+        <field id="17ab6b26-6601-496c-9d8a-1e0270607108-btn-addActionL" name="addAction" title="增加" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="catalogs" ts="2015-05-21 09:39:20" dr="0" entity="Toolbar"/>
+        <field id="17ab6b26-6601-496c-9d8a-1e0270607108-btn-editActionL" name="editAction" title="编辑" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="catalogs" ts="2015-05-21 09:39:20" dr="0" entity="Toolbar"/>
+        <field id="17ab6b26-6601-496c-9d8a-1e0270607108-btn-deleteActionL" name="deleteAction" title="删除" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="catalogs" ts="2015-05-21 09:39:20" dr="0" entity="Toolbar"/>
+        <field id="17ab6b26-6601-496c-9d8a-1e0270607108-btn-cancelActionL" name="cancelAction" title="取消" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="catalogs" ts="2015-05-21 09:39:20" dr="0" entity="Toolbar"/>
+        <field id="17ab6b26-6601-496c-9d8a-1e0270607108-btn-saveActionL" name="saveAction" title="保存" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="catalogs" ts="2015-05-21 09:39:20" dr="0" entity="Toolbar"/>
+        <field id="17ab6b26-6601-496c-9d8a-1e0270607108-btn-configActionL" name="configAction" title="设置" ctrlType="DropDownButton" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="catalogs" ts="2015-05-21 09:39:20" dr="0" entity="Toolbar"/>
+        <field id="06224886-8668-4aeb-89a2-a11e76d8afa0" name="copyAction" title="复制" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="Head" tpltype="catalogs" ts="2015-05-21 09:39:20" dr="0" entity="Toolbar"/>
+        <interfaces/>
+      </entity>
+      <entity id="6817d630-e9ea-4b3f-a010-65ee7a8399b8" name="customerclass" title="客户分类" entityId="6817d630-e9ea-4b3f-a010-65ee7a8399b8" isMain="true" ts="2015-04-22 17:03:33" dr="0">
+        <field id="6817d630-e9ea-4b3f-a010-65ee7a8399b8-ts" name="ts" title="时间戳" ctrlType="DateTimeBox" isNecessary="true" isNullable="true" isReadOnly="true" isSyncKey="true" isVisible="true" modelType="SimpleModel" fieldType="Head" ts="2015-04-23 10:20:31" dr="0" entity="customerclass"/>
+        <field id="6817d630-e9ea-4b3f-a010-65ee7a8399b8-dr" name="dr" title="删除标记" ctrlType="CheckBox" isNecessary="true" isNullable="true" isReadOnly="true" isVisible="true" modelType="SimpleModel" fieldType="Head" ts="2015-04-23 10:20:31" dr="0" entity="customerclass"/>
+        <field id="1aa931a2-2ef1-4551-86b0-100125b587d4" name="pk_customerclass" title="客户分类pk" ctrlType="TextBox" iLength="20" isKey="true" isNecessary="true" isNullable="false" isVisible="true" modelType="SimpleModel" fieldType="Head" dataType="string" ts="2015-04-23 10:20:31" dr="0" uapDataType="BS000010000100001051" entity="customerclass"/>
+        <field id="586a97b4-832b-4ede-a059-a55575e6bd44" name="code" title="客户分类编码" ctrlType="TextBox" iLength="50" isNullable="true" isVisible="true" modelType="SimpleModel" fieldType="Head" dataType="string" ts="2015-04-23 10:20:31" dr="0" uapDataType="BS000010000100001001" entity="customerclass"/>
+        <field id="7e631bee-4f05-471d-a915-4a8a3a9167aa" name="name" title="类别名称" ctrlType="TextBox" iLength="50" isNullable="true" isVisible="true" modelType="SimpleModel" fieldType="Head" dataType="string" ts="2015-04-23 10:20:31" dr="0" uapDataType="BS000010000100001001" entity="customerclass"/>
+        <field id="a271ffc5-f27c-44f8-a3a7-518f014b69f0" name="iccgrade" title="编码级次" ctrlType="NumberBox" iPrecision="0" iScale="0" isNullable="true" isVisible="true" modelType="SimpleModel" fieldType="Head" dataType="number" ts="2015-04-23 10:20:31" dr="0" uapDataType="BS000010000100001004" entity="customerclass"/>
+        <field id="f6733ec6-466b-4963-a5af-ca2c9ab03eb0" name="bccend" title="是否末级" ctrlType="CheckBox" iLength="1" isNullable="true" isVisible="true" modelType="SimpleModel" fieldType="Head" dataType="boolean" ts="2015-04-23 10:20:31" dr="0" uapDataType="BS000010000100001032" entity="customerclass"/>
+        <field id="b9ec728e-e78c-4f0e-8e48-20a20ccfae37" name="pk_group" title="集团" ctrlType="Refer" iLength="20" isNullable="true" isVisible="true" modelType="SimpleModel" refCode="code" refId="600001" refKey="pk_group" refName="name" fieldType="Head" dataType="string" ts="2015-04-23 10:20:31" dr="0" uapDataType="3b6dd171-2900-47f3-bfbe-41e4483a2a65" entity="customerclass"/>
+        <field id="e1ebf50a-ffb6-4e7a-9dcc-257ed3464816" name="pk_org" title="组织" ctrlType="Refer" iLength="20" isNullable="true" isVisible="true" modelType="SimpleModel" refCode="code" refId="600015" refKey="pk_org" refName="name" fieldType="Head" dataType="string" ts="2015-04-23 10:20:31" dr="0" uapDataType="985be8a4-3a36-4778-8afe-2d8ed3902659" entity="customerclass"/>
+        <field id="d6e079b7-f534-43d2-8678-e76638333cec" name="pk_org_v" title="组织版本" ctrlType="Refer" iLength="20" isNullable="true" isVisible="true" modelType="SimpleModel" refCode="code" refId="600700" refKey="pk_vid" refName="name" fieldType="Head" dataType="string" ts="2015-04-23 10:20:31" dr="0" uapDataType="da7bba89-9a59-42d6-a262-c13ef459dbd9" entity="customerclass"/>
+        <field id="16f83342-a72b-46bc-b163-53fa397e1004" name="creator" title="创建人" ctrlType="Refer" iLength="20" isNullable="true" isVisible="true" modelType="SimpleModel" refCode="user_code" refId="600026" refKey="cuserid" refName="user_name" fieldType="Head" dataType="string" ts="2015-04-23 10:20:31" dr="0" uapDataType="f6f9a473-56c0-432f-8bc7-fbf8fde54fee" entity="customerclass"/>
+        <field id="6eca5660-59a0-499e-aa79-17644549816f" name="creationtime" title="创建时间" ctrlType="DateTimeBox" isNullable="true" isVisible="true" modelType="SimpleModel" fieldType="Head" dataType="date" ts="2015-04-23 10:20:31" dr="0" uapDataType="BS000010000100001034" entity="customerclass"/>
+        <field id="6817d630-e9ea-4b3f-a010-65ee7a8399b8-tree" name="customerclassApp_Tree" title="u8customerclass树" ctrlType="Tree" iLength="20" isNullable="true" isVisible="true" modelType="Model2D" refCode="code" refId="600700" refKey="pk_vid" refName="name" fieldType="List" tpltype="catalogs" dataType="string" ts="2015-04-23 10:20:31" dr="0" uapDataType="da7bba89-9a59-42d6-a262-c13ef459dbd9" entity="customerclass"/>
+        <field id="5c038cf6-b5dc-40ad-a48c-1e70e5b374fc" name="modifier" title="修改人" ctrlType="Refer" iLength="20" isNullable="true" isVisible="true" modelType="SimpleModel" refCode="user_code" refId="600026" refKey="cuserid" refName="user_name" fieldType="Head" dataType="string" ts="2015-04-23 10:20:31" dr="0" uapDataType="f6f9a473-56c0-432f-8bc7-fbf8fde54fee" entity="customerclass"/>
+        <field id="571a3233-2b14-455b-b4d6-ef787486d796" name="modifiedtime" title="修改时间" ctrlType="DateTimeBox" isNullable="true" isVisible="true" modelType="SimpleModel" fieldType="Head" dataType="date" ts="2015-04-23 10:20:31" dr="0" uapDataType="BS000010000100001034" entity="customerclass"/>
+        <field id="b5545fc3-740b-488b-b05c-7ea94a5118af" name="def1" title="自定义项1" ctrlType="TextBox" iLength="100" isNullable="true" isVisible="true" modelType="SimpleModel" fieldType="Head" dataType="string" ts="2015-04-23 10:20:31" dr="0" uapDataType="BS000010000100001001" entity="customerclass"/>
+        <field id="b90c1703-55ae-4609-a3f8-b31f41ca148c" name="def2" title="自定义项2" ctrlType="TextBox" iLength="100" isNullable="true" isVisible="true" modelType="SimpleModel" fieldType="Head" dataType="string" ts="2015-04-23 10:20:31" dr="0" uapDataType="BS000010000100001001" entity="customerclass"/>
+        <field id="5918e24d-7303-4fa1-9743-780e18e16fe0" name="def3" title="自定义项3" ctrlType="TextBox" iLength="100" isNullable="true" isVisible="true" modelType="SimpleModel" fieldType="Head" dataType="string" ts="2015-04-23 10:20:31" dr="0" uapDataType="BS000010000100001001" entity="customerclass"/>
+        <field id="2ae50581-da25-40b0-b8f8-6e9dd0cfa075" name="def4" title="自定义项4" ctrlType="TextBox" iLength="100" isNullable="true" isVisible="true" modelType="SimpleModel" fieldType="Head" dataType="string" ts="2015-04-23 10:20:31" dr="0" uapDataType="BS000010000100001001" entity="customerclass"/>
+        <field id="ef25c991-07bd-4e1a-a15a-ade4bd2f7330" name="def5" title="自定义项5" ctrlType="TextBox" iLength="100" isNullable="true" isVisible="true" modelType="SimpleModel" fieldType="Head" dataType="string" ts="2015-04-23 10:20:31" dr="0" uapDataType="BS000010000100001001" entity="customerclass"/>
+        <interfaces>
+          <interface key="IOrgInfo{####}pk_org" value="pk_org"/>
+          <interface key="IBDObject{####}name" value="name"/>
+          <interface key="IAuditInfo{####}creator" value="creator"/>
+          <interface key="IBDObject{####}pid" value=""/>
+          <interface key="IAuditInfo{####}creationtime" value="creationtime"/>
+          <interface key="IBDObject{####}id" value="pk_customerclass"/>
+          <interface key="IBDObject{####}pk_org" value="pk_org"/>
+          <interface key="IBDObject{####}code" value="code"/>
+          <interface key="IAuditInfo{####}modifier" value="modifier"/>
+          <interface key="IOrgInfo{####}pk_org_v" value="pk_org_v"/>
+          <interface key="IAuditInfo{####}modifiedtime" value="modifiedtime"/>
+          <interface key="IBDObject{####}pk_group" value="pk_group"/>
+        </interfaces>
+      </entity>
+      <actions>
+        <action id="17ab6b26-6601-496c-9d8a-1e0270607108-btn-addActionL" name="addAction" entity="Toolbar" field="addAction" defaultImpl="add" eventName="click" functionName="addAction" tplType="catalogs" ts="2015-05-21 09:40:32" dr="0"/>
+        <action id="17ab6b26-6601-496c-9d8a-1e0270607108-btn-editActionL" name="editAction" entity="Toolbar" field="editAction" defaultImpl="edit" eventName="click" functionName="editAction" tplType="catalogs" ts="2015-05-21 09:40:32" dr="0"/>
+        <action id="17ab6b26-6601-496c-9d8a-1e0270607108-btn-saveActionL" name="saveAction" entity="Toolbar" field="saveAction" defaultImpl="save" eventName="click" functionName="saveAction" tplType="catalogs" ts="2015-05-21 09:40:32" dr="0"/>
+        <action id="17ab6b26-6601-496c-9d8a-1e0270607108-btn-cancelActionL" name="cancelAction" entity="Toolbar" field="cancelAction" defaultImpl="cancel" eventName="click" functionName="cancelAction" tplType="catalogs" ts="2015-05-21 09:40:32" dr="0"/>
+        <action id="17ab6b26-6601-496c-9d8a-1e0270607108-btn-deleteActionL" name="deleteAction" entity="Toolbar" field="deleteAction" defaultImpl="delete" eventName="click" functionName="deleteAction" tplType="catalogs" ts="2015-05-21 09:40:32" dr="0"/>
+        <action id="17ab6b26-6601-496c-9d8a-1e0270607108-btn-configActionL" name="configAction" entity="Toolbar" field="configAction" defaultImpl="config" eventName="click" functionName="configAction" tplType="catalogs" ts="2015-05-21 09:40:32" dr="0"/>
+        <action id="6817d630-e9ea-4b3f-a010-65ee7a8399b8-tree-act-treeBeforeExpand" name="treeBeforeExpand" entity="customerclass" field="customerclassApp_Tree" defaultImpl="treeBeforeExpand" eventName="beforeExpand" functionName="treeBeforeExpand" fieldType="List" tplType="catalogs" ts="2015-05-21 09:40:32" dr="0"/>
+        <action id="6817d630-e9ea-4b3f-a010-65ee7a8399b8-tree-act-treeClick" name="treeClick" entity="customerclass" field="customerclassApp_Tree" defaultImpl="treeClick" eventName="click" functionName="treeClick" fieldType="List" tplType="catalogs" ts="2015-05-21 09:40:32" dr="0"/>
+        <action id="6817d630-e9ea-4b3f-a010-65ee7a8399b8-tree-act-treeMoreClick" name="treeMoreClick" entity="customerclass" field="customerclassApp_Tree" defaultImpl="treeMoreClick" eventName="moreClick" functionName="treeMoreClick" fieldType="List" tplType="catalogs" ts="2015-05-21 09:40:32" dr="0"/>
+        <action id="36a9fec8-787b-4d8a-a20b-2c81c5a30a6e" name="copyAction" entity="Toolbar" field="copyAction" defaultImpl="copy" eventName="click" functionName="copyAction" tplType="catalogs" ts="2015-05-21 09:40:32" dr="0"/>
+      </actions>
+      <proxies/>
+      <states>
+        <state id="17ab6b26-6601-496c-9d8a-1e0270607108-add" name="add" isSystem="true" ts="2015-06-05 09:43:58" dr="0">
+          <buttons>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-add-addAction" name="addAction" disable="1" ts="2015-05-21 09:40:46" dr="0" entity="Toolbar" field="addAction"/>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-add-cancelAction" name="cancelAction" disable="0" ts="2015-05-21 09:40:46" dr="0" entity="Toolbar" field="cancelAction"/>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-add-configAction" name="configAction" disable="0" ts="2015-05-21 09:40:46" dr="0" entity="Toolbar" field="configAction"/>
+            <button id="723f6f38-aac9-4a7e-962f-7c2b12b0cbe6" disable="1" ts="2015-05-21 09:40:46" dr="0" entity="Toolbar" field="copyAction"/>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-add-deleteAction" name="deleteAction" disable="1" ts="2015-05-21 09:40:46" dr="0" entity="Toolbar" field="deleteAction"/>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-add-editAction" name="editAction" disable="1" ts="2015-05-21 09:40:46" dr="0" entity="Toolbar" field="editAction"/>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-add-saveAction" name="saveAction" disable="0" ts="2015-05-21 09:40:46" dr="0" entity="Toolbar" field="saveAction"/>
+          </buttons>
+        </state>
+        <state id="17ab6b26-6601-496c-9d8a-1e0270607108-browse" name="browse" isSystem="true" ts="2015-06-05 09:43:58" dr="0">
+          <buttons>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-browse-addAction" name="addAction" disable="0" ts="2015-05-21 09:40:52" dr="0" entity="Toolbar" field="addAction"/>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-browse-cancelAction" name="cancelAction" disable="1" ts="2015-05-21 09:40:52" dr="0" entity="Toolbar" field="cancelAction"/>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-browse-configAction" name="configAction" disable="0" ts="2015-05-21 09:40:52" dr="0" entity="Toolbar" field="configAction"/>
+            <button id="d72e26bd-9f8b-4e99-94ee-2598b904bda7" disable="0" ts="2015-05-21 09:40:52" dr="0" entity="Toolbar" field="copyAction"/>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-browse-deleteAction" name="deleteAction" disable="0" ts="2015-05-21 09:40:52" dr="0" entity="Toolbar" field="deleteAction"/>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-browse-editAction" name="editAction" disable="0" ts="2015-05-21 09:40:52" dr="0" entity="Toolbar" field="editAction"/>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-browse-saveAction" name="saveAction" disable="1" ts="2015-05-21 09:40:52" dr="0" entity="Toolbar" field="saveAction"/>
+          </buttons>
+        </state>
+        <state id="17ab6b26-6601-496c-9d8a-1e0270607108-edit" name="edit" isSystem="true" ts="2015-06-05 09:43:58" dr="0">
+          <buttons>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-edit-addAction" name="addAction" disable="1" ts="2015-05-21 09:40:59" dr="0" entity="Toolbar" field="addAction"/>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-edit-cancelAction" name="cancelAction" disable="0" ts="2015-05-21 09:40:59" dr="0" entity="Toolbar" field="cancelAction"/>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-edit-configAction" name="configAction" disable="0" ts="2015-05-21 09:40:59" dr="0" entity="Toolbar" field="configAction"/>
+            <button id="328df932-b3e6-4d1f-8d19-fcda8259f26a" disable="1" ts="2015-05-21 09:40:59" dr="0" entity="Toolbar" field="copyAction"/>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-edit-deleteAction" name="deleteAction" disable="1" ts="2015-05-21 09:40:59" dr="0" entity="Toolbar" field="deleteAction"/>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-edit-editAction" name="editAction" disable="1" ts="2015-05-21 09:40:59" dr="0" entity="Toolbar" field="editAction"/>
+            <button id="17ab6b26-6601-496c-9d8a-1e0270607108-edit-saveAction" name="saveAction" disable="0" ts="2015-05-21 09:40:59" dr="0" entity="Toolbar" field="saveAction"/>
+          </buttons>
+        </state>
+        <state id="4fcbfd83-073b-4e93-8070-2dfce7bd0201" name="init" isSystem="false" ts="2015-06-05 09:43:58" dr="0">
+          <buttons>
+            <button id="fbc7a36f-5ffd-4e69-8ed2-821a995ca216" disable="1" ts="2015-06-05 09:46:44" dr="0" entity="Toolbar" field="cancelAction"/>
+            <button id="56d75759-df6f-46f7-bbb5-2f025c68da17" disable="0" ts="2015-06-05 09:46:44" dr="0" entity="Toolbar" field="configAction"/>
+            <button id="3f4fdc60-476c-45d6-bfcd-e006e2e82efb" disable="1" ts="2015-06-05 09:46:44" dr="0" entity="Toolbar" field="copyAction"/>
+            <button id="8f5dbf4a-994e-423f-a063-57d6ea94caa3" disable="1" ts="2015-06-05 09:46:44" dr="0" entity="Toolbar" field="deleteAction"/>
+            <button id="9079db91-4da8-4378-b603-b089e994663a" disable="1" ts="2015-06-05 09:46:44" dr="0" entity="Toolbar" field="editAction"/>
+            <button id="4957f6ac-3623-44cc-b25d-c8d9ccadc872" disable="1" ts="2015-06-05 09:46:44" dr="0" entity="Toolbar" field="saveAction"/>
+          </buttons>
+        </state>
+      </states>
+    </viewmodel>
+  </application>
+</applications>

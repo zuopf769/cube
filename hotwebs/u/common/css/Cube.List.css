@@ -1,0 +1,197 @@
+﻿.cube-list-card-outer-container-contacts > li {
+    list-style: none;
+    margin: 10px 26px;
+    position: relative;
+    background: #FFF;
+    border: 1px solid #D7D7D7;
+    width: 500px;
+    height: 115px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+    .cube-list-card-outer-container-contacts > li.toolbar-hide {
+        height: 85px;
+    }
+
+    .cube-list-card-outer-container-contacts > li.toolbar-show {
+        height: 115px;
+    }
+
+    .cube-list-card-outer-container-contacts > li .ui-list-sign {
+        float: right;
+        width: 0;
+        height: 0;
+        border-top: 16px solid #F00;
+        border-left: 16px solid #FFF;
+    }
+
+    .cube-list-card-outer-container-contacts > li .ui-list-content {
+        position: relative;
+        width: 96%;
+        height: 65px;
+        border: .5px solid red;
+        padding: .6em;
+    }
+
+        .cube-list-card-outer-container-contacts > li .ui-list-content .ui-content-left {
+            float: left;
+            width: 160px;
+            height: 60px;
+            border-right: .5px solid #D7D7D7;
+        }
+
+            .cube-list-card-outer-container-contacts > li .ui-list-content .ui-content-left > span:first-child {
+                float: left;
+                font-family: '微软雅黑 Bold', '微软雅黑';
+                font-weight: 700;
+                width: 90%;
+                height: 32px;
+                font-size: 22px;
+                text-align: right;
+                line-height: 32px;
+            }
+
+            .cube-list-card-outer-container-contacts > li .ui-list-content .ui-content-left > span:last-child {
+                float: left;
+                width: 90%;
+                height: 32px;
+                font-family: '微软雅黑 Regular', '微软雅黑';
+                font-size: 14px;
+                text-align: right;
+                line-height: 32px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+        .cube-list-card-outer-container-contacts > li .ui-list-content .ui-content-right {
+            float: left;
+            width: 64.4%;
+            height: 60px;
+            border-left: 1px solid #D7D7D7;
+        }
+
+            .cube-list-card-outer-container-contacts > li .ui-list-content .ui-content-right > span[class*='sp-left-top'] {
+                float: left;
+                width: 80%;
+                height: 30px;
+                font-family: '微软雅黑 Regular', '微软雅黑';
+                font-size: 16px;
+                line-height: 30px;
+                padding-left: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .cube-list-card-outer-container-contacts > li .ui-list-content .ui-content-right > span[class*='sp-left-bottom'] {
+                float: left;
+                width: 80%;
+                height: 30px;
+                font-family: '微软雅黑 Regular', '微软雅黑';
+                font-size: 16px;
+                line-height: 30px;
+                padding-left: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .cube-list-card-outer-container-contacts > li .ui-list-content .ui-content-right > span[class*='sp-right-top'] {
+                float: left;
+                width: 24px;
+                height: 24px;
+                background-image: url(../images/tel.png);
+                background-size: 24px 24px;
+                -moz-background-size: 24px 24px;
+                -o-background-size: 24px 24px;
+                line-height: 30px;
+            }
+
+            .cube-list-card-outer-container-contacts > li .ui-list-content .ui-content-right > span[class*='sp-right-bottom'] {
+                float: left;
+                width: 24px;
+                height: 24px;
+                background-image: url(../images/point.png);
+                background-size: 24px 24px;
+                -moz-background-size: 24px 24px;
+                -o-background-size: 24px 24px;
+                line-height: 30px;
+            }
+
+            .cube-list-card-outer-container-contacts > li .ui-list-content .ui-content-right > span[class*='ui-bar-on'] {
+                float: left;
+                position: relative;
+                width: 13px;
+                height: 13px;
+                top: 10px;
+                left: 20px;
+                content: url(../images/on.png);
+            }
+
+            .cube-list-card-outer-container-contacts > li .ui-list-content .ui-content-right > span[class*='ui-bar-off'] {
+                float: left;
+                position: relative;
+                width: 13px;
+                height: 13px;
+                top: 10px;
+                left: 20px;
+                content: url(../images/off.png);
+            }
+
+.ui-list-content .ui-content-left .ui-title {
+    font-family: '微软雅黑 Bold', '微软雅黑';
+    font-weight: 700;
+    width: 100%;
+    font-size: 22px;
+    text-align: right;
+}
+/***********************List Bar  Start***************************************/
+.cube-list-card-outer-container-contacts > li .ui-list-toolbar {
+    position: absolute;
+    background: #F2F2F2;
+    bottom: 0px;
+    width: 100%;
+    height: 30px;
+}
+
+    .cube-list-card-outer-container-contacts > li .ui-list-toolbar .ui-toolbar-item {
+        vertical-align: middle;
+        height: 30px;
+    }
+
+        .cube-list-card-outer-container-contacts > li .ui-list-toolbar .ui-toolbar-item div {
+            float: left;
+            width: 24.5%;
+            vertical-align: middle;
+            height: 24px;
+            margin-top: .2em;
+            border-right: 1px solid #D7D7D7;
+            text-align: center;
+        }
+
+            .cube-list-card-outer-container-contacts > li .ui-list-toolbar .ui-toolbar-item div:last-child {
+                border-right: 0px;
+                text-align: center;
+            }
+
+        .cube-list-card-outer-container-contacts > li .ui-list-toolbar .ui-toolbar-item > div[class*='ui-item-msg']::after {
+            content: url(../images/message.png);
+        }
+
+        .cube-list-card-outer-container-contacts > li .ui-list-toolbar .ui-toolbar-item > div[class*='ui-item-uu']::after {
+            content: url(../images/uu.png);
+            display: block;
+            margin-top: .2em;
+        }
+
+        .cube-list-card-outer-container-contacts > li .ui-list-toolbar .ui-toolbar-item > div[class*='ui-item-weibo']::after {
+            content: url(../images/weibo.png);
+        }
+
+        .cube-list-card-outer-container-contacts > li .ui-list-toolbar .ui-toolbar-item > div[class*='ui-item-weixin']::after {
+            content: url(../images/weixin.png);
+        }
+/****************************List Bar End************************************/

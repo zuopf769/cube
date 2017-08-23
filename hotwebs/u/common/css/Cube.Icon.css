@@ -1,0 +1,87 @@
+﻿/************            Page ImageButton Icon  [Header]:Start              **********/
+.cube-main .cube-main-header div span[class*='add-icon'] {
+    content: url(../images/ImageButton/add.png);
+    width: 25px;
+    height: 25px;
+    margin-top:16px;
+    margin-left:10px;
+}
+
+.cube-main .cube-main-header div span[class*='close-icon'] {
+    content: url(../images/ImageButton/close.png);
+    width: 25px;
+    height: 25px;
+    margin-top:16px;
+    margin-left:10px;
+}
+
+.cube-main .cube-main-header div span[class*='back-icon'] {
+    content: url(../images/ImageButton/back.png);
+    width: 25px;
+    height: 25px;
+    margin-top:16px;
+    margin-left:10px;
+}
+
+.cube-main .cube-main-header div span[class*='edit-icon'] {
+    content: url(../images/ImageButton/edit.png);
+    width: 32px;
+    height: 32px;
+    margin-top:14px;
+    margin-left:10px;
+}
+
+.cube-main .cube-main-header div span[class*='list-icon'] {
+    content: url(../images/ImageButton/list.png);
+    width: 25px;
+    height: 25px;
+    margin-top:16px;
+    margin-left:10px;
+}
+
+.cube-main .cube-main-header div span[class*='extend-icon'] {
+    content: url(../images/ImageButton/extend.png);
+    width: 25px;
+    height: 25px;
+    margin-top:16px;
+    margin-left:10px;
+}
+.cube-main .cube-main-header div span[class*='menu-icon'] {
+    content: url(../images/ImageButton/menu.png);
+    width: 32px;
+    height: 32px;
+    margin-top:14px;
+    margin-left:10px;
+}
+/************            Page ImageButton Icon  [Header]:End              **********/
+.cube-main .cube-main-content div span[class*='add-icon'] {
+    content: url(../images/ImageButton/add.png);
+    width: 25px;
+    height: 25px;
+    margin: 0 8px -8px 0;
+}
+.cube-main .cube-main-content div span[class*='save-icon'] {
+    content: url(../images/ImageButton/save.png);
+    width: 25px;
+    height: 25px;
+    margin: 0 8px -8px 0;
+}
+.cube-main .cube-main-content div span[class='edit-icon'] {
+    content: url(../images/ImageButton/edit.png);
+    width: 16px;
+    height: 16px;
+    margin: 0 8px -8px 0;
+}
+
+.cube-main .cube-main-content div span[class*='status-check-icon'] {
+    content: url(../images/ImageButton/status_check.png);
+    width: 16px;
+    height: 16px;
+    margin: 0 6px -4px 0;
+}
+.cube-main .action-section div span[class*='condition-icon'] {
+    content: url(../images/ImageButton/more.png);
+    width: 24px;
+    height: 24px;
+    margin: 0 8px -8px 0;
+}

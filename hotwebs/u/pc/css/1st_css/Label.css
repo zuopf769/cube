@@ -1,0 +1,25 @@
+﻿
+.label
+{
+    font-size: 14px;
+    font-family: 宋体;
+    color: #333333;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0.2em 0 .3em 0;
+	padding-right:5px;
+}
+/*zhangxub mustInput*/
+.mustinput
+{
+    color: Blue;
+}
+.mustinput-noinput
+{
+    color: Red;
+}
+

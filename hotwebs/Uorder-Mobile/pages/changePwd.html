@@ -1,0 +1,59 @@
+﻿<div data-controller="ChangePwdController">
+    <div class="pages">
+        <div data-page="changePwdPage" class="page no-tabbar">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left"><a href="#" class="back link"><i class="icon icon-backgray"></i></a></div>
+                    <div class="center">修改密码</div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="user-list">
+                    <div class="list-block all-order  m-b-0">
+                        <form id="form-changePwd">
+                            <ul>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">
+                                            <span class="required">*</span>原密码
+                                        </div>
+                                        <div class="item-input">
+                                            <input type="password" placeholder="请输入原密码" name="oldPwd">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">
+                                            <span class="required">*</span>新密码
+                                        </div>
+                                        <div class="item-input">
+                                            <input type="password" placeholder="请输入新密码" name="newPwd">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">
+                                            <span class="required">*</span>确认密码
+                                        </div>
+                                        <div class="item-input">
+                                            <input type="password" placeholder="请重新输入新密码" name="renewPwd">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="content-block-title color-red m-t-10 changePwd-Validatelog"></div>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <a class="button button-fill bg-green-u p-lr-25 only-one-btn changePwd-btn-save">保存</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pages/ChangePwdController.js"></script>
+</div>

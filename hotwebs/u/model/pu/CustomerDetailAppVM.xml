@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<applications>
+  <application name="CustomerDetailApp" title="客户档案详情" moduleName="pu" tplName="archive_min.tpl">
+    <viewmodel name="CustomerDetailViewModel" extendName="CustomerDetailViewModel_Extend" title="客户档案详情">
+      <entity name="CustomerDetail" title="客户档案详情" isMain="true">
+        <fields>
+          <field name="ts" title="时间戳" modelType="SimpleModel" ctrlType="DateTimeBox" isNecessary="true" isReadOnly="true" isSyncKey="true" />
+          <field name="dr" title="删除标记" modelType="SimpleModel" ctrlType="CheckBox" isNecessary="true" isReadOnly="true" />
+          <field name="ccuscode_pk" title="主键" modelType="SimpleModel" ctrlType="TextBox" isNullable="false" isKey="true" isNecessary="true" />
+          <field name="ccusabbname" title="客户简称" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="code" title="客户编码" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="name" title="客户名称" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="ccusmnemcode" title="助记码" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="cuscode" title="客户分类编码" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="bcusdomestic" title="国内" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="bcusoverseas" title="国外" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="cdccode" title="地区编码" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="ccusaddress" title="地址" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="ccuspostcode" title="邮政编码" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="ccusregcode" title="纳税人登记号" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="dcusdevdate" title="发展日期" modelType="SimpleModel" isNullable="false" ctrlType="DateTimeBox" />
+          <field name="ccuslperson" title="法人" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="ccusemail" title="Email地址" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="ccusoaddress" title="发货地址" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="ccusperson" title="联系人" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="ccusphone" title="联系电话" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="ccusfax" title="传真" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="ccushand" title="手机" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="ccuspperson" title="专营业务员编码" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="icusdisrate" title="扣率" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="ccusotype" title="发货方式编码" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="ccuswhcode" title="发货仓库编码" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="cdepname" title="分管部门名称" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="dlastdate" title="最后交易日期" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="ilastmoney" title="最后交易金额" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="denddate" title="停用日期" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="dcuscreatedatetime" title="建档日期" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="ccreateperson" title="建档人" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="cmodifyperson" title="变更人" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="dmodifydate" title="变更日期" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="cmemo" title="备注" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="images" title="图片" modelType="SimpleModel" ctrlType="ImageList" />
+          <field name="attachments" title="附件" modelType="SimpleModel" ctrlType="AttachmentList" />
+        </fields>
+      </entity>
+      <entity name="Toolbar" title="功能">
+        <fields>
+          <field name="editAction" title="编辑" modelType="SimpleModel" ctrlType="Button" />
+          <field name="deleteAction" title="删除" modelType="SimpleModel" ctrlType="Button" />
+          <field name="relatedAction" title="相关业务" modelType="SimpleModel" ctrlType="Button" />
+          <field name="setAction" title="设置" modelType="SimpleModel" ctrlType="Button" />
+          <field name="outputAction" title="输出" modelType="SimpleModel" ctrlType="Button" />
+          <field name="cancelAction" title="取消" modelType="SimpleModel" ctrlType="Button" />
+          <field name="saveAction" title="保存" modelType="SimpleModel" ctrlType="Button" />
+          <field name="addAttachmentAction" title="添加附件" modelType="SimpleModel" ctrlType="Button" />
+          <field name="downloadAttachmentAction" title="打包下载" modelType="SimpleModel" ctrlType="Button" />
+        </fields>
+      </entity>
+      <actions>
+        <action name="editAction" entity="Toolbar" field="editAction" eventName="click" functionName="editAction" defaultImpl="//默认实现"/>
+        <action name="deleteAction" entity="Toolbar" field="deleteAction" eventName="click" functionName="deleteAction" defaultImpl="//默认实现"/>
+        <action name="relatedAction" entity="Toolbar" field="relatedAction" eventName="click" functionName="relatedAction" defaultImpl="//默认实现"/>
+        <action name="setAction" entity="Toolbar" field="setAction" eventName="click" functionName="setAction" defaultImpl="//默认实现"/>
+        <action name="outputAction" entity="Toolbar" field="outputAction" eventName="click" functionName="outputAction" defaultImpl="//默认实现"/>
+        <action name="cancelAction" entity="Toolbar" field="cancelAction" eventName="click" functionName="cancelAction" defaultImpl="//默认实现"/>
+        <action name="saveAction" entity="Toolbar" field="saveAction" eventName="click" functionName="saveAction" defaultImpl="//默认实现"/>
+        <action name="addAttachmentAction" entity="Toolbar" field="addAttachmentAction" eventName="click" functionName="addAttachmentAction" defaultImpl="//默认实现"/>
+        <action name="downloadAttachmentAction" entity="Toolbar" field="downloadAttachmentAction" eventName="click" functionName="downloadAttachmentAction" defaultImpl="//默认实现"/>
+      </actions>
+    </viewmodel>
+  </application>
+</applications>

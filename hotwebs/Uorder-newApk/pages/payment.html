@@ -1,0 +1,78 @@
+<div data-controller="PaymentPageController">
+    <div class="pages">
+        <div data-page="payment" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="back">
+                            <i class="icon icon-backgray"></i>
+                        </a>
+                    </div>
+                    <div class="center">支付及发运方式</div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="list-block m-t-0 addr-invoice">
+                    <ul class="invoice_form">
+                        <li class="type align-top">
+                            <div class="item-content">
+                                <div class="item-inner no-border">
+                                    <div class="item-title label">支付方式</div>
+                                    <div class="item-input checkdiv payTypeContainer">
+                                        <div class="pay-style">
+                                            <input type="radio" name="payType" value="1" data-text="在线支付" disabled>
+                                            <span>在线支付</span>
+                                        </div>
+                                        <div class="pay-style">
+                                            <input type="radio" name="payType" value="2" data-text="线下支付" checked="checked">
+                                            <span>线下支付</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="type align-top">
+                            <div class="item-content">
+                                <div class="item-inner no-border">
+                                    <div class="item-title label">结算方式 </div>
+                                    <div class="item-input checkdiv settlementWayContainer">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="type align-top">
+                            <div class="item-content">
+                                <div class="item-inner no-border">
+                                    <div class="item-title label">发运方式  </div>
+                                    <div class="item-input checkdiv shippingChoicesContainer">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="last-item isDefalutPayType">
+                            <!--勾选上时加上default即可-->
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">默认发票信息</div>
+                                    <div class="item-input">
+                                    </div>
+                                    <div class="item-after">
+                                        <i class="icon icon-undefault"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <a class="button button-fill bg-green-u p-lr-25 only-one-btn payment_save" href="#">保存</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/pages/PaymentPageController.js"></script>
+</div>

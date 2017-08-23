@@ -1,0 +1,60 @@
+﻿<div data-controller="MessageListController">
+    <div class="pages  navbar-through">
+        <div data-page="MessageList" class="page no-tabbar">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left"><a href="#" class="link back"><i class="icon icon-backgray"></i></a></div>
+                    <div class="center">
+                        消息中心
+                    </div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="list-block media-list msgList">
+                    <ul>
+                        <li>
+                            <a href="pages/messageDetail.html?voucherType=ORDER" class="item-link item-content">
+                                <div class="item-media">
+                                    <i class="icon icon-msgOrder"></i>
+                                    {{#if orderMsg.oBulletinUser}}
+                                    {{#if orderMsg.oBulletinUser.bReaded}}
+                                    <span class="badge"></span>
+                                    {{/if}}
+                                    {{/if}}
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">订单消息</div>
+                                        <div class="item-after">{{orderMsg.dCreated}}</div>
+                                    </div>
+                                    <div class="item-text">{{orderMsg.cTitle}}</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pages/messageDetail.html?voucherType=PATMENT" class="item-link item-content">
+                                <div class="item-media">
+                                    <i class="icon icon-msgPay"></i>
+                                    {{#if paymentMsg.oBulletinUser}}
+                                    {{#if paymentMsg.oBulletinUser.bReaded}}
+                                    <span class="badge"></span>
+                                    {{/if}}
+                                    {{/if}}
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">支付消息</div>
+                                        <div class="item-after">{{paymentMsg.dCreated}}</div>
+                                    </div>
+                                    <div class="item-text">{{paymentMsg.cTitle}}</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pages/MessageListController.js"></script>
+</div>

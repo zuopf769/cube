@@ -1,0 +1,47 @@
+﻿<div data-controller="NoticeListController">
+    <div class="pages">
+        <div data-page="noticeListPage" class="page no-tabbar">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left"><a href="#" class="back link"><i class="icon icon-backgray"></i></a></div>
+                    <div class="center">公告</div>
+                </div>
+            </div>
+            <div class="page-content pull-to-refresh-content infinite-scroll" data-ptr-distance="55" data-distance="50">
+                <div class="pull-to-refresh-layer">
+                    <div class="preloader"></div>
+                    <div class="pull-to-refresh-arrow"></div>
+                </div>
+                <div class="user-list">
+                    <div class="list-block media-list all-order  m-b-0">
+                        <ul class="noticeListPage-container"></ul>
+                    </div>
+                </div>
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/template7" id="noticeItemTpl">
+        {{#each noticeList}}
+        <li>
+            <a href="#" data-id="{{id}}" {{#if cUrl}} data-url="{{cUrl}}" {{/if}} data-notictype="{{cNoticeType}}" class="item-link list-bankInfor item-content">
+                <div class="item-inner">
+                    <div class="item-title">
+                        <span class="font-16">{{cTitle}}</span>
+                    </div>
+                    <div class="item-text p-t-5">{{cCategoryName}}  {{dCreated}}</div>
+                </div>
+            </a>
+        </li>
+        {{else}}
+        <div class="orderNone">
+            <div class="orderNone-info">
+                <h5>暂无公告</h5>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script type="text/javascript" src="../js/pages/NoticeListController.js"></script>
+</div>

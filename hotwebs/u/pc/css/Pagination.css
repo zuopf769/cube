@@ -1,0 +1,27 @@
+
+div[data-controltype='Pagination'] a {
+	display:inline-block;
+	width:32px;
+	height:32px;
+	vertical-align:middle;
+	background-position:0 -1px;
+	cursor:pointer;
+}
+
+div[data-controltype='Pagination'] a[disabled="true"] {	
+	cursor:default;    
+}
+
+div[data-controltype='Pagination'] a[data-flag="first"]{background-image:url("../images/pager-first.png");}
+div[data-controltype='Pagination'] a[data-flag="previous"]{background-image:url("../images/pager-previous.png");}
+div[data-controltype='Pagination'] a[data-flag="next"]{background-image:url("../images/pager-next.png");}
+div[data-controltype='Pagination'] a[data-flag="last"]{background-image:url("../images/pager-last.png");}
+div[data-controltype='Pagination'] a[data-flag="first"][disabled="true"]{background-image:url("../images/pager-first.png");}
+div[data-controltype='Pagination'] a[data-flag="previous"][disabled="true"]{background-image:url("../images/pager-previous.png");}
+div[data-controltype='Pagination'] a[data-flag="next"][disabled="true"]{background-image:url("../images/pager-last.png");}
+div[data-controltype='Pagination'] a[data-flag="last"][disabled="true"]{background-image:url("../images/pager-last.png");}
+
+div[data-controltype='Pagination'] span[data-flag="bill*"]{
+	width:auto;
+}
+

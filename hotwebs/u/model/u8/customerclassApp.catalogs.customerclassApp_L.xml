@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application id="17ab6b26-6601-496c-9d8a-1e0270607108" name="customerclassApp" title="u8customerclass" domainName="uap" moduleName="u8" symbol="u8.customerclass" ts="2015-04-22 17:03:33" dr="0" tplName_viewModel="catalogs" tplName="catalogs_L.tpl">
+  <references>
+    <reference name="../u8/customerclassApp.catalogs.VM.xml"/>
+  </references>
+  <view id="be9d7e5c-e6ce-49e5-8c21-f13275c6bc80" name="customerclassApp" title="客户分类" viewModelId="17ab6b26-6601-496c-9d8a-1e0270607108" layoutMode="Fluid" screenSize="L" tplName="catalogs_L.html.tpl" viewModel="customerclassAppViewModel_catalogs" isDefault="true" ts="2015-04-22 17:04:22" dr="0" appId="u8.customerclassApp">
+    <container id="7c9d7335-38fa-4e2f-87e2-3787ee24b17b" name="Tree" title="树" type="Tree" iCols="1" ts="2015-04-22 17:03:44" dr="0">
+      <control entity="customerclass" id="1f25c2c7-b9ed-4dcc-b949-46ac7ad0fcd4" name="customerclassApp_Tree" title="u8customerclass树" field="customerclassApp_Tree" ctrlType="Tree" iLength="20" isNullable="true" isVisible="true" refCode="code" refId="600700" refKey="pk_vid" refName="name" isPlaceHolder="false" ts="2015-04-29 15:34:21" dr="0" treeFunctionId="U8100108" isCatalog="false" vmfield="customerclassApp_Tree"/>
+    </container>
+    <container id="661f55d7-f409-4f45-b437-50dbc66c3ffe" name="Toolbar" title="工具栏" type="Toolbar" iCols="0" ts="2015-04-22 17:03:44" dr="0">
+      <control entity="Toolbar" id="535173bd-4051-4daf-a1bc-c2985f1811d5" name="addAction" title="增加" field="addAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-05-21 09:41:22" dr="0" vmfield="addAction"/>
+      <control entity="Toolbar" id="ed3f517d-640d-425e-90e3-b2fda9840024" name="editAction" title="编辑" field="editAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-05-21 09:41:22" dr="0" vmfield="editAction"/>
+      <control entity="Toolbar" id="d29c8a75-14cb-42e6-a6b8-06b48fd1bbcc" name="deleteAction" title="删除" field="deleteAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-05-21 09:41:22" dr="0" vmfield="deleteAction"/>
+      <control entity="Toolbar" id="45f9f29e-1947-428e-8ed3-4e5edd805244" name="cancelAction" title="取消" field="cancelAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-05-21 09:41:22" dr="0" vmfield="cancelAction"/>
+      <control entity="Toolbar" id="077926d8-0ca1-4a4d-87d5-947a810a3880" name="saveAction" title="保存" field="saveAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-05-21 09:41:22" dr="0" vmfield="saveAction"/>
+      <control entity="Toolbar" id="fbdd4592-af70-4ee0-9b2d-3215e88c007e" name="configAction" title="设置" field="configAction" ctrlType="DropDownButton" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-05-21 09:41:22" dr="0" vmfield="configAction"/>
+      <control entity="Toolbar" id="5ad5a8ce-12f2-4970-9bb2-96a11119e57f" name="copyAction" title="复制" field="copyAction" ctrlType="Button" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-05-21 09:41:22" dr="0" supportPagination="false" vmfield="copyAction"/>
+    </container>
+    <container id="a5dd1c3c-6679-4834-ab79-f1a30925764b" name="Card" title="卡片" type="Card" iCols="3" ts="2015-04-22 17:03:44" dr="0">
+      <control entity="customerclass" id="256e40b9-1870-45bc-bdf5-e672289992b0" name="pk_org" title="组织" field="pk_org" ctrlType="Refer" iLength="20" isNullable="false" isVisible="true" refCode="code" refId="600015" refKey="pk_org" refName="name" isPlaceHolder="false" ts="2015-04-25 15:03:04" dr="0" vmfield="pk_org"/>
+      <control entity="customerclass" id="21a5d3be-8d88-43c9-a444-a90a7d84d7ae" name="code" title="客户分类编码" field="code" ctrlType="TextBox" iLength="50" isNullable="false" isVisible="true" isPlaceHolder="false" ts="2015-04-25 15:03:04" dr="0" vmfield="code"/>
+      <control entity="customerclass" id="2a431d74-9ba9-40ec-9800-cb8fa43a52f4" name="name" title="类别名称" field="name" ctrlType="TextBox" iLength="50" isNullable="false" isVisible="true" isPlaceHolder="false" ts="2015-04-25 15:03:04" dr="0" vmfield="name"/>
+      <control entity="customerclass" id="9147d8d2-3b9c-4a41-8665-f9557be1ccc0" name="creator" title="创建人" field="creator" ctrlType="Refer" iLength="20" isNullable="true" isReadOnly="true" isVisible="true" refCode="user_code" refId="600026" refKey="cuserid" refName="user_name" isPlaceHolder="false" ts="2015-04-25 15:03:04" dr="0" vmfield="creator"/>
+      <control entity="customerclass" id="0fa60dd9-b3bb-4af0-8ffd-39ee3a4d4c6a" name="creationtime" title="创建时间" field="creationtime" ctrlType="DateTimeBox" isNullable="true" isReadOnly="true" isVisible="true" isPlaceHolder="false" ts="2015-04-25 15:03:04" dr="0" vmfield="creationtime"/>
+      <control entity="customerclass" id="4d6725ef-1d82-443e-896c-811f436efab7" name="modifier" title="修改人" field="modifier" ctrlType="Refer" iLength="20" isNullable="true" isReadOnly="true" isVisible="true" refCode="user_code" refId="600026" refKey="cuserid" refName="user_name" isPlaceHolder="false" ts="2015-04-25 15:03:04" dr="0" vmfield="modifier"/>
+      <control entity="customerclass" id="b7ec7506-501a-4a08-bbee-69a580899a05" name="modifiedtime" title="修改时间" field="modifiedtime" ctrlType="DateTimeBox" isNullable="true" isReadOnly="true" isVisible="true" isPlaceHolder="false" ts="2015-04-25 15:03:04" dr="0" vmfield="modifiedtime"/>
+    </container>
+  </view>
+</application>

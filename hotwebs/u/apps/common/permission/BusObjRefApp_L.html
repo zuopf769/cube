@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link data-config="DataGrid" />
+</head>
+<body>
+    <div id="busobjrefview" data-viewmodel="BusObjRefViewModel" data-title="业务对象及对应字段选择"
+        data-page="common.permission.BusObjRefApp" style="height: 580px;">
+
+        <div style="height: 88%; padding-top: 10px;">
+            <div data-propertyname="busObjList" data-controltype="ComboBox"></div>
+            <div style="margin-top: 5px;" data-propertyname="fieldGrid" data-controltype="DataGrid"></div>
+            <div class="pager"></div>
+        </div>
+        <div style="height: 6%">
+            <button data-propertyname="ok" data-controltype="Button">确定</button>
+        </div>
+    </div>
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./jquery/jquery-ui.js" type="text/javascript"></script>
+    <script src="./common/js/Animation.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./pc/js/cube.pc.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/Button.js" type="text/javascript"></script>
+    <script data-config="ComboBox"></script>
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>
+    <script data-config="DataGrid"></script>
+    <script src="apps/common/permission/BusObjRefApp_L.js" type="text/javascript"></script>
+    <script src="apps/common/permission/BusObjRefApp_Extend.js" type="text/javascript"></script>
+    <script src="apps/common/permission/CheckList.js" type="text/javascript"></script>
+    <script type="text/ecmascript">
+        cb.viewbinding.create("busobjrefview");
+        (function () {
+            document.body.onkeydown = function (e) {
+                if (e.keyCode == '27') {
+                    if (BusObjRefApp_Extend) {
+                        BusObjRefApp_Extend.CloseAction();
+                    }
+                }
+            }
+        })();
+    </script>
+</body>
+</html>

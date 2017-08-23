@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" data-tag="b1anw" content="width=device-width, initial-scale=1.0, user-scalable=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" data-tag="b1anw" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="common/css/loginPC.css" />
+	<link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="./kendoui/commercial/styles/kendo.common-bootstrap.min.css" rel="Stylesheet" type="text/css" />
+    <link href="./kendoui/commercial/styles/kendo.bootstrap.min.css" rel="Stylesheet" type="text/css" />
+    <link href="./pc/css/MessageBox.css" rel="Stylesheet" type="text/css" />
+<title>新产品</title>
+</head>
+<body onload="onload()" onkeydown="keyEnter()">
+    <div>
+        <div class="head">
+            <div class="head-content">
+                <div class="left">
+                    <img src="common/images/loginPC/uplogo.png" />
+                    <span id="complaySay">全球第一中型企业应用平台</span>
+                </div>
+                <div class="right">
+                    <select id="language" name="language">
+                    </select>
+                    <span><a href="../updoc/web/index.htm" id="help">帮助</a></span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content" id="content">
+            <div>
+                <div>
+                    <ul id="loginBox" class="hasloaded">
+                        <li class="username">
+                            <div style="display: none ;">
+                                <div style="background: url('pc/images/menu/u32.png') no-repeat 0 0; ">
+
+                                </div>
+                                <span>sa1</span>
+                                <span>sa1</span>
+                            </div>
+
+                            <input type="text" id="userName" placeholder="用户名" />
+                        </li>
+                        <li class="pwd"><input id="password" type="password" placeholder="密码" /></li>
+                        <li class="account-name">
+                            <select id="account" style=""></select>
+                        </li>
+                        <!--<li class="corporation-name"><input placeholder="公司名称" /></li>-->
+
+                    </ul>
+                    <div id="handleBar">
+                        <a href="javascript:void(0)" id="login" onclick="login()">登录</a>
+                        <div>
+                            <div class="remenber-name"><input id="remenberMe"  type="checkbox" /><label id="remenberUserName">记住用户名</label></div>
+                            <div class="switch-account" onclick="initLoadedState()" id="changeAccount">切换账号</div>
+                            <div class="forget-pwd" onclick="forgetPwd()" id="forgetPassword">忘记密码？</div>
+                            <div style="clear:both;"></div>
+                        </div>
+                    </div>
+                    <div id="dimensionalBarCodeContent" style="padding: 90px 50px 100px; display: none; ">
+                        <span style="padding: 0 0 0 35px">扫一扫快速登录</span>
+                        <img id="dimenSionalImage" style="height:175px;width:177px;" src="common/images/loginPC/u46.png" />
+                    </div>
+                    <div id="dimensionalBarCode" style="float: right; width: 62px; height: 62px; margin-top: 18px; background: url('common/images/loginPC/2-dimensional-bar-code.png') 11px 14px no-repeat; "></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <div>用友优普信息技术有限公司 版权所有©1997-2014</div>
+            </div>
+        </div>
+    </div>
+    <div id="modifyPasswordDialog" style="display:none;">
+        <div>
+            <div class="message">
+                <img src="pc/images/u14.png" />
+                <span>密码已过有效期，请修改密码</span>
+            </div>
+            <div class="input">
+                <div>
+                    <label>新密码</label>
+                    <input class="newpwd" type="password" />
+                </div>
+                <div>
+                    <label>新密码确认</label>
+                    <input class="newpwdconfirm" type="password" />
+                </div>
+            </div>
+            <div class="error"></div>
+            <div class="button">
+                <button class="ok">确认</button>
+                <button class="cancel">取消</button>
+            </div>
+        </div>
+    </div>
+    <script src="common/js/RSA/security.js"></script>
+    <script src="common/js/loginPC.js"></script>
+	<script type="text/javascript">
+	    var initialize = function (queryString) {
+	        init(true);
+	        getAccounts(queryString);
+	        getLanguages();
+	    };
+	    var queryString = new cb.util.queryString(location.search);
+	    initialize(queryString.p);
+	    cb.route.register("login", initialize);
+    </script>
+</body></html>

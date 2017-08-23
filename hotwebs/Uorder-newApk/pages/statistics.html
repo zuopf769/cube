@@ -1,0 +1,58 @@
+﻿<div data-controller="StatisticsController">
+    <div class="pages">
+        <div data-page="orderLists" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <!-- Search bar overlay-->
+            <div class="searchbar-overlay"></div>
+            <div class="navbar">
+                <div class="navbar-inner" id="barNoSearch">
+                    <div class="left">
+                        <a href="#" class="back link"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center">
+                        <a href="#" class="link open-popover popover-orders-links" style="color:#999;" data-ordertype="salesOrder">订货统计</a>
+                        <span class="select-u p-t-5"></span>
+                    </div>
+                    <div class="right">
+                    </div>
+                </div>
+            </div>
+            <div class="page-content orderList-container">
+                <div class="order-list">
+                    <style scoped>
+                        .row {
+                            background-color: #fff;
+                            padding: 10px 0px;
+                            border-bottom: 1px solid #E3E3E3;
+                        }
+
+                        #staYear, #staQuarter, #staMonth {
+                            border: none;
+                        }
+                    </style>
+                    <div class="row">
+                        <div class="col-33 text-center"><input type="text" readonly name="name" value="" id="staYear" style="width:42px" /><span class="select-u"></span></div>
+                        <div class="col-33 text-center"><input type="text" readonly name="name" value="" id="staQuarter" style="width:50px;" /><span class="select-u"></span></div>
+                        <div class="col-33 text-center"><input type="text" readonly name="name" value="" id="staMonth" style="width:40px" /><span class="select-u"></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-33 text-center color-red" id="yearPrice">加载中..</div>
+                        <div class="col-33 text-center color-red" id="quarterPrice">加载中..</div>
+                        <div class="col-33 text-center color-red" id="monthPrice">加载中..</div>
+                    </div>
+                    <div class="row m-t-10">
+                        <div class="col-100" style="overflow-x:auto;padding:5px 10px;">
+                            <div id="bars" style="height:300px; width:665px;"></div>
+                        </div>
+                    </div>
+                    <div class="row m-t-10">
+                        <div class="col-100" style="overflow-x:auto;padding:5px 10px;">
+                            <div id="pies" style="height:300px; width:433px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pages/echarts/echarts.js"></script>
+    <script type="text/javascript" src="../js/pages/StatisticsController.js"></script>
+</div>

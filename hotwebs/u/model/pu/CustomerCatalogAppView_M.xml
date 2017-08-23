@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application name="CustomerCatalogApp" title="客户分类" moduleName="pu" symbol="pu.CustomerCatalog" uiType="catalogs">
+  <references>
+    <reference name="../pu/CustomerCatalogAppVM.xml"/>
+  </references>
+  <view name="CustomerCatalogView" title="客户分类" layoutMode="Fluid" appId="pu.CustomerCatalogApp" viewModel="pu.CustomerCatalogApp.CustomerCatalogViewModel" screenSize="M" tplName="catalogs_M.tpl">
+    <container name="CustomerCatalogView_Body" title="客户分类树" type="Tree">
+      <controls>
+        <control name="CustomerCatalog_iPad" title="客户分类iPad" ctrlType="Tree" field="customerCatalog" entity="CustomerCatalog" />
+      </controls>
+    </container>
+  </view>
+</application>

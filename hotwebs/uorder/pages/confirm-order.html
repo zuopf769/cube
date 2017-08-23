@@ -1,0 +1,146 @@
+<div data-controller="ConfirmOrderController">
+    <div class="pages">
+        <div data-page="confirmOrder" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <a class="back  left" href="#"><i class="icon icon-backgray"></i></a>
+                    <div class="center">
+                        订单确认
+                    </div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="list-block media-list confirmList">
+                    <ul class="confirm_ul">
+                        <li class="addrList" data-link="pages/addrList.html?source=order">
+                        </li>
+                        <li class="baseInfo" data-link="pages/baseInfo.html">
+                        </li>
+                        <li class="payment" data-link="pages/payment.html">
+                        </li>
+                        <li class="invoice" data-link="pages/invoice.html">
+                        </li>
+                        <li>
+                            <a href="#" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">附件信息</div>
+                                        <div class="item-after">
+                                            <p>2件</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item-link item-content productsList">
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">商品清单</div>
+                                        <div class="item-after">
+                                            <p> <span class="quantity"></span>个</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <span>合计:<span class="color-orange-u">100</span></span>
+                    <span class="col-33" style="height:5px;"></span>
+                    <a class="button button-fill bg-green-u col-33 confirmOrder_save" href="#">立即结算</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/template7" id="addrListTpl">
+        <form id="form_addrList" class='item-content store-data'>
+            <div class="item-inner">
+                <div class="item-title-row hasInformation">
+                    <div class="item-text">
+                        <p>
+                            <span class="color-2b">
+                                <i class="icon icon-addr-name"></i>
+                                <input type="text" name="cReceiver" value="{{data.cReceiver}}" readonly class="no-border" style='width:65px' />
+                            </span>
+                            <span class="color-2b">
+                                <i class="icon icon-addr-phone"></i>
+                                <input type="text" name="cReceiveMobile" value="{{data.cReceiveMobile}}" readonly class="no-border" style='width:80px' />
+                            </span>
+                        </p>
+                        <p>
+                            <span class="color-2b">
+                                <input type="text" name="cReceiveAddress" value="{{data.cReceiveAddress}}" readonly class="no-border" />
+                                <input type="text" name="cReceiveZipCode" value="{{data.cReceiveZipCode}}" readonly class="no-border" />
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="item-title-row noInformation">
+                    <div class="item-text">
+                        <p>信息不完善，请补充信息</p>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </script>
+    <script type="text/template7" id="baseInfoTpl">
+        <form id="form_baseInfo" class="item-content store-data">
+            <div class="item-inner">
+                <div class="item-title-row">
+                    <div class="item-title">基本信息</div>
+                    <div class="item-after">
+                        <input type="text" name="agentName" value="{{data.oAgent.cName}}" readonly class="no-border" />
+                        <p id='specialInput'><input type="text" name="dConfirmDate" value="{{data.dConfirmDate}}" readonly class="no-border" /><span>下单</span></p>
+                        <p id='specialInput'><input type="text" name="dDeliveryDate" value="{{data.dDeliveryDate}}" readonly class="no-border" /><span>交货</span></p>
+                        <input type="text" name="cReceiveContacter" value="{{data.cReceiveContacter}}" readonly class="no-border" />
+                        <input type="text" name="cReceiveContacterPhone" value="{{data.cReceiveContacterPhone}}" readonly class="no-border" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </script>
+    <script type="text/template7" id="paymentTpl">
+        <form id="form_payment" class="item-content store-data">
+            <div class="item-inner">
+                <div class="item-title-row">
+                    <div class="item-title">支付及发运方式</div>
+                    <div class="item-after">
+                        <input type="text" name="payWay" value="{{#if data.oPayWayCode}}{{data.oPayWayCode.cName}}{{else}}无{{/if}}" readonly class="no-border" />
+                        <input type="text" name="payWay_code" value="{{#if data.oPayWayCode}}{{data.oPayWayCode.cCode}}{{else}}无{{/if}}" readonly class="no-border" style='display:none' />
+                        <input type="text" name="settleWay" value="{{#if data.oSettlementWay}}{{data.oSettlementWay.cName}}{{else}}无{{/if}}" readonly class="no-border" />
+                        <input type="text" name="settleWay_code" value="{{#if data.oSettlementWay}}{{data.oSettlementWay.cCode}}{{else}}无{{/if}}" readonly class="no-border" style='display:none' />
+                        <input type="text" name="settleWay_id" value="{{#if data.oSettlementWay}}{{data.oSettlementWay.id}}{{else}}无{{/if}}" readonly class="no-border" style='display:none' />
+                        <input type="text" name="shipping" value="{{#if data.oShippingChoice}}{{data.oShippingChoice.cName}}{{else}}无{{/if}}" readonly class="no-border" />
+                        <input type="text" name="shippingCode" value="{{#if data.oShippingChoice}}{{data.oShippingChoice.cCode}}{{else}}无{{/if}}" readonly class="no-border" style='display:none' />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </script>
+    <script type="text/template7" id="invoiceTpl">
+        <form id="form_invoice" class="item-content  store-data">
+            <div class="item-inner">
+                <div class="item-title-row">
+                    <div class="item-title">发票信息</div>
+                    <div class="item-after">
+                        <input type="text" name="cInvoiceName" value="{{#if data.oDefaultInvoiceType}}{{data.oDefaultInvoiceType.cName}}{{else}}无{{/if}}" readonly class="no-border" />
+                        <input type="text" name="cInvoiceType" value="{{#if data.oDefaultInvoiceType}}{{data.oDefaultInvoiceType.cCode}}{{else}}无{{/if}}" readonly class="no-border" style='display:none' />
+                        <input type="text" name="cInvoiceTitle" value="{{data.oAgent.cName}}" readonly class="no-border" />
+                        <input type="text" name="cInvoiceContent" value="{{data.cInvoiceContent}}" readonly class="no-border" />
+                        <input type="text" name="cTaxNum" value="{{data.cTaxNum}}" readonly class="no-border" />
+                        <input type="text" name="cBankName" value="{{data.cBankName}}" readonly class="no-border" />
+                        <input type="text" name="cBankCode" value="{{data.cBankCode}}" readonly class="no-border" style='display:none' />
+                        <input type="text" name="cSubBankName" value="{{data.cSubBankName}}" readonly class="no-border" />
+                        <input type="text" name="cBankAccount" value="{{data.cBankAccount}}" readonly class="no-border" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </script>
+    <script src="../js/pages/ConfirmOrderController.js"></script>
+</div>

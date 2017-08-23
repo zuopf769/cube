@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="./common/js/ListCard.js" type="text/javascript"></script>
+    <script src="./common/js/TextBox.js" type="text/javascript"></script>
+    <script src="./common/js/NumberBox.js" type="text/javascript"></script>
+    <script src="./common/js/DateTimeBox.js" type="text/javascript"></script>
+    <script src="./common/js/CheckBox.js" type="text/javascript"></script>
+    <script src="./common/js/Refer.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="list-card-wrapper">
+        <div class="list-card-scroller">
+            <div>
+			    <span class="pull-icon"></span>
+                <span class="pull-label">下拉刷新</span>
+		    </div>
+            <div data-propertyname="<#=?%s,field#>" data-controltype="ListCard">
+                <div style="display:none;">
+                    <#*(column:columns){#>
+                    <span data-field="<#=field#>" data-position="<#=position#>"></span>
+                    <#}#>
+                </div>
+            </div>
+            <div>
+			    <span class="pull-icon"></span>
+                <span class="pull-label">上拉刷新</span>
+		    </div>
+        </div>
+    </div>
+</body>
+<script>
+</script>
+<field>
+</field>
+</html>

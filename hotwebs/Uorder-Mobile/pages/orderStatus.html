@@ -1,0 +1,58 @@
+<div data-controller="OrderStatusController">
+    <div class="pages">
+        <div data-page="OrderStatus" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a class="back link" href="#"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center">订单状态</div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content ">
+                <div class="orderstatu-title">
+                    <p>{{orderDetail.cOrderNo}}</p>
+                    <p class="time"><span>订单日期 ：</span>{{orderDetail.dOrderDate}}</p>
+                </div>
+                <div class="orderstatu-content" id="normalState">
+                    <dl>
+                        <dt><i class="icon orderstatu-icon-1"> </i></dt>
+                        <dd><span>提交订单</span><em></em></dd>
+                    </dl>
+                    <dl>
+                        <dt><i class="icon orderstatu-icon-2"> </i></dt>
+                        <dd><span>订单确认</span><em></em></dd>
+                    </dl>
+                    <dl>
+                        <dt><i class="icon orderstatu-icon-3"> </i></dt>
+                        <dd><span>订单发货</span><em></em></dd>
+                    </dl>
+                    <dl>
+                        <dt><i class="icon orderstatu-icon-4"> </i></dt>
+                        <dd><span>订单收货</span><em></em></dd>
+                    </dl>
+                    <dl>
+                        <dt><i class="icon orderstatu-icon-5"> </i></dt>
+                        <dd><span>订单完成</span><em> </em></dd>
+                    </dl>
+                </div>
+                <div class="orderstatu-content" style="display:none;" id="cancleState">
+                    <dl class="active">
+                        <dt><i class="icon icon-check-number"> </i></dt>
+                        <dd><span>提交订单</span><em></em></dd>
+                    </dl>
+                    <dl class="active">
+                        <dt>2</dt>
+                        <dd><span>订单确认</span><em></em></dd>
+                    </dl>
+                    <dl class="active">
+                        <dt>3</dt>
+                        <dd><span>取消</span><em></em></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/pages/OrderStatusController.js "></script>
+</div>

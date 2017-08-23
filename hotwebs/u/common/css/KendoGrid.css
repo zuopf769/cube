@@ -1,0 +1,72 @@
+﻿/*选择、全选样式控制*/
+.cs-k-check,.checkbox-cell{
+    display:inline-block;
+    width:14px;
+    height:14px;
+    background:url(../images/checkbox_off.png) no-repeat 0 0;
+}
+.cs-k-check[check-state=on],.checkbox-cell[check-state=on]{
+    background-image:url(../images/checkbox_on.png);
+}
+.k-grid tr td {
+
+    border-bottom: 1px solid rgb(219, 219, 222);
+
+}
+/*
+.cs-kgrid-cmd {
+    min-width:0;
+    min-height:0;
+    width:auto;
+    height:auto;
+    display:'';
+    padding:0;
+    margin:0;
+    border:0 none;
+}
+*/
+.cs-kgrid-cmd-add {
+    
+    
+}
+.cs-kgrid-cmd-delete {
+
+}
+.cs-kgrid-autoWrap td[role=gridcell]{
+    white-space:normal;
+	word-wrap:break-word;
+}
+.cs-kgrid-noWrap td[role=gridcell]{
+    white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+/*过滤面板按钮样式控制*/
+button.k-button {
+    white-space:nowrap;
+}
+
+.cs-kgrid-linkHeader,.cs-kgrid-link{
+    text-decoration:underline;
+	cursor:pointer;
+	color:#00f;
+}
+/*单元格内容对齐样式*/
+td.textAlignLeft[role=gridcell] ,th.textAlignLeft[role=columnheader]{text-align:left;}
+td.textAlignRight[role=gridcell] ,th.textAlignRight[role=columnheader]{text-align:right;}
+td.textAlignCenter[role=gridcell] ,th.textAlignCenter[role=columnheader]{text-align:center;}
+
+/*必填字段表头样式**/
+.k-grid-header th.required>.k-link::before{
+    content: "*";
+    color: #f00;
+    display: inline-block;
+    width: 10px;
+    font-size: 12px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.k-grid .k-edit-cell .k-tooltip {
+    white-space:nowrap;
+}

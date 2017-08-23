@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<applications>
+  <application id="bc116373-b0ef-440d-b29a-1aa5439bdb03" name="customerApp" title="u8customer" domainName="uap" moduleName="u8" symbol="u8.customer" ts="2015-04-22 17:00:12" dr="0" tplName_viewModel="archives" tplName="archives_min.tpl">
+    <viewmodel id="bc116373-b0ef-440d-b29a-1aa5439bdb03" name="customerAppViewModel_archives" title="u8customer" extendName="customerAppViewModel_archives_Extend" ts="2015-04-22 17:00:12" dr="0" tplName="archives_min.js.tpl">
+      <entity id="50dc9d78-ee13-482f-baf2-da4621956062" name="customer" title="客户" entityId="50dc9d78-ee13-482f-baf2-da4621956062" isMain="true" ts="2015-04-22 17:00:12" dr="0">
+        <field id="50dc9d78-ee13-482f-baf2-da4621956062-listgrid" name="customerApp_List" title="u8customer列表" ctrlType="DataGrid" isNullable="true" isVisible="true" modelType="Model3D" fieldType="List" tpltype="archive" ts="2015-04-23 10:26:25" dr="0" entity="customer"/>
+        <field id="50dc9d78-ee13-482f-baf2-da4621956062-tree" name="customerApp_Tree" title="u8customer树" ctrlType="Tree" isNullable="true" isVisible="true" modelType="Model2D" fieldType="List" tpltype="archive" ts="2015-04-23 10:26:25" dr="0" entity="customer"/>
+        <interfaces>
+          <interface key="IOrgInfo{####}pk_org" value="pk_org"/>
+          <interface key="IBDObject{####}name" value="name"/>
+          <interface key="IAuditInfo{####}creator" value="creator"/>
+          <interface key="IBDObject{####}pid" value="cscode"/>
+          <interface key="IAuditInfo{####}creationtime" value="creationtime"/>
+          <interface key="IBDObject{####}id" value="ccuscode_pk"/>
+          <interface key="IBDObject{####}pk_org" value="pk_org"/>
+          <interface key="IBDObject{####}code" value="code"/>
+          <interface key="IAuditInfo{####}modifier" value="modifier"/>
+          <interface key="IOrgInfo{####}pk_org_v" value="pk_org_v"/>
+          <interface key="IAuditInfo{####}modifiedtime" value="modifiedtime"/>
+          <interface key="IBDObject{####}pk_group" value="pk_group"/>
+        </interfaces>
+      </entity>
+      <entity id="bc116373-b0ef-440d-b29a-1aa5439bdb03-toolbar" name="Toolbar" title="功能" entityId="50dc9d78-ee13-482f-baf2-da4621956062" isMain="true" ts="2015-04-22 17:00:12" dr="0">
+        <field id="bc116373-b0ef-440d-b29a-1aa5439bdb03-btn-addActionL" name="addAction" title="增加" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="archives" ts="2015-05-21 09:37:09" dr="0" entity="Toolbar"/>
+        <field id="bc116373-b0ef-440d-b29a-1aa5439bdb03-btn-editActionL" name="editAction" title="编辑" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="archives" ts="2015-05-21 09:37:09" dr="0" entity="Toolbar"/>
+        <field id="bc116373-b0ef-440d-b29a-1aa5439bdb03-btn-batchDeleteActionL" name="batchDeleteAction" title="删除" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="archives" ts="2015-05-21 09:37:09" dr="0" entity="Toolbar"/>
+        <field id="bc116373-b0ef-440d-b29a-1aa5439bdb03-btn-configActionL" name="configAction" title="设置" ctrlType="DropDownButton" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="archives" ts="2015-05-21 09:37:09" dr="0" entity="Toolbar"/>
+        <interfaces/>
+      </entity>
+      <actions>
+        <action id="bc116373-b0ef-440d-b29a-1aa5439bdb03-btn-addActionL" name="addAction" entity="Toolbar" field="addAction" defaultImpl="listAdd" eventName="click" functionName="addAction" tplType="archives" ts="2015-05-21 09:44:00" dr="0"/>
+        <action id="bc116373-b0ef-440d-b29a-1aa5439bdb03-btn-editActionL" name="editAction" entity="Toolbar" field="editAction" defaultImpl="listEdit" eventName="click" functionName="editAction" tplType="archives" ts="2015-05-21 09:44:00" dr="0"/>
+        <action id="bc116373-b0ef-440d-b29a-1aa5439bdb03-btn-batchDeleteActionL" name="batchDeleteAction" entity="Toolbar" field="batchDeleteAction" defaultImpl="batchDelete" eventName="click" functionName="batchDeleteAction" tplType="archives" ts="2015-05-21 09:44:00" dr="0"/>
+        <action id="bc116373-b0ef-440d-b29a-1aa5439bdb03-btn-configActionL" name="configAction" entity="Toolbar" field="configAction" defaultImpl="config" eventName="click" functionName="configAction" tplType="archives" ts="2015-05-21 09:44:00" dr="0"/>
+        <action id="50dc9d78-ee13-482f-baf2-da4621956062-listgrid-act-dblclickrow" name="dblclickrow" entity="customer" field="customerApp_List" defaultImpl="dblClickRow" eventName="dblclickrow" functionName="dblClickRow" fieldType="List" tplType="archives" ts="2015-05-21 09:44:00" dr="0"/>
+        <action id="50dc9d78-ee13-482f-baf2-da4621956062-tree-act-treeBeforeExpand" name="treeBeforeExpand" entity="customer" field="customerApp_Tree" defaultImpl="treeBeforeExpand" eventName="beforeExpand" functionName="treeBeforeExpand" fieldType="List" tplType="archives" ts="2015-05-21 09:44:00" dr="0"/>
+        <action id="50dc9d78-ee13-482f-baf2-da4621956062-tree-act-treeClick" name="treeClick" entity="customer" field="customerApp_Tree" defaultImpl="treeClick" eventName="click" functionName="treeClick" fieldType="List" tplType="archives" ts="2015-05-21 09:44:00" dr="0"/>
+        <action id="50dc9d78-ee13-482f-baf2-da4621956062-tree-act-treeMoreClick" name="treeMoreClick" entity="customer" field="customerApp_Tree" defaultImpl="treeMoreClick" eventName="moreClick" functionName="treeMoreClick" fieldType="List" tplType="archives" ts="2015-05-21 09:44:00" dr="0"/>
+      </actions>
+      <proxies/>
+      <states>
+        <state id="bc116373-b0ef-440d-b29a-1aa5439bdb03-add" name="add" isSystem="true" ts="2015-04-22 17:00:13" dr="0">
+          <buttons>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-add-addAction" name="addAction" disable="1" ts="2015-05-21 09:45:41" dr="0" entity="Toolbar" field="addAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-add-batchDeleteAction" name="batchDeleteAction" disable="1" ts="2015-05-21 09:45:41" dr="0" entity="Toolbar" field="batchDeleteAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-add-cancelAction" name="cancelAction" disable="0" ts="2015-05-21 09:45:41" dr="0" entity="Toolbar" field="cancelAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-add-configAction" name="configAction" disable="0" ts="2015-05-21 09:45:41" dr="0" entity="Toolbar" field="configAction"/>
+            <button id="4516e5ae-02dd-4a0b-893f-43920ca53eeb" disable="1" ts="2015-05-21 09:45:41" dr="0" entity="Toolbar" field="copyAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-add-deleteAction" name="deleteAction" disable="1" ts="2015-05-21 09:45:41" dr="0" entity="Toolbar" field="deleteAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-add-editAction" name="editAction" disable="1" ts="2015-05-21 09:45:41" dr="0" entity="Toolbar" field="editAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-add-nextAction" name="nextAction" disable="0" ts="2015-05-21 09:45:41" dr="0" entity="Toolbar" field="nextAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-add-prevAction" name="prevAction" disable="0" ts="2015-05-21 09:45:41" dr="0" entity="Toolbar" field="prevAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-add-printAction" name="printAction" disable="1" ts="2015-05-21 09:45:41" dr="0" entity="Toolbar" field="printAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-add-saveAction" name="saveAction" disable="0" ts="2015-05-21 09:45:41" dr="0" entity="Toolbar" field="saveAction"/>
+          </buttons>
+        </state>
+        <state id="bc116373-b0ef-440d-b29a-1aa5439bdb03-browse" name="browse" isSystem="true" ts="2015-04-22 17:00:12" dr="0">
+          <buttons>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-browse-addAction" name="addAction" disable="0" ts="2015-05-21 09:45:04" dr="0" entity="Toolbar" field="addAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-browse-batchDeleteAction" name="batchDeleteAction" disable="0" ts="2015-05-21 09:45:04" dr="0" entity="Toolbar" field="batchDeleteAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-browse-cancelAction" name="cancelAction" disable="1" ts="2015-05-21 09:45:04" dr="0" entity="Toolbar" field="cancelAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-browse-configAction" name="configAction" disable="0" ts="2015-05-21 09:45:04" dr="0" entity="Toolbar" field="configAction"/>
+            <button id="22869184-9efc-41ca-980b-6220a6d82299" disable="0" ts="2015-05-21 09:45:04" dr="0" entity="Toolbar" field="copyAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-browse-deleteAction" name="deleteAction" disable="0" ts="2015-05-21 09:45:04" dr="0" entity="Toolbar" field="deleteAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-browse-editAction" name="editAction" disable="0" ts="2015-05-21 09:45:04" dr="0" entity="Toolbar" field="editAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-browse-nextAction" name="nextAction" disable="0" ts="2015-05-21 09:45:04" dr="0" entity="Toolbar" field="nextAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-browse-prevAction" name="prevAction" disable="0" ts="2015-05-21 09:45:04" dr="0" entity="Toolbar" field="prevAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-browse-printAction" name="printAction" disable="0" ts="2015-05-21 09:45:04" dr="0" entity="Toolbar" field="printAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-browse-saveAction" name="saveAction" disable="1" ts="2015-05-21 09:45:04" dr="0" entity="Toolbar" field="saveAction"/>
+          </buttons>
+        </state>
+        <state id="bc116373-b0ef-440d-b29a-1aa5439bdb03-edit" name="edit" isSystem="true" ts="2015-04-22 17:00:13" dr="0">
+          <buttons>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-edit-addAction" name="addAction" disable="1" ts="2015-05-21 09:45:13" dr="0" entity="Toolbar" field="addAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-edit-batchDeleteAction" name="batchDeleteAction" disable="1" ts="2015-05-21 09:45:13" dr="0" entity="Toolbar" field="batchDeleteAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-edit-cancelAction" name="cancelAction" disable="0" ts="2015-05-21 09:45:13" dr="0" entity="Toolbar" field="cancelAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-edit-configAction" name="configAction" disable="0" ts="2015-05-21 09:45:13" dr="0" entity="Toolbar" field="configAction"/>
+            <button id="27929387-3927-463e-a77c-9dfc82701530" disable="1" ts="2015-05-21 09:45:13" dr="0" entity="Toolbar" field="copyAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-edit-deleteAction" name="deleteAction" disable="1" ts="2015-05-21 09:45:13" dr="0" entity="Toolbar" field="deleteAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-edit-editAction" name="editAction" disable="1" ts="2015-05-21 09:45:13" dr="0" entity="Toolbar" field="editAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-edit-nextAction" name="nextAction" disable="0" ts="2015-05-21 09:45:13" dr="0" entity="Toolbar" field="nextAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-edit-prevAction" name="prevAction" disable="0" ts="2015-05-21 09:45:13" dr="0" entity="Toolbar" field="prevAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-edit-printAction" name="printAction" disable="1" ts="2015-05-21 09:45:13" dr="0" entity="Toolbar" field="printAction"/>
+            <button id="bc116373-b0ef-440d-b29a-1aa5439bdb03-edit-saveAction" name="saveAction" disable="0" ts="2015-05-21 09:45:13" dr="0" entity="Toolbar" field="saveAction"/>
+          </buttons>
+        </state>
+      </states>
+    </viewmodel>
+  </application>
+</applications>

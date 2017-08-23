@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>supperEditWindow</title>
+    
+	<!--该页不需要引入kendo的js，由调用页引入
+	<link rel="stylesheet" href="styles/kendo.common.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../kendoui/trial/styles/kendo.bootstrap.min.css" rel="stylesheet" />
+	<script src="../../../jquery/jquery-1.11.1.min.js"></script>
+	<script src="js/kendo.all.min.js"></script>
+	<script src="token.js"></script>
+	-->
+	
+	
+	<script src="./apps/common/smart/supperEdit/supper_Function.js"></script>
+	<script src="./apps/common/smart/supperEdit/supper_EditWindow.js"></script>
+</head>
+<body>
+	<div id="supperEditWindow">
+		<div id="upArea">
+			<!--编辑区-->
+			<div id="supper_edit_area">
+				<p>
+					<textarea id="supper_expression" style="width:740px"></textarea>
+				</p>
+				<p>
+					<button id="supper_save" style="width:80px" class="k-primary">保存</button>
+					<button id="supper_cancle" style="width:80px">取消</button>
+					<button id="supper_check" style="width:80px">校验</button>
+					<button id="supper_clear" style="width:80px">清除</button>
+				</p>
+			</div>
+			<!--计算按钮区-->
+			<div id="supper_calculation_area">
+				<p>
+					<button id="supper_one" style="width:50px">1</button>
+					<button id="supper_two" style="width:50px">2</button>
+					<button id="supper_three" style="width:50px">3</button>
+					<button id="supper_zeor" style="width:50px">0</button>
+				</p>
+				<p>
+					<button id="supper_four" style="width:50px">4</button>
+					<button id="supper_five" style="width:50px">5</button>
+					<button id="supper_six" style="width:50px">6</button>
+					<button id="supper_dian" style="width:50px">.</button>
+				</p>
+				<p>
+					<button id="supper_seven" style="width:50px">7</button>
+					<button id="supper_eight" style="width:50px">8</button>
+					<button id="supper_nine" style="width:50px">9</button>
+					<button id="supper_zeorzeor" style="width:50px">00</button>
+				</p>
+				<p>
+					<button id="supper_jia" style="width:50px">+</button>
+					<button id="supper_jian" style="width:50px">-</button>
+					<button id="supper_cheng" style="width:50px">*</button>
+					<button id="supper_chu" style="width:50px">/</button>
+				</p>
+				<p>
+					<button id="supper_qu" style="width:50px">-></button>
+					<button id="supper_deng" style="width:50px">==</button>
+					<button id="supper_zuokuo" style="width:50px">(</button>
+					<button id="supper_youkuo" style="width:50px">)</button>
+				</p>
+				<p>
+					<button id="supper_xiaoyu" style="width:50px"><</button>
+					<button id="supper_dayu" style="width:50px">></button>
+					<button id="supper_xiaodeng" style="width:50px"><=</button>
+					<button id="supper_dadeng" style="width:50px">>=</button>
+				</p>
+			</div>
+		</div>
+		<!--函数树区-->
+		<div id="downArea">
+			<div id="down_left">
+				<div id="supper_functionTree"></div>
+			</div>
+			<div id="top_table_area">
+				<button id="db_button" style="width:100px">数据表</button>
+				<button id="other_button" style="width:100px">实体</button>
+				<input id="tableName" type="textBox"></input>
+				<button id="tableSel_button" style="width:100px" class="k-primary">查询</button>
+			</div>
+			<div id="down_right">
+				<div id="supper_table_column_area">
+					<!--数据表区-->
+					<div id="supper_dbtableGrid"></div>
+					<!--数据列区-->
+					<div id="supper_dbcolumnGrid"></div>
+				</div>
+				<!--其他区域，开发人员扩展-->
+				<div id="supper_other_area" style="display: none">
+					<div id="supper_otherGrid"></div>
+				</div>
+			</div>
+		</div>
+		<!--提示区-->
+		<div id="supper_tip_area">
+			<input id="tipStr" type="textBox" style="width:100%"></input>
+		</div>
+	</div>
+	<style scoped>
+		#supperEditWindow{
+			width:1000px;
+			margin:0 auto;/*设置整个容器在浏览器中水平居中*/
+			border:1px solid #d3d3d3;
+		}
+		#upArea {
+			overflow:hidden;
+			border:1px solid #d3d3d3;
+		}
+		#supper_edit_area {
+			margin-left:10px;
+			margin-right:10px;
+			float:left;
+		}
+		#supper_calculation_area {
+			margin-left:10px;
+			float:left;
+		}
+		#downArea {
+			overflow:hidden;
+			border:1px solid #d3d3d3;
+		}
+		#down_left{
+			width:26%;
+			float:left;
+		}
+		#supper_functionTree {
+			height:310px;
+			width:250px;
+			border:1px solid #d3d3d3;
+		}
+		#down_right{
+			width:74%;
+			float:left;
+		}
+		#top_table_area{
+			margin-top:10px;
+			margin-right:10px;
+			text-align: right;
+		}
+		#supper_table_column_area {
+			float:left;
+		}
+		#supper_dbtableGrid {
+			width:48%;
+			float:left;
+			margin-top:10px;
+		}
+		#supper_dbcolumnGrid {
+			width:48%;
+			float:right;
+			margin-top:10px;
+			margin-right:10px;
+		}
+		#supper_otherGrid {
+			margin-top:10px;
+			margin-right:10px;
+		}
+		#supper_tip_area {
+		    width:100%;
+		}
+	</style>
+</body>
+</html>

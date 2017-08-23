@@ -1,0 +1,119 @@
+﻿.message-box {
+    position:absolute;
+    /*left:38%;
+    top:27%;
+    border-radius:10px;*/
+    width:350px;
+    height:210px;
+    /*border:1px solid gray;
+    background-color:#fff;*/
+    font-size:21px;
+}
+ .img {
+     position:absolute;
+left: 10%;
+  top: 12%;
+    }
+ .information {
+  font-size:19px;
+  position:absolute;
+  left: 22%;
+  top: 13%;
+  width: 260px;
+height: 139px;
+  overflow: auto;
+}
+ .hr {
+     position:relative;
+     top:70%;
+     border:1px solid #ddd;
+     border-top:0px solid #ddd;
+    }
+  .line {
+     width:1px;
+     height:32px;
+     background-color:#ddd;
+     position:absolute;
+     left:50%;
+     top:81%;
+    }
+ .btnok,.btncn{
+    position:absolute;
+    left:5%;
+    top:80%;
+    width:40%;
+    padding:5px;
+    cursor:pointer;
+    border:0px solid white;
+    background-color:white;
+    border-radius:5px;
+    font-size:21px;
+}
+ .btncn{
+    position:absolute;
+    left:55%;
+    top:80%;
+}
+    .btnok:hover ,.btncn:hover{
+        color:white;
+        background-color:#ff6100;
+    }
+
+
+.warning-img {
+     position:absolute;
+     left:19%;
+     top:30%;
+}
+.warning-information {
+   font-size:18px;
+     position:absolute;
+     left:31%;
+     top:31%;
+     width:200px;
+	 word-break:break-word;
+}
+.warning-infor {
+    position:absolute;
+    width:180px;
+    height:50px;
+    left:31%;
+    top:47%;
+    font-size:15px;
+    color:gray;
+    overflow:auto;
+}
+ .warning-btnok{
+    position:absolute;
+    left:25%;
+    top:80%;
+    border-radius:5px;
+    width:50%;
+    height:35px;
+    text-align:center;
+    line-height:35px;
+    cursor:pointer;
+}
+ .warning-btnok:hover {
+        color:#0c83ff;
+    }
+.message-box .warning-hr {
+     position:absolute;
+     top:71%;
+     width: 100%;
+}
+
+
+
+.tip-img {
+     position:absolute;
+     left:30%;
+     top:40%;
+}
+.tip-information {
+  font-size:19px;
+  position:relative;
+  left:45%;
+  top:40%;
+  width:50%;
+}

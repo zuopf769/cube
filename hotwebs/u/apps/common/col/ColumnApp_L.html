@@ -1,0 +1,134 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>栏目</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <style type="text/css">
+        .searchBox
+        {
+            float: left;
+            height: 35px;
+            margin-left: 4px;
+            border: 1px solid #D7D7D7;
+            position: relative;
+            background-color: transparent;
+            margin-top: 5px;
+            padding-left: 0px;
+            width: 200px;
+        }
+         .searchBox input
+            {
+             border-top-color: initial;
+             
+            width: 170px;
+             height: 100%;
+             float: left;
+             text-align: left;
+             border: none;
+             border-bottom-width:0px;
+             line-height: 30px;
+            }
+          .searchBox span
+            {
+             content: url(../../../pc/images/search2.png);
+             cursor: pointer;
+             padding: 6px 2px;
+             padding-top: 6px;
+             padding-right: 2px;
+             padding-bottom: 6px;
+             padding-left: 2px;
+             position: absolute;
+             top: 2px;
+             right: 0;
+            }
+    </style>
+</head>
+<body style="width:1200px;">
+    <div id="ColumnViewModel" class="container" data-title="栏目" data-page="common.col.ColumnApp" data-viewmodel="ColumnViewModel" >
+        <div class="ui-control-group row">
+            <div class="col-lg-4">
+                <label class="col-lg-4" style="margin-top:22px;">列表名称</label>
+                <div class="col-lg-8 p-0">
+                    <label data-propertyname="columnname" data-controltype="Label" style="text-decoration:underline"></label>
+                    <!--<input type="text" data-propertyname="columnname" data-controltype="TextBox" value="" />-->
+                </div>
+            </div>
+            <div>                            
+                
+            </div>
+        </div>
+         
+
+        <div class="ui-control-group row" style="padding-right:0px;">
+           <div data-controltype="SearchBox" data-propertyname="Search" class="searchBox" >
+                <input type="text" placeholder="输入栏目名称" />
+                <span></span>
+            </div>
+
+            <div style="margin-top:8px;">
+                <div data-propertyname="upAction" data-controltype="ImageButton"><span></span><span>上移</span></div>
+                <div data-propertyname="downAction" data-controltype="ImageButton" data-name="group1"><span></span><span>下移</span></div>
+                <div data-propertyname="topAction" data-controltype="ImageButton" style="margin-left:8px;"><span></span><span>置顶</span></div>
+                <div data-propertyname="bottomAction" data-controltype="ImageButton" data-name="group2"><span></span><span>置底</span></div>
+            </div>
+        </div>
+
+        <div class="common-list ui-table row">
+            <div class="grid-wrapper col-lg-12" style="height:420px">
+                <div data-propertyname="pk_entitycolumn_b" data-controltype="DataGrid"></div>
+            </div>
+        </div>
+
+        <div class="common-list ui-footer row">
+            <div  style="display:inline;margin-left:0px; width:100%; height: 64px;">
+           <div class="ui-footer-left" style="margin-left:0px;float:left;margin-top:18px;background-color:rgb(242,242,242);width:76.7%">
+                <div data-controltype="ImageButton" data-propertyname="restoreAction" style="float:left">&nbsp;&nbsp;&nbsp;&nbsp; 恢复所有默认设置
+                </div>
+                <div data-propertyname="columnlevel" data-controltype="Radio" style="margin-bottom:1px;width:50%;float:left;height:45px;">
+                </div>
+            </div>
+
+           <!--<div class="ui-footer-right"  style="float:right;padding-top:8px;width:227.8px;height:45px;background-color:rgb(242,242,242);margin-top:18px;">
+                <div data-controltype="ImageButton" data-propertyname="submitAction"><span></span><span>确定</span></div>
+                <div data-controltype="ImageButton" data-propertyname="cancelAction"><span></span><span>取消</span></div>
+            </div>-->
+			<div class="ui-footer-right" style="float:right;padding-top:18px;">
+                <div data-controltype="ImageButton" data-propertyname="submitAction"><span></span><span>确定</span></div>
+                <div data-controltype="ImageButton" data-propertyname="cancelAction"><span></span><span>取消</span></div>
+            </div>
+           </div>
+
+
+        </div>
+
+        </div>
+
+
+   
+
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./jquery/jquery-ui.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/Button.js" type="text/javascript"></script>
+    <script src="./common/js/Label.js" type="text/javascript"></script>
+    <script data-config="CheckBox"></script>
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>
+    <script data-config="TextBox"></script>
+    <script src="./common/js/SearchBox.js" type="text/javascript"></script>
+    <script src="./common/js/CommonProxy.js" type="text/javascript"></script>    
+    <script src="apps/common/col/ColumnApp_L.js" type="text/javascript"></script>
+    <script src="apps/common/col/ColumnApp_Extend.js" type="text/javascript"></script>
+    <script data-config="DataGrid"></script>
+    <script data-config="ComboBox"></script>
+    <script src="./common/js/Radio.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        cb.viewbinding.create("ColumnViewModel");
+    </script>
+</body>
+</html>

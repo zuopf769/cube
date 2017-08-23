@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application name="CustomerApp" title="客户档案" moduleName="pu" symbol="pu.Customer" uiType="archives">
+  <references>
+    <reference name="../pu/CustomerAppVM.xml"/>
+  </references>
+  <view name="CustomerView" title="客户档案" layoutMode="Fluid" appId="pu.CustomerApp" viewModel="pu.CustomerApp.CustomerViewModel" screenSize="M" tplName="archives_M.tpl">
+    <container name="CustomerView_Body" title="客户档案列表表体" type="Grid">
+      <controls>
+        <control name="Customer_iPad" title="客户档案iPad" ctrlType="DataGrid" field="customers" entity="Customer">
+          <columns>
+            <column name="name" title="客户名称" field="name" ctrlType="TextBox" position="leftTop" />
+            <column name="code" title="联系人姓名" field="code" ctrlType="TextBox" position="rightTop" />
+            <column name="ccuscode_pk" title="单据编码" field="ccuscode_pk" ctrlType="TextBox" position="leftBottom" />
+            <column name="telephone" title="联系人电话" field="telephone" ctrlType="TextBox" position="rightBottom" />
+          </columns>
+        </control>
+      </controls>
+    </container>
+  </view>
+</application>

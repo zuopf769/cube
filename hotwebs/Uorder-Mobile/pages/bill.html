@@ -1,0 +1,116 @@
+<div data-controller="BillController">
+    <div class="pages">
+        <div data-page="Bill" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a class="back link" href="#">
+                            <i class="icon icon-return-arrow"></i>
+                        </a>
+                    </div>
+                    <div class="center">
+                        账单
+                    </div>
+                    <div class="right">
+                        <a class="link btn-addPayBill">
+                            新增
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content bill  pull-to-refresh-content infinite-scroll billListContainer" data-distance="100" data-ptr-distance="55">
+                <div class="pull-to-refresh-layer">
+                    <div class="preloader"></div>
+                    <div class="pull-to-refresh-arrow"></div>
+                </div>
+                <div class="listContainer">
+                    {{#each payList}}
+                    <div class="content-block-title">{{showDate}}</div>
+                    <div class="list-block media-list">
+                        <ul>
+                            {{#each list}}
+                            <li data-id="{{id}}">
+                                <div class="item-content">
+                                    <div class="item-media">
+                                        {{weekDay}}
+                                        <br />{{date}}
+                                    </div>
+                                    <div class="item-media">
+                                        {{#js_compare "this.cPayBusinessCode ==='ORDER'"}}
+                                        <i class="icon icon-xian"></i>
+                                        {{/js_compare}}
+                                        {{#js_compare "this.cPayBusinessCode ==='RECHARGE'"}}
+                                        <i class="icon icon-yu"></i>
+                                        {{/js_compare}}
+                                        {{#js_compare "this.cPayBusinessCode ==='FAN'"}}
+                                        <i class="icon icon-fan"></i>
+                                        {{/js_compare}}
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">
+                                                ￥{{iAmount}} {{#if iNotUsedMoney}} <br />
+                                                <span>余额￥{{iNotUsedMoney}}</span>{{/if}}
+                                            </div>
+                                            <div class="item-after">
+                                                <span class="orange">{{statusName}}</span><br /> {{oPayType}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    {{/each}}
+                </div>
+                <!-- 加载提示符 -->
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/template7" id="billItemTpl">
+        {{#each payList}}
+        <div class="content-block-title">{{showDate}}</div>
+        <div class="list-block media-list">
+            <ul>
+                {{#each list}}
+                <li>
+                    <div class="item-content">
+                        <div class="item-media">
+                            {{weekDay}}
+                            <br />{{date}}
+                        </div>
+                        <div class="item-media">
+                            {{#js_compare "this.cPayBusinessCode ==='ORDER'"}}
+                            <i class="icon icon-xian"></i>
+                            {{/js_compare}}
+                            {{#js_compare "this.cPayBusinessCode ==='RECHARGE'"}}
+                            <i class="icon icon-yu"></i>
+                            {{/js_compare}}
+                            {{#js_compare "this.cPayBusinessCode ==='FAN'"}}
+                            <i class="icon icon-fan"></i>
+                            {{/js_compare}}
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title">
+                                    ￥{{iAmount}} {{#if iNotUsedMoney}} <br />
+                                    <span>余额￥{{iNotUsedMoney}}</span>{{/if}}
+                                </div>
+                                <div class="item-after">
+                                    <span class="orange">{{statusName}}</span><br /> {{oPayType}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        {{/each}}
+    </script>
+    <script type="text/javascript" src="../js/pages/BillController.js"></script>
+</div>

@@ -1,0 +1,23 @@
+﻿.catalog {
+    width:100%;
+    height:100%;
+    position:absolute;
+}
+
+.catalog > .title {
+    width:100%;
+    font-family: '微软雅黑 Regular', '微软雅黑'; 
+    font-size:18px;
+    background-color:rgb(245,245,245);
+}
+
+.catalog > .search{
+
+}
+
+.catalog > .content{  
+    position:absolute;  
+    width:100%; 
+    height:85%;
+    background-color:white;
+}

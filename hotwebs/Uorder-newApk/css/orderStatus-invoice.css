@@ -1,0 +1,164 @@
+/*以下是订单详情-发票信息页面样式，为新创建样式*/
+.invoice-content {
+    background-color: #FFFFFF;
+    padding: 0 30px;
+    margin-top: 10px;
+    padding-top: 10px;
+    position: relative;
+}
+
+    .invoice-content h3 {
+        font-size: 20px;
+        color: #333333;
+        line-height: 45px;
+        position: relative;
+        font-weight: normal;
+        text-align: center;
+    }
+	.invoice-content h3:after{
+	  content: '';
+  	  position: absolute;
+ 	  left: 0;
+	  bottom: -10px;
+	  right: auto;
+	  top: auto;
+	  height: 1px;
+	  width: 100%;
+	  background-color: #E5E5E5;
+	  display: block;
+	  z-index: 15;
+	  -webkit-transform-origin: 50% 100%;
+	  transform-origin: 50% 100%;
+}
+html.pixel-ratio-2 .invoice-content h3:after {
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+html.pixel-ratio-3 .invoice-content h3:after {
+  -webkit-transform: scaleY(0.33);
+  transform: scaleY(0.33);
+}
+    .invoice-content:before,
+    .invoice-content:after {
+        content: " ";
+        position: absolute;
+        width: 7px;
+        height: 96%;
+        top: 7px;
+        background: url(../img/invoice-bg.png) repeat-y top center;
+        background-size: 7px auto;
+    }
+
+    .invoice-content:before {
+        left: 5px;
+    }
+
+    .invoice-content:after {
+        right: 5px;
+    }
+
+.invoice-content-form {
+    margin: 20px auto;
+    padding-bottom: 20px;
+}
+.invoice-content-form li .item-inner{
+	padding-right: 0;
+}
+.invoice-content-form li .item-inner:after{
+	height: 0;
+}
+.invoice-content-form.list-block .align-top{
+	margin: 15px auto;
+    margin-bottom: 0;
+}
+.invoice-content-form.list-block .align-top .item-input{
+	margin-top: 0px;
+}
+.invoice-content-form.list-block .item-content{
+	padding-left: 0;
+}
+    .invoice-content-form.list-block .item-title.label {
+        font-size: 14px;
+        color: #333333;
+        text-align: justify;
+        text-justify: inter-ideograph;
+        white-space: pre;
+        width: 100px;
+    }
+
+    .invoice-content-form.list-block .item-input {
+        font-size: 14px;
+        color: #666666;
+    }
+/*以下为支付信息页面样式，为11-18新建样式*/
+.pay-content {
+    margin-top: 10px;
+    border-top: 1px solid #D8D8D8;
+}
+
+    .pay-content .pay-header {
+        background: #FFFFFF;
+        border-bottom: 1px solid #D8D8D8;
+        padding: 10px 15px;
+    }
+
+        .pay-content .pay-header p {
+            margin: 0;
+            font-size: 14px;
+            color: #999999;
+        }
+
+        .pay-content .pay-header h3 {
+            font-size: 40px;
+            color: #333333;
+            font-weight: normal;
+        }
+
+.pay-content-form {
+    background: #fff;
+    margin-top: 10px;
+    border-top: 1px solid #d8d8d8;
+}
+
+    .pay-content-form.list-block .item-title.label {
+        font-size: 14px;
+        color: #333333;
+        width: 85px;
+    }
+
+    .pay-content-form.list-block .item-input {
+        font-size: 14px;
+        color: #666666;
+        line-height: 21px;
+        padding: 10px 0;
+    }
+
+        .pay-content-form.list-block .item-input .icon {
+            vertical-align: initial;
+            margin-bottom: 7px;
+        }
+
+        .pay-content-form.list-block .item-input > div {
+            display: inline-block;
+            width: 79%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+            .pay-content-form.list-block .item-input > div span {
+                font-size: 12px;
+                color: #999999;
+                display: block;
+            }
+
+.img-area {
+    padding: 10px;
+}
+
+    .img-area img {
+        width: 76px;
+        height: 76px;
+        display: inline-block;
+        margin-right: 10px;
+    }

@@ -1,0 +1,281 @@
+.grid{
+	position:relative;
+	overflow:hidden;
+	height:100%;
+}
+.grid *{
+    box-sizing:content-box;
+}
+.grid .hidden {display:none;}
+/*内容区行交互样式*/
+/*必需给cellBorder设置背景色，否则活动的列中的单元格在水平滚动时，会由于滚定列中的单元格无背景（默认透明）而可见*/
+.grid  tbody  tr,
+.grid  tbody  tr  .cellBorder{/*默认颜色*/
+	background-color:#fff;
+}
+.grid  tbody  tr:hover,
+.grid  tbody  tr:hover  .cellBorder{
+	background-color:#eaf2ff;
+}
+.grid  tbody  tr.selected,
+.grid  tbody  tr.selected  .cellBorder{
+	background-color:#0f0;
+}
+.grid  tbody  tr.focused,
+.grid  tbody  tr.focused  .cellBorder{
+	background-color:#0ff;/*焦点行的背景色应该和选中行相近，且较选中行浅*/
+}
+
+.grid .header  thead  tr  .cellBorder{
+	background-color:#fff;
+}
+.grid  .view{
+	width:100%;
+	height:100%;
+	overflow:auto;
+	position:relative;
+}
+.grid  .viewHeader{	
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:4;
+
+	width:100%;
+	overflow:hidden;
+	
+}
+.grid  .header{
+	white-space:nowrap;
+	width:20000px;
+}
+
+.grid  .header>div{
+	float:left;
+	overflow:hidden;
+	
+}
+.grid  .header .cellContent{white-space:nowrap;}
+.grid thead td{height:35px;text-align:center;white-space:nowrap;}
+.grid .header1{
+	position:relative;
+	z-index:12;
+}
+.grid .header2{
+	position:relative;
+	z-index:11;
+}
+.grid  .viewBody{
+	position:relative;
+	z-index:1;
+}
+
+.grid  .header table,.grid  .viewBody >table{
+	table-layout:fixed;
+	width:10px;
+	border-collapse:collapse;	
+	border-spacing:0;	
+	border-style:solid;
+}
+.grid  .autoLayout  .header table,.grid  .autoLayout .viewBody >table{
+	table-layout:auto;
+}
+.grid  .header table{
+	border-width:1px 0 0 0;
+}
+.grid  .viewBody > table{
+	border-width:1px 0 0 0;
+}
+.grid  .cell{
+	position:relative;
+	padding:0;
+	width:120px;
+	line-height:27px;/*设置最小行高*/
+}
+
+.grid   .cell>.cellBorder{
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+	border-width:1px;
+	border-style:hidden solid solid solid;
+	box-sizing:border-box;
+}
+/*第一个td特别处理*/
+.grid   .header2 .cellBorder{
+	border-style:hidden solid solid hidden;
+}
+.grid.noFrozen   .header2 .cellBorder{
+	border-style:hidden solid solid solid;
+}
+.grid .cell~.cell>.cellBorder{
+	border-style:hidden solid solid hidden;
+}
+
+
+
+.grid   .cell  .cellContent{
+	position:relative;
+	top:0;
+	left:0;
+	padding:2px 5px 2px 4px;
+	margin:1px;
+}
+.grid   thead  .cell  .cellContent{
+	padding:2px 1px 2px 0;
+}
+/*处理层级关系*/
+.grid   .cell{
+	z-index:5;
+}
+
+.grid    .cellBorder{
+	z-index:6;
+	/*background-color:transparent;*/
+}
+.grid    .cellContent{
+	z-index:7;
+}
+/*活动列中单元格*/
+.grid    .frozen~.cell {
+	z-index:1;
+}
+.grid .cell.editing{
+	z-index:10;
+}
+.grid    .frozen~.cell  .cellBorder{
+	z-index:3;
+	/*background-color:transparent;*/
+}
+.grid    .frozen~.cell  .cellContent{
+	z-index:4;
+}
+
+/*固定区的合并的单元格层级要高一点*/
+.grid   .cell[rowspan]{
+	z-index:8;
+}
+.grid    .frozen~.cell[rowspan] {
+	z-index:1;
+}
+
+
+.grid  td.rowNoCol{
+	width:30px;
+}
+.grid td.chkCol{
+	width:30px;
+}
+
+
+.grid  .viewBody thead{
+	visibility:hidden;
+}
+/*内容默认不换行*/
+.grid   .viewBody   tbody  .cellContent{
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.grid  .autoWrap   .viewBody  tbody  .cellContent{
+	overflow:visible;
+	white-space:normal;
+	word-wrap:break-word;
+}
+/*col-resizer*/
+.grid  .col-resizer{
+	width:6px;
+	padding-left:6px;
+	height:100%;
+	position:absolute;
+	top:0;
+	right:-6px;
+	z-index:2;
+}
+.grid  .col-resizer:hover{
+	cursor:col-resize;
+	z-index:10000;
+}
+.grid  .col-resizer span{
+	height:1500px;
+	
+	
+}
+.grid  .col-resizer.active{
+	z-index:10000;
+}
+
+.grid  div.refLine{
+	position:absolute;
+	z-index:10001;
+	left:5px;
+	top:0;
+	bottom:0;	
+	border-left:1px dashed red;
+	width:0px;
+	display:none;
+	background-color:transparent;
+}
+.grid  div.frozenBoundary{
+	position:absolute;
+	z-index:10001;
+	left:1px;
+	top:0;
+	bottom:0;
+	display:block;	
+	padding:0 5px;
+	margin-left:-7px;
+	cursor:col-resize;
+	
+}
+.grid  div.frozenBoundary  div{
+	height:100%;
+	border-right:2px solid #000;
+}
+.grid .title{
+	padding:0 16px;
+}
+.grid .sortIcon{
+	margin-left:-16px;
+	width:16px;
+	height:16px;
+	display:inline-block;
+	vertical-align:middle;
+}
+.grid  .sortAsc .sortIcon{
+	background:url(../images/sort_icons.png) no-repeat 0 0;
+}
+.grid  .sortDesc  .sortIcon{
+	background:url(../images/sort_icons.png) no-repeat -16px 0;
+}
+/*列对齐关联的class定义*/
+.grid .textAlignLeft{text-align:left;}
+.grid .textAlignRight{text-align:right;}
+.grid .textAlignCenter{text-align:center;}
+
+/*参照列样式*/
+.grid  .referData{
+	text-decoration:underline;
+	cursor:pointer;
+	color:#00f;
+}
+
+/*内置编辑器样式*/
+.grid  table.cellEditorWrapper{
+	width:100%;
+	height:100%;
+	table-layout:fixed;
+	border-collapse:collapse;
+}
+.grid  table.cellEditorWrapper td{
+	padding:2px;
+}
+.grid  table.cellEditorWrapper td *{
+	box-sizing:border-box;
+}
+.grid .TextBoxEditor  input{
+	width:100%;
+	box-sizing:border-box;
+}
+.grid .CheckboxEditor{text-align:center;}

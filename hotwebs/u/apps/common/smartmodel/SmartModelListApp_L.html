@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator" content=
+    "HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>元数据选择</title>
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+	<link href="./pc/css/accondion.pc.css" rel="stylesheet" />    
+    <link href="./pc/css/Panorama.pc.css" rel="stylesheet" /> 
+    <link href="./pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link href="./pc/css/SlickGridWrapper.css" rel="stylesheet" />
+    <link href="./pc/css/SlickGridSource.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.ToolBar.css" rel="stylesheet" />
+    <link href="./apps/common/smartmodel/css/SmartModelGenral.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="SmartModelListView" data-page="common.smartmodel.SmartModelListApp" data-viewmodel="SmartModelListViewModel">
+        <div class="cube-main">
+            <div class="cube-main-content">
+                <div class="common-list ui-header">
+                    <div>
+                        元数据选择
+                    </div>
+
+                    <div data-controltype="ImageButton" data-propertyname="closeAction" style="margin: -10px 0 5px;">
+                        <span class="close-icon">1</span> <span style="display:none;">关闭</span>
+                    </div>
+                </div>
+
+                <div class="common-list ui-content">
+                    <div data-propertyname="topToolBar" data-controltype="ToolBar" class="cube-bar-modeltxt" style="width:100%">
+                        <ul style="margin:-0.5px;">
+                            <li>
+                                <div data-propertyname="addSmartModelButton" data-controltype="ImageButton" data-name="workflow1">
+                                    <span>新增</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div data-propertyname="updateSmartModelButton" data-controltype="ImageButton" data-name="workflow1">
+                                    <span>修改</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div data-propertyname="deleteSmartModelButton" data-controltype="ImageButton" data-name="workflow1">
+                                    <span>删除</span>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div data-propertyname="designSmartModelButton" data-controltype="ImageButton">
+                                    <span>设计</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="metaDataTreeBox" style="width:30%;float:left">
+                        <div>
+                            <div data-propertyname="treeToolbar" data-controltype="ToolBar" class="cube-bar-modeltxt" style=
+                            "width:100%">
+                                <ul style="margin:-0.5px;">
+                                    <li>
+                                        <div data-propertyname="addNodeButton" data-controltype="ImageButton" data-name="workflow1">
+                                            <span>新增</span>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div data-propertyname="updateNodeButton" data-controltype="ImageButton" data-name=
+                                        "workflow1">
+                                            <span>修改</span>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div data-propertyname="deleteNodeButton" data-controltype="ImageButton" data-name=
+                                        "workflow1">
+                                            <span>删除</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div><!--模块-实体树-->
+
+                        <div class="treeComp" style="margin-top: 50px;">
+                            <div class="accondion-wrapper">
+                                <div class="accondion" data-controltype="Accondion" data-propertyname="smartModelTree"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metaDataTreeBox" style="width:70%;float:left">
+                        <div class="grid-wrapper">
+                            <!--右侧列表-->
+
+                            <div data-propertyname="smartModelForm" data-controltype="DataGrid" class="grid"></div>
+
+                            <div class="grid-pager"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="common-list ui-footer">
+                    <!--toolbar-->
+
+                    <div data-propertyname="NCMDFootToolbar" data-controltype="ToolBar" class="footToolBar" style="height:50px">
+                        <ul>
+                            <li class="button">
+                                <div data-propertyname="cancelButton" data-controltype="ImageButton">
+                                    <span>取消</span>
+                                </div>
+                            </li>
+
+                            <li class="button">
+                                <div data-propertyname="saveButton" data-controltype="ImageButton">
+                                    <span>确定</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><script src="./jquery/jquery-1.11.1.js" type="text/javascript">
+</script> <script src="./jquery/jquery-ui.js" type="text/javascript">
+</script> <script src="./common/js/Animation.js" type="text/javascript">
+</script> <script src="./common/js/Cube.js" type="text/javascript">
+</script> <script src="./pc/js/cube.pc.js" type="text/javascript">
+</script> <script src="./pc/js/modal.js" type="text/javascript">
+</script> <script src="./common/js/Cube.bindings.js" type="text/javascript">
+</script> <script src="./common/js/Control.js" type="text/javascript">
+</script> <script src="./common/js/Button.js" type="text/javascript">
+</script> <script src="./common/js/ImageButton.js" type="text/javascript">
+</script> <script src="./common/js/ToolBar.js" type="text/javascript">
+</script> <script src="./pc/js/TabContent.js" type="text/javascript">
+</script> <script src="./common/js/CommonProxy.js" type="text/javascript">
+</script> <script src="./jquery/jquery.event.drag-2.2.js" type="text/javascript">
+</script><script src="./common/js/accondion.js" type="text/javascript">
+</script><script type="text/javascript" src="./jquery/iscroll-probe.js">
+</script> <script src="./pc/js/SlickGridSource.js" type="text/javascript">
+</script> <script src="./pc/js/SlickGridWrapper.js" type="text/javascript">
+</script> <script src="apps/common/smartmodel/SmartModelListApp_L.js" type="text/javascript">
+</script> <script src="apps/common/smartmodel/SmartModelListApp_Extend.js" type="text/javascript">
+</script> <script type="text/javascript">
+        cb.viewbinding.create("SmartModelListView");111
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./bootstrap/css/bootstrap.css" rel="Stylesheet" type="text/css" />
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="./pc/css/kendoctrl/Cube.Control.css" rel="stylesheet" type="text/css" />
+    <link href="./pc/css/Cube.ToolBar.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link href="./bootstrap/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <link href="./pc/css/CheckTextBox.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link href="./pc/css/scheme.css" rel="stylesheet" />
+    <style type="text/css">
+        .col-lg-4.p-0 > span:first-child {
+            width: 100%;
+        }
+
+        .quickquery .col-lg-4.p-0 > input {
+            width: 85px;
+        }
+
+        .queryBtn {
+            margin-top: 10px;
+        }
+
+        .search {
+            display: block;
+            width: 80px;
+            height: 28px;
+            line-height: 28px;
+            background: #339EE2;
+            color: #FFF;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .morequeryitem {
+            display: block;
+            width: 102px;
+            height: 28px;
+            background: #FFF;
+            color: #339EE2;
+            line-height: 28px;
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+    <body>
+</head>
+<div id="QuerySchemeView" data-page="common.queryscheme.QuerySchemeApp" data-viewmodel="QuerySchemeViewModel">
+    <div class="row m-l-0 m-r-0">
+        <!--查询条件-->
+        <div class="col-lg-10 controlCss" id="searchItem">
+
+        </div>
+        <div class="col-lg-2 p-l-0 p-r-0 queryBtn" id="queryright">
+            <div data-propertyname="queryAction" data-controltype="ImageButton" class="col-lg-6 search">
+                <span></span><span>查询</span>
+            </div>
+            <div data-propertyname="moreAction" data-controltype="ImageButton" class="col-lg-6 morequeryitem">
+                <span></span><span>更多查询条件</span>
+            </div>
+        </div>
+    </div>
+</div>
+<script id="queryschememanage" type="text/html">
+    <!--查询条件模板 Start-->
+    <% var num = 0;%>
+    <% for(var i=0;i< propertyitem.length;i++){%>
+    <% if (!propertyitem[i].filterMeta.isDefault) continue;%>
+    <% if (num++ > 5) break;%>
+    <% if(propertyitem[i].operator!="between"){%>
+    <% var ctrlType=propertyitem[i].filterMeta.fieldType;%>
+    <% if(ctrlType=='TextBox'){%>
+    <div class="col-lg-4 p-l-0">
+        <label class="col-lg-4" title="<%=propertyitem[i].filterMeta.fieldName%>"><%=propertyitem[i].filterMeta.fieldName%>:</label>
+        <div class="col-lg-8 p-0">
+            <input data-propertyname="<%=propertyitem[i].filterMeta.fieldCode.replace(/\./g,'_')%>" data-controltype="TextBox" />
+        </div>
+    </div>
+    <% }else if(ctrlType=="Refer"){%>
+    <div class="col-lg-4 p-l-0">
+        <label class="col-lg-4" title="<%=propertyitem[i].filterMeta.fieldName%>"><%=propertyitem[i].filterMeta.fieldName%>:</label>
+        <div class="col-lg-8 p-0" data-propertyname="<%=propertyitem[i].filterMeta.fieldCode.replace(/\./g,'_')%>" data-controltype="Refer">
+            <input type="text" />
+            <div>
+                <img src="pc/images/Ref-close.png" />
+                <img src="pc/images/Ref.png" />
+            </div>
+        </div>
+    </div>
+    <% }else if(ctrlType=="ComboBox"){%>
+    <div class="col-lg-4 p-l-0">
+        <label class="col-lg-4" title="<%=propertyitem[i].filterMeta.fieldName%>"><%=propertyitem[i].filterMeta.fieldName%>:</label>
+        <div class="col-lg-8 p-0 combobox">
+            <input data-propertyname="<%=propertyitem[i].filterMeta.fieldCode.replace(/\./g,'_')%>" data-controltype="ComboBox" />
+        </div>
+    </div>
+    <% }else if(ctrlType=="DateTimeBox"){%>
+    <div class="col-lg-4 p-l-0">
+        <label class="col-lg-4" title="<%=propertyitem[i].filterMeta.fieldName%>"><%=title%>:</label>
+        <div class="col-lg-8 p-0 datetimebox">
+            <input data-propertyname="<%=propertyitem[i].filterMeta.fieldCode.replace(/\./g,'_')%>" data-controltype="DateBox" />
+        </div>
+    </div>
+    <% }else if(ctrlType=="NumberBox"){%>
+    <div class="col-lg-4 p-l-0">
+        <label class="col-lg-4" title="<%=propertyitem[i].filterMeta.fieldName%>"><%=propertyitem[i].filterMeta.fieldName%>:</label>
+        <div class="col-lg-8 p-0 numberbox">
+            <input data-propertyname="<%=propertyitem[i].filterMeta.fieldCode.replace(/\./g,'_')%>" data-controltype="NumberBox" />
+        </div>
+    </div>
+    <%}%>
+    <%}else{%>
+    <div class="col-lg-8 p-l-0">
+        <div data-controltype="CheckTextBox" data-propertyname="<%=propertyitem[i].filterMeta.fieldCode.replace(/\./g,'_')%>" class="CheckTextBox col-lg-12 p-0 quickquery">
+        </div>
+    </div>
+    <%}%>
+    <%}%>
+    <!--查询条件模板 End-->
+</script>
+<script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+<script src="./jquery/jquery-ui.js" type="text/javascript"></script>
+<script src="./common/js/Cube.js" type="text/javascript"></script>
+<script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+<script src="./common/js/Control.js" type="text/javascript"></script>
+<script src="./common/js/Button.js" type="text/javascript"></script>
+<script src="./common/js/ImageButton.js" type="text/javascript"></script>
+<script data-config="Refer"></script>
+<script data-config="DateTimeBox"></script>
+<script data-config="DateBox"></script>
+<script src="./pc/js/kendoctrl/DateBoxFx.js" type="text/javascript"></script>
+<script src="./common/js/ListControl.js" type="text/javascript"></script>
+<script data-config="NumberBox"></script>
+<script data-config="TextBox"></script>
+<script data-config="ComboBox"></script>
+<script src="./common/js/CommonProxy.js" type="text/javascript"></script>
+<script src="./pc/js/CheckTextBox.js" type="text/javascript"></script>
+<script src="./pc/js/Slider.js" type="text/javascript"></script>
+<script src="./pc/js/template.js" type="text/javascript"></script>
+<script src="apps/common/queryscheme/QuerySchemeViewModel.js" type="text/javascript"></script>
+<script type="text/javascript">
+    cb.viewbinding.create("QuerySchemeView");
+</script>
+</body>
+</html>

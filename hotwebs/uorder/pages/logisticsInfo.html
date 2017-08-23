@@ -1,0 +1,48 @@
+<div data-controller="logisticsInforController">
+    <div class="pages">
+        <div data-page="logisticsPage" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a class="back link" href="#"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center">物流信息</div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content ">
+                <div class="orderstatu-title">
+                    <p><span>物流公司 ：</span>{{logisticsName}}</p>
+                    <p><span>物流编号 ：</span>{{logisticsNo}}</p>
+                </div>
+                <div class="logistics-infor">
+                    {{#each logisticsInfo}}
+                    <dl class="active">
+                        <dt>
+                            {{#unless @index}}
+                            <i class="icon icon-check-number"></i>
+                            {{/unless}}
+                        </dt>
+                        <dd>
+                            <span class="triangle"></span>
+                            <p>{{log}}</p>
+                            <p class="color-lightergray-u">{{date}}</p>
+                        </dd>
+                    </dl>
+                    {{else}}
+                    <!--无物流信息页-->
+                    <div class="logistics-infor-none">
+                        <div class="infor">
+                            <p>未查到此物流信息</p>
+                            <p class="desc">可能是单号错误或单号尚未录入系统</p>
+                            <p><a href="#" class="retern-btn logistics">返回订单</a></p>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/pages/logisticsInforController.js "></script>
+</div>

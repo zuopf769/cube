@@ -1,0 +1,63 @@
+<div data-controller="logisticsInforController">
+    <div class="pages">
+        <div data-page="logisticsPage" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a class="back link" href="#"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center">物流信息</div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content ">
+                <div class="orderstatu-title">
+                    <span class="icon-log"> <i class="icon logistics-icon"></i></span>
+                    <p class="m-l-70">{{logisticsName}}</p>
+                    <p class="m-l-70 time">{{logisticsNo}}</p>
+
+                    <span class="sign"><i class="icon signfor"></i></span>
+                </div>
+                <div class="logistics-infor">
+                    {{#each logisticsInfo}}
+                    <dl class="active">
+                        <dt>
+                            {{#unless @index}}
+                            <!--<i class="icon icon-check-number"></i>-->
+                            {{/unless}}
+                        </dt>
+                        <dd>
+                            <!--<span class="triangle"></span>-->
+                            <p>{{log}}</p>
+                            <p class="color-lightergray-u logistics-time">{{date}}</p>
+                        </dd>
+                    </dl>
+                    {{else}}
+                    <!--无物流信息页-->
+                    <div class="logistics-infor-none">
+                        <div class="infor">
+                            <p>未查到此物流信息</p>
+                            <p class="desc">可能是单号错误或单号尚未录入系统</p>
+                            <p><a href="#" class="retern-btn logistics">返回订单</a></p>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="courier">
+                    <div class="courier-infor">
+                        <i class="icon icon-courier"></i>
+                        <div class="infor-name">
+                            <p>张国栋</p>
+                            <p class="no">京A 686GJ</p>
+                        </div>
+                    </div>
+                    <div class="courier-phone">
+                        <i class="icon icon-courier-phone"></i>
+                    </div>
+                    <p><span>收货时间</span>2015-11-12  16:03:32</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/pages/logisticsInforController.js "></script>
+</div>

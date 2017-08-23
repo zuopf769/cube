@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>U订货</title>
+    <link rel="stylesheet" href="css/framework7.css">
+    <link rel="stylesheet" href="css/my-app-index.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/shopoing-cart.css">
+    <link rel="stylesheet" href="css/my-app-product.css">
+    <link rel="stylesheet" href="css/productDetail.css">
+    <link rel="stylesheet" href="css/confirm-order.css">
+    <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="css/toast.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/addrList.css">
+    <!--<link href="css/upUorderMobileCombine.min.css" rel="stylesheet" />-->
+    <script type="text/javascript" src="js/common.js"></script>
+    <style>
+        .regBg {
+            background: url(img/regBg.png);
+            background-size: 100%;
+        }
+
+        #reg2 {
+            background-color: #fff;
+            position: relative;
+        }
+
+        .regComplate {
+            width:100%;
+        }
+
+            .regComplate a {
+                width: 50%;
+                margin: 10px auto;
+                border-radius: 17px;
+            }
+    </style>
+</head>
+<body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="popup cart-popup" style="height: 60%; top: 40%"></div>
+    <div class="popup productParam-popup" style="width: 90%;left: 10%"></div>
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <p>Left panel content goes here</p>
+        </div>
+    </div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+        <div class="content-block">
+            <p>Right Panel content here</p>
+            <!-- Click on link with "close-panel" class will close panel -->
+            <p><a href="#" class="close-panel">Close me</a></p>
+            <!-- Click on link with "open-panel" and data-panel="left" attribute will open Left panel -->
+            <p><a href="#" data-panel="left" class="open-panel">Open Left Panel</a></p>
+        </div>
+    </div>
+    <!-- Views, and they are tabs-->
+    <!-- We need to set "toolbar-through" class on it to keep space for our tab bar-->
+    <div class="views tabs toolbar-through">
+        <!-- Your first view, it is also a .tab and should have "active" class to make it visible by default-->
+        <div id="view-1" class="view view-main tab active" data-url="pages/home.html">
+            <!-- We can make with view with navigation, let's add Top Navbar-->
+            <!--    <div class="navbar"></div>-->
+            <!-- Pages-->
+            <div class="pages navbar-through">
+                <!-- Page, data-page contains page name-->
+                <div data-page="home" class="page">
+                    <!-- Scrollable page content-->
+                    <div class="page-content">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Second view (for second wrap)-->
+        <div id="view-2" class="view tab" data-url="pages/category.html">
+            <!-- We can make with view with navigation, let's add Top Navbar-->
+            <div class="navbar">
+                <div class="navbar-inner" style="background: #03bfff;">
+                    <div class="left">
+                        <a href="about.html" class="link icon-only">
+                            <i class="icon icon-scan"></i>
+                        </a>
+                    </div>
+                    <div class="center">
+                        <a href="pages/search.html" class="link icon-only">
+                            <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+                            <input type="text" class="search" value="输入商品名称/编码/条形码" readonly="readonly" />
+                            <div class="input-group-addon"><i class="icon icon-record"></i></div>
+                        </a>
+                    </div>
+                    <div class="right">
+                        <a href="pages/messageList.html" class="link icon-only">
+                            <i class="icon icon-msg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pages navbar-through">
+                <div data-page="category" class="page">
+                    <div class="page-content"></div>
+                </div>
+            </div>
+        </div>
+        <div id="view-3" class="view tab" data-url="pages/cart.html">
+            <!-- We can make with view with navigation, let's add Top Navbar-->
+            <!-- Pages-->
+            <div class="pages navbar-through">
+                <!-- Page, data-page contains page name-->
+                <div data-page="cart" class="page">
+                    <!-- Scrollable page content-->
+                    <div class="page-content"></div>
+                </div>
+            </div>
+        </div>
+        <div id="view-4" class="view tab" data-url="pages/user.html">
+            <div class="navbar"></div>
+            <div class="pages navbar-through">
+                <div data-page="user" class="page">
+                    <div class="page-content">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="login-screen modal-in">
+            <div class="views">
+                <div class="view">
+                    <div class="pages navbar-through">
+                        <div data-page="Register" class="page no-tabbar">
+                            <div class="navbar" id="regNavbar" hidden>
+                                <div class="navbar-inner">
+                                    <div class="left"><a href="#" id="regBack2" class="link forgetPwd-back"><i class="icon icon-backgray"></i></a></div>
+                                    <div class="center">
+                                        设置账户信息
+                                    </div>
+                                    <div class="right"></div>
+                                </div>
+                            </div>
+                            <div id="reg1" class="page-content login-screen-content regBg">
+                                <div class="login-avatar" style="margin:25% auto;width:220px;">
+                                    <img data-src="img/regIndexImg.png" class="lazy" />
+                                </div>
+                                <form id="mylogin">
+                                    <div class="list-block">
+                                        <ul>
+                                            <li class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-username"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-input">
+                                                        <input type="text" name="username" id="txtUserName" style="color:#fff;" placeholder="手机号/邮箱" />
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <!--<li class="item-content p-l-0">
+                                                <div class="item-inner p-r-0">
+                                                    <a href="#" id="btnGetCode" class="button border-lightestgray-u btn-space">校验码</a>
+                                                </div>
+                                            </li>-->
+                                            <li class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-password"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-input">
+                                                        <input type="text" name="ValidCode" id="txtValidCode" style="color:#fff;" placeholder="请输入校验码" />
+                                                    </div>
+                                                    <a href="#" id="btnGetCode" class="button border-lightestgray-u btn-space">校验码</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="login-btuuon">
+                                        <p>
+                                            <a href="#" class="button button-fill bg-green-u submit" id="btnRegister">注  册</a>
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="page-content" id="reg2" style="display:none;">
+                                <div class="user-list">
+                                    <div class="list-block all-order  m-b-0">
+                                        <form id="form-RegPage">
+                                            <ul>
+                                                <li class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label"><span class="color-red">*</span>登录账号</div>
+                                                        <div class="item-input">
+                                                            <input type="text" name="cUserName" placeholder="" readonly>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li style="padding:2px 0px;"></li>
+                                                <li class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label"><span class="color-red">*</span>登录密码</div>
+                                                        <div class="item-input">
+                                                            <input type="password" name="cPassword" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label"><span class="color-red">*</span>再次确认</div>
+                                                        <div class="item-input">
+                                                            <input type="password" placeholder="" name="cPassword2">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label"><span class="color-red">*</span>公司名称</div>
+                                                        <div class="item-input">
+                                                            <input type="text" placeholder="" name="cName">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label"><span class="color-red">*</span>英文名称</div>
+                                                        <div class="item-input">
+                                                            <input type="text" placeholder="" name="cAlias">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label"><span class="color-red">*</span>优普伙伴</div>
+                                                        <div class="item-input">
+                                                            <input type="text" placeholder="" name="cUPPartner">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item-content" id="liEmail" style="display:none;">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label"><span class="color-red">*</span>邮箱</div>
+                                                        <div class="item-input">
+                                                            <input type="text" placeholder="" name="cEmail">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item-content" id="liPhone" style="display:none;">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label"><span class="color-red">*</span>手机</div>
+                                                        <div class="item-input">
+                                                            <input type="text" placeholder="" name="cMobile">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label"><span class="color-red">*</span>联系人</div>
+                                                        <div class="item-input">
+                                                            <input type="text" placeholder="" name="cFullName">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <p class="regTip">英文名称会作为客户登录订货端账号的后缀来体现其唯一性</p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-content" id="reg3" style="background-color:#fff; " hidden>
+                                <div style="height: 100px;">
+                                    <div style="width:220px;margin:30px auto;">
+                                        <img src="img/reg30users.png" style="width:220px;" />
+                                    </div>
+                                    <div style="width:150px;margin:30px auto;">
+                                        <img src="img/succeed.png" style="width:150px;" />
+                                    </div>
+                                </div>
+                                <div class="m-t-25">
+                                    <p style="font-size: 16px;padding-left: 80px;">公司名称: </p>
+                                    <p style="font-size: 16px;padding-left: 120px;padding-top:18px" id="coprNameP">德国胡赫公司</p>
+                                </div>
+                                <div class="m-t-25">
+                                    <p style="font-size: 16px;padding-left: 80px;">账号: </p>
+                                    <p style="font-size: 16px;padding-left: 120px;padding-top:18px" id="accountP">234234@qq.com</p>
+                                </div>
+                                <div class="m-t-25">
+                                    <p style="font-size: 16px;padding-left: 80px;">密码: </p>
+                                    <p style="font-size: 16px;padding-left: 120px;padding-top:18px" id="pwdP">2342342342</p>
+                                </div>
+                                <div style="margin:0 auto;margin-top:50px; ">
+                                    <p style="font-size: 16px;padding-left: 80px;">U订货网址 </p>
+                                    <p style="font-size: 16px;padding-left: 80px;padding-top:18px">
+                                        <a href="#" class="button button-fill bg-green-u submit external" style="width:70%;" id="btnRegister">udh.yongyouup.com</a>
+                                    </p>
+                                    <p style="font-size: 14px;padding-left: 80px;">请在PC端登录并完善信息!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Tabbar-->
+        <div class="toolbar tabbar tabbar-labels homeNavBar">
+            <div class="toolbar-inner">
+                <div class="regComplate">
+                    <a href="#" class="button button-fill bg-green-u submit m-t" id="btnRegisterComplate">完成注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.js"></script>
+    <!--<script type="text/javascript" src="js/sha.js"></script>-->
+    <script type="text/javascript" src="js/cube.js"></script>
+    <script type="text/javascript" src="js/basedata.js"></script>
+    <script type="text/javascript" src="js/toast.js"></script>
+    <script type="text/javascript" src="js/ns.js"></script>
+
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app-index_reg.js"></script>
+</body>
+</html>

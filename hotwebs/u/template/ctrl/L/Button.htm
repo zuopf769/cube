@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>
+</head>
+<body>
+    <#?(group==null){#>
+    <div data-propertyname="<#=?%s,field#>" data-controltype="ImageButton">
+    <#}#>
+    <#?(group!=null){#>
+    <div data-propertyname="<#=?%s,field#>" data-controltype="ImageButton" data-name="<#=group#>">
+    <#}#>
+        <span class="<#=css#>"></span>
+        <span><#=title#></span>
+    </div>
+</body>
+<script>
+</script>
+<field>
+</field>
+</html>

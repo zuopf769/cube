@@ -1,0 +1,49 @@
+﻿<div data-controller="MessageDetailController">
+    <div class="pages  navbar-through">
+        <div data-page="MessageDetail" class="page no-tabbar">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left"><a href="#" class=" back link"><i class="icon icon-backgray"></i></a></div>
+                    <div class="center">
+                        订单状态
+                    </div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content infinite-scroll pull-to-refresh-content messageDetail-container" data-ptr-distance="55" data-distance="50">
+                <div class="pull-to-refresh-layer">
+                    <div class="preloader"></div>
+                    <div class="pull-to-refresh-arrow"></div>
+                </div>
+                <div class="list-block media-list msgDetail">
+                    <ul></ul>
+                </div>
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/template7" id="msgDetailTpl">
+        {{#each bulletins}}
+        <li>
+            <a href="pages/orderInfo.html?oid={{cVoucherNo}}" class="item-link item-content">
+                <div class="item-media">
+                    <img data-src="{{@root.serverhost}}{{paramsMap.img}}" alt="产品图片" width="75" class="border-lightestgray-u lazy" />
+                </div>
+                <div class="item-inner">
+                    <div class="item-title-row">
+                        <div class="item-title">订单号：{{cVoucherNo}}</div>
+                    </div>
+                    <div class="item-text">{{cTitle}}</div>
+                </div>
+            </a>
+            <div class="msgDetail-infor">
+                <span>{{dCreated}}</span>
+                <a href="pages/orderInfo.html?oid={{cVoucherNo}}">查看详情 ></a>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/javascript" src="../js/pages/MessageDetailController.js"></script>
+</div>

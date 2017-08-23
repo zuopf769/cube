@@ -1,0 +1,207 @@
+﻿.login-screen-content {
+    padding: 40px;
+    background:url(../img/login-bg.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.login-avatar {
+    width: 200px;
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+    margin: 50px auto;
+}
+
+    .login-avatar img {
+        text-align: center;
+        width: 78px;
+    	height: 78px;
+        padding: 0;
+        margin: 0;
+    }
+
+.login-screen-content .item-content{
+    border: 1px solid rgba(204,204,204,.5);
+    background-color: #fff;
+    border-radius: 6px;
+    padding-left: 10px;
+    margin-top: 15px;
+}
+ ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #cccccc;
+    font-size: 15px !important;
+}
+ :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #cccccc;
+    font-size: 15px !important;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #cccccc;
+    font-size: 15px !important;
+}
+ :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #cccccc;
+    font-size: 15px !important;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    color: #333333;
+}
+
+#mylogin input{
+    color: #333333;
+    font-size: 15px !important;
+}
+
+.list-block .item-inner:after {
+    /*height: 0;*/
+}
+
+.login-btuuon {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+    .login-btuuon .button {
+        border-radius: 19px;
+        margin: 0 auto;
+        height: 36px;
+        line-height: 36px;
+        font-size: 15px;
+        width: 250px;
+    }
+
+.value-clear{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin-top: -7px;
+    background-color: #cccccc;
+        line-height: 0;
+    text-align: center;
+    padding-top: 4px;
+    box-sizing: border-box;
+
+}
+
+/*忘记密码*/
+.forgetPwd,
+.register {
+    box-sizing: border-box;
+    color: #fff;
+    height: 100%;
+    padding: 10px 32px;
+}
+
+    .forgetPwd .list-block .item-content,
+    .register .list-block .item-content {
+        min-height: 55px;
+        line-height: 55px;
+        position: relative;
+    }
+
+.security {
+    width: 97px;
+    height: 36px;
+    background: url(../img/security.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.forgetPwd .item-input i,
+.register .item-input i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -6px;
+}
+.forgetPwd .list-block .item-content ul.sub-menu {
+    position: absolute;
+    left: 50px;
+    top: 55px;
+    padding: 0;
+    background: #FFFFFF;
+    z-index: 99;
+    width: 70%;
+}
+
+    .forgetPwd .list-block .item-content ul.sub-menu li {
+        line-height: 35px;
+        height: 35px;
+        padding-left: 5px;
+        border: 1px solid #EAEAEA;
+        border-top: none;
+        color: #a9a9a9;
+    }
+
+.forgetPwd .list-block .item-content .item-inner {
+    padding-right: 0;
+}
+
+.forgetPwd .item-input i:hover + .phone-email {
+    display: inline-block;
+}
+
+.btn-code {
+    font-size: 13px;
+    color: #b1bcc8;
+    border: 1px solid rgb(225, 225, 225);
+    background-color: rgba(24, 147, 110, 0);
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.forgetPwd-infor {
+    background-color: #fff;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+    .forgetPwd-infor .infor {
+        margin-top: 60%;
+        text-align: center;
+        font-size: 19px;
+        color: #03bfff;
+        width: 100%;
+        display: block;
+    }
+
+        .forgetPwd-infor .infor .desc {
+            color: #666666;
+            font-size: 16px;
+        }
+
+        .forgetPwd-infor .infor .retern-btn {
+            width: 140px;
+            height: 39px;
+            line-height: 39px;
+            margin: 0 auto;
+            padding: 4px 10px;
+            border: solid 1px #03bfff;
+            border-radius: 40px;
+            background-color: #FFFFFF;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 20px;
+            display: inline-block;
+            color: #03bfff;
+        }
+
+.forgetPwd-success {
+    background: url(../img/icon/succeed.png) no-repeat center 20% #fff;
+    background-size: 93px 93px;
+    display: none;
+}
+
+.forgetPwd-failure {
+    background: url(../img/icon/failure.png) no-repeat center 20% #fff;
+    background-size: 93px 93px;
+    display: none;
+}

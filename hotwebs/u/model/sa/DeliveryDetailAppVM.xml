@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<applications>
+  <application name="DeliveryDetailApp" title="发货单详情" moduleName="sa" tplName="voucher_min.tpl">
+    <viewmodel name="DeliveryDetailViewModel" extendName="DeliveryDetailViewModel_Extend" title="发货单详情">
+      <entity name="DeliveryDetail" title="发货单详情" isMain="true">
+        <fields>
+          <field name="ts" title="时间戳" modelType="SimpleModel" ctrlType="DateTimeBox" isNecessary="true" isReadOnly="true" isSyncKey="true" />
+          <field name="dr" title="删除标记" modelType="SimpleModel" ctrlType="CheckBox" isNecessary="true" isReadOnly="true" />
+          <field name="id" title="主键" modelType="SimpleModel" ctrlType="TextBox" isNullable="false" isKey="true" isNecessary="true" />
+          <field name="customer" title="客户名称" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="approvestatus" title="发货单状态" modelType="SimpleModel" ctrlType="Button" />
+          <field name="money" title="发货单金额" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="vbillno" title="发货单号" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="billdate" title="单据日期" modelType="SimpleModel" ctrlType="DateTimeBox" />
+          <field name="busitype" title="业务类型" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="deliverytype" title="销售类型" modelType="SimpleModel" ctrlType="TextBox"  />
+          <field name="handlingclerk" title="销售业务员" modelType="SimpleModel" ctrlType="Button" />
+          <field name="handlingdeptment" title="销售部门" modelType="SimpleModel" ctrlType="Refer" refId="1001ZZ1000000000IK7N" />
+          <field name="pricingtax" title="报价含税" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="deliverydetail" title="发货单明细集合" modelType="Model3D" ctrlType="DataGrid" refEntity="DeliveryDetailSubLine"/>
+        </fields>
+      </entity>
+      <entity name="DeliveryDetailSubLine" title="发货单子行">
+        <fields>
+          <field name="cusmaterialname" title="料品" modelType="SimpleModel" ctrlType="Refer" />
+          <field name="finalpriceincludetax" title="金额" modelType="SimpleModel" ctrlType="NumberBox" />
+          <field name="quotation" title="报价" modelType="SimpleModel" ctrlType="NumberBox" />
+          <field name="volume" title="数量" modelType="SimpleModel" ctrlType="TextBox" />
+        </fields>
+      </entity>
+      <entity name="Toolbar" title="功能">
+        <fields>
+          <field name="addAction" title="增加" modelType="SimpleModel" ctrlType="Button" />
+          <field name="copyAction" title="复制" modelType="SimpleModel" ctrlType="Button" />
+          <field name="draftAction" title="草稿" modelType="SimpleModel" ctrlType="Button" />
+          <field name="editAction" title="编辑" modelType="SimpleModel" ctrlType="Button" />
+          <field name="submitAction" title="提交" modelType="SimpleModel" ctrlType="Button" />
+          <field name="getorderAction" title="拉单" modelType="SimpleModel" ctrlType="Button" />
+          <field name="withdrawAction" title="收回" modelType="SimpleModel" ctrlType="Button" />
+          <field name="approveAction" title="审核" modelType="SimpleModel" ctrlType="Button" />
+          <field name="unapproveAction" title="弃审" modelType="SimpleModel" ctrlType="Button" />
+          <field name="deleteAction" title="删除" modelType="SimpleModel" ctrlType="Button" />
+          <field name="outboundAction" title="出库" modelType="SimpleModel" ctrlType="Button" />          
+          <field name="relatedAction" title="相关业务" modelType="SimpleModel" ctrlType="Button" />
+          <field name="setAction" title="设置" modelType="SimpleModel" ctrlType="Button" />
+          <field name="printAction" title="打印" modelType="SimpleModel" ctrlType="Button" />
+          <field name="outputAction" title="输出" modelType="SimpleModel" ctrlType="Button" />
+          <field name="cancelAction" title="取消" modelType="SimpleModel" ctrlType="Button" />
+          <field name="saveAction" title="保存" modelType="SimpleModel" ctrlType="Button" />
+          <field name="insertLineAction" title="插行" modelType="SimpleModel" ctrlType="Button" />
+          <field name="copyLineAction" title="复制行" modelType="SimpleModel" ctrlType="Button" />
+          <field name="divideLineAction" title="拆分行" modelType="SimpleModel" ctrlType="Button" />
+          <field name="deleteLineAction" title="删行" modelType="SimpleModel" ctrlType="Button" />
+          <field name="batchEditAction" title="批改" modelType="SimpleModel" ctrlType="Button" />
+          <field name="stockAction" title="存量" modelType="SimpleModel" ctrlType="Button" />
+          <field name="priceAction" title="价格" modelType="SimpleModel" ctrlType="Button" />
+          <field name="discountAction" title="折扣" modelType="SimpleModel" ctrlType="Button" />
+          <field name="creditAction" title="信用" modelType="SimpleModel" ctrlType="Button" />
+          <field name="optionalPopAction" title="POP选配" modelType="SimpleModel" ctrlType="Button" />
+          <field name="setLineAction" title="设置" modelType="SimpleModel" ctrlType="Button" />
+          <field name="fullscreenAction" title="全屏" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="nextAction" title="" modelType="SimpleModel" ctrlType="Button" />
+          <field name="prevAction" title="" modelType="SimpleModel" ctrlType="Button" powerAction=""/>
+        </fields>
+      </entity>
+      <actions>
+        <action name="addAction" entity="Toolbar" field="addAction" eventName="click" functionName="addAction" defaultImpl="//默认实现"/>
+        <action name="copyAction" entity="Toolbar" field="copyAction" eventName="click" functionName="copyAction" defaultImpl="copy"/>
+        <action name="draftAction" entity="Toolbar" field="draftAction" eventName="click" functionName="draftAction" defaultImpl="//默认实现"/>
+        <action name="editAction" entity="Toolbar" field="editAction" eventName="click" functionName="editAction" defaultImpl="edit"/>
+        <action name="submitAction" entity="Toolbar" field="submitAction" eventName="click" functionName="submitAction" defaultImpl="submit"/>
+        <action name="getorderAction" entity="Toolbar" field="getorderAction" eventName="click" functionName="getorderAction" defaultImpl="//默认实现"/>
+        <action name="withdrawAction" entity="Toolbar" field="withdrawAction" eventName="click" functionName="withdrawAction" defaultImpl="withDraw"/>
+        <action name="approveAction" entity="Toolbar" field="approveAction" eventName="click" functionName="approveAction" defaultImpl="approve"/>
+        <action name="unapproveAction" entity="Toolbar" field="unapproveAction" eventName="click" functionName="unapproveAction" defaultImpl="unApprove"/>
+        <action name="deleteAction" entity="Toolbar" field="deleteAction" eventName="click" functionName="deleteAction" defaultImpl="delete"/>
+        <action name="outboundAction" entity="Toolbar" field="outboundAction" eventName="click" functionName="outboundAction" defaultImpl="//默认实现"/>
+        <action name="relatedAction" entity="Toolbar" field="relatedAction" eventName="click" functionName="relatedAction" defaultImpl="//默认实现"/>
+        <action name="setAction" entity="Toolbar" field="setAction" eventName="click" functionName="setAction" defaultImpl="//默认实现"/>
+        <action name="printAction" entity="Toolbar" field="printAction" eventName="click" functionName="printAction" defaultImpl="//默认实现"/>
+        <action name="outputAction" entity="Toolbar" field="outputAction" eventName="click" functionName="outputAction" defaultImpl="//默认实现"/>
+        <action name="cancelAction" entity="Toolbar" field="cancelAction" eventName="click" functionName="cancelAction" defaultImpl="Cancel"/>
+        <action name="saveAction" entity="Toolbar" field="saveAction" eventName="click" functionName="saveAction" defaultImpl="save"/>
+        <action name="insertLineAction" entity="Toolbar" field="insertLineAction" eventName="click" functionName="insertLineAction" defaultImpl="insertLine"/>
+        <action name="copyLineAction" entity="Toolbar" field="copyLineAction" eventName="click" functionName="copyLineAction" defaultImpl="copyLine"/>
+        <action name="divideLineAction" entity="Toolbar" field="divideLineAction" eventName="click" functionName="divideLineAction" defaultImpl="//默认实现"/>
+        <action name="deleteLineAction" entity="Toolbar" field="deleteLineAction" eventName="click" functionName="deleteLineAction" defaultImpl="deleteLine"/>
+        <action name="batchEditAction" entity="Toolbar" field="batchEditAction" eventName="click" functionName="batchEditAction" defaultImpl="//默认实现"/>
+        <action name="stockAction" entity="Toolbar" field="stockAction" eventName="click" functionName="stockAction" defaultImpl="//默认实现"/>
+        <action name="priceAction" entity="Toolbar" field="priceAction" eventName="click" functionName="priceAction" defaultImpl="//默认实现"/>
+        <action name="discountAction" entity="Toolbar" field="discountAction" eventName="click" functionName="discountAction" defaultImpl="//默认实现"/>
+        <action name="creditAction" entity="Toolbar" field="creditAction" eventName="click" functionName="creditAction" defaultImpl="//默认实现"/>
+        <action name="optionalPopAction" entity="Toolbar" field="optionalPopAction" eventName="click" functionName="optionalPopAction" defaultImpl="//默认实现"/>
+        <action name="setLineAction" entity="Toolbar" field="setLineAction" eventName="click" functionName="setLineAction" defaultImpl="//默认实现"/>
+        <action name="fullscreenAction" entity="toolbar" field="fullscreenAction" eventName="click" functionName="fullscreenAction" defaultImpl="fullScreen"/>
+        <action name="prevAction" entity="Toolbar" field="prevAction" eventName="click" functionName="prevAction" defaultImpl="queryPrevious"/>
+        <action name="nextAction" entity="Toolbar" field="nextAction" eventName="click" functionName="nextAction" defaultImpl="queryNext"/>
+      </actions>
+    </viewmodel>
+  </application>
+</applications>

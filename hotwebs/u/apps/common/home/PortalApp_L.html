@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="./kendoui/commercial/styles/kendo.common-bootstrap.min.css" rel="Stylesheet" type="text/css" />
+    <link href="./kendoui/commercial/styles/kendo.bootstrap.min.css" rel="Stylesheet" type="text/css" />
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="./pc/css/dynamic.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="./pc/css/kendoctrl/Cube.Control.css" rel="stylesheet" />
+    <link data-config="MessageBox" />
+</head>
+<body>
+    <div class="portal clearfix" id="PortalView" data-viewmodel="PortalViewModel">
+        <div class="header">
+        	
+        	 <!-- 全景菜单按钮-->
+            <div data-propertyname="funcslist" class="col-lg-1" data-controltype="ImageButton"><span class="menu-icon"></span><span></span></div>
+			
+			<!-- 个人信息下拉列表-->
+            <div class="Individual">
+                <div data-controltype="IndividualCenter" class="col-lg-3 m-l-8 p-l-0" data-propertyname="individualCenter"> </div>
+            </div>
+			
+			<!-- top页签-->
+            <div data-controltype="TabNormal" class="col-lg-4" data-propertyname="tabTop">
+                <li data-content="common.home.Dynamic" data-remote="true"><span></span><span></span></li>
+                <li class="active" data-content="common.home.Application" data-remote="true"><span></span><span></span></li>
+                <li data-content="common.home.Approvement" data-remote="true"><span></span><span></span></li>
+                <li data-content="common.home.Schedule" data-remote="true"><span></span><span></span></li>
+            </div>
+            
+            <!-- 组织下拉菜单-->
+            <div class="col-lg-2" data-controltype="ComboBox" data-propertyname="organizations"></div>
+            
+            <!-- 搜索控件-->
+            <div class="col-lg-2" data-controltype="SearchBox">
+                <input type="text" placeholder="请输入关键字" /><span class="search-icon"></span>
+            </div>
+        </div>
+        
+        <!-- 全景菜单主体-->
+        <div class="funcslist">
+            <div></div>
+            <div class="menu-menu">
+            </div>
+        </div>
+		
+        <!-- top页签主体-->
+        <div class="container" data-related="tabTop">
+            
+            <!-- 动态主体-->
+			<div class="clearfix m-t-10" data-content="common.home.Dynamic" style="background:#fff;">
+           
+            </div>
+
+            <!-- 应用主体-->
+			<div class="clearfix" data-content="common.home.Application">
+              
+            </div>
+            
+            <!-- 审批主体-->
+			<div class="clearfix m-t-10" data-content="common.home.Approvement">
+        
+            </div>
+            
+            <!-- 日程主体-->
+            <div class="clearfix m-t-10" data-content="common.home.Schedule">
+            	
+            </div>
+        </div>
+        
+        <!-- 右侧悬浮工具条-->
+        <div class="floatToolBar">
+            <a>UU</a>
+            <a>反馈</a>
+            <a>帮助</a>
+        </div>                  
+    </div>
+    <script src="./jquery/jquery-1.11.1.js"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./common/js/formular.js" type="text/javascript"></script>
+    <script src="./common/js/function.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script data-config="MessageBox"></script>
+    <script src="./pc/js/cube.pc.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Button.js" type="text/javascript"></script>
+    <script data-config="ComboBox"></script>
+    <script src="./common/js/ListCard.js" type="text/javascript"></script>
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>
+    <script src="pc/js/TabContent.js"></script>
+        <script src="pc/js/tabControls/TabControl.js"></script>
+    <script src="pc/js/tabControls/TabNormalNum.js"></script>
+        <script src="pc/js/Tiles.js"></script>
+	<script src="./pc/js/IndividualCenter.js" type="text/javascript"></script>
+    <script src="pc/js/homePC.js"></script>
+    <script src="apps/common/home/PortalApp_L.js" type="text/javascript"></script>
+    <script src="apps/common/home/PortalApp_Extend.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        cb.viewbinding.create("PortalView");
+        cb.loader.initLanguage();
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+﻿<div data-controller="BankNewController">
+    <div class="pages">
+        <div data-page="bandInfoManagePage" class="page no-tabbar">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left"><a href="#" class="back link"><i class="icon icon-backgray"></i></a></div>
+                    <div class="center">银行信息维护</div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="user-list">
+                    <div class="list-block all-order  m-b-0">
+                        <form id="form-bankInfoManage">
+                            <ul>
+                                <li class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">
+                                            <span class="required">*</span>选择银行
+                                        </div>
+                                        <div class="item-input">
+                                            <input type="text" name="bankName" placeholder="请选择银行" id="picker-bm-bankName">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">所在地区</div>
+                                        <div class="item-input">
+                                            <input type="text" placeholder="请选择所在地区" name="cRegion" id="picker-bm-cRegion">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">
+                                            <span class="required">*</span>开户支行
+                                        </div>
+                                        <div class="item-input">
+                                            <input type="text" placeholder="请输入开户支行" name="cBankName">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">
+                                            <span class="required">*</span>银行账号
+                                        </div>
+                                        <div class="item-input">
+                                            <input type="number" placeholder="请输入银行账号" name="cBankAccount">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">设为默认地址</div>
+                                        <div class="item-after">
+                                            <label class="label-switch">
+                                                <input type="checkbox" name="bDefault" value="yes">
+                                                <div class="checkbox"></div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                    <div class="list-block m-t-10">
+                        <ul>
+                            <li class="item-content bankManage-btn-del">
+                                <div class="only-one-btn">
+                                    <a class="color-red">删除银行信息</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <a class="button button-fill bg-green-u p-lr-25 only-one-btn bankManage-btn-submit">保存</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pages/BankNewController.js"></script>
+</div>

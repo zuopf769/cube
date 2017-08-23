@@ -1,0 +1,116 @@
+﻿<div data-controller="HomePageController">
+    <div class="pages">
+        <div data-page="home" class="page navbar-fixed toolbar-fixed">
+            <div class="navbar no-after lucencyBar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" id="btnScan">
+                            <i class="icon icon-scan"></i>
+                            <span>扫一扫</span>
+                        </a>
+                    </div>
+                    <div class="center sliding" style="left: -6px;">
+                        <a href="pages/search.html" class="link icon-only">
+                            <div class="input-group-addon"><i class="icon icon-search-input"></i></div>
+                            <input type="text" class="search" placeholder="输入商品名称/编码/条形码">
+                            <div class="input-group-addon"><i class="icon icon-voice"></i></div>
+                        </a>
+                    </div>
+                    <div class="right">
+                        <a href="pages/messageList.html">
+                            <i class="icon icon-msg"></i>
+                            <span>消息</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content p-t-0">
+                <div class="swiper-container swiper-slow home-swiper">
+                    <!-- Slides wrapper -->
+                    <div class="swiper-wrapper">
+                        {{#each photos}}
+                        <div class="swiper-slide" data-id="{{this.id}}" data-link="{{this.cRedirectUrl}}">
+                            <img src="{{@root.serverhost}}{{this.cAdImageUrl}}" />
+                        </div>
+                        {{/each}}
+                    </div>
+                    <!-- Pagination, if required -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="row top-list">
+                    <div class="col-25">
+                        <a href="#">
+                            <i class="icon icon-list-1">
+                                <span class="badge">13</span>
+                            </i>
+                            <span>促销商品</span>
+                        </a>
+                    </div>
+                    <div class="col-25">
+                        <a href="pages/products.html?dataType=favoriteProduct&nosort=yes">
+                            <i class="icon icon-list-2"></i>
+                            <span>收藏商品</span>
+                        </a>
+                    </div>
+                    <div class="col-25">
+                        <a href="pages/products.html?dataType=recentBuyProduct&nosort=yes">
+                            <i class="icon icon-list-3"></i>
+                            <span>最近订购</span>
+                        </a>
+                    </div>
+                    <div class="col-25">
+                        <a href="pages/orderList.html">
+                            <i class="icon icon-list-4"></i>
+                            <span>我的订单</span>
+                        </a>
+                    </div>
+                    <div class="col-100">
+                        <ul>
+                            <li class="msg-top">
+                                <div id="noticeDiv">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-product m-t-10">
+                    <div class="title">
+                        <h3>新品推荐</h3>
+                        <a href="pages/products.html?dataType=newProduct">更多 <i class="icon icon-right-arrow"></i></a>
+                    </div>
+                    <ul class="row" id="newProducts"></ul>
+                </div>
+                <div class="card-product m-t-10">
+                    <div class="title">
+                        <h3>新品推荐</h3>
+                        <a href="pages/products.html?dataType=advProduct">更多 <i class="icon icon-right-arrow"></i></a>
+                    </div>
+                    <ul class="row" id="adviceProducts"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/template7" id="homeProductList">
+        {{#each products}}
+        <li class="col-50">
+            <div class="card-item">
+                <div class="item-media">
+                    <div class="upimgdiv">
+                        <a href="pages/productDetail.html?pid={{this[2]}}" data-reload="false" data-ignore-cache="true">
+                            <img {{#if this[3]}} data-src="{{@root.serverhost}}{{this[3]}}" {{else}} src="img/nopic.png" {{/if}} class="lazy lazy-fadeIn">
+                        </a>
+                    </div>
+                </div>
+                <div class="caption">
+                    <p class="p-title">{{this[0]}}</p>
+                    <p>
+                        <span class="price"><em>￥</em>{{this[1]}}</span>
+                        <span class="pull-right">库存量:{{this[6]}}</span>
+                    </p>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/javascript" src="../js/pages/HomePageController.js"></script>
+</div>

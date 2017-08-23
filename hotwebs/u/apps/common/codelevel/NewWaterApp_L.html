@@ -1,0 +1,101 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>新增流水号</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="pc/css/kendoctrl/Cube.Control.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="pc/css/Cube.ToolBar.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link data-config="MessageBox" />
+    <link data-config="DataGrid" />
+    <link href="apps/common/sysmanager/Cube.System.css" rel="Stylesheet" type="text/css" />
+    <style>
+    	.content {
+    		height: 140px;
+    		margin-bottom: 10px;
+    	}
+    </style>
+</head>
+<body>
+    <div id="NewWaterView" class="container" data-page="common.codelevel.NewWaterApp" data-title="新增流水号" data-viewmodel="NewWaterViewModel">
+        <div class="row content">
+	        <div class="col-lg-12">
+	            <label class="col-lg-4">流水号</label>
+	            <div class="col-lg-8 p-0">
+	                <input data-propertyname="lastsn" data-controltype="TextBox" />
+	            </div>
+	        </div>
+	        <div id="row">
+	        </div>
+        </div>
+        <div class="common-list ui-footer row">
+            <div class="ui-footer-right">
+                 <div  data-propertyname="Determine" data-controltype="ImageButton">确定</div>
+                 <div  data-propertyname="Close" data-controltype="ImageButton">取消</div>
+            </div>
+        </div>
+    </div>
+    <script id="NewWatertpl" type="text/html">
+        <%if(data.codescope && data.codescope=='o'){%>
+        <div class="col-lg-12">
+            <label class="col-lg-4" title="流水依据的组织">流水依据的组织:</label>
+            <div class="col-lg-8 p-0" data-propertyname="pk_org" data-controltype="Refer">
+                <input type="text" />
+                <div>
+                    <img src="pc/images/Ref-close.png" />
+                    <img src="pc/images/Ref.png" />
+                </div>
+            </div>
+        </div>
+        <%}%>
+        <%for(var len=0;len< data.codeRuleGrid.length;len++){%>
+        <%if(data.codeRuleGrid[len].isrefer!=0){%>
+        <% if(data.codeRuleGrid[len].elemtype==2){%>
+        <div class="col-lg-12">
+            <label class="col-lg-4" title="流水依据1">时间类型:</label>
+            <div class="col-lg-8 p-0 datebox">
+                <input data-propertyname="date" data-controltype="DateBox" />
+            </div>
+        </div>
+        <%}else if(data.codeRuleGrid[len].elemtype==1){%>
+        <div class="col-lg-12">
+            <label class="col-lg-4" title="流水依据2">实体类型:</label>
+            <div class="col-lg-8 p-0" data-propertyname="entity" data-controltype="Refer">
+                <input type="text" />
+                <div>
+                    <img src="pc/images/Ref-close.png" />
+                    <img src="pc/images/Ref.png" />
+                </div>
+            </div>
+        </div>
+        <%}}}%>
+    </script>
+    <script src="jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="jquery/jquery-ui.js" type="text/javascript"></script>
+    <script src="common/js/Animation.js" type="text/javascript"></script>
+    <script src="common/js/Cube.js" type="text/javascript"></script>
+    <script src="pc/js/cube.pc.js" type="text/javascript"></script>
+    <script src="common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="common/js/Control.js" type="text/javascript"></script>
+    <script src="common/js/CommonProxy.js" type="text/javascript"></script>
+    <script src="common/js/CommonCRUD.js" type="text/javascript"></script>
+    <script src="common/js/Button.js" type="text/javascript"></script>
+    <script src="common/js/ImageButton.js" type="text/javascript"></script>
+    <script src="common/js/Label.js" type="text/javascript"></script>
+    <script data-config="CheckBox"></script>
+    <script data-config="Refer"></script>
+    <script data-config="MessageBox"></script>
+    <script data-config="DateBox"></script>
+    <script data-config="DataGrid"></script>
+    <script data-config="TextBox"></script>
+    <script src="pc/js/template.js"></script>
+    <script src="apps/common/codelevel/NewWater_L.js" type="text/javascript"></script>
+    <script src="apps/common/codelevel/NewWater_Extend.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        cb.viewbinding.create("NewWaterView");
+    </script>
+</body>
+</html>

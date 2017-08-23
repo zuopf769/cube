@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application id="7dd96316-9d16-455e-808b-753c3344453d" name="purchaseorderApp" title="uppurchaseorder" domainName="uap" moduleName="u8" symbol="u8.purchaseorder" ts="2015-04-10 12:18:01" dr="0" tplName_viewModel="vouchers" tplName="vouchers_L.tpl">
+  <references>
+    <reference name="../u8/purchaseorderApp.vouchers.VM.xml"/>
+  </references>
+  <view id="0e545227-6fc7-4136-9334-1c8f83b7bfff" name="purchaseorderApp_List" title="采购订单列表" viewModelId="7dd96316-9d16-455e-808b-753c3344453d" layoutMode="Fluid" screenSize="L" tplName="vouchers_L.html.tpl" viewModel="purchaseorderAppViewModel_vouchers" isDefault="true" ts="2015-04-10 12:19:38" dr="0" appId="u8.purchaseorderApp_List">
+    <container id="f088ea26-69ce-42e5-b5b9-f4b838bea263" name="Toolbar" title="工具栏" type="Toolbar" iCols="0" ts="2015-04-10 12:18:20" dr="0">
+      <control entity="Toolbar" id="f8594556-04dc-4441-8886-a4b73dff3697" name="addAction" title="增加" field="addAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-13 16:57:10" dr="0" vmfield="addAction"/>
+      <control entity="Toolbar" id="6df5c08e-ca90-40ea-aab4-c6e9b0de7599" name="batchDeleteAction" title="删除" field="batchDeleteAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-13 16:57:10" dr="0" vmfield="batchDeleteAction"/>
+      <control entity="Toolbar" id="b3e97eeb-939c-4501-b631-0d2465f3ea00" name="batchSubmitAction" title="提交" field="batchSubmitAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-13 16:57:10" dr="0" vmfield="batchSubmitAction"/>
+      <control entity="Toolbar" id="bcb149a0-cbf4-463e-8ffa-6489d66be004" name="batchWithdrawAction" title="收回" field="batchWithdrawAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-13 16:57:10" dr="0" vmfield="batchWithdrawAction"/>
+      <control entity="Toolbar" id="40525e12-b10a-4b47-8c68-055986ba4d0b" name="batchApproveAction" title="审批" field="batchApproveAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-13 16:57:10" dr="0" vmfield="batchApproveAction"/>
+      <control entity="Toolbar" id="cc66bd6b-e50f-4149-9a04-5d18a23d9e86" name="batchUnApproveAction" title="弃审" field="batchUnApproveAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-13 16:57:10" dr="0" vmfield="batchUnApproveAction"/>
+      <control entity="Toolbar" id="5503166b-b9b2-4765-84b0-15ce34c090bb" name="configAction" title="设置" field="configAction" ctrlType="DropDownButton" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-13 16:57:10" dr="0" vmfield="configAction"/>
+      <control entity="Toolbar" id="0cf2b9db-9a04-40c0-b3ed-ee02ed2bee3c" name="batchBusiOperateAction" title="业务操作" field="batchBusiOperateAction" ctrlType="DropDownButton" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-13 16:57:10" dr="0" vmfield="batchBusiOperateAction"/>
+    </container>
+    <container id="ec7d8c7f-c8c1-454a-b5a4-a683d21b2fab" name="ListGrid" title="列表" type="Grid" iCols="1" ts="2015-04-10 12:18:20" dr="0">
+      <control entity="purchaseorder" id="24cda829-b14e-47f1-b095-6a01f8218b32" name="purchaseorderApp_List" title="uppurchaseorder列表" listId="uppurchaseorder" field="purchaseorderApp_List" ctrlType="DataGrid" iLength="0" isNullable="true" isVisible="true" refKey="pk_purodrdetailid" isPlaceHolder="false" ts="2015-04-10 12:19:52" dr="0" vmfield="purchaseorderApp_List"/>
+    </container>
+  </view>
+</application>

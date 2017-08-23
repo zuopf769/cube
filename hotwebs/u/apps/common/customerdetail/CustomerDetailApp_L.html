@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <meta charset="utf-8">
+    <title>客户详情</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="./pc/css/accondion.pc.css" rel="stylesheet" />    
+    <link href="./common/css/cube.Control.css" rel="stylesheet" type="text/css" />
+    <link href="./pc/css/cube.icon.css" rel="stylesheet" type="text/css" />
+    <link href="./pc/css/PanoramaMenuView.css" rel="stylesheet" type="text/css" />
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.ToolBar.css" rel="stylesheet" />
+
+    <style type="text/css">
+
+        .basicInformation
+        {
+            margin-top:25px
+        }
+         .basicInformation span
+        {
+            color:rgb(255,102,0)
+        }
+
+    </style>
+</head>
+<body>
+    <div id="CustomerDetailViewModel" data-page="common.customerdetail.CustomerDetailApp" data-viewmodel="CustomerDetailViewModel" style="margin-left:20px;margin-right:15px;">
+        <div class="common-list ui-header row" style="background-color:rgb(255,255,255);border-bottom-width:0px;">
+            <div data-controltype="Label" data-propertyname="customerName" style="color:rgb(21,125,251);font-size:large;">
+                <span><img src="../pc/images/u997.png"/>北京缘发生茂科技有限公司</span>
+            </div>
+            <div data-controltype="ImageButton" data-propertyname="closeAction"><span class="close-icon"></span><span style="display:none;">关闭</span></div>
+        </div>
+        <div data-controltype="Label" data-propertyname="customerCode" style="background-color:rgb(255,255,255);">01010100</div>
+      <div style="margin-top:10px;margin-left:0px;">
+          <div data-controltype="TabContent"data-propertyname="customerSwitch" class="navbar-pc-strip" style="margin-left:0px;">
+              <li class="ui-text" data-content="basicInformation">基本信息</li>
+              <li class="ui-text" data-content="dynamic">动态</li>
+              <li class="ui-text" data-content="saleOpp">销售机会</li>
+              <li class="ui-text" data-content="order">销售订单</li>
+              <li class="ui-text" data-content="sendOrder">发货单</li>
+          </div>
+        </div>
+        <div data-related="customerSwitch"   style="width: 100%;height:600px; margin-top:10px;margin-left:0px;">
+            <div class="col-lg-12" data-content="basicInformation">
+            <div style="width:100px;height:600px; float:left; margin-left:40px;">
+                <div data-controltype="Label" class="basicInformation" >客户地址</div>
+                <div data-controltype="Label" class="basicInformation" >联系人</div>
+                <div data-controltype="Label" class="basicInformation" >主管业务员</div>
+                <div data-controltype="Label" class="basicInformation">客户级别</div>
+                <div data-controltype="Label" class="basicInformation">所属行业</div>
+                <div data-controltype="Label" class="basicInformation">累计销售额</div>
+                <div data-controltype="Label" class="basicInformation">应收余额</div>
+                <div data-controltype="Label" class="basicInformation">信用余额</div>
+            </div>
+           <div style="width: 420px;height:600px;float:left; margin-left:10px;">
+                <div data-controltype="Label" data-propertyname="customerAddress" style="margin-top:25px;">北京海淀区中关村东路1号院A座608</div>
+                <div data-controltype="Label" class="basicInformation" data-propertyname="contact" style="color:rgb(21,125,251);">张国栋</div>
+                <div data-controltype="Label" class="basicInformation" data-propertyname="salesman" style="color:rgb(21,125,251);">李珊珊</div>
+                <div data-controltype="Label" class="basicInformation" data-propertyname="customerLevel">高级客户</div>
+                <div data-controltype="Label" class="basicInformation" data-propertyname="industry">电子类</div>
+                <div data-controltype="Label" class="basicInformation" data-propertyname="totalSales"><span>2,190,641.00</span> 元</div>
+                <div data-controltype="Label" class="basicInformation" data-propertyname="receivableSales"><span>190,520.00</span> 元</div>
+                <div data-controltype="Label" class="basicInformation" data-propertyname="creditSales"><span>10,000.00</span> 元</div>
+            </div>
+            </div>
+            <div class="col-lg-12" data-content="dynamic">
+                <div style="width:100%;height:600px; float:left; margin-left:20px;">
+                    <div><span style="float:left;"><img src="../pc/images/u245.png"/>&nbsp;</span></div>
+                    <div><span style="color:#157DFB;">张珊珊</span>&nbsp;<span color:#333333;">今天去拜访了客户,跟老总做了产品介绍，对方非常认可产品。</span>
+                        <br />
+                        <span>24分钟前</span>
+                        <hr />
+                    </div>
+                     <div><span style="float:left;"><img src="../pc/images/u249.png"/>&nbsp;</span></div>
+                     <div><span style="color:#157DFB;">王大伟</span>&nbsp;<span color:#333333;">更改默认联系人。</span>
+                        <br />
+                        <span>30分钟前</span>
+                        <hr />
+                    </div>
+                    <div><span style="float:left;"><img src="../pc/images/u253.png"/>&nbsp;</span></div>
+                     <div><span style="color:#157DFB;">戴芝芝</span>&nbsp;<span color:#333333;">创建了销售订单【0000000012】。</span>
+                        <br />
+                        <span>59分钟前</span>
+                        <hr />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12" data-content="saleOpp" style="margin-left:0px; padding-left:0px;padding-right:0px;">
+                <div style="width:100%;height:560px;padding-left:0px;padding-right:0px;">
+                    <div data-propertyname="saleOppDataGrid" data-controltype="DataGrid" style="padding-left:0px;padding-right:0px;"></div>
+                </div>
+            </div>
+            <div class="col-lg-12" data-content="order">
+                <div style="width:100%;height:600px; float:left;">
+                    <div data-controltype="Label" class="basicInformation" >销售订单</div>
+                </div>
+            </div>
+            <div class="col-lg-12" data-content="sendOrder">
+                <div style="width:100%;height:600px; float:left;">
+                    <div data-controltype="Label" class="basicInformation" >发货单</div> 
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./jquery/jquery-ui.js" type="text/javascript"></script>
+    <script src="./common/js/Label.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./pc/js/cube.pc.js" type="text/javascript"></script>
+    <script src="./common/js/Animation.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script> 
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/Button.js" type="text/javascript"></script>
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>
+    <script src="./common/js/ToolBar.js" type="text/javascript"></script>
+    <script src="./pc/js/TabContent.js" type="text/javascript"></script>
+    <script src="./pc/js/grid/GridVM.js" type="text/javascript"></script>
+    <script src="./pc/js/grid/DataGrid.binding.js" type="text/javascript"></script>
+    <script src="./pc/js/kendoctrl/DataGrid.js" type="text/javascript"></script>
+    <script src="./common/js/CommonProxy.js" type="text/javascript"></script>
+    <script src="apps/common/customerdetail/CustomerDetailApp_L.js" type="text/javascript"></script>
+    <script src="apps/common/customerdetail/CustomerDetailApp_Extend.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        cb.viewbinding.create("CustomerDetailViewModel");
+    </script>
+</body>
+</html>

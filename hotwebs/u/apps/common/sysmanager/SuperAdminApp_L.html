@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>超级管理员</title>
+    <link href="pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="pc/css/Cube.ToolBar.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link data-config="MessageBox" />
+    <link data-config="DataGrid" />
+    <link href="./apps/common/sysmanager/SuperAdmin.css" rel="stylesheet" />
+    <style>
+     div[data-viewmodel*="SuperAdminViewModel"] .k-grid td {
+    text-align:center;
+    }
+      div[data-viewmodel*="SuperAdminViewModel"] .pager-right {
+        margin-right:0px;
+        }
+        div[data-viewmodel*="SuperAdminViewModel"] .k-grid-header th.k-header, .k-filter-row th {
+        text-align:center;
+        }
+        div[data-viewmodel*="SuperAdminViewModel"] .k-grid tbody .k-button {
+        border:0;
+        background-color:transparent;
+        min-width:20px;
+        margin:0px;
+        padding:0px;
+        }
+		.k-grid tr
+		{
+			height:35px;
+		}
+    </style>
+</head>
+<body>
+    <div id="SuperAdmin" data-title="超级管理员" data-page="common.sysmanager.SuperAdminApp"  data-viewmodel="SuperAdminViewModel">
+       <div class="cube-main">
+			<div class="cube-main-content">
+                <div class="cube-content-page">
+                    <div class="cube-header-tool">
+                        <div data-propertyname="toolbarContent" data-controltype="ToolBar" class="cube-bar-modeltxt" style="height:600px; width:97%;margin-top:20px;margin-left:20px;margin-right:30px;  ">
+                            <div>
+                       
+                    <li>
+                                <div data-propertyname="editAction" data-controltype="ImageButton" class="edited">
+                                    <span class=""></span>
+                                    <span>编辑</span>
+                                </div>
+                    </li>
+                        <li>
+                                <div data-propertyname="deleteAction" data-controltype="ImageButton" class="deleted">
+                                    <span class=""></span>
+                                    <span>删除</span>
+                                </div>
+                        </li>
+                                
+                    <li>    
+                                 <div data-propertyname="saveAction" data-controltype="ImageButton" style="display:none">
+                                     <span class=""></span>   
+                                     <span>保存</span>
+                                </div>
+                     </li>
+                                
+                    <li>    
+                                 <div data-propertyname="cancleAction" data-controltype="ImageButton" style="display:none">
+                                     <span class=""></span>   
+                                     <span>取消</span>
+                                </div>
+                     </li>
+                                
+                               <div class="col-lg-12  m-0 m-t-15 p-0">
+                                       <div data-propertyname="adminVos" data-controltype="DataGrid" style="font-family:'微软雅黑 Regular', '微软雅黑';font-weight: 500;font-size: 12px;"></div>
+                                                               <div class="pager"></div>
+                               </div>
+                           </div>
+                         </div>     
+                     </div>
+				  </div>
+			   </div>
+	      </div>
+    </div>
+    <script src="jquery/jquery-1.11.1.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <script src="common/js/Cube.js" type="text/javascript"></script>
+    <script src="common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="common/js/Control.js" type="text/javascript"></script>
+    <script src="common/js/Button.js" type="text/javascript"></script>
+    <script src="common/js/ImageButton.js" type="text/javascript"></script>
+    <script src="common/js/SearchBox.js"></script>
+    <script data-config="TextBox"></script>
+    <script data-config="NumberBox"></script>
+    <script data-config="DateTimeBox"></script>
+    <script data-config="CheckBox"></script>
+    <script data-config="Refer"></script>
+    <script data-config="DataGrid"></script>
+    <script data-config="MessageBox"></script>
+    <script data-config="ComboBox"></script>
+    <script data-config="TextBox"></script>
+    <script src="apps/common/sysmanager/SuperAdminViewModel.js"></script>
+    <script src="apps/common/sysmanager/SuperAdminViewModel_Extend.js"></script>
+   <script type="text/javascript">
+       cb.viewbinding.create("SuperAdmin");//这的参数是id值。。。
+       </script>
+</body>
+</html>

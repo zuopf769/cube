@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="roleuserrefview" data-viewmodel="RoleUserRefViewModel" data-title="请选择角色/用户"
+        data-page="common.permission.RoleUserRefApp" style="height: 600px;">
+        <div style="height: 88%">
+            <div style="height: 520px;" data-propertyname="userTree" data-controltype="TreeView"></div>
+        </div>
+        <div style="height: 6%">
+            <div style="height: 26px; padding-top: 0px; padding-bottom: 0px; float: left" data-propertyname="noAuth" data-controltype="CheckBox">
+                <input type="checkbox" />
+            </div>
+            <div style="height: 26px; padding-top: 0px; padding-bottom: 0px; float: left" data-propertyname="readOnlyAuth" data-controltype="CheckBox">
+                <input type="checkbox" />
+            </div>
+            <div style="height: 26px; padding-top: 0px; padding-bottom: 0px; float: left" data-propertyname="auth" data-controltype="CheckBox">
+                <input type="checkbox" />
+            </div>
+            <button data-propertyname="ok" data-controltype="Button">确定</button>
+        </div>
+    </div>
+
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./jquery/jquery-ui.js" type="text/javascript"></script>
+    <script src="./common/js/Animation.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./pc/js/cube.pc.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/Button.js" type="text/javascript"></script>
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>
+    <script data-config="CheckBox"></script>
+    <script data-config="Tree"></script>
+    <script src="apps/common/permission/RoleUserList.js" type="text/javascript"></script>
+    <script src="apps/common/permission/RoleUserRefApp_L.js" type="text/javascript"></script>
+    <script src="apps/common/permission/RoleUserRefApp_Extend.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        cb.viewbinding.create("roleuserrefview");
+        (function () {
+            document.body.onkeydown = function (e) {
+                if (e.keyCode == '27') {
+                    if (RoleUserRefApp_Extend) {
+                        RoleUserRefApp_Extend.CloseAction();
+                    }
+                }
+            }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,1313 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+img {
+  border: none;
+}
+input,
+select,
+textarea {
+  outline: none;
+  border: none;
+  background: none;
+}
+textarea {
+  resize: none;
+}
+a {
+  text-decoration: none;
+}
+/* ---font color*---*/
+.blueCol {
+  color: #157dfb;
+}
+.grayCol {
+  color: #666666;
+}
+.grayCol2 {
+  color: #b5b5b5;
+}
+.organeCol {
+  color: #ff9900;
+}
+.greenCol {
+  color: #009900;
+}
+.redCol {
+  color: #ff0000;
+}
+/* ---background color*---*/
+.orangeIcon {
+  background: #ff9900;
+}
+.redIcon {
+  background: #ff0000;
+}
+.greenIcon {
+  background: #009900;
+}
+.blueIcon {
+  background: #157dfb;
+}
+.grayIcon {
+  background: #cccccc;
+}
+.none {
+  display: none;
+}
+.big-font {
+  font-size: 16px;
+}
+.w-15 {
+  width: 15%;
+}
+.w-20 {
+  width: 20%;
+}
+.w-25 {
+  width: 25%;
+}
+.w-35 {
+  width: 35%;
+}
+.w-45 {
+  width: 45%;
+}
+.w-55 {
+  width: 55%;
+}
+.w-65 {
+  width: 65%;
+}
+.w-95 {
+  width: 95%;
+}
+body {
+  background: #f6f6f6;
+}
+/*��ɫ��ť  blue button*/
+.btn {
+  background: #157dfb;
+  color: #ffffff;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px auto;
+}
+.btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background: #1371e2;
+}
+.btn:focus {
+  color: #ffffff;
+  text-decoration: none;
+}
+a {
+  color: #157dfb;
+}
+a:hover {
+  text-decoration: none;
+}
+.main {
+  border: 1px solid #ededed;
+  *zoom: 1;
+  background: #ffffff;
+  height: 100%;
+  font-size: 12px;
+}
+.main:before,
+.main:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.main:after {
+  clear: both;
+}
+/*--------------------------------ͼ�� style----------------------------------*/
+.status li.active {
+  background: url("../img/sprite.png") no-repeat 8px 27px;
+}
+.trend dd.addr {
+  background: url("../img/sprite.png") no-repeat -485px -398px;
+}
+.trend dd.operate .zan {
+  background: url("../img/sprite.png") no-repeat -46px 0;
+}
+.rightList li.title .add_btn {
+  background: url("../img/sprite.png") no-repeat -200px 0;
+}
+.task li {
+  background: url("../img/sprite.png") no-repeat -475px -40px;
+}
+.task li.active {
+  background: url("../img/sprite.png") no-repeat -475px 10px;
+}
+.apprStatus .apprRight .dropdown ul.dropdown-menu li {
+  background: url("../img/sprite.png") no-repeat -470px -140px;
+}
+.apprStatus .apprRight .dropdown ul.dropdown-menu li.active {
+  background: url("../img/sprite.png") no-repeat -470px -90px;
+}
+.apprStatus .apprRight .dropdown a.dropdown-toggle span.caret {
+  background: url("../img/sprite.png") no-repeat -150px 4px;
+}
+.apprCheck .content ul li {
+  background: url("../img/sprite.png") no-repeat -480px -243px;
+}
+.apprCheck .content ul li.active {
+  background: url("../img/sprite.png") no-repeat -480px -193px;
+}
+.apprCheck .content .title {
+  background: url("../img/sprite.png") no-repeat -490px -293px;
+}
+.scheduleTitle .abtn.btn-left {
+  background: url("../img/sprite.png") no-repeat -350px 0;
+}
+.scheduleTitle .abtn.btn-right {
+  background: url("../img/sprite.png") no-repeat -400px 0;
+}
+.scheduleBody .rightDiv .icon-bg {
+  background: url("../img/sprite.png") no-repeat -99px -1px;
+}
+.scheduleBody .rightDiv h3 .downIcon {
+  background: url("../img/sprite.png") no-repeat -299px 9px;
+}
+.scheduleBody .rightDiv .opp a.praise {
+  background: url("../img/sprite.png") no-repeat -345px -45px;
+}
+.scheduleBody .rightDiv .opp a.comment {
+  background: url("../img/sprite.png") no-repeat -395px -45px;
+}
+.scheduleBody .icon1 {
+  background: url("../img/sprite.png") no-repeat 0 -450px;
+}
+.scheduleBody .icon2 {
+  background: url("../img/sprite.png") no-repeat -50px -450px;
+}
+.scheduleBody .icon3 {
+  background: url("../img/sprite.png") no-repeat -100px -450px;
+}
+.scheduleBody .rightDiv .commentDiv .commentList > dl > .operate a.praise {
+  background: url("../img/sprite.png") no-repeat -46px 0;
+}
+.scheduleBody .rightDiv .commentDiv .face {
+  background: url("../img/sprite.png") no-repeat -350px -100px;
+}
+.scheduleBody .newSchedule > dl dd .annex {
+  background: url("../img/sprite.png") no-repeat -488px -450px;
+}
+.scheduleBody .newSchedule > dl dd > .user span.close {
+  background: url("../img/sprite.png") no-repeat -250px 0;
+}
+.mainCenter {
+  border: 1px solid #ededed;
+  border-top: none;
+  border-bottom: none;
+}
+.leftSides {
+  background: #ffffff;
+  height: 100%;
+}
+.topTab {
+  *zoom: 1;
+  background: #ffffff;
+  margin: 0 auto;
+}
+.topTab:before,
+.topTab:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.topTab:after {
+  clear: both;
+}
+.topTab li {
+  float: left;
+  position: relative;
+  margin: auto 10px;
+  padding: 20px;
+  border-bottom: 2px solid #ffffff;
+}
+.topTab li.active {
+  border-bottom: 2px solid #157dfb;
+}
+.topTab li a {
+  color: #333333;
+  text-decoration: none;
+}
+.topTab li a:hover {
+  color: #157dfb;
+}
+.topTab li span {
+  position: absolute;
+  top: 3px;
+  right: -3px;
+  color: #ffffff;
+  background: #ff9392;
+  border-radius: 8px;
+  min-width: 18px;
+  height: 16px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 16px;
+}
+/*��״̬style*/
+.status {
+  margin-top: 13px;
+  font-size: 12px;
+}
+.status li {
+  border-bottom: none;
+  padding: 10px 10px !important;
+  margin: auto 15px;
+}
+.status li.active {
+  border-bottom: none;
+}
+.status li.active a {
+  color: #157dfb;
+}
+.textarea {
+  font-size: 12px;
+  border: 1px solid #ededed;
+  width: 100%;
+  padding-left: 20px;
+  overflow: hidden;
+  height: 40px;
+  line-height: 40px;
+  margin-top: -1px;
+}
+/*rightMain smallTab style*/
+.sm_text {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.sm_text li {
+  padding: 5px 10px !important;
+  margin: auto 15px;
+}
+.sm_text a {
+  color: #b5b5b5 !important;
+  text-decoration: none;
+}
+.sm_text a:hover {
+  color: #157dfb !important;
+}
+.sm_text .active a {
+  color: #157dfb !important;
+}
+/*leftNav style*/
+.leftNav {
+  padding-top: 18px;
+}
+.leftNav li {
+  line-height: 35px;
+  text-indent: 68px;
+  font-size: 12px;
+}
+.leftNav li a {
+  color: #333333;
+  text-decoration: none;
+}
+.leftNav li:hover {
+  background: #f6f6f6;
+}
+/*trend style*/
+.trend {
+  border-bottom: 1px solid #ededed;
+  *zoom: 1;
+  width: 96%;
+  margin: 15px auto;
+}
+.trend:before,
+.trend:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.trend:after {
+  clear: both;
+}
+.trend dt {
+  float: left;
+  width: 55px;
+}
+.trend dt img {
+  display: block;
+  border: 1px solid #cccccc;
+  width: 40px;
+  height: 40px;
+}
+.trend dd {
+  margin-left: 60px;
+  font-size: 12px;
+  line-height: 30px;
+}
+.trend dd.tilte {
+  color: #157dfb;
+}
+.trend dd.from {
+  color: #999999;
+}
+.trend dd.addr {
+  text-indent: 20px;
+  color: #999999;
+}
+.trend dd.thumb img {
+  width: 156px;
+  height: 106px;
+  margin: 5px auto;
+}
+.trend dd.operate {
+  float: right;
+  display: inline;
+  margin-right: 10px;
+  margin-top: -25px;
+}
+.trend dd.operate .zan {
+  padding-left: 15px;
+}
+.trend dd.operate a {
+  margin: auto 6px;
+  text-decoration: none;
+  color: #666666;
+}
+.reply {
+  background: #f6f6f6;
+}
+.reply .trend {
+  width: 96%;
+  border-bottom: none;
+}
+.reply .trend dd {
+  margin: auto 10px;
+}
+/*rightList*/
+.rightList {
+  font-size: 12px;
+}
+.rightList li {
+  line-height: 35px;
+  text-indent: 2px;
+  padding: 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.rightList li.title {
+  background: #f9f9f9;
+  height: 35px;
+  padding-left: 20px;
+  border-bottom: 1px solid #ededed;
+}
+.rightList li.title span {
+  color: #999999;
+  margin-left: 0;
+  display: inline;
+}
+.rightList li.title .add_btn {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  float: right;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+.rightList li.more {
+  text-align: center;
+  background: none !important;
+  text-indent: 0 !important;
+}
+.rightList li.more a {
+  color: #b5b5b5;
+}
+.schedule li span {
+  width: 20%;
+  display: inline-block;
+}
+.schedule li a {
+  color: #666666;
+  text-decoration: none;
+}
+.schedule li.active span {
+  color: #ff0000;
+}
+.task li {
+  text-indent: 25px;
+}
+.task li.title {
+  background-image: none;
+  background-color: #f9f9f9 !important;
+  text-indent: 0;
+}
+.task li.active {
+  color: #999999;
+  text-decoration: line-through;
+}
+.topic a {
+  color: #157dfb !important;
+  display: inline-block;
+  width: 70%;
+}
+.topic span {
+  color: #b5b5b5;
+  text-align: right;
+}
+.vote li {
+  margin-top: 5px;
+}
+.vote a {
+  color: #157dfb !important;
+  display: block;
+  line-height: 20px;
+}
+.vote span {
+  color: #b5b5b5;
+  line-height: 20px;
+}
+/*-------------------------------approval style---------------------*/
+.apprNav li {
+  line-height: 45px;
+}
+.apprNav li:hover {
+  background: #d9e7f2;
+}
+.apprNav li.active {
+  background: #d9e7f2;
+  font-weight: bold;
+}
+.SearchBox {
+  height: 30px;
+  border: 1px solid #D7D7D7;
+  position: relative;
+  background-color: transparent;
+  margin-top: 24px;
+  padding-left: 5px;
+}
+.SearchBox input {
+  border: none;
+  width: 100%;
+  height: 100%;
+  float: left;
+  padding-right: 24px;
+}
+.SearchBox > span {
+  content: url(../img/search2.png);
+  cursor: pointer;
+  padding: 6px 2px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.apprStatus {
+  display: block;
+  clear: both;
+  margin: 10px auto;
+}
+.apprStatus .apprLeft {
+  float: left;
+}
+.apprStatus .apprLeft a {
+  margin: auto 10px;
+  color: #333333;
+  text-decoration: none;
+}
+.apprStatus .apprLeft a.active {
+  color: #157dfb;
+}
+.apprStatus .apprRight {
+  float: right;
+}
+.apprStatus .apprRight .dropdown {
+  position: relative;
+}
+.apprStatus .apprRight .dropdown a {
+  color: #333333;
+  text-decoration: none;
+}
+.apprStatus .apprRight .dropdown a.dropdown-toggle span.caret {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-left: 5px;
+}
+.apprStatus .apprRight .dropdown ul.dropdown-menu {
+  display: none;
+  position: absolute;
+  width: 138px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #ededed;
+  right: 0;
+  background: #ffffff;
+}
+.apprStatus .apprRight .dropdown ul.dropdown-menu li {
+  text-indent: 40px;
+  line-height: 35px;
+}
+.apprStatus .apprRight .dropdown ul.dropdown-menu li:hover {
+  background-color: #73dcff;
+}
+.apprStatus .apprRight .dropdown:hover .dropdown-menu {
+  display: block;
+}
+.apprMain {
+  display: block;
+  clear: both;
+}
+.apprMain dl {
+  margin: 10px auto;
+}
+.apprMain dt {
+  border-bottom: 1px solid #3399cc;
+  display: block;
+  clear: both;
+  margin-top: 10px;
+  line-height: 30px;
+}
+.apprMain dt span {
+  color: #999999;
+  margin-left: 10px;
+}
+.apprMain dd {
+  line-height: 35px;
+  border-bottom: 1px solid #cccccc;
+}
+.apprMain dd a {
+  color: #333333;
+  text-decoration: none;
+}
+.apprMain dd a.content {
+  display: block;
+  clear: both;
+}
+.apprMain dd span.time {
+  color: #999999;
+  margin-left: 28px;
+}
+.apprMain dd.active {
+  background: #f2f2f2;
+}
+/*------right apprCheck--------*/
+.statusIcon {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  margin: auto 6px;
+  border-radius: 7px;
+}
+.statusIcon.no {
+  background: transparent;
+}
+.apprCheck .title {
+  background: #f4f7fc;
+  padding: 10px;
+  border-bottom: 1px solid #cccccc;
+  line-height: 35px;
+  position: relative;
+}
+.apprCheck .title h4 {
+  font-weight: normal;
+  font-size: 16px;
+}
+.apprCheck .title span {
+  margin-right: 15px;
+}
+.apprCheck .title span.userName {
+  margin: auto 10px;
+}
+.apprCheck .title .btn-retract {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 58px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  border: 1px solid #bbcbdf;
+  background: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.apprCheck .content {
+  margin: 10px 15px;
+}
+.apprCheck .content ul li {
+  float: left;
+  display: inline;
+  margin-right: 15px;
+  padding-left: 25px;
+  line-height: 35px;
+}
+.apprCheck .content .grayBg {
+  background: #f2f2f2;
+  display: block;
+  clear: both;
+  height: 35px;
+  line-height: 35px;
+  text-indent: 15px;
+}
+.apprCheck .content .grayBg a {
+  color: #333333;
+  margin: auto 15px;
+  text-decoration: none;
+}
+.apprCheck .content .grayBg a.active {
+  color: #157dfb;
+}
+.apprCheck .content .title {
+  border-bottom: 1px solid #ededed;
+  background-color: transparent;
+  padding: 0;
+  text-indent: 15px;
+}
+.apprTable {
+  overflow: auto;
+  margin: auto 10px;
+}
+.apprTable h3 {
+  text-align: center;
+  font-weight: normal;
+  margin: 10px auto;
+}
+.apprTable .tableHead {
+  width: 1000px;
+  line-height: 35px;
+}
+.apprTable table {
+  width: 1000px;
+  border: 1px solid #d7d7d7;
+  border-collapse: collapse;
+}
+.apprTable table th,
+.apprTable table td {
+  text-align: center;
+  padding: 0 10px;
+  line-height: 35px;
+  border: 1px solid #d7d7d7;
+  white-space: nowrap;
+}
+.apprTable table th {
+  background: #f2f2f2;
+  color: #666666;
+  font-weight: normal;
+}
+.point-time {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 20%;
+  margin-left: -3px;
+  box-shadow: 0 0 0 2px #fff;
+}
+.Process {
+  position: relative;
+}
+.Process .contenter {
+  padding: 0 0 55px;
+  position: relative;
+  display: block;
+}
+.Process .contenter:before {
+  content: "";
+  width: 1px;
+  top: 35px;
+  bottom: -35px;
+  left: 20%;
+  background: #e4e4e4;
+  position: absolute;
+}
+.Process .contenter:last-child:before {
+  display: none;
+}
+.Process .contenter > .leftDiv {
+  display: block;
+}
+.Process .contenter > .leftDiv > .statusPoint {
+  width: 15%;
+  display: block;
+  position: absolute;
+  margin-top: 32px;
+  text-align: right;
+}
+.Process .contenter > .rightDiv {
+  margin-left: 25%;
+  padding-bottom: 15px;
+}
+.Process .contenter > .rightDiv dl {
+  display: block;
+  clear: both;
+}
+.Process .contenter > .rightDiv dl dt {
+  float: left;
+}
+.Process .contenter > .rightDiv dl dt img {
+  border: 1px solid #ededed;
+  margin: 12px;
+  width: 50px;
+  height: 50px;
+}
+.Process .contenter > .rightDiv dl dd {
+  float: left;
+  margin-left: 10px;
+}
+.Process .contenter > .rightDiv dl dd p {
+  line-height: 35px;
+}
+/*-----------------------------schedule  style------------------------------------------*/
+.scheduleWeek,
+.month {
+  margin: 10px 20px;
+  *zoom: 1;
+}
+.scheduleWeek:before,
+.month:before,
+.scheduleWeek:after,
+.month:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.scheduleWeek:after,
+.month:after {
+  clear: both;
+}
+.scheduleWeek .first,
+.month .first {
+  float: left;
+  width: 9%;
+}
+.scheduleWeek .first ul,
+.month .first ul {
+  margin-top: 30px;
+}
+.scheduleWeek .first ul li,
+.month .first ul li {
+  border-left: 1px solid #D7D7D7;
+  height: 150px;
+  overflow: hidden;
+  text-align: center;
+  line-height: 30px;
+  padding-top: 30px;
+  vertical-align: middle;
+  color: #b5b5b5;
+}
+.scheduleWeek .first ul li:first-child,
+.month .first ul li:first-child {
+  border-top: 1px solid #D7D7D7;
+}
+.scheduleWeek .first ul li:last-child,
+.month .first ul li:last-child {
+  border-bottom: 1px solid #D7D7D7;
+}
+.scheduleWeek dl,
+.month dl {
+  float: left;
+  width: 13%;
+  text-align: center;
+  line-height: 30px;
+}
+.scheduleWeek dl dt,
+.month dl dt {
+  color: #b5b5b5;
+}
+.scheduleWeek dl dd,
+.month dl dd {
+  border: 1px solid #D7D7D7;
+  border-bottom: 0;
+  border-right: none;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+.scheduleWeek dl dd:last-child,
+.month dl dd:last-child {
+  border-bottom: 1px solid #D7D7D7;
+}
+.scheduleWeek dl dd a,
+.month dl dd a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.scheduleWeek dl dd > .btn,
+.month dl dd > .btn {
+  display: block;
+  margin: 5px 10px auto 10px;
+  border-radius: 4px;
+  height: 24px;
+  line-height: 22px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1px 10px;
+  background: #ededed;
+  border: 1px solid #cccccc;
+  color: #333333;
+}
+.scheduleWeek dl dd .btn-blue,
+.month dl dd .btn-blue {
+  background: #C4E5F5;
+  border: 1px solid #57B5E1;
+}
+.scheduleWeek dl dd .btn-green,
+.month dl dd .btn-green {
+  background: #D2E7C3;
+  border: 1px solid #92CF68;
+}
+.scheduleWeek dl dd .btn-red,
+.month dl dd .btn-red {
+  background: #F6C9B9;
+  border: 1px solid #F8774A;
+}
+.scheduleWeek dl dd > .more,
+.month dl dd > .more {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #b5b5b5;
+  position: absolute;
+  bottom: 3px;
+  left: 40%;
+}
+.scheduleWeek dl.active,
+.month dl.active {
+  background: #f6f6f6;
+}
+.scheduleWeek dl.active dt,
+.month dl.active dt {
+  background: #ffffff;
+  color: #157dfb;
+}
+.scheduleWeek dl:last-child dd,
+.month dl:last-child dd {
+  border-right: 1px solid #D7D7D7;
+}
+.month dl {
+  width: 14.28571429%;
+}
+.month dl dd {
+  position: relative;
+  padding-top: 20px;
+}
+.month dl dd .date {
+  position: absolute;
+  right: 5px;
+  top: -5px;
+}
+.month dl dd.active {
+  background: #f6f6f6;
+  color: #157dfb;
+}
+/*scheduleDay style*/
+.scheduleTitle {
+  margin: 10px;
+  padding: 10px;
+  *zoom: 1;
+}
+.scheduleTitle:before,
+.scheduleTitle:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.scheduleTitle:after {
+  clear: both;
+}
+.scheduleTitle .titleLeft {
+  line-height: 35px;
+}
+.scheduleTitle .titleLeft a {
+  margin-right: 15px;
+  display: inline-block;
+}
+.scheduleTitle .titleLeft a.abtn {
+  width: 24px;
+  height: 24px;
+}
+.scheduleDay {
+  position: relative;
+}
+.scheduleDay > .contents {
+  padding: 0 0 15px;
+  position: relative;
+  display: block;
+}
+.scheduleDay > .contents:before {
+  content: "";
+  width: 4px;
+  top: 35px;
+  bottom: -65px;
+  left: 20%;
+  background: #e4e4e4;
+  position: absolute;
+}
+.scheduleDay > .contents:last-child:before {
+  display: none;
+}
+.scheduleDay > .contents > .leftDiv {
+  display: block;
+}
+.scheduleDay > .contents > .leftDiv > .statusPoint {
+  width: 15%;
+  display: block;
+  position: absolute;
+  margin-top: 32px;
+  text-align: right;
+}
+.scheduleBody {
+  position: relative;
+}
+.scheduleBody .rightDiv {
+  margin-left: 25%;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  width: 500px;
+  position: relative;
+  -moz-box-shadow: 2px 2px 3px #eee;
+  -webkit-box-shadow: 2px 2px 3px #eee;
+  box-shadow: 2px 2px 3px #eee;
+}
+.scheduleBody .rightDiv .icon-bg {
+  position: absolute;
+  width: 10px;
+  height: 16px;
+  top: 40px;
+  left: -10px;
+}
+.scheduleBody .rightDiv h3 {
+  margin: 15px;
+  border-bottom: 1px solid #f2f2f2;
+  line-height: 35px;
+  font-size: 16px;
+  font-weight: normal;
+  position: relative;
+}
+.scheduleBody .rightDiv h3 .downIcon {
+  position: absolute;
+  right: 15px;
+  top: 2px;
+  width: 32px;
+  height: 32px;
+}
+.scheduleBody .rightDiv dl {
+  display: block;
+  clear: both;
+  line-height: 28px;
+  margin: 15px;
+}
+.scheduleBody .rightDiv dl dt {
+  float: left;
+  color: #666666;
+}
+.scheduleBody .rightDiv dl dd {
+  margin-left: 70px;
+}
+.scheduleBody .rightDiv dl dd p {
+  line-height: 35px;
+}
+.scheduleBody .rightDiv .opp {
+  background: #f2f2f2;
+  border-radius: 0 0 8px 8px;
+  height: 35px;
+  line-height: 35px;
+  position: relative;
+}
+.scheduleBody .rightDiv .opp a {
+  text-indent: 35px;
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  text-decoration: none;
+  color: #666666;
+  cursor: pointer;
+}
+.scheduleBody .rightDiv .opp a.praise {
+  margin-right: 65px !important;
+}
+.scheduleBody .rightDiv .commentDiv {
+  margin: 15px;
+}
+.scheduleBody .rightDiv .commentDiv .face {
+  height: 30px;
+  width: 30px;
+}
+.scheduleBody .rightDiv .commentDiv .commentList h5 {
+  font-weight: normal;
+}
+.scheduleBody .rightDiv .commentDiv .commentList > dl {
+  border-bottom: 1px solid #f2f2f2;
+  padding-bottom: 15px;
+  position: relative;
+}
+.scheduleBody .rightDiv .commentDiv .commentList > dl dt img {
+  border: 1px solid #ededed;
+  height: 40px;
+  width: 40px;
+}
+.scheduleBody .rightDiv .commentDiv .commentList > dl dd p {
+  line-height: 28px;
+}
+.scheduleBody .rightDiv .commentDiv .commentList > dl > .operate {
+  position: absolute;
+  right: 15px;
+  bottom: 5px;
+}
+.scheduleBody .rightDiv .commentDiv .commentList > dl > .operate a {
+  color: #666666;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.scheduleBody .rightDiv .commentDiv .commentList > dl > .operate a.praise {
+  padding-left: 15px;
+}
+.scheduleBody .rightDiv .commentDiv .commentList > .more {
+  text-align: center;
+  color: #b5b5b5;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+.scheduleBody .pointIcon {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  top: 35px;
+  left: 20%;
+  margin-left: -12px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff;
+}
+.scheduleBody .popDiv {
+  position: absolute;
+  top: 100px;
+  /*��̬����*/
+  left: 25%;
+  background: #ffffff;
+}
+.scheduleBody .popDiv > .rightDiv {
+  margin-left: 0;
+}
+.scheduleBody .newSchedule {
+  background: #f6f6f6;
+  width: 600px;
+  padding: 30px;
+}
+.scheduleBody .newSchedule > dl {
+  clear: both;
+  margin: 10px 10px auto 10px;
+  line-height: 35px;
+}
+.scheduleBody .newSchedule > dl.title {
+  font-size: 14px;
+}
+.scheduleBody .newSchedule > dl.title > dt .pointIcon {
+  left: 10% !important;
+}
+.scheduleBody .newSchedule > dl dt {
+  width: 80px;
+  float: left;
+  color: #7d7d7d;
+}
+.scheduleBody .newSchedule > dl dd {
+  margin-left: 100px;
+}
+.scheduleBody .newSchedule > dl dd > input {
+  margin-right: 10px;
+  color: #333333;
+  line-height: 24px;
+}
+.scheduleBody .newSchedule > dl dd > input[type="checkbox"] {
+  margin-left: 15px;
+  margin-right: 3px;
+}
+.scheduleBody .newSchedule > dl dd > .user {
+  border: 1px solid #cccccc;
+  position: relative;
+  display: inline-block;
+  width: 66px;
+  height: 24px;
+  line-height: 24px !important;
+  padding-left: 10px;
+  color: #333333;
+  margin-right: 10px;
+}
+.scheduleBody .newSchedule > dl dd > .user:hover {
+  border: 1px solid #157dfb;
+}
+.scheduleBody .newSchedule > dl dd > .user span.close {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  right: 3px;
+  top: 6px;
+}
+.scheduleBody .newSchedule > dl dd .annex {
+  padding-left: 20px;
+  padding-top: 4px;
+}
+.border-b {
+  border-bottom: 1px solid #cccccc;
+}
+/*-------------------------------���ݹ���---------------------------------------------*/
+.saleFormList {
+  background: #fff;
+  margin: 0 auto;
+  width: 100%;
+}
+.saleFormList .saleForm {
+  margin: 20px;
+  width: 218px;
+  background: #E5E5E1;
+  font-size: 12px;
+  padding-bottom: 10px;
+  display: inline-block;
+  vertical-align:top;
+}
+.saleFormList .saleForm dt {
+  position: relative;
+  padding: 5px 10px;
+  padding-top: 30px;
+  text-align: center;
+}
+.saleFormList .saleForm dt span {
+  position: absolute;
+  top: -28px;
+  left: 36%;
+  width: 55px;
+  height: 55px;
+  -webkit-border-radius: 50% ;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #F6F6F6!important;
+}
+.saleFormList .saleForm dd {
+  margin: auto 10px;
+  border: 1px solid #E4E4E4;
+  border-bottom: none;
+  background: #fff;
+  padding: 5px 10px;
+  line-height: 30px;
+  position: relative;
+}
+.saleFormList .saleForm dd:last-child {
+  border-bottom: 1px solid #E4E4E4;
+}
+.saleFormList .saleForm dd hr {
+  position: absolute;
+  right: -95px;
+  top: 20px;
+  height: 1px;
+  border-top: 1px solid #e4e4e4;
+  transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  /* IE 9 */
+  -moz-transform: rotate(0deg);
+  /* Firefox */
+  -webkit-transform: rotate(0deg);
+  /* Safari �� Chrome */
+  -o-transform: rotate(0deg);
+  /* Opera */
+  width: 85px;
+  transform-origin: left top;
+  -ms-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -webkit-transform-origin: left top;
+  -o-transform-origin: left top;
+}
+.saleFormList .saleForm dd hr.deg30 {
+  right: -118px;
+  width: 110px;
+  transform: rotate(36deg);
+  -ms-transform: rotate(36deg);
+  /* IE 9 */
+  -moz-transform: rotate(36deg);
+  /* Firefox */
+  -webkit-transform: rotate(36deg);
+  /* Safari �� Chrome */
+  -o-transform: rotate(36deg);
+  /* Opera */
+}
+.saleFormList .saleForm dd hr.deg45 {
+  right: -160px;
+  width: 150px;
+  transform: rotate(53deg);
+  -ms-transform: rotate(53deg);
+  /* IE 9 */
+  -moz-transform: rotate(53deg);
+  /* Firefox */
+  -webkit-transform: rotate(53deg);
+  /* Safari �� Chrome */
+  -o-transform: rotate(53deg);
+  /* Opera */
+}
+.saleFormList .saleForm dd hr.deg64 {
+  right: -240px;
+  width: 230px;
+  transform: rotate(68deg);
+  -ms-transform: rotate(68deg);
+  /* IE 9 */
+  -moz-transform: rotate(68deg);
+  /* Firefox */
+  -webkit-transform: rotate(68deg);
+  /* Safari �� Chrome */
+  -o-transform: rotate(68deg);
+  /* Opera */
+}
+.saleFormList .saleForm dd hr.deg-30 {
+  right: -118px;
+  width: 110px;
+  transform: rotate(-36deg);
+  -ms-transform: rotate(-36deg);
+  /* IE 9 */
+  -moz-transform: rotate(-36deg);
+  /* Firefox */
+  -webkit-transform: rotate(-36deg);
+  /* Safari �� Chrome */
+  -o-transform: rotate(-36deg);
+  /* Opera */
+}
+.saleFormList .saleForm dd hr.deg-45 {
+  right: -160px;
+  width: 150px;
+  transform: rotate(-56deg);
+  -ms-transform: rotate(-56deg);
+  /* IE 9 */
+  -moz-transform: rotate(-56deg);
+  /* Firefox */
+  -webkit-transform: rotate(-56deg);
+  /* Safari �� Chrome */
+  -o-transform: rotate(-56deg);
+  /* Opera */
+}
+.saleFormList .saleForm.active {
+  background: #F4E7D5;/**#FFF3E1**/
+}
+.link{
+    cursor:pointer;
+}
+.saleFormList .saleForm.active dt {
+  color: #CC3300;
+}
+.saleFormList .saleForm.active dt span {
+  background-color: #FFF3E1!important;
+}
+.saleFormList .saleForm .icon_a {
+  background: url("../../images/linkquerylist/u193.png") no-repeat center;
+}
+.saleFormList .saleForm .icon_b {
+  background: url("../../images/linkquerylist/u195.png") no-repeat center;
+}
+.saleFormList .saleForm .icon_c {
+  background: url("../../images/linkquerylist/u197.png") no-repeat center;
+}

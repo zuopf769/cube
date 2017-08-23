@@ -1,0 +1,68 @@
+<div data-controller="PaymentPageController">
+    <div class="pages">
+	    <div data-page="payment" class="page no-tabbar navbar-fixed toolbar-fixed">
+		    <div class="navbar">
+			    <div class="navbar-inner">
+				    <div class="left">
+                        <a href="#" class="back">
+                            <i class="icon icon-backgray"></i>
+                        </a>
+				    </div>
+				    <div class="center">支付及发运方式</div>
+				    <div class="right"></div>
+			    </div>
+		    </div>
+		    <div class="page-content">
+			    <div class="list-block m-t-0 addr-new">
+				    <ul id="paymentForm">
+					    <li>
+							<div class="item-content">
+							    <div class="item-inner">
+								    <div class="item-title label">付款方式</div>
+								    <div class="item-input">
+								        <input type="text" placeholder="" name="payWay" readonly  id="invoicePayway">
+								    </div>
+	                                <div class="item-after">
+	                                    <i class="icon icon-chevron-right" ></i>
+	                                </div>
+							    </div>
+							</div>
+					    </li>
+					    <li>
+							<div class="item-content">
+							    <div class="item-inner">
+								    <div class="item-title label">结算方式</div>
+								    <div class="item-input">
+								        <input type="text" placeholder="" name="settleWay" readonly  id="invoiceSettleway">
+								    </div>
+	                                <div class="item-after">
+	                                    <i class="icon icon-chevron-right" ></i>
+	                                </div>
+							    </div>
+							</div>
+				        </li>
+					    <li>
+							<div class="item-content">
+							    <div class="item-inner">
+								    <div class="item-title label">发货方式</div>
+								    <div class="item-input">
+								        <input type="text" placeholder="" name="shipping" readonly  id="invoiceShipping">
+								    </div>
+	                                <div class="item-after">
+	                                    <i class="icon icon-chevron-right" ></i>
+	                                </div>
+							    </div>
+							</div>
+				        </li>    
+				    </ul>
+			    </div>
+		    </div>
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <a class="button button-fill bg-green-u p-lr-25 only-one-btn payment_save" href="#">保存</a>
+                </div>
+            </div>
+        </div>
+	    </div>
+        <script src="../js/pages/PaymentPageController.js"></script>
+    </div>

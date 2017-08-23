@@ -1,0 +1,82 @@
+﻿<div data-controller="UserBaseInfoEditController">
+    <div class="pages">
+        <div data-page="userBaseInfoEditPage" class="page no-tabbar">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="back link">
+                            <i class="icon icon-backgray"></i>
+                        </a>
+                    </div>
+                    <div class="center">{{showName}}</div>
+                    <div class="right userBaseInfo-btnSave">
+                        <a href="#">保存</a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content page-useBaseInfoEdit-content">
+                <div class="user-list">
+                    <div class="list-block all-order  m-b-0 mybaseinfo">
+                        <ul>
+                            {{#if cFullName}}
+                            <li class="item-content" data-name="cFullName">
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input type="text" value="{{cFullName}}" name="cFullName" placeholder="请输入姓名">
+                                    </div>
+                                </div>
+                            </li>
+                            {{/if}}
+                            {{#if cDepartment}}
+                            <li class="item-content" data-name="cDepartment">
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input type="text" placeholder="请输入部门" value="{{cDepartment}}" name="cDepartment">
+                                    </div>
+                                </div>
+                            </li>
+                            {{/if}}
+                            {{#if cPosition}}
+                            <li class="item-content" data-name="cPosition">
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input type="text" placeholder="请输入职位" name="cPosition" value="{{cPosition}}">
+                                    </div>
+                                </div>
+                            </li>
+                            {{/if}}
+                            {{#if cMobile}}
+                            <li class="item-content" data-name="cMobile">
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input type="number" value="{{cMobile}}" name="cMobile" placeholder="请输入电话号码">
+                                    </div>
+                                </div>
+                            </li>
+                            {{/if}}
+                            {{#if cEmail}}
+                            <li class="item-content" data-name="cEmail">
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input type="text" value="{{cEmail}}" name="cEmail" placeholder="请输入联系邮箱">
+                                    </div>
+                                </div>
+                            </li>
+                            {{/if}}
+                            {{#if cQQ}}
+                            <li class="item-content" data-name="cQQ">
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input type="text" placeholder="请输入QQ号" name="cQQ" value="{{cQQ}}">
+                                    </div>
+                                </div>
+                            </li>
+                            {{/if}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pages/UserBaseInfoEditController.js"></script>
+</div>

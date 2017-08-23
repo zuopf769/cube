@@ -1,0 +1,91 @@
+﻿<div data-controller="HomePageController">
+    <div class="pages">
+        <div data-page="home" class="page navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner bg-green-u">
+                    <div class="left">
+                        <a href="#" class="link icon-only">
+                            <i class="icon icon-scan"></i>
+                        </a>
+                    </div>
+                    <div class="center">
+                        <a href="pages/search.html" class="link icon-only">
+                            <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+                            <input type="text" class="search" placeholder="输入商品名称/商品编码" />
+                            <div class="input-group-addon"><i class="icon icon-record"></i></div>
+                        </a>
+                    </div>
+                    <div class="right">
+                        <a href="pages/messageList.html" class="link icon-only">
+                            <i class="icon icon-msg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="row swiper-container swiper-slow home-swiper">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-wrapper">
+                        {{#each photos}}
+                        <div class="swiper-slide" data-id="{{this.id}}">
+                            <span><img src="{{@root.serverhost}}{{this.cAdImageUrl}}" /></span>
+                            <!--<span><img src="img/banner-1.png"></span>-->
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="row links-container">
+                    {{#each links}}
+                    <div class="col-25">
+                        <a href="{{this.link}}">
+                            <div class="thumbnail">
+                                {{this.img}}
+                                <div class="caption">
+                                    <h3 class="text-center">{{this.caption}}</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {{/each}}
+                </div>
+                <div class="product-container">
+                    <div class="title">
+                        <h3>最新商品</h3>
+                        <a href="pages/products.html?dataType=newProduct" class="pull-right">查看更多</a>
+                    </div>
+                    <div class="row list" id="newProducts">
+
+                    </div>
+                </div>
+                <div class="product-container">
+                    <div class="title">
+                        <h3>推荐商品</h3>
+                        <a href="pages/products.html?dataType=advProduct" class="pull-right">查看更多</a>
+                    </div>
+                    <div class="row list" id="adviceProducts">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/template7" id="homeProductList">
+        {{#each products}}
+        <div class="col-50">
+            <a href="pages/productDetail.html?pid={{this[2]}}" data-reload="false" data-ignore-cache="true">
+                <div class="thumbnail">
+                    <img {{#if this[3]}}data-src="{{@root.serverhost}}{{this[3]}}" {{else}}data-src="img/nopic.jpg" {{/if}} class="lazy lazy-fadeIn"/>
+                    <div class="caption">
+                        <p class="border-b-d">{{this[0]}}</p>
+                        <p>
+                            <span class="color-red">￥{{this[1]}}</span>
+                            <span class="pull-right">库存量:{{this[4]}}</span>
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{/each}}
+    </script>
+    <script type="text/javascript" src="../js/pages/HomePageController.js"></script>
+</div>

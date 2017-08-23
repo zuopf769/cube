@@ -1,0 +1,397 @@
+﻿div[data-controltype='ImageButton']{
+	cursor: pointer;
+}
+/************            Page ImageButton Icon  [Header]:Start              **********/
+.header div[data-controltype='ImageButton'] span[class='menu-icon'] {
+   
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display:block;
+    background:url(../images/ImageButton/menu.png) no-repeat;
+}
+div[data-propertyname="addmenulist"] span[class='icon-add']{
+  background: url(../images/listMenu/u179.png) 50% 50% no-repeat; 
+  width: 22px;
+  height: 22px;
+  margin-top: -2px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: block;
+  float: left;
+}
+.scheduleTitle div[data-propertyname="createSchedule"]{
+ 	  background-color: #3E94FE;  
+ 	  color:#FFF;
+ 	    width: 113px;
+  float: left;
+  height: 26px;
+  padding: 3px;
+  margin: 0 10px;
+ }
+.scheduleTitle div[data-controltype="ImageButton"] span[class='icon-add']{
+  background: url(../images/ImageButton/add-white.png) 50% 50% no-repeat; 
+
+
+  width: 22px;
+  height: 22px;
+  margin-top: -2px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: block;
+  float: left;
+}
+div[data-propertyname="operatormenulist"] span[class='icon-set']{
+  background: url(../images/listMenu/u171.png) 50% 50% no-repeat;
+  width: 17px;
+  height: 17px;
+  margin-top: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: block;
+  float: left;
+}
+div[data-propertyname="goBackmenulist"] span[class='icon-back']{
+  background: url(../images/listMenu/u1905.png) 50% 50% no-repeat;
+  width: 22px;
+  height: 22px;
+  margin-top: -2px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: block;
+  float: left;
+}
+.header div span[class*='set-icon'] {
+    content: url(../images/ImageButton/set.png);
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.header div span[class*='help-icon'] {
+    content: url(../images/ImageButton/help.png);
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.header div span[class*='else-icon'] {
+    content: url(../images/ImageButton/else.png);
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+/************            Page ImageButton Icon  [Header]:End              **********/
+
+/************            Page ImageButton Icon  [Content]:Start           **********/
+
+div span[class='next-icon'] {
+    content: url(../images/ImageButton/next.png);
+    width: 32px;
+    height: 32px;
+    margin: 0 3px -3px 0;
+}
+
+div span[class*='prev-icon'] {
+    content: url(../images/ImageButton/prev.png);
+    width: 32px;
+    height: 32px;
+    margin: 0 3px -3px 0;
+}
+
+div span[class*='search-icon'] {
+    content: url(../images/search2.png);
+    width: 16px;
+    height: 16px;
+    margin: 0 3px -3px 0;
+}
+
+div span[class*='fullScreen-icon'] {
+    content: url(../images/ToolBar/fullscreen.png);
+    width: 16px;
+    height: 16px;
+    margin: 0 3px -3px 0;
+}
+
+div span[class*='unfullScreen-icon'] {
+    content: url(../images/ToolBar/unfullscreen.png);
+    width: 16px;
+    height: 16px;
+    margin: 0 3px -3px 0;
+}
+
+div span[class='edit-icon'] {
+}
+
+div span[class*='status-check-ok'] {
+    content: url(../images/ImageButton/status-check-ok.png);
+    width: 14px;
+    height: 14px;
+    margin: 0 10px -1px 0;
+}
+
+.cube-detail-content div span[class*='edit-icon'] {
+    content: url(../images/ImageButton/edit.png);
+    width: 16px;
+    height: 16px;
+    margin: 0 10px -1px 0;
+}
+
+.common-list.ui-header div span[class='close-icon'] {
+    content: url(../images/ImageButton/close.png);
+    width: 14px;
+    height: 14px;
+}
+
+.ui-head-content div span[class='oc-open-icon'] {
+    content: url(../images/ImageButton/oc-open.png);
+    width: 24px;
+    height: 24px;
+    margin-bottom: -8px;
+}
+
+.ui-head-content div span[class='oc-close-icon'] {
+    content: url(../images/ImageButton/oc-open.png);
+    width: 24px;
+    height: 24px;
+    margin-bottom: -8px;
+}
+
+.ui-control-group span[class='part-table-icon'] {
+    content: url(../images/ImageButton/part-table.png);
+    width: 20px;
+    height: 20px;
+}
+
+.ui-control-group span[class='total-table-icon'] {
+    content: url(../images/ImageButton/total-table.png);
+    width: 20px;
+    height: 20px;
+}
+
+.common-list.ui-content .ui-control-group .part-table-icon.active {
+    content: url(../images/ImageButton/part-table-active.png);
+    width: 20px;
+    height: 20px;
+}
+
+.common-list.ui-content .ui-control-group .total-table-icon.active {
+    content: url(../images/ImageButton/total-table-active.png);
+    width: 20px;
+    height: 20px;
+}
+
+.ui-control-group span[class='set-icon'] {
+    content: url(../images/ImageButton/set-1.png);
+    width: 20px;
+    height: 20px;
+}
+.common-list.ui-content > .ui-list span[class='move-icon'] {
+    content: url(../images/ImageButton/move.png);
+    width: 16px;
+    height: 16px;
+    margin:0 10px -3px 0;
+}
+.common-list.ui-footer span[class='save-icon'] {
+    content: url(../images/ImageButton/save.png);
+    width: 16px;
+    height: 16px;
+    margin:0px 9px -3px 10px;
+}
+
+.ui-tool span[class='upload-icon'] {
+    content: url(../images/ImageButton/upload.png);
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+div[data-controltype='ImageButton'] span[class*='msg-icon'] {
+    content: url(../images/ImageButton/msg.png);
+    width: 24px;
+    height: 24px;
+}
+
+div[data-controltype='ImageButton'] span[class*='sina-icon'] {
+    content: url(../images/ImageButton/sina.png);
+    width: 24px;
+    height: 24px;
+}
+
+div[data-controltype='ImageButton'] span[class*='uu-icon'] {
+    content: url(../images/ImageButton/uu.png);
+    width: 24px;
+    height: 24px;
+}
+
+.ui-head-content div[data-controltype='ImageButton'] span[class*='add-icon'] {
+    content: url(../images/ImageButton/add.png);
+    width: 16px;
+    height: 16px;
+    margin:18px 0 0 15px;
+}
+.ui-head-content div[data-controltype='ImageButton'] span[class*='set-icon'] {
+    content: url(../images/ImageButton/set-1.png);
+    width: 16px;
+    height: 16px;
+    /*margin:18px 0 0 15px;*/
+}
+
+.action-section div span[class*='condition-icon'] {
+}
+/************            Page ImageButton Icon  [Content]:End           **********/
+
+/************            Page Toolbar Icon   （modelicon）         :Start           **********/
+div[data-controltype='ToolBar'].cube-bar-modeltxt div[data-controltype='ImageButton'] span[class*='add-icon'] {
+    content: url(../images/ToolBar/add.png);
+    width: 16px;
+    height: 16px;
+    margin: 0 3px -3px 0;
+}
+
+div[data-controltype='ToolBar'].cube-bar-modelicon span[class*='add-icon'] {
+    content: url(../images/ToolBar/add.png);
+    width: 16px;
+    height: 16px;
+    margin: 0 3px -3px 0;
+}
+
+div[data-controltype='ToolBar'].cube-bar-modeltxticon span[class*='fullscreen-icon'] {
+    content: url(../images/ToolBar/fullscreen.png);
+    width: 16px;
+    height: 16px;
+    margin: 0 3px -3px 0;
+}
+
+div[data-controltype='ToolBar'].cube-bar-modeltxticon span[class*='unfullscreen-icon'] {
+    content: url(../images/ToolBar/unfullscreen.png);
+    width: 16px;
+    height: 16px;
+    margin: 0 3px -3px 0;
+}
+
+div[data-controltype='ToolBar'].cube-bar-modelicon span[class*='refresh-icon'] {
+    content: url(../images/ToolBar/refresh.png);
+    width: 16px;
+    height: 16px;
+}
+
+div[data-controltype='ToolBar'].cube-bar-modelicon span[class*='set-icon'] {
+    content: url(../images/ToolBar/set.png);
+    width: 16px;
+    height: 16px;
+}
+div[data-controltype='ToolBar'].cube-bar-modelicon span[class*='filter-icon'] {
+    content: url(../images/ToolBar/filter.png);
+    width: 16px;
+    height: 16px;
+}
+div[data-controltype='ToolBar'].cube-bar-modelicon span[class*='sort-icon'] {
+    content: url(../images/ToolBar/sort.png);
+    width: 16px;
+    height: 16px;
+}
+div[data-controltype='ToolBar'].cube-bar-modelicon span[class*='private-icon'] {
+    content: url(../images/ToolBar/private.png);
+    width: 23px;
+    height: 23px;
+}
+div[data-controltype='ToolBar'].cube-bar-modelicon span[class*='public-icon'] {
+    content: url(../images/ToolBar/public.png);
+    width: 23px;
+    height: 23px;
+}
+div[data-controltype='ToolBar'].cube-bar-modelicon span[class*='delete-icon'] {
+    content: url(../images/ToolBar/delete.png);
+    width: 23px;
+    height: 23px;
+}
+div[data-controltype='ToolBar'].cube-bar-modelicon span[class*='edit-icon'] {
+    content: url(../images/ToolBar/edit.png);
+    width: 23px;
+    height: 23px;
+}
+div[data-controltype='ToolBar'].cube-bar-modelicon span[class*='search-icon'] {
+    content: url(../images/search.png);
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+}
+/************            Page ToolBar Icon     :End           **********/
+
+/************            Page Toolbar Icon   （modeltxticon）         :Start           **********/
+cube-content-header div[data-controltype='ToolBar'].cube-bar-modeltxt span[class*='add-icon'] {
+    content: url(../images/ToolBar/content-add.png);
+    width: 32px;
+    height: 32px;
+}
+div[data-controltype='ToolBar'].cube-bar-modeltxt li > div.main-button{
+   background:#3E94FE;
+   border:1px solid #3984E5;
+   color:#fff;
+}
+div[data-controltype='ToolBar'].cube-bar-modeltxt div.main-button span[class*='toolbar-add']{
+    content: url(../images/ToolBar/toolbar-add.png);
+    width: 16px;
+    height: 16px;
+    padding-top: 6px;
+}
+div[data-controltype='ToolBar'].cube-bar-modeltxt div.main-button span[class*='toolbar-add']>img{
+    width: 32px;
+    height: 32px;
+}
+
+div[data-controltype='ToolBar'].cube-bar-modeltxticon span[class='check-icon'] {
+    content: url(../images/ToolBar/content-check.png);
+    width: 32px;
+    height: 32px;
+}
+
+div[data-controltype='ToolBar'].cube-bar-modeltxticon span[class='save-icon'] {
+    content: url(../images/ToolBar/content-save.png);
+    width: 32px;
+    height: 32px;
+}
+
+div[data-controltype='ToolBar'].cube-bar-modeltxticon span[class='send-icon'] {
+    content: url(../images/ToolBar/content-send.png);
+    width: 32px;
+    height: 32px;
+}
+
+div span[class='last-icon'] {
+    content: url(../images/ImageButton/lastOpt.png);
+    width: 16px;
+    height: 16px;
+    margin: 0 10px -3px 4px;
+}
+
+div[data-controltype='TabContent'].navbar-pc-slide .else-icon, div[data-controltype='ToolBar'] .else-icon {
+    content: url(../images/else-pc.png);
+    width: 24px;
+    height: 24px;
+    margin-top: 5px;
+}
+
+/************            Page ToolBar Icon     :End           **********/
+
+/************            Page DropDownButton Icon  :Start           **********/
+div[data-controltype='DropDownButton'] span.add-icon {
+     content: url(../images/ToolBar/add.png);
+    width: 16px;
+    height: 16px;
+    margin: 0 3px -3px 0;
+}
+/************            Page DropDownButton Icon  :End           **********/
+
+
+div[data-controltype='ImageButton'] span[class*='menu-icon'] {
+    content: url(../images/ImageButton/menu.png);
+    width: 24px;
+    height: 24px;
+    background-color:#808080;
+}

@@ -1,0 +1,259 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="common/css/index.css" media="all" type="text/css">
+    <link rel="stylesheet" href="pc/css/Cube.Control.css" media="all" type="text/css">
+    <link rel="stylesheet" href="common/css/newtimelinesheet.css" media="all" type="text/css">
+
+
+    <style type="text/css">
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html {
+            -ms-touch-action: none;
+        }
+
+        body, ul, li {
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+
+        body {
+            font-size: 12px;
+            font-family: ubuntu, helvetica, arial;
+            overflow: hidden; /* this is important to prevent the whole page to bounce */
+        }
+
+        .viewport {
+            position: relative;
+            height: 450px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            width: 640px;
+            height: 560px;
+            margin: 0 auto;
+        }
+
+        .scroller {
+            position: absolute;
+            left: -100px;
+            z-index: 1;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            height: 450px;
+            -webkit-transform: translateZ(0);
+            -moz-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            -o-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-text-size-adjust: none;
+            -moz-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            -o-text-size-adjust: none;
+            text-size-adjust: none;
+            margin: 0px;
+        }
+
+            .scroller > li {
+                width: 160px;
+                height: 150px;
+                position: absolute;
+                list-style: none;
+                border: 1px solid #fff;
+                border-radius: 12px;
+            }
+
+                .scroller > li > a {
+                    height: 100%;
+                    width: 100%;
+                    color: #ffffff;
+                    border-radius: 10px;
+                    display: block;
+                    text-decoration: none;
+                    cursor: pointer;
+                    padding: 112px 16px 0 0;
+                    font-weight: 900;
+                    text-align: right;
+                    background: url("common/images/homeImg/u644.png") no-repeat scroll center center transparent;
+                }
+
+        .painting {
+            width: 140px;
+            height: 200px;
+            border-radius: 10px;
+            margin: 20px auto;
+            border: 1px solid #000;
+            box-shadow: inset 2px 2px 6px rgba(255,255,255,0.6), inset -2px -2px 6px rgba(0,0,0,0.6), 0 1px 8px rgba(0,0,0,0.8);
+        }
+
+        .giotto {
+            background: url(../images/homeImg/u457.png);
+        }
+
+        .leonardo {
+            background: url(../images/homeImg/u457.png);
+        }
+
+        .gaugin {
+            background: url(../images/homeImg/u457.png);
+        }
+
+        .warhol {
+            background: url(../images/homeImg/u457.png);
+        }
+
+        .indicator {
+            position: relative;
+            height: 20px;
+            margin: 10px auto;
+            top: -36px;
+            z-index: 1;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUBAMAAABohZD3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QUGCDYztyDUJgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAGFBMVEUAAADNzc3Nzc3Nzc3Nzc3Nzc3Nzc3///8aWwwLAAAABnRSTlMAX5Ks3/nRD0HIAAAAAWJLR0QHFmGI6wAAAFtJREFUGFdjYGBgEHYNMWRAAJE0IHCEc5nSwEABxleD8JOgXMY0KBCA8FlgfAcIXwzGT4TwzWD8ZAjfDcZPgfDDYPxU7Hx09ejmoduH7h5096L7B8O/6OGBGl4APYg8TQ0XAScAAAAASUVORK5CYII=);
+        }
+
+        .dotty {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background: #777;
+        }
+
+        .background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            content: url("pad/images/u2.jpg");
+        }
+    </style>
+
+</head>
+<body>
+    <div class="background"></div>
+
+    <div id="HomePadView" class="cube-main" data-viewmodel="HomePadViewModel">
+
+        <div data-propertyname="controlpages" data-controltype="LoadPage">
+            <!--<!--<div class="menu-part" style="display:none;">
+                <div data-propertyname="listMenu" data-controltype="ListCard"></div>
+            </div>-->
+            <div class="menu-part" data-page="menu-part">
+                <div data-propertyname="listMenu" data-controltype="ListCard"></div>
+            </div>
+            <div data-page="homepage" class="index_box active-page">
+                
+               <div data-propertyname="settingMenu" data-controltype="DropDownButton"> 
+                    <span><img src="common/images/homeImg/u42.png" /></span>
+                    <span></span> 
+                    <!-- <div class="clear"></div> -->
+                    <div class="dropbutton-item" style="height: 175px;"></div>
+                </div>
+               
+                <!-- 页签-->
+                <div>
+                    <ul class="indexTab">
+                        <li id="TabDecisionAnalysis" class="tab_1 size1 status1">
+                            <a href="javascript:void(0);">
+                                <img src="common/images/homeImg/u628.png" />
+                            </a>
+                        </li>
+                        <li id="TabMessageTask" class="tab_2 size2 status1">
+                            <a href="javascript:void(0);">
+                                <img src="common/images/homeImg/u624.png" />
+                            </a>
+                        </li>
+                        <li id="TabMyWork" class="tab_3 size3 status2">
+                            <a href="javascript:void(0);">
+                                <img src="common/images/homeImg/u616.png" />
+                            </a>
+                        </li>
+                        <li id="TabMyMessage" class="tab_4 size2 status1">
+                            <a href="javascript:void(0);">
+                                <img src="common/images/homeImg/u618.png" />
+                            </a>
+                        </li>
+                        <li id="TabMySchedule" class="tab_5 size1 status1">
+                            <a href="javascript:void(0);">
+                                <img src="common/images/homeImg/u620.png" />
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- 页签详细内容-->
+                    <div>
+                        <div id="DecisionAnalysis" style="display: none">
+                            DecisionAnalysisDecisionAnalysisDecisionAnalysisDecisionAnalysisDecisionAnalysis
+                        </div>
+                        <div id="MessageTask" data-propertyname="msgTask" data-controltype="TimeLineControl" class="MessageTask" style="display: none;">
+                        </div>
+                        <div id="MyWork" class="MyWork" style="position: relative;">
+                            <div class="Carousel">
+
+                                <div class="viewport">
+                                    <div class="wrapper">
+                                        <ul data-propertyname="listTile" data-controltype="ListCard"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="MyMessage" class="MessageTask" style="display: none;">
+                            Continued to do...
+                        </div>
+                        <div id="MySchedule" data-propertyname="schedule" data-controltype="TimeLineControl" style="display: none; padding: 10px 40px;">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    
+        <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+        <script src="./common/js/Animation.js" type="text/javascript"></script>
+        <script src="./useragent/userAgent.js" type="text/javascript"></script>
+        <script src="./cordova/cordova.js" type="text/javascript"></script>
+        <script src="./common/js/Cube.js" type="text/javascript"></script>
+        <script src="./pad/js/cube.pad.js" type="text/javascript"></script>
+        <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+        <script src="./common/js/Control.js" type="text/javascript"></script>
+        <script src="./common/js/ListCard.js" type="text/javascript"></script>
+        <script src="./common/js/loadpage.js" type="text/javascript"></script>
+        <script type="text/javascript" src="common/js/index.js"></script>
+        <script type="text/javascript" src="jquery/iscroll-probe.js"></script>
+        <script type="text/javascript" src="jquery/jquery.carousel-relative.js"></script>
+        <script type="text/javascript" src="pc/js/DropDownButton.js"></script>
+        <script type="text/javascript" src="common/js/Schedule.js"></script>
+        <script type="text/javascript" src="common/js/TimeLineControl.js"></script>
+
+        <script src="HomePadViewModel.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            cb.viewbinding.create("HomePadView");
+            /*$("#MyWork>div>div>ul").crlPosition({master:"#MyWork>div>div>ul"});
+            */
+
+            document.body.onload = function () {
+                //var mySchedule = new TimeLineControl($('#MySchedule'),'schedule','schedule',scheduletestdatas);
+            }
+
+
+        </script>
+</body>
+</html>

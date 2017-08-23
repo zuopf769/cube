@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="pc/css/kendoctrl/Cube.Control.css" rel="stylesheet" type="text/css" />
+    <link href="pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/modal.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.ToolBar.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="PrintPathView" data-page="common.sysmanager.PrintPathApp"  data-viewmodel="PrintPathViewModel" style="height:555px;margin:0">
+        <div class="row p-0 m-0"></div>        
+                <span  class="col-lg-12 p-0 m-t-5">输入应用</span>
+                <hr  class="col-lg-12 p-0" style="margin-top:5px;margin-bottom:5px;position: relative;left:-16px;border-color:#aaa;width:796px"/>
+                <div  class="col-lg-12 p-0 m-0 m-t-10" style="height:420px;overflow:auto" >
+                   <div data-propertyname="DirTree" data-controltype="TreeView"></div>
+                </div>
+                <div data-propertyname="leftToolbar" data-controltype="ToolBar" class="cube-bar-modeltxt col-lg-12" style="margin-top:31px;overflow:inherit">
+                   <div class="col-lg-12">
+                     <div class="col-lg-8 p-0 m-0">
+                        <span  class="col-lg-2 p-0 m-t-5">输入路径:</span>
+                         <div class="col-lg-10 p-0">
+                            <input data-propertyname="PrintPath" data-controltype="TextBox"/>
+                        </div>
+                        </div> 
+                        <li class="col-lg-2 m-t-3">
+                          <div data-propertyname="confirmAction" data-controltype="ImageButton">
+                               <span></span>
+                               <span>确认</span>
+                           </div>
+                    </li> 
+                                           <li class="col-lg-2 m-t-3">
+                        <div data-propertyname="cancelAction" data-controltype="ImageButton">
+                            <span></span>
+                            <span>取消</span>
+                        </div>
+                      </li>     
+                    </div> 
+                </div>  
+       </div>
+
+    <script src="./jquery/jquery-1.11.1.js"></script>
+    <script src="./jquery/jquery-ui.js"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/Button.js" type="text/javascript"></script>
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>
+    <script src="apps/common/sysmanager/PrintPathViewModel.js"></script>
+    <script src="apps/common/sysmanager/PrintPathViewModel_Extend.js"></script>
+    <script data-config="TextBox"></script>
+    <script data-config="Tree"></script>
+    <script>
+        cb.viewbinding.create("PrintPathView");
+    </script>
+</body>
+</html>

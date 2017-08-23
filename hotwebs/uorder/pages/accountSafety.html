@@ -1,0 +1,55 @@
+﻿<div data-controller="AccountSafetyController">
+    <div class="pages">
+        <div data-page="accountSafetyPage" class="page no-tabbar">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="link back"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center"> 账户安全</div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="user-list">
+                    <div class="list-block media-list all-order  m-b-0">
+                        <ul>
+                            <a href="pages/changePwd.html">
+                                <li class="list-bankInfor item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">登录密码</div>
+                                            <div class="item-after"></div>
+                                        </div>
+                                        <div class="item-subtitle">互联网账号存在被盗风险,建议您定期修改密码以保护账号安全!</div>
+                                    </div>
+                                </li>
+                            </a>
+                            <a href="pages/changeEmail.html?valid={{userInfo.user.bEmailValid}}">
+                                <li class="list-bankInfor item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">邮箱验证</div>
+                                            <div class="item-after">{{#if userInfo.user.bEmailValid}}{{userInfo.user.cEmail}}{{else}}您还未验证邮箱{{/if}}</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </a>
+                            <a href="pages/changePhone.html?valid={{userInfo.user.bMobileValid}}">
+                                <li class="list-bankInfor item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title">手机验证</div>
+                                            <div class="item-after">{{#if userInfo.user.bMobileValid}}{{userInfo.user.cMobile}}{{else}}您还未验证手机{{/if}}</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pages/AccountSafetyController.js"></script>
+</div>

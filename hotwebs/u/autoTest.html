@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+        <meta charset="utf-8">
+        <title>接口自动化测试</title>
+		<link rel="stylesheet" href="./common/css/jquery-ui.css">
+        <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+        <script src="./jquery/jquery-ui.js" type="text/javascript"></script>
+
+        <style type="text/css">
+            table
+            {
+                border-collapse:collapse;
+            }
+            table, td, th
+            {
+                border:1px solid black;
+            }
+			
+			.no-close .ui-dialog-titlebar {
+				display: none;
+			}
+        </style>
+    </head>
+    <body>
+        <h1>接口自动化测试</h1>
+        <hr/>
+		<center>
+        <div >
+            <input  type="button" name="run_bt" id="run_bt" value="运行测试" onClick="do_auto_test()"/>
+        </div>
+        </br>
+		<div id="loading_div" style=" background-color: white;text-align:center;vertical-align :middle;display:none;">
+			<img id="loading_img" src="./common/images/load.gif" /> 
+		</div>
+        <div id="resultdata" style="width:1050px; float:left;display:none;padding-left:80px;">
+            <table style="border:1px solid black;width: 1050px;height: 100px;" > 
+                <tr id="content_first_tr">
+                    <td nowrap>用例编码</td>
+                    <td nowrap>用例名称</td>
+                    <td nowrap>请求URL</td>
+                    <td nowrap>通过</td>
+                    <td nowrap>开发者Email</td>
+					<td nowrap>服务调用结果</td>
+                </tr>
+            </table>
+        </div>
+		</center>
+    </body>
+    <script type="text/javascript">
+        /**
+         * 根据传入的参数进行参数值的查询
+         */
+        function url_query(query) {
+            query = query.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+            var expr = "[\\?&]" + query + "=([^&#]*)";
+            var regex = new RegExp(expr);
+            var results = regex.exec(window.location.href);
+            if (results !== null) {
+                return results[1];
+            } else {
+                return false;
+            }
+        }
+
+        /**
+         * 进行接口的自动化测试
+         */
+        function do_auto_test() {
+            var token = url_query("token");
+            $(".content_tr").remove();
+			$("#resultdata").hide();
+			//$("#loading_img").show();
+			$("#run_bt").attr("disabled",true);
+			debugger;
+			$("#loading_div").dialog({
+			    dialogClass: "no-close",
+				modal: true
+			});
+             debugger;
+            $.ajax({
+                url: window.location.protocol + "//" + window.location.host+"/classes/General/UAP/AutoTest?token=" + token,
+                async: true,
+                type: "POST",
+                data: JSON.stringify({"token": token, "targetUrl": window.location.protocol + "//" + window.location.host+"/classes"}),
+                contentType: "application/json; charset=utf-8",
+                success: function (response) {
+				    $("#run_bt").removeAttr("disabled");
+                    $("#resultdata").show();
+					//$("#loading_img").hide();
+					 debugger;
+                    for (i = response.tempResultData.length -1; i >= 0; i--) {
+                        //var pass_flag = "否";
+                        var pass_flag = "<span id='totalcount' style='color: #f00;font-weight:bold;'>否</span>"
+                        if (response.tempResultData[i].isTestPass) {
+                            pass_flag = "是";
+                        }
+						var res_text =  response.tempResultData[i].responseText;
+						if(!res_text){
+							res_text = response.tempResultData[i].exceptionText;
+						}
+                        $("#content_first_tr").after("<tr class=content_tr><td>" 
+								+ response.tempResultData[i].id + "</td><td nowrap>"
+                                + response.tempResultData[i].desc + "</td><td>"
+                                + response.tempResultData[i].targetUrl + "</td><td>"
+                                + pass_flag + "</td><td>"
+                                + response.tempResultData[i].authorEmail + "</td>"
+								+"<td nowrap class='res_text' title='"+res_text+"'>"
+								+ res_text.substring(0,15) + "...</td></tr>");
+                    }
+					
+					show_tooltip();
+					debugger;
+					$("#loading_div").dialog('close');
+                },
+                error: function (req, textStatus) {
+				    alert("发生异常："+textStatus);
+                    $("#run_bt").removeAttr("disabled");
+					$("err_msg").html("发生异常："+textStatus);
+					$("#loading_div").dialog('close');
+				}
+			});
+        }
+		
+		/**
+		* 将文本信息进行tooltip处理
+		*/
+        function show_tooltip(){
+			$(".res_text").tooltip();
+       }
+	   
+    </script>	
+</html>

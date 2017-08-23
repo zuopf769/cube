@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application name="CustomerCatalogApp" title="客户分类" moduleName="pu" symbol="pu.CustomerCatalog" uiType="catalogs">
+  <references>
+    <reference name="../pu/CustomerCatalogAppVM.xml"/>
+  </references>
+  <view name="CustomerCatalogView" title="客户分类" layoutMode="Fluid" appId="pu.CustomerCatalogApp" viewModel="pu.CustomerCatalogApp.CustomerCatalogViewModel" screenSize="L" tplName="catalogs_L.tpl">
+    <container name="CustomerCatalogView_Body" title="客户分类树" type="Tree">
+      <controls>
+        <control name="CustomerCatalog_iPad" title="客户分类iPad" ctrlType="Tree" field="customerCatalog" entity="CustomerCatalog" />
+      </controls>
+    </container>
+    <container name="Toolbar" title="工具栏" type="Toolbar">
+      <controls>
+        <control name="addAction" title="增加" group="add" ctrlType="Button" css="add-icon" field="addAction" entity="Toolbar" />
+        <control name="editAction" title="修改" group="edit" ctrlType="Button" css="edit-icon" field="editAction" entity="Toolbar" />
+        <control name="deleteAction" title="删除" group="edit" ctrlType="Button" css="delete-icon" field="deleteAction" entity="Toolbar" />
+        <control name="saveAction" title="保存" group="edit" ctrlType="Button" css="save-icon" field="saveAction" entity="Toolbar" />
+        <control name="cancelAction" title="取消" group="edit" ctrlType="Button" css="cancel-icon" field="cancelAction" entity="Toolbar" />
+      </controls>
+    </container>
+    <container name="baseinfo" title="基本信息" type="Card">
+      <controls>
+        <control name="code" title="分类编码" field="code" ctrlType="TextBox" entity="CustomerCatalogDetail" />
+        <control name="name" title="分类名称" field="name" ctrlType="TextBox" entity="CustomerCatalogDetail" />
+      </controls>
+    </container>
+  </view>
+</application>

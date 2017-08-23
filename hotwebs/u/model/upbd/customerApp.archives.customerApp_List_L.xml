@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application domainName="uap" dr="0" id="d67f22fb-bd8d-4a2f-8cf0-d71bace0aaac" moduleName="upbd" name="customerApp" symbol="upbd.customer" title="upcustomer" ts="2015-04-27 10:25:48" tplName_viewModel="archives" tplName="archives_L.tpl">
+  <references>
+    <reference name="../upbd/customerApp.archives.VM.xml"/>
+  </references>
+  <view dr="0" id="ded3c87f-c268-40c3-8734-f455bbf92327" isDefault="true" layoutMode="Fluid" name="customerApp_List" screenSize="L" title="客户树表" tplName="archives_L.html.tpl" ts="2015-04-27 10:28:12" viewModel="customerAppViewModel_archives" viewModelId="d67f22fb-bd8d-4a2f-8cf0-d71bace0aaac" appId="upbd.customerApp_List">
+    <container dr="0" iCols="1" id="75a0cf91-f7e7-4a4f-ad8d-c49df1f61731" name="Tree" title="树" ts="2015-04-27 10:29:41" type="Tree">
+      <control entity="customer" ctrlType="Tree" dr="0" field="customerApp_Tree" id="72240c45-296f-4eef-a5c6-b803ce07dea1" isNullable="true" isPlaceHolder="false" isVisible="true" name="customerApp_Tree" title="upcustomer树" ts="2015-04-27 10:30:48" treeFunctionId="UPBD0201" vmfield="customerApp_Tree"/>
+    </container>
+    <container dr="0" iCols="0" id="1e580c4b-63f7-47ce-be2b-cb248a1c7dda" name="Toolbar" title="工具栏" ts="2015-04-27 10:29:41" type="Toolbar">
+      <control entity="Toolbar" ctrlType="Button" dr="0" field="addAction" id="dfa9933c-17a4-4436-957c-6fed39ed3256" isNullable="false" isPlaceHolder="false" isReadOnly="false" isVisible="true" name="addAction" title="增加" ts="2015-04-27 10:27:28" vmfield="addAction"/>
+      <control entity="Toolbar" ctrlType="Button" dr="0" field="editAction" id="fa046bb3-8c07-456e-bf74-e1ac4d7778eb" isNullable="false" isPlaceHolder="false" isReadOnly="false" isVisible="true" name="editAction" title="编辑" ts="2015-04-27 10:27:28" vmfield="editAction"/>
+      <control entity="Toolbar" ctrlType="Button" dr="0" field="batchDeleteAction" id="813d1dc9-8a3a-4307-a979-593a8d493b5b" isNullable="false" isPlaceHolder="false" isReadOnly="false" isVisible="true" name="batchDeleteAction" title="删除" ts="2015-04-27 10:27:29" vmfield="batchDeleteAction"/>
+      <control entity="Toolbar" ctrlType="DropDownButton" dr="0" field="configAction" id="194a6287-7118-4b80-9491-cada4893cfc6" isNullable="false" isPlaceHolder="false" isReadOnly="false" isVisible="true" name="configAction" title="设置" ts="2015-04-27 10:27:29" vmfield="configAction"/>
+    </container>
+    <container dr="0" iCols="1" id="949d865c-3a3c-42c8-b708-8965158e6f30" name="customerApp_List_-998381629List" title="upcustomer_List" ts="2015-04-27 10:29:41" type="Grid">
+      <control entity="customer" ctrlType="DataGrid" dr="0" field="customerApp_List" id="7477c673-e66e-4bbd-a060-fbfc598246d6" isNullable="true" isPlaceHolder="false" isVisible="true" listId="upbd_customer" name="customerApp_List" title="upcustomer列表" ts="2015-05-11 10:58:01" vmfield="customerApp_List"/>
+    </container>
+  </view>
+</application>

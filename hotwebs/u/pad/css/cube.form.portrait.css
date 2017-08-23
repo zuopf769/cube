@@ -1,0 +1,103 @@
+﻿.menu-part {
+    width: 30%;
+}
+
+.document-wrapper {
+    width: 40%;
+    left: 20%;
+}
+.down-list-partrait{
+	width:30%;
+}
+.add-icon{
+height:25px;
+width:25px;
+}
+@keyframes document-wrapper-show-to-left {
+    0% { left: 20%; }
+    100% { left: 7%; }
+}
+
+@-moz-keyframes document-wrapper-show-to-left /* Firefox */ {
+    0% { left: 20%; }
+    100% { left: 7%; }
+}
+
+@-webkit-keyframes document-wrapper-show-to-left /* Safari 和 Chrome */ {
+    0% { left: 20%; }
+    100% { left: 7%; }
+}
+
+@-o-keyframes document-wrapper-show-to-left /* Opera */ {
+    0% { left: 20%; }
+    100% { left: 7%; }
+}
+
+@keyframes document-wrapper-show-to-right {
+    0% { left: 7%; }
+    100% { left: 20%; }
+}
+
+@-moz-keyframes document-wrapper-show-to-right /* Firefox */ {
+    0% { left: 7%; }
+    100% { left: 20%; }
+}
+
+@-webkit-keyframes document-wrapper-show-to-right /* Safari 和 Chrome */ {
+    0% { left: 7%; }
+    100% { left: 20%; }
+}
+
+@-o-keyframes document-wrapper-show-to-right /* Opera */ {
+    0% { left: 7%; }
+    100% { left: 20%; }
+}
+
+.related-part {
+    width: 40%;
+    left: 45%;
+}
+
+@keyframes related-part-show-from-right {
+    0% { left: 45%; }
+    100% { left: 5%; }
+}
+
+@-moz-keyframes related-part-show-from-right /* Firefox */ {
+    0% { left: 45%; }
+    100% { left: 5%; }
+}
+
+@-webkit-keyframes related-part-show-from-right /* Safari 和 Chrome */ {
+    0% { left: 45%; }
+    100% { left: 5%; }
+}
+
+@-o-keyframes related-part-show-from-right /* Opera */ {
+    0% { left: 45%; }
+    100% { left: 5%; }
+}
+
+@keyframes related-part-hide-to-left {
+    0% { left: 5%; }
+    100% { left: -40%; }
+}
+
+@-moz-keyframes related-part-hide-to-left /* Firefox */ {
+    0% { left: 5%; }
+    100% { left: -40%; }
+}
+
+@-webkit-keyframes related-part-hide-to-left /* Safari 和 Chrome */ {
+    0% { left: 5%; }
+    100% { left: -40%; }
+}
+
+@-o-keyframes related-part-hide-to-left /* Opera */ {
+    0% { left: 5%; }
+    100% { left: -40%; }
+}
+
+.detail-wrapper {
+    left: 47%;
+}

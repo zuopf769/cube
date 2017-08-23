@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <title>metaDataPage</title>
+        <link rel="stylesheet" href="styles/kendo.common.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../../../kendoui/trial/styles/kendo.bootstrap.min.css" rel="stylesheet" />
+		
+        <script src="../../../jquery/jquery-1.11.1.min.js"></script>
+		<script src="js/kendo.all.min.js"></script>
+		<script src="token.js"></script>
+		<script src="metaDataPage.js"></script>
+    </head>
+    <body>
+		<div id="Container">
+			<div id="Header">
+				<strong style="clear: both; font-family: 'Microsoft YaHei UI'; color: lightblue;font-size:20px">选择元数据</strong>
+			</div>
+	        <div id="Center">
+				<div id="attrTree"></div>
+				<div id="entityModelTree"></div>
+	        </div>
+			<div id="Footer">
+				<button id="saveButton" class="k-primary">确定</button>
+				<button id="cancleButton">取消</button>
+			</div>
+
+		</div>
+		<style scoped>
+			#Container{
+				width:100%;
+				margin:0 auto;/*设置整个容器在浏览器中水平居中*/
+			}
+			#Header {
+				margin:10px;
+				overflow:hidden;
+			}
+			#Center {
+				overflow:auto;
+				margin:10px;
+			}
+			#entityModelTree {
+				width:44%;
+				height:550px;
+				float:right;
+				border:1px solid #d3d3d3;
+			}
+			#attrTree {
+				width:55%;
+				height:550px;
+				float:right;
+				border:1px solid #d3d3d3;
+			}
+			#Footer {
+				margin:10px;
+				text-align: right;
+			}
+		</style>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<applications>
+  <application name="CustomerCatalogApp" title="客户分类" moduleName="pu" tplName="catalogs_min.tpl">
+    <viewmodel name="CustomerCatalogViewModel" extendName="CustomerCatalogViewModel_Extend" title="客户分类">
+      <entity name="CustomerCatalog" title="客户分类树" isMain="true">
+        <fields>
+          <field name="customerCatalog" title="客户分类" modelType="SimpleModel" ctrlType="Tree" treeFunctionId="U8100108" />
+        </fields>
+      </entity>
+      <entity name="CustomerCatalogDetail" title="客户分类详情">
+        <fields>
+          <field name="ts" title="时间戳" modelType="SimpleModel" ctrlType="DateTimeBox" isNecessary="true" isReadOnly="true" isSyncKey="true" />
+          <field name="dr" title="删除标记" modelType="SimpleModel" ctrlType="CheckBox" isNecessary="true" isReadOnly="true" />
+          <field name="pk_customerclass" title="主键" modelType="SimpleModel" ctrlType="TextBox" isNullable="false" isKey="true" isNecessary="true" />
+          <field name="code" title="分类编码" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="name" title="分类名称" modelType="SimpleModel" ctrlType="TextBox" />
+        </fields>
+      </entity>
+      <entity name="Toolbar" title="功能">
+        <fields>
+          <field name="addAction" title="增加" modelType="SimpleModel" ctrlType="Button" />
+          <field name="editAction" title="编辑" modelType="SimpleModel" ctrlType="Button" />
+          <field name="deleteAction" title="删除" modelType="SimpleModel" ctrlType="Button" />
+          <field name="cancelAction" title="取消" modelType="SimpleModel" ctrlType="Button" />
+          <field name="saveAction" title="保存" modelType="SimpleModel" ctrlType="Button" />
+        </fields>
+      </entity>
+      <actions>
+        <action name="catalogBeforeExpand" entity="CustomerCatalog" field="customerCatalog" eventName="beforeExpand" functionName="catalogBeforeExpand" defaultImpl="//默认实现"/>
+        <action name="catalogClick" entity="CustomerCatalog" field="customerCatalog" eventName="click" functionName="catalogClick" defaultImpl="//默认实现"/>
+        <action name="catalogMoreClick" entity="CustomerCatalog" field="customerCatalog" eventName="moreClick" functionName="catalogMoreClick" defaultImpl="//默认实现"/>
+        <action name="addAction" entity="Toolbar" field="addAction" eventName="click" functionName="addAction" defaultImpl="//默认实现"/>
+        <action name="editAction" entity="Toolbar" field="editAction" eventName="click" functionName="editAction" defaultImpl="//默认实现"/>
+        <action name="deleteAction" entity="Toolbar" field="deleteAction" eventName="click" functionName="deleteAction" defaultImpl="//默认实现"/>
+        <action name="cancelAction" entity="Toolbar" field="cancelAction" eventName="click" functionName="cancelAction" defaultImpl="//默认实现"/>
+        <action name="saveAction" entity="Toolbar" field="saveAction" eventName="click" functionName="saveAction" defaultImpl="//默认实现"/>
+      </actions>
+    </viewmodel>
+  </application>
+</applications>

@@ -1,0 +1,58 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>全景菜单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="./pc/css/accondion.pc.css" rel="stylesheet" />    
+    <link href="./pc/css/Panorama.pc.css" rel="stylesheet" />            
+    <link href="./common/css/cube.Control.css" rel="stylesheet" type="text/css" />       
+    <link href="./pc/css/cube.icon.css" rel="stylesheet" type="text/css" />       
+    <link href="./pc/css/PanoramaMenuView.css" rel="stylesheet" type="text/css" />            
+</head>
+<body>
+    <div id="ApplicationViewModel" data-page="common.home.ApplicationApp" data-viewmodel="ApplicationViewModel">
+         <div>
+            <div data-controltype="TabContent" data-propertyname="tabMenu" class="application_top_tab clearfix">
+
+                <li class="active" data-touchable="true" data-content="baseinfo">首页</li>
+            </div>
+        </div>
+        <div class="home-tab-content" data-related="tabMenu">
+            <div data-content="baseinfo" style="min-height: 600px; margin: 0 0px;background:#fff;" >
+            	<div class="p-t-15 col-lg-offset-10">
+            		<div data-propertyname="addmenulist" style="float:left;" data-controltype="ImageButton" id="additem"><span class='icon-add'></span><span>新增</span></div>
+            		<div data-propertyname="operatormenulist" style="float:left;" data-controltype="ImageButton" id="editeitem"><span class='icon-set'></span><span>管理</span></div>
+            		<div data-propertyname="goBackmenulist" style="float:left;display:none;" data-controltype="ImageButton" style="display: none;" id="goback"><span class='icon-back'></span><span>返回</span></div>
+            	</div>
+                <div class="clearfix" data-propertyname="menuTiles" data-controltype="Tiles"></div>
+            </div>
+        </div>
+    </div>   
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>    
+    <script src="./common/js/Button.js" type="text/javascript"></script>    
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>    
+    <script data-config="TextBox"></script>
+    <script src="./common/js/accondion.js" type="text/javascript"></script>
+    <script src="./common/js/SearchBox.js" type="text/javascript"></script>
+    <script src="./common/js/CommonProxy.js" type="text/javascript"></script>
+
+    <script src="./common/js/Animation.js" type="text/javascript"></script>
+
+    <script src="./common/js/Panorama.js" type="text/javascript"></script>
+	<script src="./pc/js/Tiles.js" type="text/javascript"></script>
+    <script type="text/javascript" src="./jquery/iscroll-probe.js"></script>
+
+    <script src="apps/common/home/ApplicationApp_L.js" type="text/javascript"></script>
+    <script src="apps/common/home/ApplicationApp_Extend.js" type="text/javascript"></script>
+
+
+
+    <script type="text/javascript">
+        cb.viewbinding.create("ApplicationViewModel");
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+﻿.menu-part {
+    width: 18%;
+}
+
+.document-wrapper {
+    width: 38%;
+    left: 18%;
+}
+
+@keyframes document-wrapper-show-to-left {
+    0% { left: 18%; }
+    100% { left: 4%; }
+}
+
+@-moz-keyframes document-wrapper-show-to-left /* Firefox */ {
+    0% { left: 18%; }
+    100% { left: 4%; }
+}
+
+@-webkit-keyframes document-wrapper-show-to-left /* Safari 和 Chrome */ {
+    0% { left: 18%; }
+    100% { left: 4%; }
+}
+
+@-o-keyframes document-wrapper-show-to-left /* Opera */ {
+    0% { left: 18%; }
+    100% { left: 4%; }
+}
+
+@keyframes document-wrapper-show-to-right {
+    0% { left: 4%; }
+    100% { left: 18%; }
+}
+
+@-moz-keyframes document-wrapper-show-to-right /* Firefox */ {
+    0% { left: 4%; }
+    100% { left: 18%; }
+}
+
+@-webkit-keyframes document-wrapper-show-to-right /* Safari 和 Chrome */ {
+    0% { left: 4%; }
+    100% { left: 18%; }
+}
+
+@-o-keyframes document-wrapper-show-to-right /* Opera */ {
+    0% { left: 4%; }
+    100% { left: 18%; }
+}
+
+.related-part {
+    width: 38%;
+    left: 42%;
+}
+
+@keyframes related-part-show-from-right {
+    0% { left: 42%; }
+    100% { left: 4%; }
+}
+
+@-moz-keyframes related-part-show-from-right /* Firefox */ {
+    0% { left: 42%; }
+    100% { left: 4%; }
+}
+
+@-webkit-keyframes related-part-show-from-right /* Safari 和 Chrome */ {
+    0% { left: 42%; }
+    100% { left: 4%; }
+}
+
+@-o-keyframes related-part-show-from-right /* Opera */ {
+    0% { left: 42%; }
+    100% { left: 4%; }
+}
+
+@keyframes related-part-hide-to-left {
+    0% { left: 4%; }
+    100% { left: -38%; }
+}
+
+@-moz-keyframes related-part-hide-to-left /* Firefox */ {
+    0% { left: 4%; }
+    100% { left: -38%; }
+}
+
+@-webkit-keyframes related-part-hide-to-left /* Safari 和 Chrome */ {
+    0% { left: 4%; }
+    100% { left: -38%; }
+}
+
+@-o-keyframes related-part-hide-to-left /* Opera */ {
+    0% { left: 4%; }
+    100% { left: -38%; }
+}
+
+.detail-wrapper {
+    left: 42%;
+}

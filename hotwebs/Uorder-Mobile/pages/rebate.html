@@ -1,0 +1,150 @@
+﻿<div data-controller="RebateController">
+    <div class="pages">
+        <div data-page="rebateListPage" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a class="back link" href="#"><i class="icon icon-return-arrow"></i></a>
+                    </div>
+                    <div class="center">
+                        我的返利
+                    </div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content pull-to-refresh-content infinite-scroll" data-ptr-distance="55" data-distance="50">
+                <div class="pull-to-refresh-layer">
+                    <div class="preloader"></div>
+                    <div class="pull-to-refresh-arrow"></div>
+                </div>
+                <div class="rebate rebateListPage-container">
+                </div>
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/template7" id="rebateItemTpl">
+        {{#each rebateList}}
+        <dl class="available">
+            <dt>
+                <h3><em>￥</em>{{fSurplusMoney}}</h3>
+                <p>总额:￥{{fRebateMoney}}</p>
+                <span class="semicircle"></span>
+            </dt>
+            <dd>
+                <p class="rebate-title">季度奖励</p>
+                <p class="rebate-con">{{cUseWayName}}</p>
+                <p class="rebate-date"><span>使用期限：</span>{{dValidStartDate}}-{{dValidEndDate}}</p>
+                <span class="semicircle"></span>
+            </dd>
+        </dl>
+        {{else}}
+        <div class="orderNone">
+            <div class="orderNone-info">
+                <h5>暂无返利数据</h5>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script type="text/template7" id="rebateItemTplSelect">
+        {{#each rebateList}}
+        <dl class="available active">
+            <dt>
+                <h3><em>￥</em>{{fSurplusMoney}}</h3>
+                <p>总额:￥{{fRebateMoney}}</p>
+                <span class="semicircle"></span>
+            </dt>
+            <dd>
+                <p class="rebate-title">季度奖励</p>
+                <p class="rebate-con">
+                    可用<input type="text" value="{{fSurplusMoney}}" /> 元返利
+                </p>
+                <span class="semicircle"></span>
+                <span class="choose"></span>
+            </dd>
+        </dl>        {{else}}
+        <div class="orderNone">
+            <div class="orderNone-info">
+                <h5>暂无返利数据</h5>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script src="../js/pages/RebateController.js"></script>
+</div>
+
+<!--<dl class="available">
+    <dt>
+        <h3><em>￥</em>5,607.84</h3>
+        <p>总额:￥12,209</p>
+        <span class="semicircle"></span>
+    </dt>
+    <dd class=" bg-arrow">
+        <p class="rebate-title">季度奖励</p>
+        <p class="rebate-con">全部商品均可使用</p>
+        <p class="rebate-date"><span>使用期限：</span>10/01-12/30</p>
+        <span class="semicircle"></span>
+    </dd>
+</dl>
+<dl class="unavailable ">
+    <dt>
+        <h3><em>￥</em>5,607.84</h3>
+        <p>总额:￥12,209</p>
+        <span class="semicircle"></span>
+    </dt>
+    <dd class=" bg-arrow">
+        <p class="rebate-title">季度奖励</p>
+        <p class="rebate-con">全部商品均可使用</p>
+        <p class="rebate-date"><span>使用期限：</span>10/01-12/30</p>
+        <span class="semicircle"></span>
+    </dd>
+    <i class="icon run-out"></i>
+</dl>
+<dl class="unavailable">
+    <dt>
+        <h3><em>￥</em>5,607.84</h3>
+        <p>总额:￥12,209</p>
+        <span class="semicircle"></span>
+    </dt>
+    <dd class=" bg-arrow">
+        <p class="rebate-title">季度奖励</p>
+        <p class="rebate-con">全部商品均可使用</p>
+        <p class="rebate-date"><span>使用期限：</span>10/01-12/30</p>
+        <span class="semicircle"></span>
+    </dd>
+    <i class="icon expired"></i>
+</dl>-->
+
+<!--<dl class="available active">
+    <dt>
+        <h3><em>￥</em>5,607.84</h3>
+        <p>总额:￥12,209</p>
+        <span class="semicircle"></span>
+    </dt>
+    <dd>
+        <p class="rebate-title">季度奖励</p>
+        <p class="rebate-con">
+            可用<input type="text" value="1125" /> 元返利
+        </p>
+        <span class="semicircle"></span>
+        <span class="choose"></span>
+    </dd>
+</dl>
+<dl class="available ">
+    <dt>
+        <h3><em>￥</em>5,607.84</h3>
+        <p>总额:￥12,209</p>
+        <span class="semicircle"></span>
+    </dt>
+    <dd>
+        <p class="rebate-title">季度奖励</p>
+        <p class="rebate-con">
+            可用<input type="text" value="1125" /> 元返利
+        </p>
+        <span class="semicircle"></span>
+        <span class="choose"></span>
+    </dd>
+</dl>-->

@@ -1,0 +1,96 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>定位</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./bootstrap/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link href="./pc/css/kendoctrl/Cube.Control.css" rel="stylesheet" type="text/css" />
+    <link href="./pc/css/modal.css" rel="stylesheet" type="text/css" />
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/CheckBoxList.css" rel="stylesheet" />
+    <link href="./pc/css/CheckTextBox.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="RefPositionViewModel" class="container" data-title="定位" data-page="common.position.RefPositionApp"  data-viewmodel="RefPositionViewModel">
+        <div class="popup" >
+            <div class="popup_droplist">
+                <ul>
+                    <li class="row">
+                        <span class="col-lg-4" >查找内容:</span>
+                        <!--<select name="" id="popup_selectContent">
+                            <option value="组织形态">组织形态</option>
+                            <option value="隶属法人组织">隶属法人组织</option>
+                            <option value="上级行政组织">上级行政组织</option>
+                        </select>-->
+                        <input class="col-lg-8"  data-propertyname="selectContent" data-controltype="ComboBox" />
+                    </li>
+                    <li class="row" >
+                        <span class="col-lg-4" >查找属性:</span>
+                        <!--<select name="" id="">
+                            <option value="名称">名称</option>
+                            <option value="编码">编码</option>
+                        </select>-->
+                        <input class="col-lg-8"  data-propertyname="selectAttr" data-controltype="ComboBox" />
+                    </li>
+                </ul>
+            </div>
+
+            <div class="popup_choice">
+                <ul class="row p-10"  >
+                    <li class="col-lg-12">选项:</li>
+                    <!-- <li><input type="checkbox">部分字符串匹配</li>
+                    <li><input type="checkbox">匹配大小写</li> -->
+                    <li class="col-lg-6 " >
+                        全部字符串匹配
+                        <div data-propertyname="partMatch" data-controltype="CheckBox" style="display:inline-block" >
+                            <input type="checkbox" />
+                        </div>
+                    </li>
+                    <li class="col-lg-6 " >
+                        匹配大小写
+                        <div data-propertyname="caseMatch" data-controltype="CheckBox" style="display:inline-block" >
+                            <input style="display:inline-block" type="checkbox" />
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div data-propertyname="rightToolbar" data-controltype="ToolBar" class="common-list ui-footer row"  >
+            <div class="ui-footer-right">
+                <div data-controltype="ImageButton" data-propertyname="searchNextAction" >
+                    <span >查找下一处</span>
+                </div>
+                <div data-controltype="ImageButton" data-propertyname="closeAction" >
+                    <span>关闭</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./jquery/jquery-ui.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/Button.js" type="text/javascript"></script>
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>
+    <script data-config="Refer"></script>
+    <script data-config="DateTimeBox"></script>
+    <script src="./common/js/ListControl.js" type="text/javascript"></script>
+    <script data-config="ComboBox"></script>
+    <script data-config="NumberBox"></script>
+    <script data-config="CheckBox"></script>
+    <script src="./pc/js/slider.js" type="text/javascript"></script>
+    <script data-config="TextBox"></script>
+    <script src="./common/js/CommonProxy.js" type="text/javascript"></script>
+    <script src="./pc/js/CheckTextBox.js"></script>
+    <script src="./pc/js/CheckBoxList.js"></script>
+
+    <script src="apps/common/position/RefPositionApp_Extend.js" type="text/javascript"></script>
+    <script src="apps/common/position/RefPositionApp_L.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        cb.viewbinding.create("RefPositionViewModel");
+    </script>
+</body>
+</html>

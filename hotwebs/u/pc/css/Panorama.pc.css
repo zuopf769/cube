@@ -1,0 +1,68 @@
+﻿.Panorama { background-color:green; margin-top:20px; }
+.Panorama ul { padding:0px; padding-left:22px; height:100%; width:200px; display:inline-block; float:left; border-right:rgb(228,228,228) 1px solid; }
+.Panorama ul:last-child { border-right:none; }
+
+    .Panorama ul li{ font-family:Tahoma;list-style:none;  height:30px; cursor:pointer; }
+    .Panorama ul li:hover {background: #73DCFF;}
+    /*.Panorama ul li span {
+    	display: none;
+    }*/
+    /*.Panorama ul li:hover img{
+    	display: inline-block;
+    	float: right;
+     	content:url(../images/add.png);
+    }*/
+    .Panorama ul li span[data-isExist="1"]{
+    	display: inline-block;
+    	float: left;
+     	background:url(../images/listMenu/u1252.png) 50% 50% no-repeat;
+     	margin-right: 10px;
+     	width: 20px;
+     	height: 20px;
+    }
+    .Panorama ul li:hover span[data-isExist="2"]{
+    	display: inline-block;
+    	float: right;
+     	background:url(../images/listMenu/u1252.png) 50% 50% no-repeat;
+     	width: 20px;
+     	height: 20px;    	
+    }
+    .Panorama ul li span[data-isExist="3"]{
+    	display: inline-block;
+    	float: left;
+     	background:url(../images/listMenu/u1264.png) 50% 50% no-repeat;
+     	margin-right: 10px;
+     	width: 20px;
+     	height: 20px;   
+    }
+    .Panorama ul li:hover span[data-isExist="4"]{
+    	display: inline-block;
+    	float: right;
+     	background:url(../images/listMenu/u1088.png) 50% 50% no-repeat;
+     	width: 20px;
+     	height: 20px;    
+    }
+
+
+.Panorama ul li{ white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ /*.Panorama ul li[leaf="1"]::before{ content:url(../images/dot.png);font-weight:bold; align-content:space-between }*/ 
+.Panorama ul li[leaf="1"]::before{align-content:space-between }
+ 
+ .Panorama ul li[leaf="1"] { margin-left:15px;  font-size:10px; }
+ .Panorama ul li[leaf="0"][level="0"] { font-size:14px; font-weight:bolder;}
+ .Panorama ul li[leaf="0"][level="1"] { font-size:12px; font-weight:bolder;}
+
+ /* 
+ 
+.Panorama ul li [leaf="0"][level="0"] { font-size:16px; font-weight:bolder;}
+.Panorama ul li [leaf="0"][level="1"] {  margin-left:15px;  font-size:14px; font-weight:bold; }
+.Panorama ul li [leaf="1"]::before{ content:url(../images/dot.png);font-weight:bold; align-content:space-between }
+.Panorama ul li [leaf="1"][level="2"] {  margin-left:15px;  font-size:10px; }
+.Panorama ul li [leaf="1"][levle="1"] {  margin-left:15px;  font-size:14px; }
+     */
+/*
+.Panorama ul li[level="1"][leaf="1"] {  margin-left:15px;  font-size:12px; }
+.Panorama ul li[leaf="1"]::before{ content:url(../images/dot.png);font-weight:bold; align-content:space-between }
+.Panorama ul li[leaf="1"] {  margin-left:15px;  font-size:10px; }
+    */
+    

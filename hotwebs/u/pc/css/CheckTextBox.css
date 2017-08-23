@@ -1,0 +1,122 @@
+﻿.CheckTextBox > span {
+    margin-top: 12px;
+}
+
+.CheckTextBox.active {
+    color: #157DFB;
+}
+
+.CheckTextBox.active label {
+    color: #157DFB;
+}
+
+.CheckTextBox select {
+    border: 0px;
+    margin-top: 9px;
+}
+
+.CheckTextBox select:focus {
+    outline: none;
+}
+
+.CheckTextBox > span:last-of-type {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.CheckTextBox > span:first-of-type {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-top: 12px;
+    background: url('../images/checkbox.png') top left repeat;
+}
+
+.CheckTextBox > span.unchecked {
+    width: 18px;
+    height: 18px;
+    background-position: -2px 80px;
+}
+
+.CheckTextBox > span.checked {
+    width: 18px;
+    height: 18px;
+    background-position: -2px 52px;
+}
+
+.CheckTextBox span.m-date-wrap-padding-r {
+	padding-right: 3.8em;
+}
+
+
+.CheckTextBox span.m-date-select-position {
+	right:1.9em;
+}
+
+.CheckTextBox span.m-date-fx-outer {
+	position: absolute;
+	right:0;
+	top:0;
+}
+
+.CheckTextBox span.m-date-fx {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	overflow: hidden;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.fx-datapanelpick {
+	width: 420px;
+	height: 200px;
+	position: absolute;
+	border: 1px solid #d3dcdd;
+	background-color: #FFFFFF;
+	box-shadow: 0 0 7px rgba(0,0,0,.2);
+	z-index: 99999;
+	display: none;
+}
+
+.fx-datapanelpick .fxdate-arr{
+    width: 13px;
+    height: 7px;
+    position: absolute;
+    left: 25px;
+    top: -7px;
+    background: url("../images/pop-tips-info-arr.gif") no-repeat 0 0;
+}
+
+.fx-datapanelpick .fxdate-select{
+}
+
+.fxdate-select dl dd{
+	width: 140px;
+    height: 40px;
+    float: left;
+    background-color: #fff;
+    padding: 7px 0 6px;
+    margin: -1px 0 0 -1px;
+    line-height: 20px;
+    text-align: center;
+    color: #4b555b;
+    cursor: pointer;
+}
+
+.fxdate-select dl dd.over{
+    color: #95a5a6;
+    background-color: #ecf0f1;
+}
+
+.fxdate-select dl dd.selected{
+    color: #ffffff;
+    background-color: #3276b1;
+}
+
+.fxdate-select dl dd em{
+	font-size: 12px;
+    display: block;
+    font-style: normal;
+}

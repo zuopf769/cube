@@ -1,0 +1,149 @@
+﻿<div data-controller="ProductsPageController">
+	<div class="pages navbar-fixed navbar-through">
+		<div data-page="products" class="page no-toolbar no-tabbar">
+			<div class="navbar card-navbar">
+				<div class="navbar-inner">
+					<div class="left">
+						<a href="#" class="back icon-only">
+							<i class="icon icon-return-arrow"></i>
+						</a>
+					</div>
+					<div class="center sliding">
+						<a href="#" class="link icon-only search-product" id="proSearchBar">
+							<div class="input-group-addon"><i class="icon icon-search-gray"></i></div>
+							<input type="text" id="products_txtSearch" class="search" placeholder="">
+							<div class="search-item hid">
+								<span><span id="spanProListCl"></span> <i class="icon icon-colsr-white p-l-0"></i></span>
+							</div>
+							<div class="search-item hid">
+								<span><span id="spanProListKW"></span> <i class="icon icon-colsr-white p-l-0"></i></span>
+							</div>
+							<div class="input-group-addon"><i class="icon icon-voice-gray"></i></div>
+						</a>
+						<span id="spanProTitle" >历史记录</span>
+					</div>
+					<div class="right">
+						<a href="#" class="icon-only">
+							<i class="icon icon-product-list"></i>
+						</a>
+					</div>
+				</div>
+				<div class="subnavbar">
+					<div class="row content-block buttons-row nav-condition" id="sortRow">
+						<a href="#" class="button active" data-name="">默认 <i class="icon icon-down-arrow"></i></a>
+						<a href="#" class="button" data-name="iSales">销量</a>
+						<a href="#" class="button" data-name="fSalePrice">价格</a>
+					</div>
+				</div>
+			</div>
+			<div class="page-content product-container infinite-scroll hide-bars-on-scroll pull-to-refresh-content" data-ptr-distance="55" data-distance="50">
+                <div class="smlProImg_f">
+                    <img src="" class="lazy" />
+                </div>
+				<div class="pull-to-refresh-layer">
+					<div class="preloader"></div>
+					<div class="pull-to-refresh-arrow"></div>
+				</div>
+				<div class="m-t-42 m-t-0 list-continer card-product" style="display:none;">
+					<ul id="products_block" class="row"></ul>
+				</div>
+				<div class="row list-continer" id="products_list">
+					<div class="list-block media-list m-t-42 product-list" style="width:100%;">
+						<ul></ul>
+					</div>
+				</div>
+				<a class="tocart animated upShoppingCount" href="#" style="display: block;"><span class="badge bg-red">{{cartCount}}</span></a>
+				<a class="totop hid" href="#" id="proDtop"></a>
+				<div class="infinite-scroll-preloader hid">
+					<div class="preloader"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/template7" id="tpl_list">
+		{{#each products}}
+		<li>
+			<a href="pages/productDetail.html?pid={{this[2]}}" class="item-link item-content">
+				<div class="item-media">
+					<div class="upimgdiv" style="width:100px;height:100px;">
+						<img {{#if this[3]}} data-src="{{@root.serverhost}}{{this[3]}}" {{else}} data-src="img/nopic.jpg" {{/if}} class="lazy lazy-fadeIn">
+					</div>
+					<!--<div class="product-badge">
+                        <span class="bg-1">买赠</span><span class="bg-2">打折</span>
+                    </div>-->
+				</div>
+				<div class="item-inner">
+					<div class="title-top">
+					<div class="item-title-row">
+						<div class="item-text">{{this[0]}}</div>
+
+					</div>
+					<!--只有编码时字体较大使用下面注释这行-->
+					<!--<div class="item-subtitle number font-14">{{this[5]}}</div>-->
+					<div class="item-subtitle number">编码:{{this[5]}}</div>
+					<div class="item-subtitle number">条码:{{this[5]}}</div>
+					</div>
+					<div class="item-subtitle price">
+						<em>￥</em>{{this[1]}}
+						<!--<span class="phone-mall"><i class="icon icon-phone-mall"></i>已省20元</span>-->
+						<!--<span class="promo-type col-1 p-0 m-l-10">折</span>
+						<span class="promo-type col-2 p-0">减</span>
+						<span class="promo-type col-3 p-0">增</span>
+						<span class="promo-type col-4 ">一口价</span>-->
+					</div>
+					<div class="item-subtitle stock">库存 {{this[6]}}</div>
+				</div>
+			</a>
+			<a href="#" class="add-cart-btn" data-id="{{this[2]}}"></a>
+		</li>
+		{{else}}
+		<li class="noDataTip">
+			<div class="empty">
+				<i class="icon icon-no-category"></i>
+				<p>暂无商品，敬请期待哦！</p>
+
+			</div>
+		</li>
+		{{/each}}
+	</script>
+	<script type="text/template7" id="tpl_block">
+		{{#each products}}
+		<li class="col-50">
+			<div class="card-item">
+				<div class="item-media">
+					<div class="upimgdiv">
+						<a href="pages/productDetail.html?pid={{this[2]}}">
+							<img {{#if this[3]}} data-src="{{@root.serverhost}}{{this[3]}}" {{else}} data-src="img/nopic.jpg" {{/if}} class="lazy lazy-fadeIn">
+							<!--<div class="product-badge">
+                                <span class="bg-1">买赠</span><span class="bg-2">打折</span>
+                            </div>-->
+						</a>
+					</div>
+				</div>
+
+				<div class="caption">
+					<p class="p-title">{{this[0]}}</p>
+					<p class="price">
+                        <em>￥</em>{{this[1]}}
+                        <!--<i class="icon icon-phone-mall"></i>-->
+                        <!--<span class="promo-type col-1 p-0 m-l-10">折</span>
+						<span class="promo-type col-2 p-0">减</span>
+						<span class="promo-type col-3 p-0">增</span>-->
+						
+					</p>
+					<p class="stock">库存 {{this[6]}}</p>
+				</div>
+			</div>
+		</li>
+		{{else}}
+		<div class="noDataTip">
+			<div class="empty">
+				<i class="icon icon-no-category"></i>
+				<p>暂无商品，敬请期待哦！</p>
+
+			</div>
+		</div>
+		{{/each}}
+	</script>
+	<script type="text/javascript" src="../js/pages/ProductsPageController.js"></script>
+</div>

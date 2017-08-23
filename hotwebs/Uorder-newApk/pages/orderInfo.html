@@ -1,0 +1,292 @@
+﻿<div data-controller="OrderInfoController">
+    <div class="pages">
+        <div data-page="orderInfo" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a class="back  link" href="#"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center">订单详情</div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content ">
+                <div class="orderstatu-title">
+                    <a href="pages/orderStatus.html?orderId={{orderDetail.cOrderNo}}"  class="bg-arrow">
+                        <p class="title ">{{orderDetail.cOrderNo}} 
+                            {{#unless orderDetail.isAgentSubmit}}
+                            <span class="promo-type m-l-10"> 代下单</span>
+                            {{/unless}}                        
+                        </p>
+                        <p class="time">下单时间：{{orderDetail.dOrderDate}}</p>
+                        {{#js_compare "this.orderDetail.cStatusCode==='TAKEDELIVERY'"}}
+                        <p class="time">发货时间：--------</p>
+                        {{/js_compare}}
+                    </a>
+                    <span class="sign">
+                        {{#js_compare "this.orderDetail.cStatusCode==='ENDORDER'"}}
+                        <i class="icon icon-finish"></i>
+                        {{else}}
+                        {{orderDetail.cNextStatusName}}
+                        {{/js_compare}}
+                    </span>
+                    {{#js_compare "this.orderDetail.cSource=='1'"}}
+                    <div class="phone-order"></div>
+                    {{/js_compare}}
+                </div>
+                <div class="list-block media-list orderInfo">
+                    <ul class="no-border">
+                        <li class="align-top">
+                            <a href="#" class="item-link item-content">
+                                <div class="item-media"><i class="icon order-addr"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">{{orderDetail.cReceiveContacter}}</div>
+                                        <div class="item-after">{{orderDetail.cReceiveContacterPhone}}</div>
+                                    </div>
+                                    <div class="item-text">{{orderDetail.cReceiveAddress}}</div>
+                                </div>
+                            </a>
+                        </li>
+                        {{#js_compare "this.orderDetail.cPayStatusCode==='PAYMONEY'"}}
+                        <li class="align-top">
+                            <a href="pages/orderStatus-pay.html" class="item-link item-content">
+                                <div class="item-media"><i class="icon order-pay"></i></div>
+                                <div class="item-inner bg-arrow">
+                                    <div class="item-title-row">
+                                        <div class="item-title">支付宝支付</div>
+                                    </div>
+                                    <div class="item-text">2015-11-09 09:20:10</div>
+                                </div>
+                            </a>
+                        </li>
+                        {{/js_compare}}
+                        <li class="align-top hide">
+                            <a href="pages/logisticsInfo.html?oid={{orderDetail.cOrderNo}}" class="item-link item-content">
+                                <div class="item-media"><i class="icon order-logistics"></i></div>
+                                <div class="item-inner bg-arrow">
+                                    <div class="item-title-row">
+                                        <div class="item-title">{{#if orderDetail.oShippingChoice}}{{orderDetail.oShippingChoice.cName}}{{else}}无{{/if}}</div>
+                                        <div class="item-after blue">物流状态位</div>
+                                    </div>
+                                    <div class="item-text">2015-11-10 10:20:26</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="align-top">
+                            {{#js_compare "this.orderDetail.cInvoiceType ==='VAT'"}}
+                            <a href="pages/orderStatus-invoice.html?orderId={{orderDetail.cOrderNo}}" class="item-link item-content">
+                            {{/js_compare}}
+                            {{#js_compare "this.orderDetail.cInvoiceType === 'PLAIN'"}}
+                            <a href="pages/orderStatus-invoice.html?orderId={{orderDetail.cOrderNo}}" class="item-link item-content">
+                            {{/js_compare}}
+                            {{#js_compare "this.orderDetail.cInvoiceType === 'NONE'"}}
+                            <a href="#" class="item-link item-content">
+                            {{/js_compare}}
+                                <div class="item-media"><i class="icon order-invoice"></i></div>
+                                    {{#js_compare "this.orderDetail.cInvoiceType ==='VAT'"}}
+                                    <div class="item-inner bg-arrow">
+                                        <div class="item-title-row">
+                                            <div class="item-title">
+                                                {{orderDetail.cInvoiceTitle}}
+                                                <span class="tip">增</span>
+                                            </div>
+                                            <div class="item-after"></div>
+                                        </div>
+                                        <div class="item-text">{{orderDetail.cInvoiceContent}}</div>
+                                    </div>
+                                    {{/js_compare}}
+                                    {{#js_compare "this.orderDetail.cInvoiceType ==='PLAIN'"}}
+                                    <div class="item-inner bg-arrow">
+                                        <div class="item-title-row">
+                                            <div class="item-title">
+                                                {{orderDetail.cInvoiceTitle}}
+                                                <span class="tip">普</span>
+                                            </div>
+                                            <div class="item-after"></div>
+                                        </div>
+                                        <div class="item-text">{{orderDetail.cInvoiceContent}}</div>
+                                    </div>
+                                    {{/js_compare}}
+                                    {{#js_compare "this.orderDetail.cInvoiceType ==='NONE'"}}
+                                    <div class="item-inner no-bg">
+                                        <div class="item-title-row">
+                                            <div class="item-title">
+                                                不开发票
+                                            </div>
+                                            <div class="item-after"></div>
+                                        </div>
+                                    </div>
+                                    {{/js_compare}}
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="list-block media-list confirmList m-b-0">
+                    <ul>
+                        <li>
+                            <a href="#" class="item-link item-content productsList title-border-bottom">
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">货品清单（{{orderDetail.oOrderDetails.length}}）</div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="list-block media-list m-t-0 cartList m-b-0">
+                                <ul class="no-border productDetailContainer">
+                                    {{#each orderDetail.oOrderDetails}}
+                                    {{#if cOrderProductType}}
+                                    <li class="no-border">
+                                        <div class="label-checkbox item-content">
+                                            <div class="item-media">
+                                                <img data-src="{{cImgUrl}}" width="62" class="lazy">
+                                            </div>
+                                            <div class="item-inner  no-border ">
+                                                <div class="item-title-row no-bg">
+                                                    <div class="item-text">{{cName}}</div>
+                                                </div>
+                                                {{#if oOrderProductApportions.length}}
+                                                <div class="item-subtitle">
+                                                    <span class="promo-type col-1 p-0">折</span>
+                                                    <span class="promo-type col-2 p-0">促</span>
+                                                    <span class="promo-type col-3 p-0">赠</span>
+                                                    <span class="m-l-10 discountDescContainer" data-productid="{{iProductId}}">优惠说明 <i class="icon arrow-down"></i></span>
+                                                </div>
+                                                {{/if}}
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            {{#each SkuSpecItems}}
+                                            <li class="no-border">
+                                                <div class="label-checkbox item-content">
+                                                    <div class="item-inner no-border">
+                                                        <div class="item-title-row no-bg p-r-0">
+                                                            <div class="item-title">
+                                                                {{#each lsSkuSpecItems}}
+                                                                <span>{{cName}}:</span>{{cSpecItemName}}
+                                                                <br>
+                                                                {{/each}}
+                                                                <span>单价:￥{{fSalePrice}}/{{cProductUnitName}}</span>
+                                                            </div>
+                                                            <div class="item-price">
+                                                                <!--<span class="font-12">促销已优惠_.00元 <i class="icon arrow-down"></i></span>
+                                <br>-->
+                                                                <span class="font-13">X{{iQuantity}}</span>
+
+                                                                <span class="price">￥{{js "upTool.numMulti(this.fSalePrice,this.iQuantity)"}}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            {{/each}}
+                                        </ul>
+                                    </li>
+                                    {{else}}
+                                    <li class="none-border no-border gift">
+                                        <div class="label-checkbox item-content">
+                                            <div class="item-media">
+                                                <img data-src="{{cImgUrl}}" width="62" class="lazy">
+                                                <span><i class="icon icon-gift"></i></span>
+                                            </div>
+                                            <div class="item-inner  no-border">
+                                                <div class="item-title-row no-bg p-r-0">
+                                                    <div class="item-text">
+                                                        {{cName}}<br />
+                                                        <div class="item-title">{{#each SkuSpecItems}}{{cName}}{{cSpecItemName}}{{/each}}</div>
+                                                    </div>
+                                                    <div class="item-after">
+                                                        <span>￥{{fSalePrice.toFixed(2)}}</span><br />
+                                                        <span>X{{iQuantity}}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {{/if}}
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                {{#if orderDetail.cRemark}}
+                <div class="list-block m-t-10 m-b-0 confirmList-rabeta">
+                    <ul>
+                        <!--<li>
+                            <a href="#" class="item-link item-content">
+                                <div class="item-media"><i class="icon icon-accessory"></i></div>
+                                <div class="item-inner ">
+                                    <div class="item-title">附件(0) </div>
+                                </div>
+                            </a>
+                        </li>-->
+                        <li>
+                            <a href="#" class="item-link item-content">
+                                <div class="item-media"><i class="icon icon-note"></i></div>
+                                <div class="item-inner no-bg">
+                                    <div class="item-title" style="white-space:normal;">{{orderDetail.cRemark}}</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                {{/if}}
+                <div class="m-t-10 statistic" style="height:120px;">
+                    <dl>
+                        <dt>商品金额</dt>
+                        <dd class="totalPriceContainer">￥{{orderDetail.fTotalMoney.toFixed(2)}}</dd>
+                    </dl>
+                    <dl>
+                        <dt>整单优惠</dt>
+                        <dd>-  ￥{{orderDetail.fPromotionMoney.toFixed(2)}}</dd>
+                    </dl>
+                    <dl>
+                        <dt>返利</dt>
+                        <dd>-  ￥{{orderDetail.fRebateMoney.toFixed(2)}}</dd>
+                    </dl>
+                    <dl class="statistic-bottom">
+                        <dd>
+                            <span>￥{{orderDetail.fPayMoney.toFixed(2)}}</span>
+                            <span>{{orderDetail.oOrderDetails.length}}种{{orderDetail.totalCount}}件  实付款：</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            {{#js_compare "this.orderDetail.cNextStatus != 'OPPOSE'"}}
+            <div class="toolbar ">
+                <style scoped>
+                    .corpOrder {
+                        display: inline-block;
+                        line-height: 44px;
+                        font-size: 12px;
+                        padding-left: 28px;
+                        background-position: 10px 15px;
+                        background-repeat: no-repeat;
+                        background-size: 15px;
+                    }
+                </style>
+                <div class="order-btn fr m-t-10" data-orderno="{{orderDetail.cOrderNo}}">
+                    <a href="pages/logisticsInfo.html?oid={{cOrderNo}}" class="btn " data-btntype="logistics" style="display:none;">查看物流</a>
+                    {{#js_compare "this.orderDetail.cNextStatus == 'CONFIRMORDER'"}}
+                    <a href="#" class="btn " data-btntype="del">删除订单</a>
+                    {{/js_compare}}
+                    {{#js_compare "this.orderDetail.cNextStatus == 'DELIVERGOODS' && !this.orderDetail.isDeliverying"}}
+                    <a href="#" class="btn " data-btntype="payfor" style="display:none;">付款</a>
+                    {{/js_compare}}
+                    <!--收货-->
+                    {{#js_compare "this.orderDetail.cNextStatus == 'TAKEDELIVERY' || this.orderDetail.isDeliverying"}}
+                    <!--<a href="#" class="btn btn-red" data-btntype="SaleReturn">退货</a>-->
+                    <!--<a href="#" class="btn btn-red" data-btntype="received">确认收货</a>-->
+                    {{/js_compare}}
+                    {{#js_compare "this.orderDetail.cNextStatus == 'ENDORDER'"}}
+                    <!--<a href="#" class="btn btn-red" data-btntype="SaleReturn">退货</a>-->
+                    {{/js_compare}}
+                </div>
+            </div>
+            {{/js_compare}}
+        </div>
+    </div>
+    <script src="../js/pages/OrderInfoController.js "></script>
+</div>

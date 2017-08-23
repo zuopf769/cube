@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application id="bc116373-b0ef-440d-b29a-1aa5439bdb03" name="customerApp" title="u8customer" domainName="uap" moduleName="u8" symbol="u8.customer" ts="2015-04-22 17:00:12" dr="0" tplName_viewModel="archives" tplName="archives_L.tpl">
+  <references>
+    <reference name="../u8/customerApp.archives.VM.xml"/>
+  </references>
+  <view id="606fc803-a0c6-49f2-b0e1-3e3f1599f452" name="customerApp_List" title="客户档案" viewModelId="bc116373-b0ef-440d-b29a-1aa5439bdb03" layoutMode="Fluid" screenSize="L" tplName="archives_L.html.tpl" viewModel="customerAppViewModel_archives" isDefault="true" ts="2015-04-22 17:01:37" dr="0" appId="u8.customerApp_List">
+    <container id="d0907a66-43d5-4a62-8aa8-73298a544787" name="Tree" title="树" type="Tree" iCols="1" ts="2015-04-22 17:00:59" dr="0">
+      <control entity="customer" id="aaac5602-7567-4aa2-8ffd-ecfcacd177f3" name="customerApp_Tree" title="u8customer树" field="customerApp_Tree" ctrlType="Tree" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-25 10:14:09" dr="0" treeFunctionId="U8100108" vmfield="customerApp_Tree"/>
+    </container>
+    <container id="6a4c4827-c430-4899-9464-9719deaffce6" name="Toolbar" title="工具栏" type="Toolbar" iCols="0" ts="2015-04-22 17:00:59" dr="0">
+      <control entity="Toolbar" id="edcc757f-801f-4ccd-ab51-110ce3fd9c5e" name="addAction" title="增加" field="addAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-28 15:30:06" dr="0" vmfield="addAction"/>
+      <control entity="Toolbar" id="098d2685-5221-4932-920e-9224086d0525" name="editAction" title="编辑" field="editAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-28 15:30:06" dr="0" vmfield="editAction"/>
+      <control entity="Toolbar" id="87acaf2c-2111-4386-98fc-e190d421b992" name="batchDeleteAction" title="删除" field="batchDeleteAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-28 15:30:06" dr="0" vmfield="batchDeleteAction"/>
+      <control entity="Toolbar" id="10c30df3-9dd2-491a-82e5-0d7cbc29a71c" name="configAction" title="设置" field="configAction" ctrlType="DropDownButton" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-28 15:30:06" dr="0" vmfield="configAction"/>
+    </container>
+    <container id="f21c0ac2-34a5-4517-9191-f1d26c5bf7b2" name="customerApp_List_704876576List" title="u8customer_List_704876576 - 列表" type="Grid" iCols="1" ts="2015-04-22 17:00:59" dr="0">
+      <control entity="customer" id="b92e41b3-8530-4cf6-8cda-293b032a1399" name="customerApp_List" title="u8customer列表" listId="customer" field="customerApp_List" ctrlType="DataGrid" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-23 18:57:47" dr="0" dsMode="Remote" supportPagination="false" vmfield="customerApp_List"/>
+    </container>
+  </view>
+</application>

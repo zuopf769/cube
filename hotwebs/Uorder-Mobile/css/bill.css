@@ -1,0 +1,280 @@
+﻿.bill{}
+.bill .content-block-title{
+	margin: 0;
+	height: 30px;
+	line-height: 30px;
+	color: #666666;
+	font-size: 12px;
+	text-indent: 20px;
+	
+}
+.bill .content-block-title + .list-block{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.bill .content-block-title + .list-block .item-media{
+	text-align: center;
+	font-size: 15px;
+	color: #999999;
+}
+.bill .content-block-title + .list-block .item-media + .item-media{
+	margin-left: 8px;
+}
+.bill .content-block-title + .list-block .item-title{
+	font-size: 16px;
+	color: #333333;
+	font-weight: bold;
+}
+.bill .content-block-title + .list-block .item-title span{
+	font-size: 13px;
+	color: #999999;
+	font-weight: normal;
+}
+.bill .content-block-title + .list-block .item-after{
+	text-align: right;
+	font-size: 12px;
+	color: #666666;
+	display: inline-block;
+	line-height: 24px;
+}
+
+.bill .content-block-title + .list-block .item-after span.orange{
+	color: #ff9334
+}
+
+/*以下为我的资金样式*/
+.fund-page .navbar,
+.fund-page .navbar a{ 
+	background-color: transparent !important;
+	color: #FFFFFF;
+}
+.fund-page .page-content{
+	padding-top: 0;
+	
+}
+.fund-header{
+	background: -webkit-linear-gradient(left top, #2edfc0 , #22afbe); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(bottom right, #2edfc0 , #22afbe); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(bottom right, #2edfc0 , #22afbe); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to bottom right, #2edfc0 , #22afbe); /* 标准的语法 */
+   background-image: url(../img/icon/fund-header-bg.png);
+   background-size: 100% 240px;
+   height: 240px;
+   width: 100%;
+   text-align: center;
+   box-sizing: border-box;
+   padding-top: 50px;
+}
+.fund-header p{
+	font-size: 14px;
+	color: #FFFFFF;
+	
+}
+.fund-header h2{
+	font-size: 50px;
+	color: #FFFFFF;
+	font-weight: normal;
+}
+.fund-title{
+	text-align: center;
+	background-color: #FFFFFF;
+	padding: 10px 0;
+	border-bottom: 1px solid #d8d8d8;
+}
+.fund-title .icon{
+	display: block;
+	margin: 10px auto;
+}
+.fund-title span{
+	display: block;
+	color: #999999;
+	font-size: 13px;
+}
+.fund-title h3{
+	font-size: 23px;
+	color: #FF5000;
+	font-weight: 700;
+	padding-bottom: 20px;
+	
+}
+.fund-title div:first-child{
+	position: relative;
+}
+.fund-title div:first-child:after{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 1px;
+	background-color: #E5E5E5;
+	bottom: auto;
+	height: 100%;
+}
+.fund-page .button.active{
+	background-color: #ff9e06;
+	border-color: #ff9e06;
+	margin: 30px 10px;
+}
+.fund-page .right{
+	font-size: 15px;
+}
+/*以下为支付单样式*/
+.pay-bill{
+	margin-top: 10px;
+}
+.pay-bill .item-input{
+	font-size: 25px;
+	color: #333333;
+}
+.pay-bill .item-input em{
+	font-style: normal;
+	font-size: 14px;
+}
+.pay-bill.list-block .item-title.label{
+	color: #333333;
+	    width: 25%;
+	    font-size: 14px;
+}
+.pay-bill p .button.active{
+	background-color: #ff9e06;
+	border-color: #ff9e06;
+	margin: 30px 10px;
+}
+.pay-bill .checkdiv{
+	margin-top: 20px;
+	margin-left: -70px!important;
+}
+.offline .checkdiv{
+	margin-left: 5px !important;
+	margin-top: 0px !important;
+	 
+}
+
+.offline .item-inner{
+	
+}
+.offline .item-subtitle{
+	width: 100%;
+}
+.offline.list-block .item-title.label{
+	width: 15%;
+}
+.offline .item-link{
+	background: url(../img/icon/arrow-right.png) no-repeat 96% center !important;
+    background-size: 8px 14px !important;
+}
+.pay-style {
+    float: left;
+    position: relative;
+    height: 33px;
+    line-height: 33px;
+    margin: 6px;
+}
+
+    .pay-style input[type=radio] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        z-index: 999;
+    }
+
+    .pay-style span {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #999;
+        border: 1px solid #d9d9d9;
+        border-radius: 4px;
+        z-index: 1;
+        font-size: 15px;
+        padding:3px 10px;
+    }
+
+    .pay-style input[type=radio]:checked + span {
+        border: 1px solid #19c4b3;
+        width: initial;
+        color: #19C4B3;
+        background: url(../img/icon/checked-bg.png) no-repeat right bottom;
+        background-size: 15px 14px;
+    }
+    
+.upload{
+	display: inline-block;
+	border: 1px solid #d9d9d9;
+	width: 79px;
+	height: 79px;
+	margin: 10px;
+	background: #f5f5f5 url(../img/icon/img-upload.png) no-repeat center center;
+	background-size:30px 30px ;
+}
+p.upload-tip{
+	    display: inline-block;
+    color: #999999;
+    font-size: 13px;
+    text-align: center;
+    margin: 0px;
+    vertical-align: top;
+    margin-top: 30px;
+}
+
+.popup-select-bank{
+	top: 30%;
+	z-index: 99999;
+}
+.popup-select-bank .content-block{
+	margin: 0;
+	padding: 0;
+	
+}
+.popup-select-bank .content-block .navbar{
+	background: #FFFFFF;
+	padding: 0 15px;
+	color: #333333;
+	
+}
+.popup-select-bank .content-block .navbar .right a{ 
+		font-size: 15px;
+		color: #06c1ae;
+		}
+.popup-select-bank label.label-radio input[type="checkbox"]:checked ~ .item-inner, 
+.popup-select-bank label.label-radio input[type="radio"]:checked ~ .item-inner{
+	background-image: url(../img/icon/bank-checked.png);
+	background-size: 22px 15px;
+}
+
+.popup-select-bank label.label-radio input[type="checkbox"] ~ .item-inner, 
+.popup-select-bank label.label-radio input[type="radio"] ~ .item-inner{
+	padding-left: 5px;
+}
+.popup-select-bank .item-title,
+.pay-bill .item-title{
+	font-size: 14px;
+	color: #333;
+}
+.pay-bill .item-subtitle,
+.popup-select-bank .item-subtitle{
+	font-size: 12px;
+	color: #999999;
+}
+.default-bank{
+	display: inline-block;
+    padding: 1px 4px;
+    color: #fff;
+    background-color: #f5716e;
+    border-radius: 3px;
+    font-size: 10px;
+    margin-bottom: -3px;
+    margin-left: 5px;
+}
+.button-add-bank{
+	border: 1px solid #19c4b3;
+	color: #19C4B3;
+	font-size: 16px;
+	border-radius: 5px;
+	height: 40px;
+	line-height: 40px;
+	margin: auto 20px;
+}

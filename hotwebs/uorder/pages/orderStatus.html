@@ -1,0 +1,42 @@
+<div data-controller="OrderStatusController">
+    <div class="pages">
+        <div data-page="OrderStatus" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <a class="back  left" href="#"><i class="icon icon-backgray"></i></a>
+                    <div class="center">订单状态</div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content ">
+                <div class="orderstatu-title">
+                    <p><span>订单编号 ：</span>{{orderDetail.cOrderNo}}</p>
+                    <p><span>订单日期 ：</span>{{orderDetail.dOrderDate}}</p>
+                </div>
+                <div class="orderstatu-content">
+                    <dl>
+                        <dt><i class="icon icon-check-number"> </i></dt>
+                        <dd><span class="triangle"></span><span>提交订单</span><em></em></dd>
+                    </dl>
+                    <dl>
+                        <dt>2</dt>
+                        <dd><span class="triangle"></span><span>订单确认</span><em></em></dd>
+                    </dl>
+                    <dl>
+                        <dt>3</dt>
+                        <dd><span class="triangle"></span><span>订单发货</span><em></em></dd>
+                    </dl>
+                    <dl>
+                        <dt>4</dt>
+                        <dd><span class="triangle"></span><span>订单收货</span><em></em></dd>
+                    </dl>
+                    <dl>
+                        <dt>5</dt>
+                        <dd><span class="triangle"></span><span>订单完成</span><em> </em></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/pages/OrderStatusController.js "></script>
+</div>

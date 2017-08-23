@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<applications>
+  <application id="7c80263f-de50-44fd-9c8a-30f71bf566b8" name="DispatchlistApp" title="u8dispatchlist" domainName="uap" moduleName="u8" symbol="u8.Dispatchlist" ts="2015-04-02 11:17:47" dr="0" tplName_viewModel="vouchers" tplName="vouchers_min.tpl">
+    <viewmodel id="7c80263f-de50-44fd-9c8a-30f71bf566b8" name="DispatchlistAppViewModel_vouchers" title="u8dispatchlist" extendName="DispatchlistAppViewModel_vouchers_Extend" ts="2015-04-02 11:17:47" dr="0" tplName="vouchers_min.js.tpl">
+      <entity id="7c80263f-de50-44fd-9c8a-30f71bf566b8-toolbar" name="Toolbar" title="功能" entityId="5e977a2e-011e-45bd-8584-f98cf6a1e540" ts="2015-04-02 11:17:52" dr="0">
+        <field id="9b23a895-4324-46ed-932e-c1b29e765341" name="history" title="历史" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="Head" tpltype="vouchers" ts="2015-05-15 09:16:27" dr="0" entity="Toolbar"/>
+        <field id="7c80263f-de50-44fd-9c8a-30f71bf566b8-btn-addActionL" name="addAction" title="增加" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="vouchers" ts="2015-05-15 09:16:27" dr="0" entity="Toolbar"/>
+        <field id="7c80263f-de50-44fd-9c8a-30f71bf566b8-btn-batchDeleteActionL" name="batchDeleteAction" title="删除" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="vouchers" ts="2015-05-15 09:16:27" dr="0" entity="Toolbar"/>
+        <field id="7c80263f-de50-44fd-9c8a-30f71bf566b8-btn-batchSubmitActionL" name="batchSubmitAction" title="提交" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="vouchers" ts="2015-05-15 09:16:27" dr="0" entity="Toolbar"/>
+        <field id="7c80263f-de50-44fd-9c8a-30f71bf566b8-btn-batchWithdrawActionL" name="batchWithdrawAction" title="收回" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="vouchers" ts="2015-05-15 09:16:27" dr="0" entity="Toolbar"/>
+        <field id="7c80263f-de50-44fd-9c8a-30f71bf566b8-btn-batchApproveActionL" name="batchApproveAction" title="审批" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="vouchers" ts="2015-05-15 09:16:27" dr="0" entity="Toolbar"/>
+        <field id="7c80263f-de50-44fd-9c8a-30f71bf566b8-btn-batchUnApproveActionL" name="batchUnApproveAction" title="弃审" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="vouchers" ts="2015-05-15 09:16:27" dr="0" entity="Toolbar"/>
+        <field id="7c80263f-de50-44fd-9c8a-30f71bf566b8-btn-configActionL" name="configAction" title="设置" ctrlType="DropDownButton" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="vouchers" ts="2015-05-15 09:16:27" dr="0" entity="Toolbar"/>
+        <field id="7c80263f-de50-44fd-9c8a-30f71bf566b8-btn-batchBusiOperateActionL" name="batchBusiOperateAction" title="业务操作" ctrlType="DropDownButton" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="vouchers" ts="2015-05-15 09:16:27" dr="0" entity="Toolbar"/>
+        <interfaces/>
+      </entity>
+      <entity id="f4a2ca63-6dd9-439d-b4a3-820fbdff261d" name="Dispatchlist" title="发货单" entityId="f4a2ca63-6dd9-439d-b4a3-820fbdff261d" isMain="true" ts="2015-04-02 11:17:47" dr="0">
+        <field id="f4a2ca63-6dd9-439d-b4a3-820fbdff261d-listgrid" name="DispatchlistApp_List" title="u8dispatchlist列表" ctrlType="DataGrid" iLength="0" isNullable="true" isVisible="true" modelType="Model3D" refKey="pk_dispatchlistdetails" fieldType="List" tpltype="voucher" dataType="string" ts="2015-04-22 14:34:18" dr="0" uapDataType="5e977a2e-011e-45bd-8584-f98cf6a1e540" entity="Dispatchlist"/>
+        <interfaces>
+          <interface key="IFlowBizItf{####}transtypepk" value=""/>
+          <interface key="IBDObject{####}pid" value=""/>
+          <interface key="IFlowBizItf{####}billversionpk" value=""/>
+          <interface key="IFlowBizItf{####}srcbilltype" value="srcbilltype"/>
+          <interface key="IFlowBizItf{####}billtype" value="vtrantype"/>
+          <interface key="IFlowBizItf{####}approvestatus" value="approvestatus"/>
+          <interface key="IFlowBizItf{####}emendenum" value=""/>
+          <interface key="IFlowBizItf{####}billno" value="billno"/>
+          <interface key="IBDObject{####}pk_org" value="pk_org"/>
+          <interface key="IAuditInfo{####}modifier" value="modifier"/>
+          <interface key="IOrgInfo{####}pk_org_v" value="pk_org_v"/>
+          <interface key="IAuditInfo{####}modifiedtime" value="modifiedtime"/>
+          <interface key="IFlowBizItf{####}approver" value="approver"/>
+          <interface key="IOrgInfo{####}pk_org" value="pk_org"/>
+          <interface key="IBDObject{####}name" value=""/>
+          <interface key="IFlowBizItf{####}billmaker" value="billmaker"/>
+          <interface key="IPfBillLock{####}lockid" value="pk_dispatchlist"/>
+          <interface key="IFlowBizItf{####}pkorg" value="pk_org"/>
+          <interface key="IAuditInfo{####}creationtime" value="creationtime"/>
+          <interface key="IFlowBizItf{####}srcbillid" value="srcbillid"/>
+          <interface key="IFlowBizItf{####}busitype" value="busitype"/>
+          <interface key="IFlowBizItf{####}transtype" value="vtrantypecode"/>
+          <interface key="IBDObject{####}id" value="pk_dispatchlist"/>
+          <interface key="IBDObject{####}code" value=""/>
+          <interface key="IBDObject{####}pk_group" value="pk_group"/>
+          <interface key="IFlowBizItf{####}approvedate" value="approvedate"/>
+          <interface key="IAuditInfo{####}creator" value="creator"/>
+          <interface key="IBillDate{####}billdate" value="billdate"/>
+          <interface key="IFlowBizItf{####}approvenote" value=""/>
+          <interface key="IFlowBizItf{####}billid" value="pk_dispatchlist"/>
+        </interfaces>
+      </entity>
+      <actions>
+        <action id="4e9b6efb-6abe-4cee-9288-60747833d736" name="historyClick" entity="Toolbar" field="history" defaultImpl="showApproveHistory" eventName="click" functionName="historyAction" tplType="vouchers" ts="2015-06-05 09:05:28" dr="0"/>
+        <action id="859b6f3c-847e-462c-8fbd-25657e8915d6" name="clickcell" entity="Dispatchlist" field="DispatchlistApp_List" defaultImpl="openLinkAction" eventName="clickcell" functionName="clickcell" tplType="vouchers" ts="2015-06-05 09:05:29" dr="0"/>
+        <action id="7c80263f-de50-44fd-9c8a-30f71bf566b8-btn-addActionL" name="addAction" entity="Toolbar" field="addAction" defaultImpl="linkOpen" eventName="click" functionName="addAction" tplType="vouchers" ts="2015-06-05 09:05:28" dr="0"/>
+        <action id="7c80263f-de50-44fd-9c8a-30f71bf566b8-btn-batchDeleteActionL" name="batchDeleteAction" entity="Toolbar" field="batchDeleteAction" defaultImpl="batchDelete" eventName="click" functionName="batchDeleteAction" tplType="vouchers" ts="2015-06-05 09:05:29" dr="0"/>
+        <action id="7c80263f-de50-44fd-9c8a-30f71bf566b8-btn-batchSubmitActionL" name="batchSubmitAction" entity="Toolbar" field="batchSubmitAction" defaultImpl="batchSubmit" eventName="click" functionName="batchSubmitAction" tplType="vouchers" ts="2015-06-05 09:05:29" dr="0"/>
+        <action id="7c80263f-de50-44fd-9c8a-30f71bf566b8-btn-batchWithdrawActionL" name="batchWithdrawAction" entity="Toolbar" field="batchWithdrawAction" defaultImpl="batchWithdraw" eventName="click" functionName="batchWithdrawAction" tplType="vouchers" ts="2015-06-05 09:05:29" dr="0"/>
+        <action id="7c80263f-de50-44fd-9c8a-30f71bf566b8-btn-batchApproveActionL" name="batchApproveAction" entity="Toolbar" field="batchApproveAction" defaultImpl="batchApprove" eventName="click" functionName="batchApproveAction" tplType="vouchers" ts="2015-06-05 09:05:29" dr="0"/>
+        <action id="7c80263f-de50-44fd-9c8a-30f71bf566b8-btn-batchUnApproveActionL" name="batchUnApproveAction" entity="Toolbar" field="batchUnApproveAction" defaultImpl="batchUnApprove" eventName="click" functionName="batchUnApproveAction" tplType="vouchers" ts="2015-06-05 09:05:29" dr="0"/>
+        <action id="7c80263f-de50-44fd-9c8a-30f71bf566b8-btn-configActionL" name="configAction" entity="Toolbar" field="configAction" defaultImpl="config" eventName="click" functionName="configAction" tplType="vouchers" ts="2015-06-05 09:05:29" dr="0"/>
+        <action id="f4a2ca63-6dd9-439d-b4a3-820fbdff261d-listgrid-act-dblclickrow" name="dblclickrow" entity="Dispatchlist" field="DispatchlistApp_List" defaultImpl="activeRow" eventName="dblclickrow" functionName="activeRowClick" fieldType="List" tplType="vouchers" ts="2015-06-05 09:05:29" dr="0"/>
+        <action id="7c80263f-de50-44fd-9c8a-30f71bf566b8-btn-batchBusiOperateActionL" name="batchBusiOperateAction" entity="Toolbar" field="batchBusiOperateAction" eventName="click" functionName="batchBusiOperateAction" tplType="vouchers" ts="2015-06-05 09:05:29" dr="0"/>
+      </actions>
+      <proxies/>
+      <states>
+        <state id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add" name="add" isSystem="true" ts="2015-04-02 11:17:55" dr="0">
+          <buttons>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-addAction" name="addAction" disable="1" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="addAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-addLineAction" name="addLineAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="addLineAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-approveAction" name="approveAction" disable="1" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="approveAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-batchApproveAction" name="batchApproveAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="batchApproveAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-batchBusiOperateAction" name="batchBusiOperateAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="batchBusiOperateAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-batchDeleteAction" name="batchDeleteAction" disable="1" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="batchDeleteAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-batchEditAction" name="batchEditAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="batchEditAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-batchSubmitAction" name="batchSubmitAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="batchSubmitAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-batchUnApproveAction" name="batchUnApproveAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="batchUnApproveAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-batchWithdrawAction" name="batchWithdrawAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="batchWithdrawAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-busiOperateAction" name="busiOperateAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="busiOperateAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-cancelAction" name="cancelAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="cancelAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-configAction" name="configAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="configAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-copyAction" name="copyAction" disable="1" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="copyAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-copyLineAction" name="copyLineAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="copyLineAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-deleteAction" name="deleteAction" disable="1" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="deleteAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-deleteLineAction" name="deleteLineAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="deleteLineAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-divideLineAction" name="divideLineAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="divideLineAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-draftAction" name="draftAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="draftAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-editAction" name="editAction" disable="1" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="editAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-fullScreenAction" name="fullScreenAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="fullScreenAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-insertLineAction" name="insertLineAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="insertLineAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-pagination" name="pagination" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="pagination"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-printAction" name="printAction" disable="1" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="printAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-saveAction" name="saveAction" disable="0" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="saveAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-searchAction" name="searchAction" disable="0" ts="2015-04-17 15:14:45" dr="0" entity="Toolbar" field="searchAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-submitAction" name="submitAction" disable="1" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="submitAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-unApproveAction" name="unApproveAction" disable="1" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="unApproveAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-add-withdrawAction" name="withdrawAction" disable="1" ts="2015-04-15 10:19:23" dr="0" entity="Toolbar" field="withdrawAction"/>
+          </buttons>
+        </state>
+        <state id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse" name="browse" isSystem="true" ts="2015-04-02 11:17:54" dr="0">
+          <buttons>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-addAction" name="addAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="addAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-addLineAction" name="addLineAction" disable="1" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="addLineAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-approveAction" name="approveAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="approveAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-batchApproveAction" name="batchApproveAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="batchApproveAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-batchBusiOperateAction" name="batchBusiOperateAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="batchBusiOperateAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-batchDeleteAction" name="batchDeleteAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="batchDeleteAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-batchEditAction" name="batchEditAction" disable="1" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="batchEditAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-batchSubmitAction" name="batchSubmitAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="batchSubmitAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-batchUnApproveAction" name="batchUnApproveAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="batchUnApproveAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-batchWithdrawAction" name="batchWithdrawAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="batchWithdrawAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-busiOperateAction" name="busiOperateAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="busiOperateAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-cancelAction" name="cancelAction" disable="1" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="cancelAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-configAction" name="configAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="configAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-copyAction" name="copyAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="copyAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-copyLineAction" name="copyLineAction" disable="1" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="copyLineAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-deleteAction" name="deleteAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="deleteAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-deleteLineAction" name="deleteLineAction" disable="1" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="deleteLineAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-divideLineAction" name="divideLineAction" disable="1" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="divideLineAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-draftAction" name="draftAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="draftAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-editAction" name="editAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="editAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-fullScreenAction" name="fullScreenAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="fullScreenAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-insertLineAction" name="insertLineAction" disable="1" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="insertLineAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-pagination" name="pagination" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="pagination"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-printAction" name="printAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="printAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-saveAction" name="saveAction" disable="1" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="saveAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-searchAction" name="searchAction" disable="0" ts="2015-04-17 15:14:45" dr="0" entity="Toolbar" field="searchAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-submitAction" name="submitAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="submitAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-unApproveAction" name="unApproveAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="unApproveAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-browse-withdrawAction" name="withdrawAction" disable="0" ts="2015-04-15 10:19:39" dr="0" entity="Toolbar" field="withdrawAction"/>
+          </buttons>
+        </state>
+        <state id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit" name="edit" isSystem="true" ts="2015-04-02 11:17:56" dr="0">
+          <buttons>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-addAction" name="addAction" disable="1" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="addAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-addLineAction" name="addLineAction" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="addLineAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-approveAction" name="approveAction" disable="1" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="approveAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-batchApproveAction" name="batchApproveAction" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="batchApproveAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-batchBusiOperateAction" name="batchBusiOperateAction" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="batchBusiOperateAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-batchDeleteAction" name="batchDeleteAction" disable="1" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="batchDeleteAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-batchEditAction" name="batchEditAction" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="batchEditAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-batchSubmitAction" name="batchSubmitAction" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="batchSubmitAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-batchUnApproveAction" name="batchUnApproveAction" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="batchUnApproveAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-batchWithdrawAction" name="batchWithdrawAction" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="batchWithdrawAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-busiOperateAction" name="busiOperateAction" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="busiOperateAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-cancelAction" name="cancelAction" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="cancelAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-configAction" name="configAction" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="configAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-copyAction" name="copyAction" disable="1" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="copyAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-copyLineAction" name="copyLineAction" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="copyLineAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-deleteAction" name="deleteAction" disable="1" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="deleteAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-deleteLineAction" name="deleteLineAction" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="deleteLineAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-divideLineAction" name="divideLineAction" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="divideLineAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-draftAction" name="draftAction" disable="1" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="draftAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-editAction" name="editAction" disable="1" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="editAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-fullScreenAction" name="fullScreenAction" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="fullScreenAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-insertLineAction" name="insertLineAction" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="insertLineAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-pagination" name="pagination" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="pagination"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-printAction" name="printAction" disable="1" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="printAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-saveAction" name="saveAction" disable="0" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="saveAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-searchAction" name="searchAction" disable="0" ts="2015-04-17 15:14:45" dr="0" entity="Toolbar" field="searchAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-submitAction" name="submitAction" disable="1" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="submitAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-unApproveAction" name="unApproveAction" disable="1" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="unApproveAction"/>
+            <button id="7c80263f-de50-44fd-9c8a-30f71bf566b8-edit-withdrawAction" name="withdrawAction" disable="1" ts="2015-04-15 10:19:54" dr="0" entity="Toolbar" field="withdrawAction"/>
+          </buttons>
+        </state>
+      </states>
+    </viewmodel>
+  </application>
+</applications>

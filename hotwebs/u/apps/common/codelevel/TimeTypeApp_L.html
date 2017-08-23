@@ -1,0 +1,60 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>时间类型</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="pc/css/kendoctrl/Cube.Control.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="pc/css/Cube.ToolBar.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link data-config="MessageBox" />
+    <link data-config="DataGrid" />
+    <link href="apps/common/sysmanager/Cube.System.css" rel="Stylesheet" type="text/css" />  
+    <style>
+    	.radio-border-b {
+    		border-bottom: 1px solid silver;
+    	}
+    	
+    	.radio-text-center {
+    		text-align: center;
+    	}
+    </style>
+</head>
+<body>
+    <div id="TimeTypeView" class="container" data-page="common.codelevel.TimeTypeApp" data-title="请选择编码实体" data-viewmodel="TimeTypeViewModel">
+        <div class="row">
+            <div class="col-lg-12 radio-border-b p-t-10 p-b-10 ">
+            	<div  class="radio-text-center" data-controltype="Radio" data-propertyname="timeType"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12" style="height:400px;overflow-y: auto;">
+            	<div data-controltype="TreeView" data-propertyname="codeEntityTree"></div>
+            </div>
+        </div>
+     	<div class="common-list ui-footer row">
+            <div class="ui-footer-right">
+                 <div  data-propertyname="Determine" data-controltype="ImageButton">确定</div>
+                 <div  data-propertyname="Close" data-controltype="ImageButton">取消</div>
+            </div>
+        </div>
+    </div>
+    <script src="jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="jquery/jquery-ui.js" type="text/javascript"></script>
+    <script src="common/js/Animation.js" type="text/javascript"></script>
+    <script src="common/js/Cube.js" type="text/javascript"></script>
+    <script src="pc/js/cube.pc.js" type="text/javascript"></script>
+    <script src="common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="common/js/Control.js" type="text/javascript"></script>
+    <script src="common/js/ImageButton.js" type="text/javascript"></script>
+    <script data-config="Tree"></script>
+    <script data-config="MessageBox"></script>
+    <script src="apps/common/codelevel/TimeType_L.js" type="text/javascript"></script>
+    <script src="apps/common/codelevel/TimeType_Extend.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	    cb.viewbinding.create("TimeTypeView");
+	</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+﻿.acInput
+{
+  border:1px solid #cccccc;  
+  display: inline-block;
+  height: 20px;
+  width: 206px;
+  line-height: 20px;
+  color: black;
+  vertical-align: middle;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.acInput-focus
+{  
+  border:1px solid #FFD42C;  
+}
+
+
+.acResults {
+	padding: 0px;
+	border: 1px solid #B2B2B2;
+	background-color: #EEEEEE;
+	overflow: hidden;
+	width:150px;
+	z-index:1000000;
+}
+
+.acResults ul {
+	width: 300px;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.acResults li {
+	margin: 0px;
+	padding: 2px 5px;
+	cursor: pointer;
+	display: block;
+	width: 300%;
+	font: menu;
+	font-size: 12px;
+	overflow: hidden;
+}
+
+.acLoading {
+	background : url('../images/indicator.gif') right center no-repeat;
+}
+
+.acSelect {
+	background-color: #DDDDDD;
+	color: #000000;
+}

@@ -1,0 +1,156 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title><#=title#></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link href="./bootstrap/css/bootstrap.css" rel="Stylesheet" type="text/css" />
+    <link href="./pc/css/modal.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.ToolBar.css" rel="stylesheet" />
+    <#@LinkBuilder#>
+</head>
+<body>
+    <#*(view:views){#>
+	<div id="<#=name#>" class="container" data-title="<#=title#>" data-page="<#=appId#>" data-viewmodel="<#=viewModel#>">
+        <div class="row">
+            <div data-propertyname="toolbarContent" data-controltype="ToolBar" class="col-lg-10 cube-bar-modeltxt">
+                <#*(container:containers)?(type==Toolbar){#>
+                    <#*(control:controls){#>
+                        <li><#@ControlBuilder#></li>
+                    <#}#>
+                <#}#>
+            </div>
+            <div class="ui-content-right col-lg-2">
+                <div data-propertyname="prevAction" data-controltype="ImageButton"><span class="prev-icon"></span><span>上一条</span></div>
+                <div data-propertyname="nextAction" data-controltype="ImageButton"><span class="next-icon"></span><span>下一条</span></div>
+            </div>
+        </div>
+        <div class="cube-content-header row">
+            <div class="col-lg-1 p-l-0 p-r-0">
+                <span class="page-mark"></span>
+            </div>
+            <div class="content-header-center col-lg-6">
+                <#*(container:containers)?(type==Abstract){#>
+			        <#*(control:controls)?(position==top){#>
+				        <div class="left-top">
+                            <div class="ui-field-contain">
+                                <#@ControlBuilder#>
+                            </div>
+                        </div>
+			        <#}#>
+			    <#}#>
+                <div class="right-top"><span></span></div>
+                <#*(container:containers)?(type==Abstract){#>
+			        <#*(control:controls)?(position==bottom){#>
+				        <div class="left-bottom">
+                            <div class="ui-field-contain">
+                                <#@ControlBuilder#>
+                            </div>
+                        </div>
+			        <#}#>
+			    <#}#>
+            </div>
+        </div>
+        <div class="row">
+            <div class="navbar-pc-strip" data-propertyname="tabMenu" data-controltype="TabContent">
+                <li class="ui-text" data-content="baseinfo">基本信息<a href="#5F"><img src="./pc/images/u891.png" width="20px" height="20px" />(5)</a></li>
+                <#*(container:containers)?(type==TabPage){#>
+					<#?(content==null){#>
+                        <li class="ui-text" data-content="<#=name#>"><#=title#></li>
+                    <#}#>
+                    <#?(content!=null){#>
+                        <li class="ui-text" data-content="<#=content#>" data-remote="true"><#=title#></li>
+                    <#}#>
+                <#}#>
+            </div>
+        </div>
+        <div class="row" data-related="tabMenu">
+            <div class="row m-l-20" data-content="baseinfo">
+                <#*(container:containers)?(type==Group){#>
+                    <div class="<#=css#>">
+                        <#?(title!=null){#>
+                        <div class="row border-l-blue m-l-20 p-l-20"><#=title#></div>
+                        <div class="row col-lg-11">
+                        <#}#>
+                        <#?(iCols==null){#>
+							<#*(control:controls){#>
+								<div class="col-lg-4">
+									<#@ControlBuilder#>
+								</div>
+							<#}#>
+                        <#}#>
+                        <#?(iCols==1){#>
+							<#*(control:controls){#>
+								<div class="col-lg-12">
+									<#@ControlBuilder#>
+								</div>
+							<#}#>
+                        <#}#>
+						<#?(iCols==2){#>
+							<#*(control:controls){#>
+								<div class="col-lg-6">
+									<#@ControlBuilder#>
+								</div>
+							<#}#>
+                        <#}#>
+						<#?(iCols==3){#>
+							<#*(control:controls){#>
+								<div class="col-lg-4">
+									<#@ControlBuilder#>
+								</div>
+							<#}#>
+                        <#}#>
+						<#?(iCols==4){#>
+							<#*(control:controls){#>
+								<div class="col-lg-3">
+									<#@ControlBuilder#>
+								</div>
+							<#}#>
+                        <#}#>
+                        <#?(title!=null){#>
+                        </div>
+                        <#}#>
+                    </div>
+                <#}#>
+            </div>
+            <#*(container:containers)?(type==TabPage){#>
+				<#?(content==null){#>
+                    <div class="row" data-content="<#=name#>">
+                        <#*(control:controls){#>
+                            <#@ControlBuilder#>
+                        <#}#>
+                    </div>
+                <#}#>
+                <#?(content!=null){#>
+                    <div data-content="<#=content#>" data-remote="true"></div>
+                <#}#>
+            <#}#>
+        </div>
+	</div>
+    <#}#>
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./jquery/jquery-ui.js" type="text/javascript"></script>
+    <script src="./common/js/Animation.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./pc/js/modal.js" type="text/javascript""></script>
+    <script src="./pc/js/cube.pc.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/SearchBox.js" type="text/javascript"></script>
+    <script src="./common/js/ToolBar.js" type="text/javascript"></script>
+    <script src="./pc/js/TabContent.js" type="text/javascript"></script>
+    <script src="./common/js/CommonProxy.js" type="text/javascript"></script>
+    <script src="./common/js/CommonCRUD.js" type="text/javascript"></script>
+	<#@ScriptBuilder#>
+	<script src="apps/<#=moduleName#>/<#=name#>_<#=screenSize#>.js" type="text/javascript"></script>
+	<script src="apps/<#=moduleName#>/<#=name#>_Extend.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	    <#*(view:views){#>
+		cb.viewbinding.create("<#=name#>");
+	    <#}#>
+	</script>
+</body>
+</html>

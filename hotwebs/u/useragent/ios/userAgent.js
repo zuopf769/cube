@@ -1,0 +1,1 @@
+﻿var UserAgent = ua = "iosApp";

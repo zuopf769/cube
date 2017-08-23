@@ -1,0 +1,81 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title><#=title#></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./bootstrap/css/bootstrap.css" rel="Stylesheet" type="text/css" />
+    <link href="./pc/css/modal.css" rel="stylesheet" />
+    <link href="./pc/css/ToolBar.css" rel="Stylesheet" />
+    <link href="./pc/css/accondion.pc.css" rel="stylesheet" />
+    <link href="./pad/css/menu.css" rel="stylesheet" />
+    <link href="./pad/css/SearchBox.css" rel="stylesheet" type="text/css" />
+    <link href="./pad/css/dropdown.css" rel="stylesheet" type="text/css" />
+    <link href="./pc/css/Catalog.pc.css" rel="stylesheet" type="text/css" />
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.ToolBar.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <#@LinkBuilder#>
+</head>
+<body>
+    <#*(view:views){#>
+	<div id="<#=name#>" class="container" data-title="<#=title#>" data-page="<#=appId#>" data-viewmodel="<#=viewModel#>">
+        <div class="row">
+            <div class="cube-main-left">
+                <#*(container:containers)?(type==Tree){#>
+			        <#*(control:controls){#>
+                        <#@ControlBuilder#>
+                    <#}#>
+		        <#}#>
+            </div>
+            <div class="cube-main-right p-l-15">
+                <div data-propertyname="toolbarContent" data-controltype="ToolBar" class="col-lg-12 cube-bar-modeltxt">
+                    <#*(container:containers)?(type==Toolbar){#>
+                        <#*(control:controls){#>
+                            <li><#@ControlBuilder#></li>
+                        <#}#>
+                    <#}#>
+                </div>
+                <div class="col-lg-12">
+                    <#*(container:containers)?(type==Card){#>
+                        <#*(control:controls){#>
+                            <div class="col-lg-4 col-lg-offset-4">
+                                <#@ControlBuilder#>
+                            </div>
+                        <#}#>
+                    <#}#>
+                </div>
+            </div>
+        </div>
+	</div>
+    <#}#>
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./common/js/Animation.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./pc/js/modal.js" type="text/javascript""></script>
+    <script src="./pc/js/cube.pc.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/Button.js" type="text/javascript"></script>
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>
+    <script src="./common/js/ToolBar.js" type="text/javascript"></script>
+    <script src="./common/js/TextBox.js" type="text/javascript"></script>
+    <script src="./common/js/accondion.js" type="text/javascript"></script>
+    <script src="./common/js/SearchBox.js" type="text/javascript"></script>
+    <script src="./common/js/dropDown.js" type="text/javascript"></script>
+    <script src="./common/js/Catalog.js" type="text/javascript"></script>
+    <script src="./pc/js/Catalog.pc.js" type="text/javascript"></script>
+    <script src="./common/js/CatalogHelper.js" type="text/javascript"></script>
+    <script src="./common/js/CommonProxy.js" type="text/javascript"></script>
+    <script src="./common/js/CommonCRUD.js" type="text/javascript"></script>
+	<#@ScriptBuilder#>
+    <script src="apps/<#=moduleName#>/<#=name#>_<#=screenSize#>.js" type="text/javascript"></script>
+	<script src="apps/<#=moduleName#>/<#=name#>_Extend.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	    <#*(view:views){#>
+		cb.viewbinding.create("<#=name#>");
+	    <#}#>
+	</script>
+</body>
+</html>

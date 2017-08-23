@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application name="DeliveryApp" title="发货单" moduleName="sa" symbol="sa.Delivery" uiType="vouchers">
+  <references>
+    <reference name="../sa/DeliveryAppVM.xml"/>
+  </references>
+  <view name="DeliveryView" title="发货单" layoutMode="Fluid" appId="sa.DeliveryApp" viewModel="sa.DeliveryApp.DeliveryViewModel" screenSize="M" tplName="vouchers_M.tpl">
+    <container name="DeliveryView_Body" title="发货单列表表体" type="Grid">
+      <controls>
+        <control name="Delivery_iPad" title="发货单iPad" ctrlType="DataGrid" field="deliverys" entity="Delivery">
+          <columns>
+            <column name="customer" title="客户名称" field="customer" ctrlType="TextBox" position="leftTop" />
+            <column name="money" title="订单总额" field="money" ctrlType="TextBox" position="rightTop" />
+            <column name="vbillno" title="订单编码" field="vbillno" ctrlType="TextBox" position="leftBottom" />
+            <column name="billdate" title="订单日期" field="billdate" ctrlType="TextBox" position="rightBottom" />
+            <column name="approvestatus" title="审批状态" field="approvestatus" ctrlType="TextBox" position="status" />
+          </columns>
+        </control>
+      </controls>
+    </container>
+  </view>
+</application>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<applications>
+  <application name="customerListApp" title="u8customer列表" moduleName="u8" symbol="u8.customer">
+    <viewmodel name="customerListViewModel" extendName="customerListViewModel_Extend" title="客户列表" tplName="archives_min.js.tpl">
+      <entity name="customerList" title="客户列表" isMain="true">
+        <fields>
+          <field name="customers" title="客户集合" modelType="Model3D" ctrlType="DataGrid" refEntity="customer"/>
+        </fields>
+      </entity>
+      <entity name="customer" title="客户" >
+        <fields>
+          <field name="ts" title="时间戳" modelType="SimpleModel" ctrlType="DateTimeBox" isNecessary="true" isReadOnly="true" isSyncKey="true" isVisible="false"/>
+          <field name="dr" title="删除标记" modelType="SimpleModel" ctrlType="CheckBox" isNecessary="true" isReadOnly="true" isVisible="false"/>
+          <field name="ccuscode_pk" title="客户PK" iLength="20" isNullable="false" modelType="SimpleModel" ctrlType="TextBox" isKey="true" isNecessary="true" isVisible="false"/>
+          <field name="code" title="客户编码" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="name" title="客户名称" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="cscode" title="客户分类编码" iLength="20" refKey="pk_customerclass" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="customerclass"/>
+          <field name="maketime" title="制单时间" isNullable="false" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="pk_group" title="集团" iLength="20" isNullable="false" refKey="pk_group" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="600001"/>
+          <field name="pk_org" title="所属权限组" iLength="20" refKey="pk_org" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="600015"/>
+          <field name="pk_org_v" title="组织版本" iLength="20" refKey="pk_vid" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="600700"/>
+          <field name="creator" title="创建人" iLength="20" refKey="cuserid" refCode="user_code" refName="user_name" modelType="SimpleModel" ctrlType="Refer" refId="600026"/>
+          <field name="creationtime" title="创建时间" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="modifier" title="修改人" iLength="20" refKey="cuserid" refCode="user_code" refName="user_name" modelType="SimpleModel" ctrlType="Refer" refId="600026"/>
+          <field name="modifiedtime" title="修改时间" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="ccusabbname" title="客户简称" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="ccusmnemcode" title="助记码" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="bcusdomestic" title="国内" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="bcusoverseas" title="国外" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="cdccode" title="地区编码" refModelName="国家地区" iLength="20" refKey="pk_country" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="600203"/>
+          <field name="ccusaddress" title="地址" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="ccuspostcode" title="邮政编码" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="ccusregcode" title="纳税人登记号" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="dcusdevdate" title="发展日期" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="ccuslperson" title="法人" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="ccusemail" title="Email地址" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="ccusoaddress" title="发货地址" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="ccusperson" title="联系人" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="ccusphone" title="电话" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="ccusfax" title="传真" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="ccushand" title="手机" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="ccuspperson" title="专营业务员编码" iLength="20" refKey="person_pk" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="person"/>
+          <field name="icusdisrate" title="扣率" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="ccusotype" title="发运方式编码" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="ccuswhcode" title="发货仓库编码" iLength="20" refKey="wh_pk" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="warehouse"/>
+          <field name="cdepname" title="分管部门名称" iLength="20" refKey="pk_dept" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="600905"/>
+          <field name="dlastdate" title="最后交易日期" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="ilastmoney" title="最后交易金额" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="denddate" title="停用日期" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="dcuscreatedatetime" title="建档日期" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="ccreateperson" title="建档人" iLength="20" refKey="cuserid" refCode="user_code" refName="user_name" modelType="SimpleModel" ctrlType="Refer" refId="600026"/>
+          <field name="cmodifyperson" title="变更人" iLength="20" refKey="cuserid" refCode="user_code" refName="user_name" modelType="SimpleModel" ctrlType="Refer" refId="600026"/>
+          <field name="dmodifydate" title="变更日期" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="cmemo" title="备注" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="def1" title="自定义项1" iLength="100" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def2" title="自定义项2" iLength="100" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def3" title="自定义项3" iLength="100" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def4" title="自定义项4" iLength="100" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def5" title="自定义项5" iLength="100" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def6" title="自定义项6" iLength="100" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def7" title="自定义项7" iLength="100" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def8" title="自定义项8" iLength="100" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def9" title="自定义项9" iLength="100" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def10" title="自定义项10" iLength="100" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def11" title="自定义项11" iLength="100" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def12" title="自定义项12" iLength="100" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def13" title="自定义项13" iLength="100" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def14" title="自定义项14" iLength="100" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def15" title="自定义项15" iLength="100" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def16" title="自定义项16" iLength="100" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+        </fields>
+      </entity>
+      <entity name="Toolbar" title="功能">
+        <fields>
+          <field name="addAction" title="增加" modelType="SimpleModel" ctrlType="Button" />
+          <field name="editAction" title="修改" modelType="SimpleModel" ctrlType="Button" />
+          <field name="batchAction" title="批改" modelType="SimpleModel" ctrlType="Button" />
+          <field name="deleteAction" title="删除" modelType="SimpleModel" ctrlType="Button" />
+          <field name="mergeAction" title="并户" modelType="SimpleModel" ctrlType="Button" />
+          <field name="creditAction" title="信用" modelType="SimpleModel" ctrlType="Button" />
+          <field name="checkAction" title="查重" modelType="SimpleModel" ctrlType="Button" />
+          <field name="printAction" title="打印" modelType="SimpleModel" ctrlType="Button" />
+          <field name="outputAction" title="输出" modelType="SimpleModel" ctrlType="Button" />
+          <field name="bizAction" title="业务操作" modelType="SimpleModel" ctrlType="Button" />
+          <field name="filterAction" title="过滤" modelType="SimpleModel" ctrlType="Button" />
+          <field name="refreshAction" title="刷新" modelType="SimpleModel" ctrlType="Button" />
+          <field name="setAction" title="设置" modelType="SimpleModel" ctrlType="Button" />
+        </fields>
+      </entity>
+      <actions>
+        <action name="clickrow" entity="customerList" field="customers" eventName="clickrow" functionName="itemClick" />
+        <action name="dblclickrow" entity="customerList" field="customers" eventName="dblclickrow" functionName="activeRowClick" />
+        <action name="addAction" entity="Toolbar" field="addAction" eventName="click" functionName="addAction" />
+        <action name="editAction" entity="Toolbar" field="editAction" eventName="click" functionName="editAction" />
+        <action name="batchAction" entity="Toolbar" field="batchAction" eventName="click" functionName="batchAction" />
+        <action name="deleteAction" entity="Toolbar" field="deleteAction" eventName="click" functionName="deleteAction" />
+        <action name="mergeAction" entity="Toolbar" field="mergeAction" eventName="click" functionName="mergeAction" />
+        <action name="creditAction" entity="Toolbar" field="creditAction" eventName="click" functionName="creditAction" />
+        <action name="checkAction" entity="Toolbar" field="checkAction" eventName="click" functionName="checkAction" />
+        <action name="printAction" entity="Toolbar" field="printAction" eventName="click" functionName="printAction" />
+        <action name="outputAction" entity="Toolbar" field="outputAction" eventName="click" functionName="outputAction" />
+        <action name="bizAction" entity="Toolbar" field="bizAction" eventName="click" functionName="bizAction" />
+        <action name="filterAction" entity="Toolbar" field="filterAction" eventName="click" functionName="filterAction" />
+        <action name="refreshAction" entity="Toolbar" field="refreshAction" eventName="click" functionName="refreshAction" />
+        <action name="setAction" entity="Toolbar" field="setAction" eventName="click" functionName="setAction" />
+      </actions>
+    </viewmodel>
+  </application>
+</applications>

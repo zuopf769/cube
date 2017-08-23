@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application name="inventoryListApp" title="存货列表" moduleName="u8" symbol="u8.inventory">
+  <references reference="../u8/inventoryListAppVM.xml"/>
+  <view name="inventoryListView" title="存货列表" layoutMode="Fluid" appId="u8.inventoryListApp" viewModel="u8.inventoryListApp.inventoryListViewModel" screenSize="L" tplName="archives_L.html.tpl">
+    <container name="Toolbar" type="Toolbar">
+      <control name="addAction" title="增加" group="add" ctrlType="Button" css="add-icon" field="addAction" entity="Toolbar"/>
+      <control name="editAction" title="编辑" group="edit" ctrlType="Button" css="add-icon" field="editAction" entity="Toolbar"/>
+      <control name="deleteAction" title="删除" group="delete" ctrlType="Button" css="delete-icon" field="deleteAction" entity="Toolbar"/>
+    </container>
+    <container name="inventoryListView_body" title="存货列表" type="Grid">
+      <control name="inventorys" title="存货列表" ctrlType="DataGrid" field="inventorys" entity="inventoryList">
+        <column name="pk_inventory" title="存货pk" field="pk_inventory" ctrlType="TextBox" position="leftTop"/>
+        <column name="code" title="存货编码" field="code" ctrlType="TextBox" position="rightTop"/>
+        <column name="name" title="存货名称" field="name" ctrlType="TextBox" position="leftBottom"/>
+        <column name="maketime" title="制单时间" field="maketime" ctrlType="DateTimeBox" position="rightBottom"/>
+        <column name="creationtime" title="创建时间" field="creationtime" ctrlType="DateTimeBox" position="status"/>
+      </control>
+    </container>
+  </view>
+</application>

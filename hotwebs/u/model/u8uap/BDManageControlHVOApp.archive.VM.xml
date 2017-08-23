@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<applications>
+  <application domainName="uap" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9" moduleName="u8uap" name="BDManageControlHVOApp" symbol="u8uap.BDManageControlHVO" title="档案管控模式" ts="2015-06-04 09:47:38" tplName_viewModel="archive" tplName="archive_min.tpl">
+    <viewmodel dr="0" extendName="BDManageControlHVOAppViewModel_archive_Extend" id="a561b1c5-0c4b-432f-904b-5017ec67aad9" name="BDManageControlHVOAppViewModel_archive" title="档案管控模式" ts="2015-06-04 09:47:38" tplName="archive_min.js.tpl">
+      <entity dr="0" entityId="bbb50ea9-91ca-4df7-a1b9-c115a6eb7a78" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-toolbar" name="Toolbar" title="功能" ts="2015-06-04 09:47:38">
+        <field ctrlType="Button" dr="0" fieldType="head" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-returnAction" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" name="returnAction" title="返回" tpltype="archive" ts="2015-06-05 17:48:15" entity="Toolbar"/>
+        <field ctrlType="DropDownButton" dr="0" fieldType="head" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-addAction" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" name="addAction" title="增加" tpltype="archive" ts="2015-06-05 17:48:15" entity="Toolbar"/>
+        <field ctrlType="Button" dr="0" fieldType="body" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-addLineAction" isVisible="true" modelType="SimpleModel" name="addLineAction" title="增行" tpltype="archive" ts="2015-06-05 17:48:15" entity="Toolbar"/>
+        <field ctrlType="Button" dr="0" fieldType="head" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-saveAction" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" name="saveAction" title="保存" tpltype="archive" ts="2015-06-05 17:48:15" entity="Toolbar"/>
+        <field ctrlType="Button" dr="0" fieldType="body" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-insertLineAction" isVisible="true" modelType="SimpleModel" name="insertLineAction" title="插行" tpltype="archive" ts="2015-06-05 17:48:15" entity="Toolbar"/>
+        <field ctrlType="Button" dr="0" fieldType="body" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-copyLineAction" isVisible="true" modelType="SimpleModel" name="copyLineAction" title="复制行" tpltype="archive" ts="2015-06-05 17:48:15" entity="Toolbar"/>
+        <field ctrlType="Button" dr="0" fieldType="head" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-editAction" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" name="editAction" title="修改" tpltype="archive" ts="2015-06-05 17:48:15" entity="Toolbar"/>
+        <field ctrlType="Button" dr="0" fieldType="head" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-deleteAction" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" name="deleteAction" title="删除" tpltype="archive" ts="2015-06-05 17:48:15" entity="Toolbar"/>
+        <field ctrlType="Button" dr="0" fieldType="body" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-deleteLineAction" isVisible="true" modelType="SimpleModel" name="deleteLineAction" title="删行" tpltype="archive" ts="2015-06-05 17:48:15" entity="Toolbar"/>
+        <field ctrlType="Button" dr="0" fieldType="head" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-cancelAction" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" name="cancelAction" title="放弃" tpltype="archive" ts="2015-06-05 17:48:15" entity="Toolbar"/>
+        <field ctrlType="Button" dr="0" fieldType="head" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-printAction" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" name="printAction" title="打印" tpltype="archive" ts="2015-06-05 17:48:15" entity="Toolbar"/>
+        <field css="next-icon" ctrlType="Button" dr="0" fieldType="head" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-nextAction" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" name="nextAction" position="right" tpltype="archive" ts="2015-06-05 17:48:15" entity="Toolbar"/>
+        <field css="prev-icon" ctrlType="Button" dr="0" fieldType="head" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-prevAction" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" name="prevAction" position="right" tpltype="archive" ts="2015-06-05 17:48:15" entity="Toolbar"/>
+        <interfaces/>
+      </entity>
+      <entity dr="0" entityId="bbb50ea9-91ca-4df7-a1b9-c115a6eb7a78" id="bbb50ea9-91ca-4df7-a1b9-c115a6eb7a78" name="BDManageControlBVO" title="档案管控模式子表" ts="2015-06-04 09:47:38">
+        <field ctrlType="DateTimeBox" dr="0" fieldType="Body" id="bbb50ea9-91ca-4df7-a1b9-c115a6eb7a78-ts" isNecessary="true" isNullable="true" isReadOnly="true" isSyncKey="true" isVisible="true" modelType="SimpleModel" name="ts" title="时间戳" ts="2015-06-04 09:47:38" entity="BDManageControlBVO"/>
+        <field ctrlType="CheckBox" dr="0" fieldType="Body" id="bbb50ea9-91ca-4df7-a1b9-c115a6eb7a78-dr" isNecessary="true" isNullable="true" isReadOnly="true" isVisible="true" modelType="SimpleModel" name="dr" title="删除标记" ts="2015-06-04 09:47:38" entity="BDManageControlBVO"/>
+        <field ctrlType="TextBox" dataType="string" dr="0" fieldType="Body" id="60e0ac16-25d1-4adc-9402-3032961656af" iLength="20" isKey="true" isNecessary="true" isNullable="false" isVisible="true" modelType="SimpleModel" name="pk_bdmanagecontrol_b" title="子表主键" ts="2015-06-04 09:47:38" uapDataType="BS000010000100001051" entity="BDManageControlBVO"/>
+        <field ctrlType="TextBox" dataType="string" dr="0" fieldType="Body" id="ee9def9d-82af-4de6-a7d8-a31a50d972ca" iLength="50" isNullable="true" isVisible="true" modelType="SimpleModel" name="mdclassid" title="实体ID" ts="2015-06-04 09:47:38" uapDataType="BS000010000100001001" entity="BDManageControlBVO"/>
+        <field ctrlType="TextBox" dataType="string" dr="0" fieldType="Body" id="1b02d02f-bbfb-4734-853b-f096569de7de" iLength="50" isNullable="true" isVisible="true" modelType="SimpleModel" name="mdname" title="实体名称" ts="2015-06-09 10:46:43" uapDataType="BS000010000100001001" entity="BDManageControlBVO"/>
+        <field ctrlType="TextBox" dataType="string" dr="0" fieldType="Body" id="05187ee5-8104-4b48-a95a-a090023cb370" iLength="50" isNullable="true" isVisible="true" modelType="SimpleModel" name="fieldname" title="字段名称" ts="2015-06-04 09:47:38" uapDataType="BS000010000100001001" entity="BDManageControlBVO"/>
+        <field ctrlType="TextBox" dataType="string" dr="0" fieldType="Body" id="7c9b4cc0-8e44-4be9-98a7-2d24bf8b4cc2" iLength="50" isNullable="true" isVisible="true" modelType="SimpleModel" name="fieldcode" title="实体字段" ts="2015-06-09 10:46:43" uapDataType="BS000010000100001001" entity="BDManageControlBVO"/>
+        <field ctrlType="CheckBox" dataType="boolean" dr="0" fieldType="Body" id="cf6b8101-eec5-48a2-9bfb-109a09566a5f" iLength="1" isNullable="true" isVisible="true" modelType="SimpleModel" name="editflag" title="分配后是否可编辑" ts="2015-06-04 09:47:38" uapDataType="BS000010000100001032" entity="BDManageControlBVO"/>
+        <interfaces/>
+      </entity>
+      <entity dr="0" entityId="e3d22f8a-53a1-455a-b623-63d4333be28a" id="e3d22f8a-53a1-455a-b623-63d4333be28a" isMain="true" name="BDManageControlHVO" title="档案管控模式主表" ts="2015-06-04 09:47:38">
+        <field ctrlType="DateTimeBox" dr="0" fieldType="Head" id="e3d22f8a-53a1-455a-b623-63d4333be28a-ts" isNecessary="true" isNullable="true" isReadOnly="true" isSyncKey="true" isVisible="true" modelType="SimpleModel" name="ts" title="时间戳" ts="2015-06-04 09:47:38" entity="BDManageControlHVO"/>
+        <field ctrlType="CheckBox" dr="0" fieldType="Head" id="e3d22f8a-53a1-455a-b623-63d4333be28a-dr" isNecessary="true" isNullable="true" isReadOnly="true" isVisible="true" modelType="SimpleModel" name="dr" title="删除标记" ts="2015-06-04 09:47:38" entity="BDManageControlHVO"/>
+        <field ctrlType="TextBox" dataType="string" dr="0" fieldType="Head" id="71ffe0a8-977d-4ec3-9a9e-4c0ca0110de5" iLength="20" isKey="true" isNecessary="true" isNullable="false" isVisible="true" modelType="SimpleModel" name="pk_bdmanagecontrol_h" title="主表主键" ts="2015-06-04 09:47:38" uapDataType="BS000010000100001051" entity="BDManageControlHVO"/>
+        <field refEntity="BDManageControlBVO" ctrlType="DataGrid" dataType="string" dr="0" fieldType="Head" id="ff571910-bdd2-4033-8bd9-ef707e09f367" iLength="0" isNullable="false" isVisible="true" modelType="Model3D" name="pk_bdmanagecontrol_b" refEntityId="bbb50ea9-91ca-4df7-a1b9-c115a6eb7a78" refKey="pk_bdmanagecontrol_b" title="子表主键" ts="2015-06-04 09:47:38" uapDataType="bbb50ea9-91ca-4df7-a1b9-c115a6eb7a78" entity="BDManageControlHVO"/>
+        <field ctrlType="TextBox" dataType="string" dr="0" fieldType="Head" id="00a88b92-6c67-421b-b95b-184623884738" iLength="50" isNullable="true" isVisible="true" modelType="SimpleModel" name="mdclassid" title="主实体ID" ts="2015-06-04 09:47:38" uapDataType="BS000010000100001001" entity="BDManageControlHVO"/>
+        <field ctrlType="TextBox" dataType="string" dr="0" fieldType="Head" id="74fe7966-47de-4cdb-a32b-7bff418a4bea" iLength="50" isNullable="true" isVisible="true" modelType="SimpleModel" name="mdname" title="档案名称" ts="2015-06-04 09:47:38" uapDataType="BS000010000100001001" entity="BDManageControlHVO"/>
+        <field ctrlType="Refer" dataType="string" dr="0" fieldType="Head" id="d8556aa7-6fc2-4880-8707-59d254fa25ff" iLength="20" isNullable="true" isVisible="true" modelType="SimpleModel" name="pk_org" refCode="code" refId="600015" refKey="pk_org" refName="name" title="组织" ts="2015-06-04 09:47:38" uapDataType="985be8a4-3a36-4778-8afe-2d8ed3902659" entity="BDManageControlHVO"/>
+        <field ctrlType="Refer" dataType="string" dr="0" fieldType="Head" id="c5678fee-c7a9-44bd-973e-6d93a1ec9779" iLength="20" isNullable="true" isVisible="true" modelType="SimpleModel" name="pk_group" refCode="code" refId="600001" refKey="pk_group" refName="name" title="集团" ts="2015-06-04 09:47:38" uapDataType="3b6dd171-2900-47f3-bfbe-41e4483a2a65" entity="BDManageControlHVO"/>
+        <field ctrlType="ComboBox" dataType="string" dr="0" enumType="u8uap.BDMode" fieldType="Head" id="8dd312ba-8a0f-4443-8194-aa937a207a13" iLength="50" isNullable="true" isVisible="true" modelType="SimpleModel" name="managemode" title="管理方式" ts="2015-06-04 09:47:38" uapDataType="9a4d1110-659d-4597-90b8-81755a1a18d1" entity="BDManageControlHVO"/>
+        <field ctrlType="ComboBox" dataType="string" dr="0" enumType="u8uap.BDMode" fieldType="Head" id="f252245a-7a49-40e7-a2a9-a203fac83e94" iLength="50" isNullable="true" isVisible="true" modelType="SimpleModel" name="visiblescope" title="可见性范围" ts="2015-06-04 09:47:38" uapDataType="9a4d1110-659d-4597-90b8-81755a1a18d1" entity="BDManageControlHVO"/>
+        <field ctrlType="ComboBox" dataType="string" dr="0" enumType="u8uap.BDMode" fieldType="Head" id="c0d116a5-5992-4651-b4af-10b6dcafcc1a" iLength="50" isNullable="true" isVisible="true" modelType="SimpleModel" name="uniquescope" title="唯一性范围" ts="2015-06-04 09:47:38" uapDataType="9a4d1110-659d-4597-90b8-81755a1a18d1" entity="BDManageControlHVO"/>
+        <field ctrlType="ComboBox" dataType="string" dr="0" enumType="u8uap.ShareModeEnum" fieldType="Head" id="0a8713ee-fd72-412c-88fd-bdc6de2f2c7c" iLength="50" isNullable="true" isVisible="true" modelType="SimpleModel" name="sharemode" title="共享模式" ts="2015-06-04 09:47:38" uapDataType="1cba071b-a72e-4ec1-8cd8-197986f6e198" entity="BDManageControlHVO"/>
+        <field ctrlType="ComboBox" dataType="string" dr="0" enumType="u8uap.SynchroModeEnum" fieldType="Head" id="e96c5635-8f4c-4ea4-9f6c-10f517817467" iLength="50" isNullable="true" isVisible="true" modelType="SimpleModel" name="updatemodel" title="分配同步方式" ts="2015-06-04 09:47:38" uapDataType="0e9b46b2-35d8-447f-85a0-541897b197eb" entity="BDManageControlHVO"/>
+        <field ctrlType="CheckBox" dataType="boolean" dr="0" fieldType="Head" id="acfe6c67-2ef0-4c80-a469-2ddafa72ac3f" iLength="1" isNullable="true" isVisible="true" modelType="SimpleModel" name="updateflag" title="组织字段同步" ts="2015-06-04 09:47:38" uapDataType="BS000010000100001032" entity="BDManageControlHVO"/>
+        <field ctrlType="TextBox" dataType="string" dr="0" fieldType="Head" id="465d869c-1b74-477b-8275-995a2c4d8abd" iLength="50" isNullable="true" isVisible="true" modelType="SimpleModel" name="creator" title="创建人" ts="2015-06-04 09:47:38" uapDataType="BS000010000100001001" entity="BDManageControlHVO"/>
+        <field ctrlType="DateTimeBox" dataType="date" dr="0" fieldType="Head" id="b093267f-fa74-4323-9036-00ba1a0afcdc" isNullable="true" isVisible="true" modelType="SimpleModel" name="creationtime" title="创建时间" ts="2015-06-04 09:47:38" uapDataType="BS000010000100001034" entity="BDManageControlHVO"/>
+        <field ctrlType="TextBox" dataType="string" dr="0" fieldType="Head" id="250537e9-2ad6-4545-8f28-5026621991e4" iLength="50" isNullable="true" isVisible="true" modelType="SimpleModel" name="modifier" title="修改人" ts="2015-06-04 09:47:38" uapDataType="BS000010000100001001" entity="BDManageControlHVO"/>
+        <field ctrlType="DateTimeBox" dataType="date" dr="0" fieldType="Head" id="a79c8a4f-7f00-486d-a448-f70da73d9142" isNullable="true" isVisible="true" modelType="SimpleModel" name="modifiedtime" title="修改时间" ts="2015-06-04 09:47:38" uapDataType="BS000010000100001034" entity="BDManageControlHVO"/>
+        <interfaces>
+          <interface key="IBDObject{####}name" value="mdname"/>
+          <interface key="IAuditInfo{####}creator" value="creator"/>
+          <interface key="IBDObject{####}pid" value=""/>
+          <interface key="IAuditInfo{####}creationtime" value="creationtime"/>
+          <interface key="IBDObject{####}id" value="pk_bdmanagecontrol_h"/>
+          <interface key="IBDObject{####}pk_org" value="pk_org"/>
+          <interface key="IBDObject{####}code" value="mdclassid"/>
+          <interface key="IAuditInfo{####}modifier" value="modifier"/>
+          <interface key="IAuditInfo{####}modifiedtime" value="modifiedtime"/>
+          <interface key="IBDObject{####}pk_group" value="pk_group"/>
+        </interfaces>
+      </entity>
+      <actions>
+        <action defaultImpl="insertLine" dr="0" entity="Toolbar" eventName="click" field="insertLineAction" functionName="insertLineAction" id="1627ad5c-8192-42e4-99d0-130fcec678af" name="insertLineAction" tplType="archive" ts="2015-06-05 17:35:51"/>
+        <action defaultImpl="addLine" dr="0" entity="Toolbar" eventName="click" field="addLineAction" functionName="addLineAction" id="20ccc843-4aef-440e-94f4-288e76dfef42" name="addLineAction" tplType="archive" ts="2015-06-05 17:35:51"/>
+        <action defaultImpl="copyLine" dr="0" entity="Toolbar" eventName="click" field="copyLineAction" functionName="copyLineAction" id="8f453a95-b917-4563-b2c0-9925db8e1931" name="copyLineAction" tplType="archive" ts="2015-06-05 17:35:51"/>
+        <action defaultImpl="return" dr="0" entity="Toolbar" eventName="click" field="returnAction" functionName="returnAction" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-returnAction" name="returnAction" tplType="archive" ts="2015-06-05 17:35:51"/>
+        <action defaultImpl="deleteLine" dr="0" entity="Toolbar" eventName="click" field="deleteLineAction" functionName="deleteLineAction" id="b7c8d0e8-4246-4057-94ef-d8911778b4eb" name="deleteLineAction" tplType="archive" ts="2015-06-05 17:35:51"/>
+        <action defaultImpl="add" dr="0" entity="Toolbar" eventName="click" field="addAction" functionName="addAction" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-addAction" name="addAction" tplType="archive" ts="2015-06-05 17:35:51"/>
+        <action defaultImpl="save" dr="0" entity="Toolbar" eventName="click" field="saveAction" functionName="saveAction" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-saveAction" name="saveAction" tplType="archive" ts="2015-06-05 17:35:51"/>
+        <action defaultImpl="edit" dr="0" entity="Toolbar" eventName="click" field="editAction" functionName="editAction" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-editAction" name="editAction" tplType="archive" ts="2015-06-05 17:35:51"/>
+        <action defaultImpl="delete" dr="0" entity="Toolbar" eventName="click" field="deleteAction" functionName="deleteAction" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-deleteAction" name="deleteAction" tplType="archive" ts="2015-06-05 17:35:51"/>
+        <action defaultImpl="cancel" dr="0" entity="Toolbar" eventName="click" field="cancelAction" functionName="cancelAction" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-cancelAction" name="cancelAction" tplType="archive" ts="2015-06-05 17:35:51"/>
+        <action defaultImpl="next" dr="0" entity="Toolbar" eventName="click" field="nextAction" functionName="nextAction" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-nextAction" name="nextAction" tplType="archive" ts="2015-06-05 17:35:51"/>
+        <action defaultImpl="prev" dr="0" entity="Toolbar" eventName="click" field="prevAction" functionName="prevAction" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-prevAction" name="prevAction" tplType="archive" ts="2015-06-05 17:35:51"/>
+        <action defaultImpl="print" dr="0" entity="Toolbar" eventName="click" field="printAction" functionName="printAction" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-btn-printAction" name="printAction" tplType="archive" ts="2015-06-05 17:35:51"/>
+      </actions>
+      <proxies/>
+      <states>
+        <state dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-add" isSystem="true" name="add" ts="2015-06-04 09:47:38">
+          <buttons>
+            <button disable="1" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-add-addAction" name="addAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="addAction"/>
+            <button disable="1" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-add-batchDeleteAction" name="batchDeleteAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="batchDeleteAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-add-cancelAction" name="cancelAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="cancelAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-add-configAction" name="configAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="configAction"/>
+            <button disable="1" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-add-deleteAction" name="deleteAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="deleteAction"/>
+            <button disable="1" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-add-editAction" name="editAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="editAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-add-nextAction" name="nextAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="nextAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-add-prevAction" name="prevAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="prevAction"/>
+            <button disable="1" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-add-printAction" name="printAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="printAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-add-returnAction" name="returnAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="returnAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-add-saveAction" name="saveAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="saveAction"/>
+          </buttons>
+        </state>
+        <state dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-browse" isSystem="true" name="browse" ts="2015-06-04 09:47:38">
+          <buttons>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-browse-addAction" name="addAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="addAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-browse-batchDeleteAction" name="batchDeleteAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="batchDeleteAction"/>
+            <button disable="1" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-browse-cancelAction" name="cancelAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="cancelAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-browse-configAction" name="configAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="configAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-browse-deleteAction" name="deleteAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="deleteAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-browse-editAction" name="editAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="editAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-browse-nextAction" name="nextAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="nextAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-browse-prevAction" name="prevAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="prevAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-browse-printAction" name="printAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="printAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-browse-returnAction" name="returnAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="returnAction"/>
+            <button disable="1" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-browse-saveAction" name="saveAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="saveAction"/>
+          </buttons>
+        </state>
+        <state dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-edit" isSystem="true" name="edit" ts="2015-06-04 09:47:38">
+          <buttons>
+            <button disable="1" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-edit-addAction" name="addAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="addAction"/>
+            <button disable="1" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-edit-batchDeleteAction" name="batchDeleteAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="batchDeleteAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-edit-cancelAction" name="cancelAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="cancelAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-edit-configAction" name="configAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="configAction"/>
+            <button disable="1" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-edit-deleteAction" name="deleteAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="deleteAction"/>
+            <button disable="1" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-edit-editAction" name="editAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="editAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-edit-nextAction" name="nextAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="nextAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-edit-prevAction" name="prevAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="prevAction"/>
+            <button disable="1" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-edit-printAction" name="printAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="printAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-edit-returnAction" name="returnAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="returnAction"/>
+            <button disable="0" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9-edit-saveAction" name="saveAction" ts="2015-06-04 09:47:38" entity="Toolbar" field="saveAction"/>
+          </buttons>
+        </state>
+      </states>
+    </viewmodel>
+  </application>
+</applications>

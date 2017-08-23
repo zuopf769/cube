@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application id="17ab6b26-6601-496c-9d8a-1e0270607108" name="customerclassApp" title="u8customerclass" domainName="uap" moduleName="u8" symbol="u8.customerclass" ts="2015-04-14 16:27:31" dr="0" tplName_viewModel="catalogs" tplName="catalogs_L.tpl">
+  <references>
+    <reference name="../u8/customerclassApp.catalogs.VM.xml"/>
+  </references>
+  <view id="210e1bdb-fca3-4bd0-8d38-f098e4a5eea1" name="customerClass" title="客户分类" viewModelId="17ab6b26-6601-496c-9d8a-1e0270607108" layoutMode="Fluid" screenSize="L" tplName="catalogs_L.html.tpl" viewModel="customerclassAppViewModel_catalogs" isDefault="true" ts="2015-04-15 10:08:39" dr="0" appId="u8.customerClass">
+    <container id="0529dd3f-551e-4c4b-b56c-fcfd278b8d4c" name="Abstract" title="ToolBar" type="Toolbar" iCols="0" ts="2015-04-14 20:08:20" dr="0">
+      <container id="4c62e45b-63af-42ee-af4d-f9a42a7cab25" name="Abstract" title="工具条" type="Toolbar" ts="2015-04-14 18:36:16" dr="0"/>
+      <control entity="Toolbar" id="bcfd0e6f-fced-41c2-8f94-b3ad8374c951" name="addAction" title="新增" field="addAction" ctrlType="Button" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-14 18:36:17" dr="0" vmfield="addAction"/>
+      <control entity="Toolbar" id="54f2d52b-aa89-453f-9bf1-9baa6954b43b" name="editAction" title="编辑" field="editAction" ctrlType="Button" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-14 18:36:17" dr="0" vmfield="editAction"/>
+      <control entity="Toolbar" id="dde4daf2-9dfb-44f1-9e03-e8262ce69420" name="deleteAction" title="删除" field="deleteAction" ctrlType="Button" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-14 18:36:17" dr="0" vmfield="deleteAction"/>
+      <control entity="Toolbar" id="702c7da9-cfb0-47e6-a65f-f0b312bc16be" name="saveAction" title="保存" field="saveAction" ctrlType="Button" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-14 18:36:17" dr="0" vmfield="saveAction"/>
+    </container>
+    <container id="6f292822-5b43-4811-88b0-9c535e0b5709" name="Abstract" title="BaseInfo" type="TabPage" iCols="0" ts="2015-04-14 20:08:20" dr="0">
+      <container id="dbf27229-4dbd-4a91-a25a-b727fa366db2" name="Abstract" title="基本信息" type="Card" ts="2015-04-15 11:10:19" dr="0"/>
+      <control entity="customerclass" id="e0c5303f-6f75-442f-b530-196afadcea72" name="ts" title="时间戳" field="ts" ctrlType="DateTimeBox" isNullable="true" isReadOnly="true" isVisible="false" isPlaceHolder="false" ts="2015-04-15 11:10:20" dr="0" vmfield="ts"/>
+      <control entity="customerclass" id="815f765d-cd83-40c1-82f5-b4571c7d11db" name="dr" title="删除标记" field="dr" ctrlType="CheckBox" isNullable="true" isReadOnly="true" isVisible="false" isPlaceHolder="false" ts="2015-04-15 11:10:20" dr="0" vmfield="dr"/>
+      <control entity="customerclass" id="1bca662b-6715-4ff6-928a-7b2eb2eaa932" name="pk_customerclass" title="客户分类pk" field="pk_customerclass" ctrlType="TextBox" iLength="20" isNullable="false" isVisible="false" isPlaceHolder="false" ts="2015-04-15 11:10:20" dr="0" vmfield="pk_customerclass"/>
+      <control entity="customerclass" id="1dbea5c2-bc24-48e2-8a7b-f178666ac700" name="code" title="客户分类编码" field="code" ctrlType="TextBox" iLength="50" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-15 11:10:20" dr="0" vmfield="code"/>
+      <control entity="customerclass" id="01166d62-2f22-4333-b216-0e95c5a4b6a6" name="name" title="类别名称" field="name" ctrlType="TextBox" iLength="50" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-15 11:10:20" dr="0" vmfield="name"/>
+      <control entity="customerclass" id="2a44db61-6409-4e63-bcfd-412709409c00" name="iccgrade" title="编码级次" field="iccgrade" ctrlType="NumberBox" iPrecision="0" iScale="0" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-15 11:10:20" dr="0" vmfield="iccgrade"/>
+      <control entity="customerclass" id="2dd30aa9-4594-4f54-8195-5d1e188af131" name="bccend" title="是否末级" field="bccend" ctrlType="CheckBox" iLength="1" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-15 11:10:20" dr="0" vmfield="bccend"/>
+      <control entity="customerclass" id="a107c8a4-f7e1-42b0-9419-6d67c728578b" name="pk_group" title="集团" field="pk_group" ctrlType="Refer" iLength="20" isNullable="false" isVisible="true" refCode="code" refId="600001" refKey="pk_group" refName="name" isPlaceHolder="false" ts="2015-04-15 11:10:20" dr="0" vmfield="pk_group"/>
+      <control entity="customerclass" id="44c955ab-a635-4979-bc4c-3cda81b6ee8d" name="pk_org" title="组织" field="pk_org" ctrlType="Refer" iLength="20" isNullable="true" isVisible="true" refCode="code" refId="600015" refKey="pk_org" refName="name" isPlaceHolder="false" ts="2015-04-15 11:10:20" dr="0" vmfield="pk_org"/>
+      <control entity="customerclass" id="d720f3cc-881b-44a1-94cc-bdf84335afb7" name="pk_org_v" title="组织版本" field="pk_org_v" ctrlType="Refer" iLength="20" isNullable="true" isVisible="true" refCode="code" refId="600700" refKey="pk_vid" refName="name" isPlaceHolder="false" ts="2015-04-15 11:10:20" dr="0" vmfield="pk_org_v"/>
+      <control entity="customerclass" id="e798e971-86ca-4bb2-8413-59af0b3490f3" name="creator" title="创建人" field="creator" ctrlType="Refer" iLength="20" isNullable="true" isVisible="true" refCode="user_code" refId="600026" refKey="cuserid" refName="user_name" isPlaceHolder="false" ts="2015-04-15 11:10:20" dr="0" vmfield="creator"/>
+      <control entity="customerclass" id="25ed2b94-811d-45e2-ba2a-6daddccdd723" name="creationtime" title="创建时间" field="creationtime" ctrlType="DateTimeBox" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-15 11:10:20" dr="0" vmfield="creationtime"/>
+      <control entity="customerclass" id="32053fe8-ba76-44d4-b504-5a88345523c1" name="modifier" title="修改人" field="modifier" ctrlType="Refer" iLength="20" isNullable="true" isVisible="true" refCode="user_code" refId="600026" refKey="cuserid" refName="user_name" isPlaceHolder="false" ts="2015-04-15 11:10:20" dr="0" vmfield="modifier"/>
+      <control entity="customerclass" id="90c86ce5-b98b-4213-9615-729ba987b020" name="modifiedtime" title="修改时间" field="modifiedtime" ctrlType="DateTimeBox" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-15 11:10:20" dr="0" vmfield="modifiedtime"/>
+    </container>
+    <container id="22b0738d-c6b6-4339-bdaf-140261584ab2" name="Abstract" title="Tree" type="Tree" iCols="0" ts="2015-04-14 20:08:20" dr="0">
+      <container id="fb9a3ae3-7a34-4843-ada4-fdad0653f3e4" name="Abstract" title="新建容器" type="Tree" ts="2015-04-14 20:26:01" dr="0"/>
+      <control entity="customerclass" id="e39e1bfd-fe95-43fa-8c78-307756800b0e" name="pk_customerclass" title="客户分类pk" field="pk_customerclass" ctrlType="Tree" iLength="20" isNullable="false" isVisible="true" isPlaceHolder="false" ts="2015-04-14 20:26:02" dr="0" treeFunctionId="U8100108" vmfield="pk_customerclass"/>
+    </container>
+  </view>
+</application>

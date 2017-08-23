@@ -1,0 +1,320 @@
+﻿.list-card-wrapper {
+    height: 100%;
+    overflow: hidden;
+}
+
+.list-card-wrapper > .list-card-scroller {
+    overflow: hidden;
+}
+
+.list-card-wrapper > .list-card-scroller > div:first-child,
+.list-card-wrapper > .list-card-scroller > div:last-child {
+    height: 40px;
+    line-height: 40px;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #888;
+}
+    
+.list-card-wrapper > .list-card-scroller .pull-icon {
+    display: block;
+    float: left;
+    width: 40px;
+    height: 40px;
+    background: url(../images/pull-icon.png) 0 0 no-repeat;
+    -webkit-background-size: 40px 80px;
+    background-size: 40px 80px;
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 250ms;
+}
+    
+.list-card-wrapper > .list-card-scroller > div:first-child > .pull-icon {
+    -webkit-transform: rotate(0deg) translateZ(0);
+}
+    
+.list-card-wrapper > .list-card-scroller > div:last-child > .pull-icon {
+    -webkit-transform: rotate(-180deg) translateZ(0);
+}
+    
+.list-card-wrapper > .list-card-scroller > div:first-child.flip > .pull-icon {
+    -webkit-transform: rotate(-180deg) translateZ(0);
+}
+    
+.list-card-wrapper > .list-card-scroller > div:last-child.flip > .pull-icon {
+    -webkit-transform: rotate(0deg) translateZ(0);
+}
+    
+.list-card-wrapper > .list-card-scroller > div.loading > .pull-icon {
+    background-position: 0 100%;
+    -webkit-transform: rotate(0deg) translateZ(0);
+    -webkit-transition-duration: 0ms;
+    -webkit-animation-name: loading;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+.cube-list-card-outer-container-archives > li,
+.cube-list-card-outer-container-vouchers > li {
+    list-style: none;
+    margin: 10px 26px;
+	position:relative;
+}
+
+.cube-list-card-outer-container-archives > li:hover,
+.cube-list-card-outer-container-vouchers > li:hover,
+.cube-list-card-outer-container-archives > li.selected,
+.cube-list-card-outer-container-vouchers > li.selected {
+    cursor: pointer;
+    background-color: #E4E4E4;
+}
+
+.cube-list-card-outer-container-archives > li > div,
+.cube-list-card-outer-container-vouchers > li > div {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D7D7D7;
+    box-sizing: content-box;
+}
+
+.cube-list-card-outer-container-archives > li > .first-row {
+    height: 64px;
+    /*border-radius: 6px;*/
+}
+
+.cube-list-card-outer-container-vouchers > li > .first-row {
+    height: 64px;
+    /*border-radius: 6px 6px 0 0;*/
+}
+
+.cube-list-card-outer-container-vouchers > li > .second-row {
+    height: 16px;
+    border-top: 0;
+    /*border-radius: 0 0 6px 6px;*/
+    margin-top: -2px;
+    background: #F2F2F2;
+}
+.cube-list-card-outer-container-vouchers > li > .three-row {
+	height:100%;
+	width:50%;
+	position:absolute;
+	right:-21px;
+	top:0px;
+	background-color:#3891FB;
+	filter:alpha(opacity=50);  /*支持 IE 浏览器*/
+	-moz-opacity:0.50; /*支持 FireFox 浏览器*/
+	opacity:0.50;  /*支持 Chrome, Opera, Safari 等浏览器*/
+}
+.cube-list-card-outer-container-vouchers > li > .three-row > .copy-Button{
+content: url("../images/u103.png");
+height: 76%;
+padding: 12%;
+margin: 10% 0;
+width: 33%;
+display: block;
+float:left;
+}
+.cube-list-card-outer-container-vouchers > li > .three-row > .edit-Button{
+content: url("../images/u99.png");
+height: 76%;
+padding: 12%;
+margin: 10% 0;
+width: 33%;
+display: block;
+float:left;
+}
+.cube-list-card-outer-container-vouchers > li > .three-row > .delete-Button{
+content: url("../images/u101.png");
+height: 76%;
+padding: 12%;
+margin: 10% 0;
+width: 33%;
+display: block;
+float:left;
+}
+
+.cube-list-card-outer-container-archives > li > .first-row > span,
+.cube-list-card-outer-container-vouchers > li > .first-row > span {
+    float: left;
+    width: 47.5%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 32px;
+}
+
+.cube-list-card-outer-container-archives > li > .first-row > .left-top,
+.cube-list-card-outer-container-vouchers > li > .first-row > .left-top {
+    font-family: '微软雅黑 Bold', '微软雅黑';
+    font-size: 16px;
+}
+
+.cube-list-card-outer-container-archives > li > .first-row > .right-top {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-size: 16px;
+    text-align: right;
+}
+
+.cube-list-card-outer-container-vouchers > li > .first-row > .right-top {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-size: 18px;
+    color: #CC0000;
+    text-align: right;
+}
+
+.cube-list-card-outer-container-archives > li > .first-row > .left-bottom {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-size: 16px;
+    color: #999999;
+}
+
+.cube-list-card-outer-container-vouchers > li > .first-row > .left-bottom {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-size: 14px;
+    color: #999999;
+}
+
+.cube-list-card-outer-container-archives > li > .first-row > .right-bottom {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-size: 16px;
+    color: #999999;
+    text-align: right;
+}
+
+.cube-list-card-outer-container-vouchers > li > .first-row > .right-bottom {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-size: 14px;
+    color: #999999;
+    text-align: right;
+}
+
+.cube-list-card-outer-container-vouchers > li > .first-row > span[class*=ui-bar-] {
+    float: right;
+    position: relative;
+    width: 13px;
+    height: 13px;
+    top: 10px;
+}
+
+.cube-list-card-outer-container-vouchers > li > .first-row > .ui-bar-on {
+    content: url(../images/on.png);
+}
+
+.cube-list-card-outer-container-vouchers > li > .first-row > .ui-bar-off {
+    content: url(../images/off.png);
+}
+
+.cube-list-card-outer-container-vouchers > li > .second-row [class*=img-] {
+    margin-bottom: -2px;
+    margin-right: 4px;
+}
+
+.cube-list-card-outer-container-vouchers > li > .second-row > .left-status {
+    float: left;
+    width: 50%;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-size: 14px;
+    color: #666666;
+    border-right: 1px solid #D7D7D7;
+}
+
+.cube-list-card-outer-container-vouchers > li > .second-row > .left-status .img-free {
+    content: url("../images/u169.png");
+}
+
+.cube-list-card-outer-container-vouchers > li > .second-row > .left-status .img-obsolete {
+    content: url("../images/u188.png");
+}
+
+.cube-list-card-outer-container-vouchers > li > .second-row > .left-status .img-reviewed {
+    content: url("../images/u150.png");
+}
+
+.cube-list-card-outer-container-vouchers > li > .second-row > .left-status .img-reviewing {
+    content: url("../images/u94.png");
+}
+
+.cube-list-card-outer-container-vouchers > li > .second-row > .left-status .img-commit {
+    content: url("../images/u207.png");
+}
+
+.cube-list-card-outer-container-vouchers > li > .second-row > .right-action {
+    float: left;
+    width: 49.5%;
+    font-family: 'Arial Normal', 'Arial';
+    font-size: 13px;
+    color: #666666;
+}
+
+.cube-list-card-outer-container-vouchers > li > .second-row > .right-action > div {
+    display: inline-block;
+    width: 49.5%;
+    height: 20px;
+    border-right: 1px solid #D7D7D7;
+    text-align: center;
+}
+
+.cube-list-card-outer-container-vouchers > li > .second-row > .right-action > div:last-child {
+    border-right: 0;
+}
+
+.cube-list-card-outer-container-vouchers > li > .second-row > .right-action .img-submit {
+    content: url("../images/u102.png");
+    cursor: pointer;
+}
+
+.cube-list-card-outer-container-vouchers > li > .second-row > .right-action .img-interest {
+    content: url("../images/u106.png");
+    cursor: pointer;
+}
+
+.cube-list-card-outer-container-menus > li {
+    list-style: none;
+    padding: 10px;
+    height: 58px;
+}
+
+.cube-list-card-outer-container-menus > li:hover, .cube-list-card-outer-container-menus > li.selected {
+    cursor: pointer;
+    background-color: #101C28;
+}
+
+.cube-list-card-outer-container-menus > li > [class*=img-] {
+    margin: 0 18px -4px 0;
+    width: 32px;
+    height: 32px;
+}
+
+.cube-list-card-outer-container-menus > li > .img-homepage {
+    content: url("../images/u74.png");
+    /*margin: 3px;*/
+}
+
+.cube-list-card-outer-container-menus > li > .img-icon-past {
+    content: url("../images/u44.png");
+}
+
+.cube-list-card-outer-container-menus > li > .img-icon-opportunities {
+    content: url("../images/u48.png");
+}
+
+.cube-list-card-outer-container-menus > li > .img-icon-feed {
+    content: url("../images/u52.png");
+}
+
+.cube-list-card-outer-container-menus > li > .img-icon-sales-order {
+    content: url("../images/u56.png");
+}
+
+.cube-list-card-outer-container-menus > li > .text {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: left;
+    width: 68%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

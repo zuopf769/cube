@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/modal.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.ToolBar.css" rel="stylesheet" />
+    <style>
+       div[data-viewmodel*="UpgradeViewModel"] * {
+        padding:0px;
+        }
+       div[data-viewmodel*="UpgradeViewModel"] #container {
+        margin-top:0px;
+        margin-left:20px;
+        }
+       div[data-viewmodel*="UpgradeViewModel"] #container hr {
+        margin-top: 13px;
+        margin-bottom:13px;
+        position: relative;
+        left: -35px;
+        width: 794px;
+        }
+       div[data-viewmodel*="UpgradeViewModel"] #container .module {
+        color: #515151;
+        font-weight: 700;
+        margin-top:8px;
+        }
+       div[data-viewmodel*="UpgradeViewModel"] #main {
+        height:80%;
+        width:100%;
+        overflow:auto;
+        }
+       div[data-viewmodel*="UpgradeViewModel"] #foot{
+        background-color: #F2F2F2;
+        height:40px;
+        margin-left:-35px;
+        width:100%;
+        position:absolute;
+        top:513px;
+        }
+        div[data-viewmodel*="UpgradeViewModel"] #container  .button {
+        width: 90px;
+        height: 40px;
+        color:white;
+        float:left;
+        line-height:40px;
+        text-align:center;
+        cursor:pointer;
+        position:relative;
+        left:614px;
+        font-size:15px;
+        }
+       div[data-viewmodel*="UpgradeViewModel"] #confirm{
+        background-color:#157EFB ;
+        border:1px solid #157EFB;
+        }
+        div[data-viewmodel*="UpgradeViewModel"] #cancle {
+        background-color:#A1A1A1;
+        border:1px solid #a1a1a1;
+        }
+        div[data-viewmodel*="UpgradeViewModel"] #shadow {
+       display:none;
+       position:absolute;
+       top:0px;
+       left:0px;
+       background-color:rgb(220,236,255);
+       width:100%;
+       height:553px;
+       opacity:0.5; 
+       filter:alpha(opacity=50);
+       text-align:center;
+       line-height:630px;
+       color:#ff6100;
+       font-size:18px;
+        }
+       div[data-viewmodel*="UpgradeViewModel"] #container #span {
+        position:relative;
+        top:5px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="UpgradeView" data-page="common.sysmanager.UpdateApp"  data-viewmodel="UpgradeViewModel">
+        <div class="cube-main" style="height: 552px;">
+            <div class="cube-main-content">
+                    <div id="container">
+                        <span  id="span" style="font-family:'微软雅黑 Regular', '微软雅黑';font-weight:600;">以下为需要升级的应用</span>
+                        <hr />
+                    <div id="main" data-propertyname="upgradeData" data-controltype="TreeView" style="height:430px;margin:0px;"></div>
+                    <div id="foot" style="margin-right:15px">
+                    <div class="button" id="confirm" data-propertyname="confirmAction" data-controltype="ImageButton">确认</div>
+                    <div class="button" id="cancle" data-propertyname="cancelAction" data-controltype="ImageButton">取消</div>
+                    </div>
+                    <div id="shadow"><span>正在努力为您升级中...</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./jquery/jquery-1.11.1.js"></script>
+    <script src="./jquery/jquery-ui.js"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/Button.js" type="text/javascript"></script>
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>
+    <script src="apps/common/sysmanager/UpgradeViewModel.js"></script>
+        <script data-config="Tree"></script>
+    <script src="apps/common/sysmanager/UpgradeViewModel_Extend.js"></script>
+    <script>
+        cb.viewbinding.create("UpgradeView");
+    </script>
+</body>
+</html>

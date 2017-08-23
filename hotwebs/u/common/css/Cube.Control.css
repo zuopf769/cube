@@ -1,0 +1,178 @@
+﻿/****************DropDownList 样式 Start***********************/
+.cube-main div[data-controltype='DropDownList'] {
+    width: 400px;
+    min-width: 130px;
+    height: 45px;
+    border: 1px solid red;
+    background: #E4E4E4;
+    margin: 0 auto;
+}
+
+    .cube-main div[data-controltype='DropDownList'].cube-control-header {
+        background: #FFF;
+    }
+
+    .cube-main div[data-controltype='DropDownList'] .cube-control-content {
+        height: 30px;
+        width: 97%;
+        line-height: 30px;
+        border-radius: 4px;
+        background-color: white;
+        margin: 7px 0 5px 5px;
+        cursor: pointer;
+    }
+
+        .cube-main div[data-controltype='DropDownList'] .cube-control-content > span:first-child {
+            float: left;
+            width: 70%;
+            text-align: center;
+            font-family: '微软雅黑 Regular', '微软雅黑';
+            font-size: 14px;
+        }
+
+        .cube-main div[data-controltype='DropDownList'] .cube-control-content > span:last-child {
+            float: right;
+            background: url(../images/control/dropdown.png);
+            width: 13px;
+            height: 13px;
+            margin: 10px;
+        }
+
+    .cube-main div[data-controltype='DropDownList'].cube-control-header .cube-control-content > span:first-child {
+        font-size: 18px;
+    }
+
+    .cube-main div[data-controltype='DropDownList'].cube-control-header .cube-control-content > span:last-child {
+        float: right;
+        background: url(../images/control/dropdown_head.png);
+        width: 12px;
+        height: 8px;
+        margin: 10px;
+    }
+/****************DropDownList 样式 End***********************/
+
+/****************SearchBox Pad Tree端样式 Start***********************/
+.cube-main .cube-control-content {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #E4E4E4;
+    background: #E4E4E4;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.cube-main div[data-controltype='SearchBox'].cube-control-tree {
+    height: 30px;
+    width: 90%;
+    background: #FFF;
+    line-height: 30px;
+    border-radius: 4px;
+    padding: 0 10px 0 10px;
+    background-color: white;
+    margin: 7px 0 5px 5px;
+}
+
+    .cube-main div[data-controltype='SearchBox'].cube-control-tree .search-icon {
+        background: url(../images/control/search1.png);
+        float: left;
+        width: 16px;
+        height: 16px;
+        margin-top: 6px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .cube-main div[data-controltype='SearchBox'].cube-control-tree input {
+        float: left;
+        width: 85%;
+        border: none;
+        height: 23px;
+    }
+
+        .cube-main div[data-controltype='SearchBox'].cube-control-tree input:focus {
+            outline: none;
+        }
+/****************SearchBox Pad端样式 End***********************/
+
+/****************SearchBox PC端样式 Start***********************/
+.cube-main div[data-controltype='SearchBox'].cube-header-control {
+    width: 260px;
+    min-width: 260px;
+    height: 30px;
+    border: 1px solid red;
+    background: #FFF;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    margin: 0 auto;
+}
+
+    .cube-main div[data-controltype='SearchBox'].cube-header-control .search-icon {
+        background: url(../images/control/search1.png);
+        float: right;
+        width: 16px;
+        height: 16px;
+        margin-top: 6px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .cube-main div[data-controltype='SearchBox'].cube-header-control input {
+        width: 78%;
+        min-width: 200px;
+        border: none;
+        height: 23px;
+        margin-top: 3px;
+        margin-left: 25px;
+    }
+
+        .cube-main div[data-controltype='SearchBox'].cube-header-control input:focus {
+            outline: none;
+        }
+        
+/****************SearchBox PC端样式 End***********************/
+
+/****************SearchBox PC 全景菜单端样式 Start*************/
+.cube-main div[data-controltype='SearchBox'].cube-control-menu {
+    width: 96%;
+    height: 30px;
+    border-bottom: 1px solid #E4E4E4;
+    margin: 0 auto;
+}
+
+    .cube-main div[data-controltype='SearchBox'].cube-control-menu .search-icon {
+        background: url(../images/control/search1.png);
+        float: left;
+        width: 16px;
+        height: 16px;
+        margin-top: 13px;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    .cube-main div[data-controltype='SearchBox'].cube-control-menu input {
+        float: left;
+        width: 75%;
+        border: none;        
+        height: 20px;
+        line-height: 16px;
+        margin-top: 12px;
+    }
+
+        .cube-main div[data-controltype='SearchBox'].cube-control-menu input:focus {
+            outline: none;
+        }
+
+/****************SearchBox PC 全景菜单端样式 End*************/
+
+
+/****************Refer 样式 Start***********************/
+.cube-main div[data-controltype='Refer'] {
+}
+
+    .cube-main div[data-controltype='Refer']:first-child {
+    }
+
+    .cube-main div[data-controltype='Refer']:last-child {
+    }
+
+/****************Refer 样式 End***********************/

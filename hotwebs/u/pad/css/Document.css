@@ -1,0 +1,222 @@
+﻿body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    content: url("../images/u2.jpg");
+}
+
+.menu-part {
+    width: 18%;
+    height: 100%;
+    float: left;
+    background-image: url("../images/u38.png");
+	min-width:190px;
+}
+
+.document-wrapper {
+    width: 38%;
+    float: left;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 18%;
+}
+
+.document-wrapper > .document-scroller {
+    width: 200%;
+    height: 100%;
+	position: relative;
+	/*left: -38%;*/
+}
+
+.document-wrapper > .document-scroller > div {
+    float: left;
+}
+
+.class-part, .master-part {
+    height: 100%;
+    float: left;
+	width: 60%;
+    background-color: White;
+}
+
+.class-part {
+    width: 40%;
+    overflow: hidden;
+    position: relative;
+}
+
+.master-part {
+    border:1px solid #D7D7D7;
+}
+
+.master-part > .header-section > div {
+    display: inline-block;
+}
+
+.master-part > .header-section > div:last-child {
+    float: right;
+}
+
+.master-part > .header-section .img-menu {
+    content: url("../images/u51.png");
+    margin: 0 11px -11px 0;
+    cursor: pointer;
+}
+
+.master-part > .header-section .img-card {
+    content: url("../images/u90.png");
+    margin: 0 11px -11px 0;
+    cursor: pointer;
+	/*height:50%;*/
+}
+
+.master-part > .header-section > .txt-title {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-size: 18px;
+}
+
+
+.master-part > .action-section > div {
+    display: inline-block;
+}
+
+.master-part > .action-section > div:last-child {
+    float: right;
+}
+
+.master-part > .action-section .img-query {
+    content: url("../images/u55.png");
+    margin: 10px;
+    cursor: pointer;
+}
+
+.master-part > .content-section {
+    height: 90%;
+	width:84%;
+}
+
+.master-part > .content-section > .content-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.master-part > .content-section > .content-wrapper > .content-scroller {
+    width: 200%;
+}
+
+.master-part > .content-section > .content-wrapper > .content-scroller > div {
+    width: 50%;
+    float: left;
+}
+
+.master-part > .content-section > .content-wrapper > .content-scroller > .main-content {
+    position: relative;
+}
+
+.master-part > .content-section > .content-wrapper > .content-scroller > .main-content > .list-card {
+    float: left;
+	width:90%;
+}
+
+.master-part > .content-section > .content-wrapper > .content-scroller > .main-content > .time-line {
+    width: 20px;
+    height: 95%;
+    padding: 12px 0 0 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.related-part {
+    width: 38%;
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 42%;
+}
+
+.detail-wrapper {
+    position: absolute;
+    left: 42%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: none;
+}
+
+.detail-wrapper > .detail-scroller {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+}
+
+.detail-part {
+    width: 50%;
+}
+
+.page-view {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: none;
+}
+
+@keyframes page-view-show-from-right {
+    0% { left: 100%; }
+    100% { left: 0%; }
+}
+
+@-moz-keyframes page-view-show-from-right /* Firefox */ {
+    0% { left: 100%; }
+    100% { left: 0%; }
+}
+
+@-webkit-keyframes page-view-show-from-right /* Safari 和 Chrome */ {
+    0% { left: 100%; }
+    100% { left: 0%; }
+}
+
+@-o-keyframes page-view-show-from-right /* Opera */ {
+    0% { left: 100%; }
+    100% { left: 0%; }
+}
+
+@keyframes page-view-hide-to-right {
+    0% { left: 0%; }
+    100% { left: 100%; }
+}
+
+@-moz-keyframes page-view-hide-to-right /* Firefox */ {
+    0% { left: 0%; }
+    100% { left: 100%; }
+}
+
+@-webkit-keyframes page-view-hide-to-right /* Safari 和 Chrome */ {
+    0% { left: 0%; }
+    100% { left: 100%; }
+}
+
+@-o-keyframes page-view-hide-to-right /* Opera */ {
+    0% { left: 0%; }
+    100% { left: 100%; }
+}

@@ -1,0 +1,139 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>新增供货组织</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="pc/css/Cube.ToolBar.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link data-config="MessageBox" />
+    <link href="apps/common/sysmanager/Cube.System.css" rel="Stylesheet" type="text/css" />
+    <link href="pc/css/kendoctrl/Cube.Control.css" rel="stylesheet" />
+    <style>
+        .bottom_btn {
+            background: #F0F0F0;
+            height: 40px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+            .bottom_btn .btn, .bottom_btn .btn-on {
+                width: 90px;
+                float: right;
+                height: 40px;
+                color: #fff;
+                cursor: pointer;
+                text-align: center;
+                line-height: 40px;
+            }
+
+            .bottom_btn .btn-on {
+                background: #147EFC;
+            }
+
+            .bottom_btn .btn {
+                background: #aaa;
+            }
+
+        .title_btn {
+            line-height: 39px;
+            font-weight: bold;
+            border-bottom: 1px solid #d3d3d3;
+        }
+
+        .common-list {
+            overflow: hidden;
+            height: 48px;
+            margin: 0 -15px;
+            padding: 0 5px 0 15px;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+
+            .common-list.ui-header > div:first-child {
+                min-width: 14px;
+                display: table-cell;
+            }
+
+        .text-box-border input, .text-box-border input:focus {
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid #ccc;
+        }
+        input[data-controltype='TextBox'] {
+            height:30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="ParameterSettingView" data-page="common.sysmanager.ParameterSettingApp" data-title="参数设置"
+         data-viewmodel="ParameterSettingViewModel">
+        <div class="title_btn common-list ui-header">参数设置<div data-propertyname="Close" data-controltype="ImageButton"><span class="close-icon"></span></div></div>
+        <div class="row m-t-15">
+            <div class="col-lg-12 p-l-0 p-r-0">
+                <label class="col-lg-2 p-r-0">供应方式：</label>
+                <div class="col-lg-2 m-t-10">
+                    <input type="checkbox" data-controltype="CheckBox" />全部
+                </div>
+                <div class="col-lg-8 m-t-6">
+                    <input type="checkbox" data-controltype="CheckBox" /> 按科品分类
+                    <div data-propertyname="productList" data-controltype="ComboBox"></div>
+                </div>
+            </div>
+            <div class="col-lg-6 p-r-0 m-t-15">
+                <label class="col-lg-4 p-r-0 p-l-0">结算主体：</label><div class="col-lg-8 text-box-border"><input data-controltype="TextBox"></div>
+                </div>
+            <div class="col-lg-6 p-r-0 m-t-15">
+                <label class="col-lg-4 p-r-0 p-l-0">计算规则：</label><div class="col-lg-8 text-box-border"><input data-controltype="TextBox"></div>
+            </div>
+            <div class="col-lg-6 p-r-0">
+                <label class="col-lg-4 p-r-0 p-l-0">计算单据类型：</label><div class="col-lg-8 text-box-border"><input data-controltype="TextBox"></div>
+                </div>
+            <div class="col-lg-6 p-r-0">
+                <label class="col-lg-4 p-r-0 p-l-0">结算单据类型：</label><div class="col-lg-8 text-box-border"><input data-controltype="TextBox"></div>
+            </div>
+            <div class="col-lg-12 p-r-0 p-l-0 m-t-10">
+                <div class="bottom_btn">
+                    <div class="btn-on" data-propertyname="Determine" data-controltype="ImageButton">确定</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="jquery/jquery-ui.js" type="text/javascript"></script>
+    <script src="common/js/Animation.js" type="text/javascript"></script>
+    <script src="common/js/Cube.js" type="text/javascript"></script>
+    <script src="pc/js/cube.pc.js" type="text/javascript"></script>
+    <script src="common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="common/js/Control.js" type="text/javascript"></script>
+    <script src="common/js/CommonProxy.js" type="text/javascript"></script>
+    <script src="common/js/CommonCRUD.js" type="text/javascript"></script>
+    <script src="common/js/Button.js" type="text/javascript"></script>
+    <script src="common/js/ImageButton.js" type="text/javascript"></script>
+    <script src="common/js/ToolBar.js" type="text/javascript"></script>
+    <script src="common/js/Label.js" type="text/javascript"></script>
+    <script src="common/js/ListControl.js" type="text/javascript"></script>
+    <script src="common/js/ListBox.js" type="text/javascript"></script>
+    <script src="pc/js/TabContent.js" type="text/javascript"></script>
+    <script src="common/js/TimeLine.js" type="text/javascript"></script>
+    <script data-config="NumberBox"></script>
+    <script data-config="CheckBox"></script>
+    <script src="common/js/Button.js" type="text/javascript"></script>
+    <script src="common/js/Radio.js" type="text/javascript"></script>
+    <script src="common/js/ImageButton.js" type="text/javascript"></script>
+    <script src="common/js/SearchBox.js" type="text/javascript"></script>
+    <script data-config="MessageBox"></script>
+    <script data-config="DataGrid"></script>
+    <script data-config="TextBox"></script>
+    <script data-config="Tree"></script>
+    <script data-config="ComboBox"></script>
+    <script data-config="DateTimeBox"></script>
+    <script src="apps/common/sysmanager/ParameterSetting_L.js" type="text/javascript"></script>
+    <script src="apps/common/sysmanager/ParameterSetting_Extend.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        cb.viewbinding.create("ParameterSettingView");
+    </script>
+</body>
+</html>

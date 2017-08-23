@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application id="8d597299-3575-45af-9eb8-4da57d2e9297" name="personApp" title="u8person" domainName="uap" moduleName="u8" symbol="u8.person" ts="2015-04-21 15:11:51" dr="0" tplName_viewModel="documents" tplName="documents_L.tpl">
+  <references>
+    <reference name="../u8/personApp.documents.VM.xml"/>
+  </references>
+  <view id="de4f938a-efb5-4ad0-9eed-75b71820bfd5" name="personApp_TreeGrid" title="业务员档案" viewModelId="8d597299-3575-45af-9eb8-4da57d2e9297" layoutMode="Fluid" screenSize="L" tplName="archives_L.html.tpl" viewModel="personAppViewModel_documents" isDefault="true" ts="2015-04-21 15:12:53" dr="0" appId="u8.personApp_TreeGrid">
+    <container id="8942a3c1-2e4b-42f9-b268-7602f882596e" name="Tree" title="树" type="Tree" iCols="1" ts="2015-04-21 15:12:03" dr="0">
+      <control entity="person" id="daf6d330-edb9-4d8f-aab7-0eec50abeb1a" name="personApp_Tree" title="u8person树" field="personApp_Tree" ctrlType="Tree" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-23 11:38:46" dr="0" treeFunctionId="U8100106" vmfield="personApp_Tree"/>
+    </container>
+    <container id="0ab9d1d2-6126-4c18-a94b-dba9482e0da4" name="Toolbar" title="工具栏" type="Toolbar" iCols="0" ts="2015-04-21 15:12:03" dr="0">
+      <control entity="Toolbar" id="2a2fe5d5-ef8f-4634-82ba-5dcc25cc262d" name="addAction" title="增加" field="addAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-21 15:12:03" dr="0" vmfield="addAction"/>
+      <control entity="Toolbar" id="43fbda5a-1418-4b0c-b164-c70b27d7a922" name="editAction" title="编辑" field="editAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-21 15:12:03" dr="0" vmfield="editAction"/>
+      <control entity="Toolbar" id="fede8b9a-0c05-4740-af76-eb01aaa0b6df" name="batchDeleteAction" title="删除" field="batchDeleteAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-21 15:12:03" dr="0" vmfield="batchDeleteAction"/>
+      <control entity="Toolbar" id="58306176-bb9e-4035-a41a-3272bcc8319b" name="configAction" title="设置" field="configAction" ctrlType="DropDownButton" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-21 15:12:03" dr="0" vmfield="configAction"/>
+    </container>
+    <container id="d9215f98-b131-4220-9210-cdf4664f4493" name="Grid" title="表格" type="Grid" iCols="0" ts="2015-04-21 15:12:03" dr="0">
+      <control entity="person" id="e62cb93b-185f-41dc-b065-cce99935f08c" name="personApp_List" title="u8person列表" listId="person" field="personApp_List" ctrlType="DataGrid" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-21 15:13:39" dr="0" dsMode="Local" supportPagination="false" vmfield="personApp_List"/>
+    </container>
+  </view>
+</application>

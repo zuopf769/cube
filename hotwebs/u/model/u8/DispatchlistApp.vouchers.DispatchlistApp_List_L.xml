@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application id="7c80263f-de50-44fd-9c8a-30f71bf566b8" name="DispatchlistApp" title="u8dispatchlist" domainName="uap" moduleName="u8" symbol="u8.Dispatchlist" ts="2015-04-02 11:17:47" dr="0" tplName_viewModel="vouchers" tplName="vouchers_L.tpl">
+  <references>
+    <reference name="../u8/DispatchlistApp.vouchers.VM.xml"/>
+  </references>
+  <view id="aa63aaba-9f4f-4f20-903b-28c6488f9808" name="DispatchlistApp_List" title="发货单列表" viewModelId="7c80263f-de50-44fd-9c8a-30f71bf566b8" layoutMode="Fluid" screenSize="L" tplName="vouchers_L.html.tpl" viewModel="DispatchlistAppViewModel_vouchers" isDefault="true" ts="2015-04-15 10:25:13" dr="0" appId="u8.DispatchlistApp_List">
+    <container id="ae0de2ff-08d2-4736-a9e5-d150896a710c" name="Toolbar" title="工具栏" type="Toolbar" iCols="0" ts="2015-04-02 11:19:28" dr="0">
+      <control entity="Toolbar" id="5dd2373a-07a1-4055-b0d4-eaeb5c54de5a" name="addAction" title="增加" field="addAction" ctrlType="DropDownButton" isNullable="false" isReadOnly="false" isVisible="true" ts="2015-06-12 09:59:44" dr="0" vmfield="addAction"/>
+      <control entity="Toolbar" id="8d391ba4-19a7-49db-8067-9526596f94ad" name="batchDeleteAction" title="删除" field="batchDeleteAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" ts="2015-06-12 09:59:44" dr="0" vmfield="batchDeleteAction"/>
+      <control entity="Toolbar" id="f8cb8d64-f40e-4010-b475-39a0e6662b3f" name="batchSubmitAction" title="提交" field="batchSubmitAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" ts="2015-06-12 09:59:44" dr="0" vmfield="batchSubmitAction"/>
+      <control id="45e8de22-28f3-4e4d-9d68-a69af8e23993" name="name" title="新建控件" ctrlType="SeparatorButton" isNullable="true" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-06-12 09:59:45" dr="0"/>
+      <control entity="Toolbar" id="bd041232-2060-42fd-91c1-915ff091fc5b" name="batchWithdrawAction" title="收回" field="batchWithdrawAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" ts="2015-06-12 09:59:45" dr="0" vmfield="batchWithdrawAction"/>
+      <control entity="Toolbar" id="e8de6a88-e03c-404a-bfda-7a786845f036" name="batchApproveAction" title="审批" field="batchApproveAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" ts="2015-06-12 09:59:45" dr="0" vmfield="batchApproveAction"/>
+      <control entity="Toolbar" id="f1741643-fe04-451e-8e86-b024f8dcef44" name="history" title="历史" field="history" ctrlType="Button" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-06-12 09:59:45" dr="0" vmfield="history"/>
+      <control entity="Toolbar" id="833874d0-595f-411c-832d-377e69bb349e" name="batchUnApproveAction" title="弃审" field="batchUnApproveAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" ts="2015-06-12 09:59:45" dr="0" vmfield="batchUnApproveAction"/>
+      <control entity="Toolbar" id="8d78a022-88ba-4db0-a933-c8f2eea0388f" name="configAction" title="设置" field="configAction" ctrlType="DropDownButton" isNullable="false" isReadOnly="false" isVisible="true" ts="2015-06-12 09:59:45" dr="0" vmfield="configAction"/>
+      <control entity="Toolbar" id="b90af1de-06c6-4acb-9805-b1dc6c7864dc" name="batchBusiOperateAction" title="业务操作" field="batchBusiOperateAction" ctrlType="DropDownButton" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-06-12 09:59:45" dr="0" vmfield="batchBusiOperateAction"/>
+    </container>
+    <container id="487aabc3-6130-497d-83d9-b8e94d546a8b" name="ListGrid" title="列表" type="Grid" iCols="1" ts="2015-04-02 11:19:29" dr="0">
+      <control entity="Dispatchlist" id="1a7b847c-af91-4084-9e2a-1b36445044ab" name="DispatchlistApp_List" title="u8dispatchlist列表" listId="u8_dispatchlists" field="DispatchlistApp_List" ctrlType="DataGrid" iLength="0" isNullable="true" isVisible="true" refKey="pk_dispatchlistdetails" ts="2015-04-13 16:40:50" dr="0" dsMode="Remote" supportPagination="true" vmfield="DispatchlistApp_List"/>
+    </container>
+  </view>
+</application>

@@ -1,0 +1,18 @@
+<application name="DispatchlistListApp" title="发货单" moduleName="u8" symbol="u8.Dispatchlist" uiType="vouchers">
+  <references reference="../u8/DispatchlistListAppVM.xml" />
+  <view name="DispatchlistListView" title="发货单" layoutMode="Fluid" appId="u8.DispatchlistListApp" viewModel="u8.DispatchlistListApp.DispatchlistListViewModel" screenSize="M" tplName="vouchers_M.tpl">
+    <container name="DispatchlistListView_body" title="发货单列表表体" type="Grid">
+      <controls>
+        <control name="DispatchlistList_iPad" title="发货单iPad" ctrlType="DataGrid" field="dispatchlists" entity="DispatchlistList">
+          <columns>
+            <column name="ccusname" title="客户全称" field="ccusname" ctrlType="TextBox" position="leftTop" />
+            <column name="iexchrate" title="汇率" field="iexchrate" ctrlType="NumberBox" position="rightTop" />
+            <column name="creationtime" title="制单时间" field="creationtime" ctrlType="DateTimeBox" position="leftBottom" />
+            <column name="itaxrate" title="税率" field="itaxrate" ctrlType="TextBox" position="rightBottom" />
+            <column name="approvestatus" title="单据状态" field="approvestatus" ctrlType="ComboBox" position="status" />
+          </columns>
+        </control>
+      </controls>
+    </container>
+  </view>
+</application>

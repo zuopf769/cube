@@ -1,0 +1,238 @@
+﻿.cube-bar-container {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    vertical-align: middle;
+    zoom: 1;
+    background: #FFF;
+    overflow: hidden;
+    border: 1px solid #c9c9c9;
+}
+
+    .cube-bar-container > div[data-controltype='ImageButton'] {
+        float: left;
+        width: 50%;
+        vertical-align: middle;
+        height: 45px;
+        line-height: 45px;
+        border: 1px solid #D7D7D7;
+        text-align: center;
+        color: #999;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+        .cube-bar-container > div[data-controltype='ImageButton'] span:last-child {
+            font-family: '微软雅黑 Regular', '微软雅黑';
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+    .cube-bar-container > div[class*='active'] {
+        background: #FFF;
+        color: #157EFB;
+    }
+
+    .cube-bar-container > div:hover {
+        background: #157EFB;
+        color: #FFF;
+    }
+
+
+/*展开方式 start */
+div[data-controltype='ToolBar'] {
+    float: right;
+    padding-right: 5px;
+}
+
+.cube-bar-open-container {
+    padding: 0 5px;
+    left: 0;
+}
+
+    .cube-bar-open-container li {
+        position: relative;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        margin: 0 3px;
+    }
+
+        .cube-bar-open-container li > div {
+            border-radius: 50%;
+            border: 0px solid #0094ff;
+            background-color: white;
+            text-align: center;
+            vertical-align: top;
+            cursor: pointer;
+        }
+
+            .cube-bar-open-container li > div:hover {
+                background-color: #0094ff;
+            }
+
+        .cube-bar-open-container li span[class*='submit-icon'] {
+            width: 32px;
+            height: 32px;
+            content: url(../images/toolbar-icon/approve.png);
+        }
+
+        .cube-bar-open-container li span[class*='withdraw-icon'] {
+            width: 32px;
+            height: 32px;
+            content: url(../images/toolbar-icon/approve.png);
+        }
+
+        .cube-bar-open-container li span[class*='approve-icon'] {
+            width: 32px;
+            height: 32px;
+            content: url(../images/toolbar-icon/approve.png);
+        }
+
+        .cube-bar-open-container li span[class*='outbound-icon'] {
+            width: 32px;
+            height: 32px;
+            content: url(../images/toolbar-icon/approve.png);
+        }
+
+        .cube-bar-open-container li span[class*='copy-icon'] {
+            width: 32px;
+            height: 32px;
+            content: url(../images/toolbar-icon/copy.png);
+        }
+
+        .cube-bar-open-container li span[class*='delete-icon'] {
+            width: 32px;
+            height: 32px;
+            content: url(../images/toolbar-icon/delete.png);
+        }
+
+        .cube-bar-open-container li span[class*='edit-icon'] {
+            width: 32px;
+            height: 32px;
+            content: url(../images/toolbar-icon/edit.png);
+        }
+
+        .cube-bar-open-container li span[class*='linkman-icon'] {
+            width: 32px;
+            height: 32px;
+            content: url(../images/toolbar-icon/linkman.png);
+        }
+
+        .cube-bar-open-container li span[class*='related-icon'] {
+            width: 32px;
+            height: 32px;
+            content: url(../images/toolbar-icon/set.png);
+        }
+
+        .cube-bar-open-container li span[class*='set-icon'] {
+            width: 32px;
+            height: 32px;
+            content: url(../images/toolbar-icon/set.png);
+        }
+
+        .cube-bar-open-container li span[class*='output-icon'] {
+            width: 32px;
+            height: 32px;
+            content: url(../images/toolbar-icon/set.png);
+        }
+
+        .cube-bar-open-container li span[class*='mark-icon'] {
+            width: 32px;
+            height: 32px;
+            content: url(../images/toolbar-icon/mark.png);
+        }
+
+        .cube-bar-open-container li span[class*='search-icon'] {
+            width: 32px;
+            height: 32px;
+            content: url(../images/toolbar-icon/search.png);
+        }
+
+        .cube-bar-open-container li span[class*='send-icon'] {
+            width: 32px;
+            height: 32px;
+            content: url(../images/toolbar-icon/send.png);
+        }
+
+
+        .cube-bar-open-container li span[class*='else-icon'] {
+            width: 32px;
+            height: 32px;
+            content: url(../images/toolbar-icon/else.png);
+        }
+
+        .cube-bar-open-container li span:last-child {
+            display: none;
+        }
+/*展开方式  end*/
+
+/*收缩方式 start*/
+
+.cube-bar-close-container {
+    position: absolute;
+    background: #fff;
+    float: right;
+    right: 0px;
+    z-index: 10;
+    display: none;
+}
+
+    .cube-bar-close-container .cube-bar-close-btn {
+        /*border: 1px solid #DDDDDD;*/
+        box-shadow: 2px 3px 5px 3px #aaaaaa;
+        width: 120px;
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 15px;
+        margin-right: 10px;
+    }
+
+.cube-bar-close-btn li {
+    text-align: left;
+    line-height: normal;
+    list-style: none;
+    width: auto;
+    cursor: pointer;
+}
+
+    .cube-bar-close-btn li span[class*='mark-icon'] {
+        content: url(../images/toolbar-icon/mark-1.png);
+        margin: 0 8px -8px 0;
+    }
+
+    .cube-bar-close-btn li span[class*='copy-icon'] {
+        content: url(../images/toolbar-icon/copy-1.png);
+        margin: 0 8px -8px 0;
+    }
+
+    .cube-bar-close-btn li span[class*='delete-icon'] {
+        content: url(../images/toolbar-icon/download.png);
+        margin: 0 8px -8px 0;
+    }
+
+    .cube-bar-close-btn li span:last-child {
+        margin-left: 10px;
+        font-family: '微软雅黑 Regular', '微软雅黑';
+        font-size: 16px;
+        line-height: 40px;
+        color: black;
+    }
+
+.cube-bar-close-pointer {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 10px solid #DDD;
+    display: block;
+    float: right;
+    margin-top: 5px;
+    margin-right: 12px;
+}
+
+.cube-bar-close-line {
+    border-top: 1px solid #E4E4E4;
+}
+
+/*收缩方式 end*/

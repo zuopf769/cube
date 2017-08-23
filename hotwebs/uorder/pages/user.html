@@ -1,0 +1,139 @@
+﻿<div data-controller="UserPageController">
+    <div class="pages">
+        <div data-page="user" class="page">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center">我的</div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="user-info">
+                    <a href="pages/userBaseInfor.html">
+                        {{#if userInfo.img}}
+                        <img class="avatar lazy" data-src="{{@root.serverhost}}{{userInfo.img.cUrl}}">
+                        {{else}}
+                        <img class="avatar lazy" data-src="./img/icon/avatar.png">
+                        {{/if}}
+                        <p class="username">{{userInfo.user.cUserName}}</p>
+                    </a>
+                    <div class="account">
+                        <dl class="account-infor">
+                            <dt>￥{{#if userInfo.accountbalance}}{{userInfo.accountbalance}}{{else}}0{{/if}}</dt>
+                            <dd>账户余额</dd>
+                        </dl>
+                        <dl class="account-infor">
+                            <dt>{{#if userInfo.favoriteCount}}{{userInfo.favoriteCount}}{{else}}0{{/if}}</dt>
+                            <dd>收藏商品</dd>
+                        </dl>
+                        <dl class="account-infor">
+                            <dt>{{#if userInfo.exploreCount}}{{userInfo.exploreCount}}{{else}}0{{/if}}</dt>
+                            <dd>浏览记录</dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="user-list">
+                    <div class="list-block all-order  m-b-0">
+                        <ul>
+                            <li class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">我的订单</div>
+                                    <div class="item-after user-btn-OrderList">查看所有订单</div>
+                                </div>
+                            </li>
+                            <div class="user-btn-OrderType">
+                                <a class="my-order tb-confirm" data-filter="CONFIRMORDER">待确认{{#if userInfo.order.confirmOrder}}<span class="badge">{{userInfo.order.confirmOrder}}</span>{{/if}}</a>
+                                <a class="my-order tb-deliver" data-filter="DELIVERGOODS">待发货{{#if userInfo.order.deliveryCount}}<span class="badge">{{userInfo.order.deliveryCount}}</span>{{/if}}</a>
+                                <a class="my-order tb-receipt" data-filter="TAKEDELIVERY">待收货{{#if userInfo.order.takeDelivery}}<span class="badge">{{userInfo.order.takeDelivery}}</span>{{/if}}</a>
+                                <a class="my-order tb-pay" data-filter="PAYMONEY">待付款{{#if userInfo.order.pay}}<span class="badge">{{userInfo.order.pay}}</span>{{/if}}</a>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="list-block m-t-10 m-b-0">
+                        <ul>
+                            <li>
+                                <a href="pages/userBaseInfor.html" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">基本信息</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages/accountSafety.html" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">账户安全</div>
+                                        <div class="item-after"></div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="list-block m-t-10 m-b-0">
+                        <ul>
+                            <li>
+                                <a href="pages/clientInfor.html" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">客户信息</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages/contacts.html" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">联系人</div>
+                                        <div class="item-after"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages/addrList.html" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">收货地址</div>
+                                        <div class="item-after"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages/bankInfor.html" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">银行账户信息</div>
+                                        <div class="item-after"></div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-block m-t-10 m-b-0">
+                        <ul>
+                            <li>
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">客服热线 0532-55676706</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">意见与建议</div>
+                                        <div class="item-after"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">关于U订货</div>
+                                        <div class="item-after"></div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pages/UserPageController.js"></script>
+</div>

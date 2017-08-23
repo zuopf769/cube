@@ -1,0 +1,196 @@
+<div data-controller="CartPageController">
+    <div class="pages">
+        <div data-page="cart" class="page cart-page">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                    </div>
+                    <div class="center">全部货品<span>(30)</span></div>
+                    <div class="right">
+                        <a href="#" class="btn-editStatue" data-type="edit">
+                            编辑
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content pull-to-refresh-content cart-main-container" data-ptr-distance="2">
+                <div class="pull-to-refresh-layer">
+                    <div class="preloader"></div>
+                    <div class="pull-to-refresh-arrow"></div>
+                </div>
+                <div class="list-block media-list m-t-0 cartNew-list">
+                    <ul class="cartItemContainer">
+                        {{#each cartList}}
+                        <li class="productItemContent" data-productid="{{id}}">
+                            <label class="label-checkbox item-content">
+                                <input type="checkbox" name="my-checkbox">
+                                <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                                <div class="item-media">
+                                    <img data-src="{{oProductClass.cImgUrl}}" class="lazy" width="62">
+                                </div>
+                                <div class="item-inner  no-border">
+                                    <div class="item-title-row">
+                                        <div class="item-text">{{cName}}</div>
+                                    </div>
+                                    <div class="item-subtitle">
+                                        <span class="promo-type col-1">折</span>
+                                        <span class="promo-type col-2">促</span>
+                                        <span class="promo-type col-3">赠</span>
+                                        <span class="m-l-10">优惠说明 <i class="icon arrow-down"></i></span>
+                                    </div>
+                                </div>
+                            </label>
+                            <ul>
+                                {{#each SkuSpecItems}}
+                                <li data-id="{{id}}" data-skuid="{{skuid}}" data-productid="{{iProductId}}">
+                                    <label class="label-checkbox item-content">
+                                        <input type="checkbox" name="my-checkbox">
+                                        <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                                        <div class="item-inner  no-border">
+                                            <div class="item-title-row">
+                                                <div class="item-title editControl propertyContainer" data-skuid="{{skuid}}" data-productid="{{iProductId}}">
+                                                    {{#each lsSkuSpecItems}}
+                                                    <span>{{oSpec.cName}}:</span>{{cSpecItemName}}<br>
+                                                    {{/each}}
+                                                </div>
+                                                <div class="item-price">
+                                                    <span class="price">￥{{fSalePrice}}</span>
+                                                    <div class="numberManage">
+                                                        <i class="icon icon-cart-less hide"></i>
+                                                        <input type="text" value="{{iQuantity}}" data-min="{{iMinOrderQuantity}}" class="editControl">
+                                                        <i class="icon icon-cart-add hide"></i>
+                                                        <i class="icon icon-cart-ok hide"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="bottom-bar row">
+                    <label class="label-checkbox item-content col-auto ck-allSelect">
+                        <input type="checkbox" name="my-checkbox">
+                        <div class="item-media">
+                            <i class="icon icon-form-checkbox"></i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">全选</div>
+                        </div>
+                    </label>
+                    <span class="col-40 sum-price editControl cart-balance-container">
+                        合计:<span class="sum-price-c">￥0.00</span><br>
+                        <span class="count">0种0件 </span>
+                    </span>
+                    <a class="button button-fill col-33 editControl cart-btn-collection">移至收藏</a>
+                    <a class="button button-fill col-33 editControl cart-btn-delete">删除</a>
+                    <a class="button button-fill col-33 editControl cart-btn-submit">立即结算</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/template7" id="cartItemTpl">
+        {{#each cartList}}
+        <li class="productItemContent" data-productid="{{id}}">
+            <label class="label-checkbox item-content">
+                <input type="checkbox" name="my-checkbox">
+                <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                <div class="item-media">
+                    <img data-src="{{oProductClass.cImgUrl}}" class="lazy" width="62">
+                </div>
+                <div class="item-inner  no-border">
+                    <div class="item-title-row">
+                        <div class="item-text">{{cName}}</div>
+                    </div>
+                    <div class="item-subtitle">
+                        <span class="promo-type col-1">折</span>
+                        <span class="promo-type col-2">促</span>
+                        <span class="promo-type col-3">赠</span>
+                        <span class="m-l-10">优惠说明 <i class="icon arrow-down"></i></span>
+                    </div>
+                </div>
+            </label>
+            <ul>
+                {{#each SkuSpecItems}}
+                <li data-id="{{id}}" data-skuid="{{skuid}}" data-productid="{{iProductId}}">
+                    <label class="label-checkbox item-content">
+                        <input type="checkbox" name="my-checkbox">
+                        <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                        <div class="item-inner  no-border">
+                            <div class="item-title-row">
+                                <div class="item-title editControl propertyContainer" data-skuid="{{skuid}}" data-productid="{{iProductId}}">
+                                    {{#each lsSkuSpecItems}}
+                                    <span>{{oSpec.cName}}:</span>{{cSpecItemName}}<br>
+                                    {{/each}}
+                                </div>
+                                <div class="item-price">
+                                    <span class="price">￥{{fSalePrice}}</span>
+                                    <div class="numberManage">
+                                        <i class="icon icon-cart-less hide"></i>
+                                        <input type="text" value="{{iQuantity}}" data-min="{{iMinOrderQuantity}}" class="editControl">
+                                        <i class="icon icon-cart-add hide"></i>
+                                        <i class="icon icon-cart-ok hide"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </li>
+                {{/each}}
+            </ul>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/template7" id="productAttrTpl">
+        {{#if product}}
+        <div class="content-block">
+            <p class="p-close">
+                <a href="#" class="close-popup"> <i class="icon icon-colse-popup"></i></a>
+            </p>
+            <div class="popup-top">
+                <div class="popup-img">
+                    <img src="{{product.oDefaultAlbum.cFolder}}lm_{{product.oDefaultAlbum.cImgName}}" alt="" />
+                </div>
+                <div class="title-row">
+                    <div class="title">
+                        {{product.cName}}
+                    </div>
+                    <div class="subtitle">{{product.cCode}}</div>
+                </div>
+                <div class="popup-number priceStepContainer">
+                </div>
+            </div>
+            <div class="popup-content">
+                <div class="row popup-attrs">
+                    {{#each product.lsSpecs}}
+                    <p>{{cName}}</p>
+                    <div class="col-100">
+                        {{#each lsSpecItem}}
+                        <div class="attrItem">
+                            <input type="radio" name="attrItem{{parentId}}" value="{{id}}" {{#if isCheck}}checked{{/if}}/>
+                            <span>{{cSpecItemName}}</span>
+                        </div>
+                        {{/each}}
+                    </div>
+                    {{/each}}
+                    <p>订购数量<span id="InventoryCount">库存 {{product.lInventoryCount}}</span></p>
+                    <div class="numberManage col-100">
+                        <i class="icon icon-cart-less disabled"></i>
+                        <input type="text" value="{{product.iQuantity}}" class="editControl" data-linventoryCount="{{product.lInventoryCount}}">
+                        <i class="icon icon-cart-add"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-bottom">
+                <span class="totalContainer">{{product.iQuantity}} <em>件</em>  {{js "this.product.iQuantity * this.product.fSalePrice"}} <em>元</em> </span>
+                <a href="#" class="button btn-update-sku">确  定</a>
+            </div>
+        </div>
+        {{/if}}
+    </script>
+    <script type="text/javascript" src="../js/pages/CartPageController.js"></script>
+</div>

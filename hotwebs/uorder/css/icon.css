@@ -1,0 +1,134 @@
+/*顶部图标*/
+.icon-arrow-down{
+  width: 11px;
+  height: 8px;
+  background-image: url("../img/icon/arrow-bottom.png");
+}
+.icon-orderback{
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/icon/back-gray.png");
+}
+.icon-backwhite{
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/icon/back.png");
+}
+.icon-search{
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/icon/search-gray.png");
+}
+.icon-backgray{
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/icon/back-gray.png");
+}
+.icon-add{
+  background-image: url("../img/icon/add.png");
+  }
+.icon-less{
+  background-image: url("../img/icon/less.png");
+}
+.icon-arrow{
+  width: 11px;
+  height: 6px;
+  background-image: url("../img/icon/arrow.png");
+}
+.icon-history{
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/icon/history.png");
+}
+.icon-refresh{
+	 width: 12px;
+ 	 height:12px;
+	background-image: url("../img/icon/refresh.png");
+}
+.icon-username{
+	width: 22px;
+ 	height:22px;
+	background-image: url("../img/icon/username.png");
+}
+.icon-password{
+	width: 22px;
+ 	height:22px;
+	background-image: url("../img/icon/pwd.png");
+}
+.icon-verification{
+	width: 22px;
+ 	height:22px;
+	background-image: url("../img/icon/verification.png");
+}
+.icon-phone{
+	width: 22px;
+ 	height:22px;
+	background-image: url("../img/icon/phone.png");
+}
+.icon-newPwd{
+	width: 22px;
+ 	height:22px;
+	background-image: url("../img/icon/newPwd.png");
+}
+.icon-help{
+	width: 22px;
+ 	height:22px;
+	background-image: url("../img/icon/help.png");
+}
+.icon-collect{
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/icon/collect.png");
+}
+.icon-cart{
+  background-image: url("../img/icon/cart.png");
+  width: 22px;
+  height: 22px ;
+  }
+.icon-cu{
+  width: 14px;
+  height: 14px;
+  background-image: url("../img/icon/icon-cu.png");
+  margin: 4px 10px 0 0;
+}
+.icon-addr-name{
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icon/addr-name.png");
+}
+
+.icon-addr-phone{
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icon/addr-phone.png");
+}
+.icon-addr-check{
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/icon/check.png");
+}
+.icon-addr-edit{
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/icon/edit.png");
+}
+.icon-chevron-right{
+  width: 8px;
+  height: 12.5px;
+  background-image: url("../img/i-list-chevron-right.png");
+}
+.icon-check-number{
+	width: 16px;
+  height: 16px;
+  background-image: url("../img/icon/check-number.png");
+}
+.icon-msgOrder{
+	width: 50px;
+  height: 50px;
+  background-image: url("../img/msg-order.png");
+}
+.icon-msgPay{
+	width: 50px;
+  height: 50px;
+  background-image: url("../img/msg-pay.png");
+}

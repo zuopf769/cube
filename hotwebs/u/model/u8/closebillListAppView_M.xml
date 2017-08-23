@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application name="closebillListApp" title="收款单主表列表" moduleName="u8" symbol="u8.closebill" uiType="vouchers">
+  <references reference="../u8/closebillListAppVM.xml"/>
+  <view name="closebillListView" title="收款单主表列表" layoutMode="Fluid" appId="u8.closebillListApp" viewModel="u8.closebillListApp.closebillListViewModel" screenSize="M" tplName="vouchers_M.tpl">
+    <container name="closebillListView_body" title="收款单主表列表" type="Grid">
+      <controls>
+        <control name="closebills" title="收款单主表列表" ctrlType="DataGrid" field="closebills" entity="closebillList">
+          <columns>
+            <column name="billno" title="单据号" field="billno" ctrlType="TextBox" position="leftTop"/>
+            <column name="ccusname" title="客户全称" field="ccusname" ctrlType="TextBox" position="rightTop"/>
+            <column name="creationtime" title="制单时间" field="creationtime" ctrlType="DateTimeBox" position="leftBottom"/>
+            <column name="cvshipaddress" title="联系地址" field="cvshipaddress" ctrlType="TextBox" position="rightBottom"/>
+            <column name="approvestatus" title="单据状态" field="approvestatus" ctrlType="TextBox" position="status"/>
+          </columns>
+        </control>
+      </controls>
+    </container>
+  </view>
+</application>

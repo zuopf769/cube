@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<applications>
+  <application id="7dd96316-9d16-455e-808b-753c3344453d" name="purchaseorderApp" title="uppurchaseorder" domainName="uap" moduleName="u8" symbol="u8.purchaseorder" ts="2015-04-10 12:18:01" dr="0" tplName_viewModel="vouchers" tplName="vouchers_min.tpl">
+    <viewmodel id="7dd96316-9d16-455e-808b-753c3344453d" name="purchaseorderAppViewModel_vouchers" title="uppurchaseorder" extendName="purchaseorderAppViewModel_vouchers_Extend" ts="2015-04-10 12:18:01" dr="0" tplName="vouchers_min.js.tpl">
+      <entity id="0318abee-3d14-404a-96aa-0449095f6795" name="purchaseorder" title="采购订单" entityId="0318abee-3d14-404a-96aa-0449095f6795" isMain="true" ts="2015-04-10 12:18:01" dr="0">
+        <field refEntity="pk_purchaseorderdetail" id="0318abee-3d14-404a-96aa-0449095f6795-listgrid" name="purchaseorderApp_List" title="uppurchaseorder列表" refEntityId="d4bfdc97-ddca-44dc-965b-7aa457e80568" ctrlType="DataGrid" iLength="0" isNullable="true" isVisible="true" modelType="Model3D" refKey="pk_purodrdetailid" fieldType="List" tpltype="voucher" dataType="string" ts="2015-04-10 12:18:02" dr="0" uapDataType="d4bfdc97-ddca-44dc-965b-7aa457e80568" entity="purchaseorder"/>
+      </entity>
+      <entity id="7dd96316-9d16-455e-808b-753c3344453d-toolbar" name="Toolbar" title="功能" entityId="d4bfdc97-ddca-44dc-965b-7aa457e80568" ts="2015-04-10 12:18:02" dr="0">
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-addAction" name="addAction" title="增加" ctrlType="DropDownButton" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-addActionL" name="addAction" title="增加" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="vouchers" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-addLineAction" name="addLineAction" title="增行" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="body" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-batchDeleteActionL" name="batchDeleteAction" title="删除" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="vouchers" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-insertLineAction" name="insertLineAction" title="插行" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="body" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-saveAction" name="saveAction" title="保存" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-editAction" name="editAction" title="修改" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-copyLineAction" name="copyLineAction" title="复制行" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="body" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-batchSubmitActionL" name="batchSubmitAction" title="提交" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="vouchers" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-deleteAction" name="deleteAction" title="删除" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-divideLineAction" name="divideLineAction" title="拆分行" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="body" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-batchWithdrawActionL" name="batchWithdrawAction" title="收回" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="vouchers" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-cancelAction" name="cancelAction" title="放弃" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-deleteLineAction" name="deleteLineAction" title="删行" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="body" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-batchApproveActionL" name="batchApproveAction" title="审批" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="vouchers" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-batchUnApproveActionL" name="batchUnApproveAction" title="弃审" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="vouchers" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-batchEditAction" name="batchEditAction" title="批改" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="body" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-copyAction" name="copyAction" title="复制" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-fullScreenAction" name="fullScreenAction" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="body" tpltype="voucher" css="fullScreen-icon" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-draftAction" name="draftAction" title="草稿" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-configActionL" name="configAction" title="设置" ctrlType="DropDownButton" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="vouchers" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-submitAction" name="submitAction" title="提交" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-withdrawAction" name="withdrawAction" title="收回" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-approveAction" name="approveAction" title="审批" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-unApproveAction" name="unApproveAction" title="弃审" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-printAction" name="printAction" title="打印" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-nextAction" name="nextAction" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="voucher" position="right" css="next-icon" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-prevAction" name="prevAction" ctrlType="Button" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="voucher" position="right" css="prev-icon" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-busiOperateAction" name="busiOperateAction" title="业务操作" ctrlType="DropDownButton" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="voucher" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+        <field id="7dd96316-9d16-455e-808b-753c3344453d-btn-batchBusiOperateActionL" name="batchBusiOperateAction" title="业务操作" ctrlType="DropDownButton" isReadOnly="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="vouchers" ts="2015-04-13 16:57:57" dr="0" entity="Toolbar"/>
+      </entity>
+      <actions>
+        <action id="7dd96316-9d16-455e-808b-753c3344453d-btn-addActionL" name="addAction" entity="Toolbar" field="addAction" defaultImpl="linkOpen" eventName="click" functionName="addAction" tpltype="vouchers" ts="2015-04-10 12:18:02" dr="0"/>
+        <action id="7dd96316-9d16-455e-808b-753c3344453d-btn-batchDeleteActionL" name="batchDeleteAction" entity="Toolbar" field="batchDeleteAction" defaultImpl="batchDelete" eventName="click" functionName="batchDeleteAction" tpltype="vouchers" ts="2015-04-10 12:18:02" dr="0"/>
+        <action id="7dd96316-9d16-455e-808b-753c3344453d-btn-batchSubmitActionL" name="batchSubmitAction" entity="Toolbar" field="batchSubmitAction" defaultImpl="batchSubmit" eventName="click" functionName="batchSubmitAction" tpltype="vouchers" ts="2015-04-10 12:18:02" dr="0"/>
+        <action id="7dd96316-9d16-455e-808b-753c3344453d-btn-batchWithdrawActionL" name="batchWithdrawAction" entity="Toolbar" field="batchWithdrawAction" defaultImpl="batchWithdraw" eventName="click" functionName="batchWithdrawAction" tpltype="vouchers" ts="2015-04-10 12:18:02" dr="0"/>
+        <action id="7dd96316-9d16-455e-808b-753c3344453d-btn-batchApproveActionL" name="batchApproveAction" entity="Toolbar" field="batchApproveAction" defaultImpl="batchApprove" eventName="click" functionName="batchApproveAction" tpltype="vouchers" ts="2015-04-10 12:18:02" dr="0"/>
+        <action id="7dd96316-9d16-455e-808b-753c3344453d-btn-batchUnApproveActionL" name="batchUnApproveAction" entity="Toolbar" field="batchUnApproveAction" defaultImpl="batchUnApprove" eventName="click" functionName="batchUnApproveAction" tpltype="vouchers" ts="2015-04-10 12:18:02" dr="0"/>
+        <action id="7dd96316-9d16-455e-808b-753c3344453d-btn-configActionL" name="configAction" entity="Toolbar" field="configAction" defaultImpl="config" eventName="click" functionName="configAction" tpltype="vouchers" ts="2015-04-10 12:18:02" dr="0"/>
+        <action id="0318abee-3d14-404a-96aa-0449095f6795-listgrid-act-dblclickrow" name="dblclickrow" entity="purchaseorder" field="purchaseorderApp_List" defaultImpl="activeRow" eventName="dblclickrow" functionName="activeRowClick" fieldtype="List" ts="2015-04-10 12:18:02" dr="0"/>
+        <action id="7dd96316-9d16-455e-808b-753c3344453d-btn-batchBusiOperateActionL" name="batchBusiOperateAction" entity="Toolbar" field="batchBusiOperateAction" eventName="click" functionName="batchBusiOperateAction" tpltype="vouchers" ts="2015-04-10 12:18:02" dr="0"/>
+      </actions>
+      <proxies/>
+      <states>
+        <state id="7dd96316-9d16-455e-808b-753c3344453d-add" name="add" isSystem="true" ts="2015-04-10 12:18:03" dr="0">
+          <buttons>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-addAction" name="addAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="addAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-addLineAction" name="addLineAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="addLineAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-approveAction" name="approveAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="approveAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-batchApproveAction" name="batchApproveAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchApproveAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-batchBusiOperateAction" name="batchBusiOperateAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchBusiOperateAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-batchDeleteAction" name="batchDeleteAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchDeleteAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-batchEditAction" name="batchEditAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchEditAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-batchSubmitAction" name="batchSubmitAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchSubmitAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-batchUnApproveAction" name="batchUnApproveAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchUnApproveAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-batchWithdrawAction" name="batchWithdrawAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchWithdrawAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-busiOperateAction" name="busiOperateAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="busiOperateAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-cancelAction" name="cancelAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="cancelAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-configAction" name="configAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="configAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-copyAction" name="copyAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="copyAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-copyLineAction" name="copyLineAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="copyLineAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-deleteAction" name="deleteAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="deleteAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-deleteLineAction" name="deleteLineAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="deleteLineAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-divideLineAction" name="divideLineAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="divideLineAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-draftAction" name="draftAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="draftAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-editAction" name="editAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="editAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-fullScreenAction" name="fullScreenAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="fullScreenAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-insertLineAction" name="insertLineAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="insertLineAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-nextAction" name="nextAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="nextAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-prevAction" name="prevAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="prevAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-printAction" name="printAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="printAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-saveAction" name="saveAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="saveAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-submitAction" name="submitAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="submitAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-unApproveAction" name="unApproveAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="unApproveAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-add-withdrawAction" name="withdrawAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="withdrawAction"/>
+          </buttons>
+        </state>
+        <state id="7dd96316-9d16-455e-808b-753c3344453d-browse" name="browse" isSystem="true" ts="2015-04-10 12:18:02" dr="0">
+          <buttons>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-addAction" name="addAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="addAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-addLineAction" name="addLineAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="addLineAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-approveAction" name="approveAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="approveAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-batchApproveAction" name="batchApproveAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchApproveAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-batchBusiOperateAction" name="batchBusiOperateAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchBusiOperateAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-batchDeleteAction" name="batchDeleteAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchDeleteAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-batchEditAction" name="batchEditAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchEditAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-batchSubmitAction" name="batchSubmitAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchSubmitAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-batchUnApproveAction" name="batchUnApproveAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchUnApproveAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-batchWithdrawAction" name="batchWithdrawAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchWithdrawAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-busiOperateAction" name="busiOperateAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="busiOperateAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-cancelAction" name="cancelAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="cancelAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-configAction" name="configAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="configAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-copyAction" name="copyAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="copyAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-copyLineAction" name="copyLineAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="copyLineAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-deleteAction" name="deleteAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="deleteAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-deleteLineAction" name="deleteLineAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="deleteLineAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-divideLineAction" name="divideLineAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="divideLineAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-draftAction" name="draftAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="draftAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-editAction" name="editAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="editAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-fullScreenAction" name="fullScreenAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="fullScreenAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-insertLineAction" name="insertLineAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="insertLineAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-nextAction" name="nextAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="nextAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-prevAction" name="prevAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="prevAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-printAction" name="printAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="printAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-saveAction" name="saveAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="saveAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-submitAction" name="submitAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="submitAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-unApproveAction" name="unApproveAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="unApproveAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-browse-withdrawAction" name="withdrawAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="withdrawAction"/>
+          </buttons>
+        </state>
+        <state id="7dd96316-9d16-455e-808b-753c3344453d-edit" name="edit" isSystem="true" ts="2015-04-10 12:18:03" dr="0">
+          <buttons>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-addAction" name="addAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="addAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-addLineAction" name="addLineAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="addLineAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-approveAction" name="approveAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="approveAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-batchApproveAction" name="batchApproveAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchApproveAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-batchBusiOperateAction" name="batchBusiOperateAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchBusiOperateAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-batchDeleteAction" name="batchDeleteAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchDeleteAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-batchEditAction" name="batchEditAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchEditAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-batchSubmitAction" name="batchSubmitAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchSubmitAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-batchUnApproveAction" name="batchUnApproveAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchUnApproveAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-batchWithdrawAction" name="batchWithdrawAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="batchWithdrawAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-busiOperateAction" name="busiOperateAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="busiOperateAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-cancelAction" name="cancelAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="cancelAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-configAction" name="configAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="configAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-copyAction" name="copyAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="copyAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-copyLineAction" name="copyLineAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="copyLineAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-deleteAction" name="deleteAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="deleteAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-deleteLineAction" name="deleteLineAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="deleteLineAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-divideLineAction" name="divideLineAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="divideLineAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-draftAction" name="draftAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="draftAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-editAction" name="editAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="editAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-fullScreenAction" name="fullScreenAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="fullScreenAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-insertLineAction" name="insertLineAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="insertLineAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-nextAction" name="nextAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="nextAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-prevAction" name="prevAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="prevAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-printAction" name="printAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="printAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-saveAction" name="saveAction" disable="0" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="saveAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-submitAction" name="submitAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="submitAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-unApproveAction" name="unApproveAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="unApproveAction"/>
+            <button id="7dd96316-9d16-455e-808b-753c3344453d-edit-withdrawAction" name="withdrawAction" disable="1" ts="2015-04-10 12:18:03" dr="0" entity="Toolbar" field="withdrawAction"/>
+          </buttons>
+        </state>
+      </states>
+    </viewmodel>
+  </application>
+</applications>

@@ -1,0 +1,144 @@
+﻿label {
+    font-family: '', '', '应用字体';
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 32px;
+    padding: 3px 0;
+}
+
+/*label[data-content]{
+    cursor:pointer;
+    text-decoration:underline;
+}*/
+
+/****************TextBox 样式 Start***********************/
+input[data-controltype='TextBox'] {
+    border-color: #ccc;
+    /*height: 30px;*/
+    padding: 0;
+    margin: 0;
+}
+
+input[data-controltype='TextBox'].parentdiv-noinput {
+    border-color: red;
+}
+/****************TextBox 样式 End***********************/
+
+/****************NumberBox 样式 Start***********************/
+div.col-lg-8.numberbox .k-numerictextbox {
+    width: 100%;
+}
+/****************NumberBox 样式 End***********************/
+
+/****************DateTimebox 样式 Start***********************/
+input[data-controltype='DateTimeBox'] {
+    background: none;
+}
+
+div.col-lg-8.datetimebox .k-datetimepicker {
+    width: 100%;
+}
+
+div.col-lg-8.datetimebox .k-datetimepicker .k-picker-wrap.readonly {
+    padding-right: 0;
+}
+
+div.col-lg-8.datetimebox .k-datetimepicker .k-picker-wrap.readonly > span {
+    width: 0;
+}
+/****************DateTimebox 样式 End***********************/
+
+/****************Datebox 样式 Start***********************/
+div.col-lg-8.datebox .k-datepicker {
+    width: 100%;
+}
+/****************Datebox 样式 End***********************/
+
+/****************CheckBox 样式 Start***********************/
+div[data-controltype='CheckBox'] {
+    height: auto;
+    padding: 7px 0;
+}
+.checkbox {
+    height: 35px;
+    padding: 6px 0 0 3px;
+}
+.k-checkbox-label {
+    padding-left: 1.5em!important;
+    line-height: .875em!important;
+}
+/****************CheckBox 样式 End***********************/
+
+/****************RadioBox 样式 Start***********************/
+ul[data-controltype='RadioBox'] {
+    padding-top: 6px;
+}
+ul[data-controltype='RadioBox'] > li {
+    float: left;
+    margin-left: 6px;
+}
+ul[data-controltype='RadioBox'] > li:first-child {
+    margin-left: 0;
+}
+.k-radio-label {
+    padding-left: 1.5em!important;
+    line-height: .875em!important;
+}
+.k-radio:checked+.k-radio-label:after {
+    top: 2px;
+    left: 2px;
+}
+/****************RadioBox 样式 End***********************/
+
+/****************ComboBox 样式 Start***********************/
+div.col-lg-8.combobox .k-combobox {
+    width: 100%;
+}
+/****************ComboBox 样式 End***********************/
+
+/****************Refer 样式 Start***********************/
+div[data-controltype='Refer'] {
+    border-color: #ccc;
+    margin: 0;
+}
+
+div[data-controltype='Refer'] > input {
+    height: 2.29em;
+    text-indent: .8em;
+}
+
+div[data-controltype='Refer'].parentdiv-noinput {
+    border-color: red;
+}
+/****************Refer 样式 End***********************/
+
+/****************概要  样式 Start***********************/
+.content-header-center label[title="客户名称"] {
+    color: #333333;
+    font-size: 18px;
+    font-weight:400;
+}
+.content-header-center label[title="客户编码"] {
+    color: #666666;
+    font-size: 16px;
+    font-weight:400;
+}
+/****************概要  样式 End***********************/
+
+.k-window-content.k-content * {
+    box-sizing: border-box;
+}
+
+.k-window-content.k-content .container {
+    width: 100%;
+}
+
+/****************树控件图标 样式Start**********************************/
+.k-treeview .k-image {
+	vertical-align: middle;
+}
+
+.k-treeview .k-checkbox {
+	vertical-align: middle;
+}
+/****************树控件图标 样式End***********************************/

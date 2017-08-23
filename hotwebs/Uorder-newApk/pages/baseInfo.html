@@ -1,0 +1,58 @@
+﻿<div data-controller="BaseInfoController">
+    <div class="pages">
+        <div data-page="BaseInfo" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="back link"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center">基本信息</div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="list-block m-t-0 baseInfo-block">
+                    <div class="orderstatu-title">
+                        <p class="title companyName"></p>
+                        <p class="time orderType"></p>
+                    </div>
+                    <form id="baseInfo">
+                        <div class="content-block">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label"><i class="icon icon-date"></i></div>
+                                    <div class="item-input">
+                                        <input type="text" placeholder="请输入交货日期" readonly id="calendar-default" name="dSendDate">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label"><i class="icon icon-contacts"></i></div>
+                                    <div class="item-input">
+                                        <input type="text" name="cReceiveContacter" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label"><i class="icon icon-tel"></i></div>
+                                    <div class="item-input">
+                                        <input type="tel" name="cReceiveContacterPhone" />
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <a class="button button-fill bg-green-u only-one-btn baseInfo-submit">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pages/BaseInfoController.js"></script>
+</div>

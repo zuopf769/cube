@@ -1,0 +1,75 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>系统启用</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+     <link href="pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="pc/css/Cube.ToolBar.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link href="pc/css/kendoctrl/Cube.Control.css" rel="stylesheet" type="text/css" />
+    <link data-config="MessageBox" />
+    <link data-config="DataGrid" />
+    <style>
+       div[data-viewmodel*="LanguageExtensionViewModel"] .k-grid-header th.k-header, .k-filter-row th {
+        text-align:center;
+        }
+		.k-grid tr
+		{
+			height:35px;
+		}
+    </style>
+</head>
+<body>
+<div id="LanguageExtensionView" data-page="common.sysmanager.LanguageExtensionApp" data-title="语言扩展" data-viewmodel="LanguageExtensionViewModel" style="height:500px">
+<div class="row p-0 m-0"></div>        
+                <span  class="col-lg-12 p-0 m-t-5" style="font-family:'微软雅黑 Regular', '微软雅黑';font-weight:600;">语言扩展</span>
+                <hr  class="col-lg-12 p-0" style="margin-top:5px;margin-bottom:5px;position: relative;left:-16px;border-color:#aaa;width:796px"/>
+                <div class="col-lg-12 m-t-10 p-0" style="height:380px">
+                            <div data-propertyname="LanguagesList" data-controltype="DataGrid" style="font-family:'微软雅黑 Regular', '微软雅黑';font-weight: 500;font-size: 12px;">
+                            </div>
+                                <div class="pager"></div>
+                        </div>
+                <div data-propertyname="leftToolbar" data-controltype="ToolBar" class="cube-bar-modeltxt col-lg-4 p-0 m-0" style="overflow:inherit;float:right;margin-top:30px">
+                                        <li class="col-lg-4 m-t-3 p-r-0"style="float:right">
+                        <div data-propertyname="cancelAction" data-controltype="ImageButton" >
+                            <span></span>
+                            <span>取消</span>
+                        </div>
+                      </li>          
+                    <li class="col-lg-4 m-t-3 p-r-0"style="float:right">
+                          <div data-propertyname="confirmAction" data-controltype="ImageButton">
+                               <span></span>
+                               <span>确认</span>
+                           </div>
+                    </li> 
+            </div>   
+</div>
+<script src="jquery/jquery-1.11.1.js" type="text/javascript"></script>
+<script src="jquery/jquery-ui.js" type="text/javascript"></script>
+<script src="common/js/Animation.js" type="text/javascript"></script>
+<script src="common/js/Button.js" type="text/javascript"></script>
+<script src="common/js/ImageButton.js" type="text/javascript"></script>
+<script src="common/js/Cube.js" type="text/javascript"></script>
+<script src="common/js/CommonProxy.js" type="text/javascript"></script>
+<script src="common/js/CommonCRUD.js" type="text/javascript"></script>
+<script src="common/js/Cube.bindings.js" type="text/javascript"></script>
+<script src="common/js/Control.js" type="text/javascript"></script>
+<script src="common/js/ToolBar.js" type="text/javascript"></script>
+<script data-config="DataGrid"></script>
+<script src="pc/js/TabContent.js" type="text/javascript"></script>
+<script src="pc/js/cube.pc.js" type="text/javascript"></script>
+<script data-config="DateBox"></script>
+<script data-config="TextBox"></script>
+<script data-config="MessageBox"></script>
+<script data-config="ComboBox"></script>
+<script src="apps/common/sysmanager/LanguageExtensionViewModel.js"></script>
+<script src="apps/common/sysmanager/LanguageExtensionViewModel_Extend.js"></script>
+<script type="text/javascript">
+debugger;
+    cb.viewbinding.create("LanguageExtensionView");
+</script>
+</body>
+</html>

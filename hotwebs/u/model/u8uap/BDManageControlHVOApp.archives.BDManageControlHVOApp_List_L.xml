@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application domainName="uap" dr="0" id="a561b1c5-0c4b-432f-904b-5017ec67aad9" moduleName="u8uap" name="BDManageControlHVOApp" symbol="u8uap.BDManageControlHVO" title="档案管控模式" ts="2015-06-04 09:47:38" tplName_viewModel="archives" tplName="archives_L.tpl">
+  <references>
+    <reference name="../u8uap/BDManageControlHVOApp.archives.VM.xml"/>
+  </references>
+  <view dr="0" id="cbac1fc2-db36-4962-82ae-6aaebf247572" isDefault="true" layoutMode="Fluid" name="BDManageControlHVOApp_List" screenSize="L" title="档案管控模式_List" tplName="archives_L.html.tpl" ts="2015-06-04 09:59:31" viewModel="BDManageControlHVOAppViewModel_archives" viewModelId="a561b1c5-0c4b-432f-904b-5017ec67aad9" appId="u8uap.BDManageControlHVOApp_List">
+    <container dr="0" iCols="1" id="25e5a864-428c-4f3c-9efe-556750180183" name="Tree" title="树" ts="2015-06-04 10:00:01" type="Tree" hasQueryScheme="true">
+      <control entity="BDManageControlHVO" ctrlType="Tree" dr="0" field="BDManageControlHVOApp_Tree" id="b256d026-9d8d-4daf-a4fb-9119d2190bfd" isNullable="true" isPlaceHolder="false" supportPagination="false" isVisible="true" name="BDManageControlHVOApp_Tree" title="档案管控模式树" treeFunctionId="UAP" ts="2015-06-04 20:58:59" vmfield="BDManageControlHVOApp_Tree"/>
+    </container>
+    <container dr="0" iCols="0" id="9cd3efd9-dfe5-4601-bcab-03554859700e" name="Toolbar" title="工具栏" ts="2015-06-04 10:00:01" type="Toolbar" hasQueryScheme="true">
+      <control entity="Toolbar" ctrlType="Button" dr="0" field="addAction" id="aacf36fe-e720-49a1-a412-ea808411533e" isNullable="false" isPlaceHolder="false" isReadOnly="false" supportPagination="false" isVisible="true" name="addAction" title="增加" ts="2015-06-04 09:47:46" vmfield="addAction"/>
+      <control entity="Toolbar" ctrlType="Button" dr="0" field="editAction" id="078b03ee-36b1-4ba9-90a0-6505954eb784" isNullable="false" isPlaceHolder="false" isReadOnly="false" supportPagination="false" isVisible="true" name="editAction" title="编辑" ts="2015-06-04 09:47:46" vmfield="editAction"/>
+      <control entity="Toolbar" ctrlType="Button" dr="0" field="batchDeleteAction" id="1405556d-6003-4023-bf9b-3a525057b1e3" isNullable="false" isPlaceHolder="false" isReadOnly="false" supportPagination="false" isVisible="true" name="batchDeleteAction" title="删除" ts="2015-06-04 09:47:46" vmfield="batchDeleteAction"/>
+      <control entity="Toolbar" ctrlType="DropDownButton" dr="0" field="configAction" id="cf6dae44-192c-4737-90ab-9a5d198d2465" isNullable="false" isPlaceHolder="false" isReadOnly="false" supportPagination="false" isVisible="true" name="configAction" title="设置" ts="2015-06-04 09:47:46" vmfield="configAction"/>
+    </container>
+    <container dr="0" iCols="1" id="c8e14fa0-b8f6-4218-b115-19a73cf97759" name="BDManageControlHVOApp_List_-182054622List" title="档案管控模式_List" ts="2015-06-04 10:00:01" type="Grid" hasQueryScheme="true">
+      <control entity="BDManageControlHVO" ctrlType="DataGrid" dr="0" field="BDManageControlHVOApp_List" id="bf7729c7-cfaf-47ac-aeaf-45a42bed10a8" isNullable="true" isPlaceHolder="false" supportPagination="false" isVisible="true" listId="bdmode_h" name="BDManageControlHVOApp_List" title="档案管控模式列表" ts="2015-06-04 09:49:13" vmfield="BDManageControlHVOApp_List"/>
+    </container>
+  </view>
+</application>

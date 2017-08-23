@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application name="DeliveryDetailApp" title="发货单详情" moduleName="sa" symbol="sa.Delivery" uiType="voucher">
+  <references>
+    <reference name="../sa/DeliveryDetailAppVM.xml"/>
+  </references>
+  <view name="DeliveryDetailView" title="发货单详情" layoutMode="Fluid" appId="sa.DeliveryDetailApp" viewModel="sa.DeliveryDetailApp.DeliveryDetailViewModel" screenSize="M" tplName="voucher_M.tpl">
+    <container name="Abstract" title="概要" type="Card">
+      <controls>
+        <control name="customer" title="客户名称" placeHolder="true" ctrlType="TextBox" position="top-left" field="customer" entity="DeliveryDetail" />
+        <control name="approvestatus" title="发货单状态" ctrlType="Label" defaultValue="-1" position="top-right" field="approvestatus" entity="DeliveryDetail" />
+        <control name="money" title="发货单金额" placeHolder="true" ctrlType="TextBox" position="bottom-left" field="money" entity="DeliveryDetail" />
+        <control name="toolbar" title="工具栏" ctrlType="Button" position="bottom-right" />
+      </controls>
+    </container>
+    <container name="Toolbar" title="工具栏" type="Toolbar">
+      <controls>
+        <control name="editAction" title="编辑" ctrlType="Button" css="tb-edit-icon" field="editAction" entity="Toolbar" />
+        <control name="submitAction" title="提交" ctrlType="Button" css="submit-icon" field="submitAction" entity="Toolbar" />
+        <control name="withdrawAction" title="收回" ctrlType="Button" css="withdraw-icon" field="withdrawAction" entity="Toolbar" />
+        <control name="getorderAction" title="拉单" ctrlType="Button" css="outbound-icon" field="getorderAction" entity="Toolbar" />
+        <control name="approveAction" title="审核" ctrlType="Button" css="approve-icon" field="approveAction" entity="Toolbar" />
+        <control name="unapproveAction" title="弃审" ctrlType="Button" css="unapprove-icon" field="unapproveAction" entity="Toolbar" />
+        <control name="deleteAction" title="删除" ctrlType="Button" css="delete-icon" field="deleteAction" entity="Toolbar" />
+        <control name="outboundAction" title="出库" ctrlType="Button" css="outbound-icon" field="outboundAction" entity="Toolbar" />
+        <control name="relatedAction" title="相关业务" ctrlType="Button" css="related-icon" field="relatedAction" entity="Toolbar" />
+        <control name="setAction" title="设置" ctrlType="Button" css="set-icon" field="setAction" entity="Toolbar" />
+        <control name="outputAction" title="输出" ctrlType="Button" css="output-icon" field="outputAction" entity="Toolbar" />
+      </controls>
+    </container>
+    <container name="Tab" title="页签" mode="strip" type="Toolbar">
+      <controls>
+        <control name="baseinfo" title="基本信息" ctrlType="Button" />
+        <control name="linkman" title="联系人" ctrlType="Button" content="common.contact.ContactApp" />
+      </controls>
+    </container>
+    <container name="baseinfo" title="基本信息" type="TabPage">
+      <controls>
+        <control name="vbillno" title="发货单号" ctrlType="TextBox" field="vbillno" entity="DeliveryDetail" />
+        <control name="billdate" title="单据日期" ctrlType="DateTimeBox" defaultValue="@SYSDATE" field="billdate" entity="DeliveryDetail" />
+        <control name="busitype" title="业务类型" ctrlType="Refer" field="busitype" entity="DeliveryDetail" />
+        <control name="deliverytype" title="销售类型" ctrlType="Refer" defaultValue="0001ZZ10000000003T83" field="deliverytype" entity="DeliveryDetail" />
+        <control name="handlingclerk" title="销售业务员" ctrlType="TextBox" field="handlingclerk" entity="DeliveryDetail" />
+        <control name="handlingdeptment" title="销售部门" ctrlType="Refer" field="handlingdeptment" entity="DeliveryDetail" />
+        <control name="pricingtax" title="报价含税" ctrlType="TextBox" field="pricingtax" entity="DeliveryDetail" />
+        <control name="deliverydetail" title="子行" ctrlType="DataGrid" field="deliverydetail" entity="DeliveryDetail">
+          <columns>
+            <column name="cusmaterialname" title="料品" field="cusmaterialname" ctrlType="Refer" position="leftTop" />
+            <column name="finalpriceincludetax" title="金额" field="finalpriceincludetax" ctrlType="NumberBox" position="rightTop" />
+            <column name="quotation" title="报价" field="quotation" ctrlType="NumberBox" position="leftBottom" />
+            <column name="volume" title="数量" field="volume" ctrlType="TextBox" position="rightBottom" />
+          </columns>
+        </control>
+        <control name="cancelAction" title="取消" ctrlType="Button" css="cancel-icon" field="cancelAction" entity="Toolbar" />
+        <control name="saveAction" title="保存" ctrlType="Button" css="search-icon" field="saveAction" entity="Toolbar" />
+      </controls>
+    </container>
+  </view>
+</application>

@@ -1,0 +1,79 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>附件详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link href="./pc/css/modal.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.ToolBar.css" rel="stylesheet" />
+    <link href="./bootstrap/css/bootstrap-datetimepicker.css" rel="stylesheet" />
+    <link href="./bootstrap/css/bootstrap.css"rel="stylesheet"/>
+</head>
+<body>
+    <div id="AttachDetailView" data-title="附件详情" data-page="common.attachment.AttachmentListApp" data-viewmodel="AttachDetailViewModel">
+        <div class="cube-main">
+            <div class="cube-main-content">
+                <div class="cube-content-page">
+                    <div class="cube-content-content">
+                        <div data-related="tabMenu" style="height:100%;overflow: auto;">
+                            <div class="cube-detail-content CustomerFile" data-content="baseinfo">
+                                <div>
+                                    <div style=" width: 98%; margin-left: 20px; font-family: '微软雅黑 Regular', '微软雅黑'; font-weight: 700; font-style: normal; font-size: 14px; color: #333;">附件信息<a name="5F"></a></div>
+                                    <div data-propertyname="attachmentList" data-controltype="AttachmentList">
+                                        <div class="col-lg-8" style=" width: 98%; margin-left: 10px;">
+                                            <div class="col-lg-4" style="width: 18%; display: inline; ">
+                                                <span class="tb-edit-icon" style="margin-right: 5px;"></span>
+                                                <span style="cursor:pointer">添加附件</span>
+                                            </div>
+                                            <div class="col-lg-4" style="width: 21%; display: inline;">
+                                                <span class="tb-edit-icon" style="margin-left: 20px; margin-right: 5px;"></span>
+                                                <span style="cursor:pointer">打包下载</span>
+                                            </div>
+                                        </div>
+                                        <input type="file" multiple="multiple" style="display:none;" />
+                                        <ul style="width: 98%;margin-left: 20px;">
+                                            <!--<ul>
+            <li>
+                <img src="./pc/images/AttachmentList/u144.png" />
+                <div>
+                    <div>产品使用手册.pdf</div>
+                    <div><span>下载</span><span>删除</span></div>
+                </div>
+                <div><span>12.81MB</span><span>5次下载</span><span>张国栋</span><span>2014-11-14</span></div>
+            </li>
+        </ul>-->
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./jquery/jquery-ui.js" type="text/javascript"></script>
+    <script src="./bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="./common/js/Animation.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./pc/js/cube.pc.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/CommonProxy.js" type="text/javascript"></script>
+    <script src="./common/js/Button.js" type="text/javascript"></script>
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>
+    <script src="./jquery/jquery.event.drag-2.2.js" type="text/javascript"></script>
+    <script src="./pc/js/attachmentList.js" type="text/javascript"></script>
+    <script src="apps/common/attachment/AttachmentListApp_L.js" type="text/javascript"></script>
+    <script src="apps/common/attachment/AttachmentListApp_Extend.js" type="text/javascript"></script>
+    <script src="./common/js/CommonCRUD.js" type="text/javascript" ></script>
+    <script type="text/javascript">
+        cb.viewbinding.create("AttachDetailView");
+    </script>
+</body>
+</html>

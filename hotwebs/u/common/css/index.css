@@ -1,0 +1,264 @@
+
+body {
+    
+    font-family: "Î¢ÈíÑÅºÚ Regular","Î¢ÈíÑÅºÚ";
+}
+ul {
+    padding: 0;
+}
+.index_box {
+    background: url("../images/homeImg/u423.jpg") no-repeat scroll 0 0%, url("../images/homeImg/u421.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    padding: 38px 0 0;
+    width: 600px;
+}
+.setting > img {
+    float: right;
+    margin: 2%;
+}
+.clear {
+    clear: both;
+}
+.indexTab {
+    height: 226px;
+    position: relative;
+}
+.indexTab > .size1 img {
+    height: 40px;
+    left: 22%;
+    position: relative;
+    top: 22%;
+    width: 40px;
+}
+.indexTab > .size2 img {
+    height: 50px;
+    left: 22%;
+    position: relative;
+    top: 22%;
+    width: 50px;
+}
+.indexTab > .size3 img {
+    height: 60px;
+    left: 22%;
+    position: relative;
+    top: 22%;
+    width: 60px;
+}
+.indexTab > li {
+    background-color: #bcbcbc;
+    border: 4px solid #ffffff;
+    display: inline-block;
+    list-style: none outside none;
+    position: absolute;
+    transition: transform 2s ease 0s;
+    -webkit-transition: -webkit-transform 2s ease 0s;
+    -moz-transition: -moz-transform 2s ease 0s;
+    -o-transition: -o-transform 2s ease 0s;
+}
+.indexTab > li:hover {
+    background-color: #8abdfe;
+    cursor: pointer;
+}
+.indexTab > li > a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.indexTab > li > a:focus {
+    outline: medium none;
+}
+.indexTab > .tab_1 {
+    border-radius: 40px;
+    height: 80px;
+    transform: translate(0px, 0px);
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    width: 80px;
+}
+.indexTab > .tab_2 {
+    border-radius: 50px;
+    height: 100px;
+    transform: translate(104px, 74px);
+    -webkit-transform: translate(104px, 74px);
+    -moz-transform: translate(104px, 74px);
+    -o-transform: translate(104px, 74px);
+    width: 100px;
+}
+.indexTab > .tab_3 {
+    border-radius: 60px;
+    height: 120px;
+    transform: translate(238px, 92px);
+    -webkit-transform: translate(238px, 92px);
+    -moz-transform: translate(238px, 92px);
+    -o-transform: translate(238px, 92px);
+    width: 120px;
+}
+.indexTab > .tab_4 {
+    border-radius: 50px;
+    height: 100px;
+    transform: translate(392px, 74px);
+    -webkit-transform: translate(392px, 74px);
+    -moz-transform: translate(392px, 74px);
+    -o-transform: translate(392px, 74px);
+    width: 100px;
+}
+.indexTab > .tab_5 {
+    border-radius: 40px;
+    height: 80px;
+    transform: translate(516px, 0px);
+    -webkit-transform: translate(516px, 0px);
+    -moz-transform: translate(516px, 0px);
+    -o-transform: translate(516px, 0px);
+    width: 80px;
+}
+.indexTab > li.status2 {
+    background-color: #8abdfe;
+    border: 4px solid #ffffff;
+}
+.MyWork > ul {
+    height: 468px;
+    left: 0;
+    list-style: none outside none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-left: 60px;
+    position: absolute;
+    width: 600px;
+}
+.MyWork > ul > li {
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    height: 150px;
+    position: absolute;
+    transition: transform 1s ease-in-out 0s;
+    -webkit-transition: -webkit-transform 1s ease-in-out 0s;
+    -moz-transition: -moz-transform 1s ease-in-out 0s;
+    -o-transition: -o-transform 1s ease-in-out 0s;
+    width: 160px;
+}
+.background-blank {
+    background: url("../images/homeImg/u457.png") no-repeat scroll 0 0 transparent;
+}
+.background-notes {
+    background: url("../images/homeImg/u632.png") no-repeat scroll 0 0 transparent;
+}
+.background-opportunities {
+    background: url("../images/homeImg/u642.png") no-repeat scroll 0 0 transparent;
+}
+.background-feed {
+    background: url("../images/homeImg/u646.png") no-repeat scroll 0 0 transparent;
+}
+.background-task {
+    background: url("../images/homeImg/u654.png") no-repeat scroll 0 0 transparent;
+}
+.background-sales-order {
+    background: url("../images/homeImg/u658.png") no-repeat scroll 0 0 transparent;
+}
+.background-past {
+    background: url("../images/homeImg/u612.png") no-repeat scroll 0 0 transparent;
+}
+.MyWork > ul > li > a {
+    background: url("../images/homeImg/u644.png") no-repeat scroll center center transparent;
+    border-radius: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-weight: 900;
+    height: 100%;
+    padding: 112px 16px 0 0;
+    text-align: right;
+    text-decoration: none;
+    width: 100%;
+}
+.MessageTask {
+}
+.MessageTask > div {
+    margin: 10px;
+    padding: 10px;
+}
+.MessageTask > div > div {
+    float: left;
+}
+.left-Icon {
+    border: 4px solid #ffffff;
+    border-radius: 30px;
+    height: 60px;
+    margin: 10px 0 0;
+    padding: 10px 0 0 11px;
+    width: 60px;
+}
+.triangle-up {
+    border: 18px solid #ffffff;
+    border-radius: 15px 15px 0 0;
+    display: block;
+    height: 0;
+    margin: 0 auto -46px;
+    width: 0;
+}
+.triangle-left {
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #ffffff;
+    border-top: 10px solid transparent;
+    height: 0;
+    margin: 30px 0 0 10px;
+    width: 0;
+}
+.right-list {
+    background-color: #ffffff;
+    border-radius: 10px;
+    list-style: none outside none;
+    margin: 0 0 10px;
+    padding: 10px 10px 10px 20px;
+    width: 480px;
+}
+.right-list > ul {
+    list-style: none outside none;
+}
+.right-list > ul > li {
+    color: #666666;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    list-style: none outside none;
+    padding: 10px 0;
+}
+.right-list > span.title {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 700;
+}
+.right-list span.time {
+    color: #999999;
+    font-size: 14px;
+    font-weight: 400;
+}
+.TabBar {
+}
+.ScheduleWeek {
+    list-style: none outside none;
+}
+.ScheduleWeek li {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 0 30px 0 0;
+}
+.commenDay1 {
+    color: #999999;
+}
+.commenDay {
+    color: #ff6600;
+}
+.ScheduleDay {
+    list-style: none outside none;
+}
+.ScheduleDay li {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 0 30px 0 0;
+    width: 70px;
+}
+.hasScheduleDay {
+    background: url("../images/homeImg/u159.png") no-repeat scroll 30px 1px transparent;
+}

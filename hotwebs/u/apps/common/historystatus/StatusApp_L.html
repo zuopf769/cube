@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="pc/css/StatusBar.css" rel="stylesheet" />
+    <link href="pc/css/ScaleBar.css" rel="stylesheet" />
+    <style>
+        #StatusView {
+        }
+        .statusRow {
+            overflow:auto;
+            margin:50px auto;
+        }
+        .statusRow > span {
+            display: block;
+            float: left;
+            width: 138px;
+            text-align: center;
+            font-family: '微软雅黑 Regular', 微软雅黑;
+        }
+        .statusRow > div {
+            margin-left: 138px;
+            padding-top: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div id="StatusView" data-page="common.historystatus.StatusApp" data-viewmodel="StatusViewModel">
+        <div class="statusRow">
+            <span>物理状态</span>
+            <div data-propertyname="status" data-controltype="StatusBar" style="width: 670px; padding-top: 1px;"></div>
+        </div>
+        <div class="statusRow">
+            <span>出货状态</span>
+            <div data-propertyname="scale1" data-controltype="ScaleBar" style="width:403px;">
+                <div class="barList">
+                    <div></div>
+                    <div class="part"></div>
+                </div>
+                <div class="descriptionList">
+                    <div><span></span></div>
+                    <div class="part"><span></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="statusRow">
+            <span>出库状态</span>
+            <div data-propertyname="scale2" data-controltype="ScaleBar" style="width:403px;">
+                <div class="barList">
+                    <div></div>
+                    <div class="part"></div>
+                </div>
+                <div class="descriptionList">
+                    <div><span></span></div>
+                    <div class="part"><span></span></div>
+                </div>
+            </div>
+        </div>
+   </div>
+
+    <script src="./jquery/jquery-1.11.1.js"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    
+	<script src="./pc/js/StatusBar.js"></script>
+    <script src="./pc/js/ScaleBar.js"></script>
+    
+<script>
+var StatusViewModel = function (name) {
+    cb.model.ContainerModel.call(this, null, name || "StatusViewModel");
+    this.init();
+};
+StatusViewModel.prototype = new cb.model.ContainerModel();
+StatusViewModel.prototype.constructor = StatusViewModel;
+
+StatusViewModel.prototype.init = function () {
+    var fields = {
+        ViewModelName: "StatusViewModel",
+        status: new cb.model.SimpleModel(),
+        scale1: new cb.model.SimpleModel(),
+        scale2: new cb.model.SimpleModel()
+    };
+    this.setData(fields);
+    this.setDirty(false);
+
+    var proxyConfig = {
+        //GetMenu: { url: "u8services/classes/UAP/com.yonyou.u8.framework.server.service.base.MenuService?method=GetMenu", method: "Get" },
+        //GetMsg: { url: "classes/Message/UAP/QueryMessage", method: "Post" },
+        //GetSchedule: { url: "classes/General/tt.Schedule/QueryByEntity", method: "Post" }
+        
+    };
+    this.setProxy(proxyConfig);
+
+    StatusViewModel_Extend.initStatus(this);
+};
+
+var StatusViewModel_Extend = {
+
+	initStatus: function (viewModel) {
+		var data={
+				//dir: 'VR',
+				value:{
+					index:3,
+					content:new Date()
+				},
+				datasource: [
+					{ name: "开立", content: 111 },
+					{ name: "提交", content: 222 },
+					{ name: "审核通过", content: 333 },
+					{ name: "变更", content: 444 },
+                    { name: "变更通过" },
+					{ name: "关闭" }
+				]
+		};
+		var scale1 = {
+		    total: 5600,
+		    value: 3685
+		},
+        scale2 = {
+            total: 5600,
+            value: 2750
+        };
+        viewModel.getstatus().setData(data);
+        viewModel.getscale1().setData(scale1);
+        viewModel.getscale2().setData(scale2);
+    }
+
+	
+};
+	</script>
+    <script>
+        cb.viewbinding.create("StatusView");
+    </script>
+</body>
+</html>

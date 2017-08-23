@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>U订货</title>
+    <!--<link rel="stylesheet" href="css/framework7.css">-->
+    <link href="css/framework7.ios.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/my-app-index.css">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!--<link rel="stylesheet" href="css/shopoing-cart.css">-->
+    <link rel="stylesheet" href="css/my-app-product.css">
+    <link rel="stylesheet" href="css/productDetail.css">
+    <link rel="stylesheet" href="css/confirm-order.css">
+    <!--<link rel="stylesheet" href="css/category.css">-->
+    <link rel="stylesheet" href="css/toast.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/addrList.css">
+
+    <link rel="stylesheet" href="css/rebate.css" />
+    <link rel="stylesheet" href="css/bill.css" />
+<link rel="stylesheet" href="css/orderStatus-invoice.css" />
+</head>
+<body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="popup popup-prodSUK"></div>
+    <div class="popup productParam-popup"></div>
+    <div class="panel panel-left panel-reveal">
+        <div class="content-block">
+            <p>Left panel content goes here</p>
+        </div>
+    </div>
+    <div class="popup popup-select-bank"></div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+        <div class="content-block">
+            <p>Right Panel content here</p>
+            <!-- Click on link with "close-panel" class will close panel -->
+            <p><a href="#" class="close-panel">Close me</a></p>
+            <!-- Click on link with "open-panel" and data-panel="left" attribute will open Left panel -->
+            <p><a href="#" data-panel="left" class="open-panel">Open Left Panel</a></p>
+        </div>
+    </div>
+    <div class="views tabs">
+        <div id="view-1" class="view view-main tab active" data-url="pages/home.html">
+            <div class="pages navbar-fixed navbar-through tabbar-labels-fixed  fixed-through">
+                <div data-page="home" class="page">
+                    <div class="page-content p-t-0">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="view-2" class="view tab" data-url="pages/category.html">
+            <!-- We can make with view with navigation, let's add Top Navbar-->
+            <div class="pages navbar-through">
+                <div data-page="category" class="page">
+                    <div class="page-content"></div>
+                </div>
+            </div>
+        </div>
+        <div id="view-3" class="view tab" data-url="pages/cart.html">
+            <!-- We can make with view with navigation, let's add Top Navbar-->
+            <!-- Pages-->
+            <div class="pages navbar-through toolbar-through">
+                <!-- Page, data-page contains page name-->
+                <div data-page="cart" class="page">
+                    <!-- Scrollable page content-->
+                    <div class="page-content"></div>
+                </div>
+            </div>
+        </div>
+        <div id="view-4" class="view tab" data-url="pages/user.html">
+            <div class="pages navbar-through">
+                <div data-page="user" class="page">
+                    <div class="page-content">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="login-screen modal-in">
+            <div class="views">
+                <div class="view">
+                    <div class="pages">
+                        <div class="page">
+                            <div class="page-content login-screen-content">
+                                <!--<div class="login-screen-title">U订货</div>-->
+                                <div class="text-right">
+                                    <i class="icon icon-help hidden"></i>
+                                </div>
+                                <div class="login-avatar">
+                                    <img data-src="img/indexImg.png" class="lazy" />
+                                </div>
+                                <form id="mylogin">
+                                    <div class="list-block">
+                                        <ul>
+                                            <li class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-username"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-input">
+                                                        <input type="text" name="username" placeholder="账户/手机号/邮箱" value="0006@huch.com.cn" />
+                                                    </div>
+                                                    <span class="value-clear"><i class="icon icon-clear"></i></span>
+                                                </div>
+                                            </li>
+                                            <li class="item-content">
+                                                <div class="item-media">
+                                                    <i class="icon icon-password"></i>
+                                                </div>
+                                                <div class="item-inner">
+                                                    <div class="item-input">
+                                                        <input type="password" name="password" placeholder="请输入密码" value="huch12345" />
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="login-btuuon">
+                                        <p>
+                                            <a href="#" class="button button-big button-fill bg-green-u submit">登 录</a>
+                                        </p>
+                                        <p style="margin-top:10px; display:none;">
+                                            <a href="#" class="button border-lightestgray-u color-lightergray-u">注  册</a>
+                                        </p>
+                                    </div>
+                                    <div class="text-right">
+                                        <a class=" forgetPwd" href="pages/forgetPwd.html">忘记密码</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="toolbar tabbar tabbar-labels homeNavBar">
+            <div class="toolbar-inner">
+                <a href="#view-1" class="tab-link active">
+                    <i class="icon footer-icon-1"></i>
+                    <span class="tabbar-label">首页</span>
+                </a>
+                <a href="#view-2" class="tab-link">
+                    <i class="icon footer-icon-2"> </i>
+                    <span class="tabbar-label">分类</span>
+                </a>
+                <a href="#tab5" class="tab-link">
+                    <i class="icon q-order"> </i>
+                </a>
+                <a href="#view-3" class="tab-link">
+                    <i class="icon footer-icon-3" id="toolBarShoppingCartCount">
+                    </i>
+                    <span class="tabbar-label">购物车</span>
+                </a>
+                <a href="#view-4" class="tab-link">
+                    <i class="icon footer-icon-4">
+                        <span class="mybadge"></span>
+                    </i>
+                    <span class="tabbar-label">我的</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="popup tablet-fullscreen popup-welcome modal-in">
+        <div class="welcome">
+            <p class="footerTitle">
+                ©2015 用友优普信息技术有限公司
+            </p>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.js"></script>
+    <script type="text/javascript" src="js/cube.js"></script>
+    <script type="text/javascript" src="js/basedata.js"></script>
+    <script type="text/javascript" src="js/toast.js"></script>
+    <script type="text/javascript" src="js/ns.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app-index.js"></script>
+    <script type="text/javascript">
+        function plusReady() {
+            // 隐藏滚动条
+            plus.webview.currentWebview().setStyle({
+                scrollIndicator: 'none'
+            });
+            var backBtnCount = 0;
+            // Android处理返回键
+            plus.key.addEventListener('backbutton', function () {
+                var homePages = ["home", "category", "cart", "user"];
+                var currPage = $$(".view-main").data("page");
+                if (homePages.indexOf(currPage) > -1) {
+                    if (backBtnCount == 0) {
+                        plus.nativeUI.toast("再次点击返回可退出！");
+                        setTimeout(function () {
+                            backBtnCount = 0;
+                        }, 1000);
+                    }
+                    backBtnCount = backBtnCount + 1;
+                    if (backBtnCount == 2) {
+                        plus.runtime.quit();
+                    }
+                } else {
+                    switch (currPage) {
+                        case "ForgetPwd":  //忘记密码页面,未进入系统
+                            myApp.loginScreen();
+                            myApp.mainView.router.back();
+                            break;
+                        case "productDetail": //规格半屏页,需要特殊处理
+                            if ($$(".productParam-popup").length > 0 && $$(".productParam-popup")[0].style.display == "block") {
+                                $$("div[data-page=protDetailPage] .icon-backgray").trigger("click");
+                            }
+                            else {
+                                myApp.mainView.router.back();
+                            }
+                            break;
+                        default:
+                            myApp.mainView.router.back();
+                    }
+                }
+            }, false);
+        }
+        if (window.plus) {
+            plusReady();
+        } else {
+            document.addEventListener('plusready', plusReady, false);
+        }
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿<div data-controller="ContactsController">
+    <div class="pages">
+        <div data-page="contactsListPage" class="page no-tabbar">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left"><a href="#" class="link back"><i class="icon icon-backgray"></i></a></div>
+                    <div class="center">联系人</div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="user-list">
+                    <div class="list-block  all-order  m-b-0">
+                        <ul class="contactsListPage-container"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <a class="button button-fill bg-green-u p-lr-25 only-one-btn" href="pages/contactsNew.html">添加联系人</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script id="contactItemTpl" type="text/template7">
+        {{#each contacts}}
+        <a href="#">
+            <li class="list-bankInfor item-content contactsPage-item" data-id="{{id}}">
+                <div class="item-inner">
+                    <div class="item-title">
+                        <span>{{cFullName}}</span>
+                        <span>{{#if cPosition}}{{cPosition}}{{/if}}</span>
+                        {{#if bDefault}}
+                        <span class="cur">默认</span>
+                        {{/if}}
+                    </div>
+                    <div class="item-after">
+                        {{cMobile}}
+                    </div>
+                </div>
+            </li>
+        </a>
+        {{/each}}
+    </script>
+    <script type="text/javascript" src="../js/pages/ContactsController.js"></script>
+</div>

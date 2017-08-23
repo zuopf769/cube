@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<applications>
+  <application id="8d597299-3575-45af-9eb8-4da57d2e9297" name="personApp" title="u8person" domainName="uap" moduleName="u8" symbol="u8.person" ts="2015-04-21 15:11:51" dr="0" tplName_viewModel="documents" tplName="documents_min.tpl">
+    <viewmodel id="8d597299-3575-45af-9eb8-4da57d2e9297" name="personAppViewModel_documents" title="u8person" extendName="personAppViewModel_documents_Extend" ts="2015-04-21 15:11:51" dr="0" tplName="archives_min.js.tpl">
+      <entity id="8d597299-3575-45af-9eb8-4da57d2e9297-toolbar" name="Toolbar" title="功能" entityId="92161ac4-ab8f-4a2e-8488-6164f7cc2e2b" isMain="true" ts="2015-04-21 15:11:51" dr="0">
+        <field id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-returnAction" name="returnAction" title="返回" ctrlType="Button" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="document" isSplit="false" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar"/>
+        <field id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-addAction" name="addAction" title="增加" ctrlType="DropDownButton" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="document" isSplit="false" ts="2015-04-21 15:11:51" dr="0" entity="Toolbar"/>
+        <field id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-addActionL" name="addAction" title="增加" ctrlType="Button" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="documents" isSplit="false" ts="2015-04-21 15:11:51" dr="0" entity="Toolbar"/>
+        <field id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-saveAction" name="saveAction" title="保存" ctrlType="Button" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="document" isSplit="false" ts="2015-04-21 15:11:51" dr="0" entity="Toolbar"/>
+        <field id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-editAction" name="editAction" title="修改" ctrlType="Button" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="document" isSplit="false" ts="2015-04-21 15:11:51" dr="0" entity="Toolbar"/>
+        <field id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-editActionL" name="editAction" title="编辑" ctrlType="Button" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="documents" isSplit="false" ts="2015-04-21 15:11:51" dr="0" entity="Toolbar"/>
+        <field id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-deleteAction" name="deleteAction" title="删除" ctrlType="Button" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="document" isSplit="false" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar"/>
+        <field id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-batchDeleteActionL" name="batchDeleteAction" title="删除" ctrlType="Button" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="documents" isSplit="false" ts="2015-04-21 15:11:51" dr="0" entity="Toolbar"/>
+        <field id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-cancelAction" name="cancelAction" title="放弃" ctrlType="Button" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="document" isSplit="false" ts="2015-04-21 15:11:51" dr="0" entity="Toolbar"/>
+        <field id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-configActionL" name="configAction" title="设置" ctrlType="DropDownButton" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="documents" isSplit="false" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar"/>
+        <field id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-printAction" name="printAction" title="打印" ctrlType="Button" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="document" isSplit="false" ts="2015-04-21 15:11:51" dr="0" entity="Toolbar"/>
+        <field id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-nextAction" name="nextAction" ctrlType="Button" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="document" position="right" isSplit="false" css="next-icon" ts="2015-04-21 15:11:51" dr="0" entity="Toolbar"/>
+        <field id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-prevAction" name="prevAction" ctrlType="Button" isKey="false" isNecessary="false" isNullable="false" isReadOnly="false" isSyncKey="false" isVisible="true" modelType="SimpleModel" fieldType="head" tpltype="document" position="right" isSplit="false" css="prev-icon" ts="2015-04-21 15:11:51" dr="0" entity="Toolbar"/>
+      </entity>
+      <entity id="92161ac4-ab8f-4a2e-8488-6164f7cc2e2b" name="person" title="业务员" entityId="92161ac4-ab8f-4a2e-8488-6164f7cc2e2b" isMain="true" ts="2015-04-21 15:11:51" dr="0">
+        <field id="92161ac4-ab8f-4a2e-8488-6164f7cc2e2b-listgrid" name="personApp_List" title="u8person列表" ctrlType="DataGrid" isNullable="true" isVisible="true" modelType="Model3D" fieldType="List" tpltype="document" ts="2015-04-21 15:11:51" dr="0" entity="person"/>
+        <field id="92161ac4-ab8f-4a2e-8488-6164f7cc2e2b-tree" name="personApp_Tree" title="u8person树" ctrlType="Tree" isNullable="true" isVisible="true" modelType="Model2D" fieldType="List" tpltype="document" ts="2015-04-21 15:11:51" dr="0" entity="person"/>
+      </entity>
+      <actions>
+        <action id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-addActionL" name="addAction" entity="Toolbar" field="addAction" defaultImpl="listAdd" eventName="click" functionName="addAction" tpltype="documents" ts="2015-04-21 15:11:51" dr="0"/>
+        <action id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-editActionL" name="editAction" entity="Toolbar" field="editAction" defaultImpl="listEdit" eventName="click" functionName="editAction" tpltype="documents" ts="2015-04-21 15:11:51" dr="0"/>
+        <action id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-batchDeleteActionL" name="batchDeleteAction" entity="Toolbar" field="batchDeleteAction" defaultImpl="batchDelete" eventName="click" functionName="batchDeleteAction" tpltype="documents" ts="2015-04-21 15:11:51" dr="0"/>
+        <action id="8d597299-3575-45af-9eb8-4da57d2e9297-btn-configActionL" name="configAction" entity="Toolbar" field="configAction" defaultImpl="config" eventName="click" functionName="configAction" tpltype="documents" ts="2015-04-21 15:11:52" dr="0"/>
+        <action id="92161ac4-ab8f-4a2e-8488-6164f7cc2e2b-listgrid-act-dblclickrow" name="dblclickrow" entity="person" field="personApp_List" defaultImpl="dblClickRow" eventName="dblclickrow" functionName="dblClickRow" fieldtype="List" tpltype="documents" ts="2015-04-21 15:11:51" dr="0"/>
+        <action id="92161ac4-ab8f-4a2e-8488-6164f7cc2e2b-tree-act-treeBeforeExpand" name="treeBeforeExpand" entity="person" field="personApp_Tree" defaultImpl="treeBeforeExpand" eventName="beforeExpand" functionName="treeBeforeExpand" fieldtype="List" tpltype="documents" ts="2015-04-21 15:11:51" dr="0"/>
+        <action id="92161ac4-ab8f-4a2e-8488-6164f7cc2e2b-tree-act-treeClick" name="treeClick" entity="person" field="personApp_Tree" defaultImpl="treeClick" eventName="click" functionName="treeClick" fieldtype="List" tpltype="documents" ts="2015-04-21 15:11:51" dr="0"/>
+        <action id="92161ac4-ab8f-4a2e-8488-6164f7cc2e2b-tree-act-treeMoreClick" name="treeMoreClick" entity="person" field="personApp_Tree" defaultImpl="treeMoreClick" eventName="moreClick" functionName="treeMoreClick" fieldtype="List" tpltype="documents" ts="2015-04-21 15:11:51" dr="0"/>
+      </actions>
+      <proxies/>
+      <states>
+        <state id="8d597299-3575-45af-9eb8-4da57d2e9297-add" name="add" isSystem="true" ts="2015-04-21 15:11:52" dr="0">
+          <buttons>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-add-addAction" name="addAction" disable="1" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="addAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-add-batchDeleteAction" name="batchDeleteAction" disable="1" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="batchDeleteAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-add-cancelAction" name="cancelAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="cancelAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-add-configAction" name="configAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="configAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-add-deleteAction" name="deleteAction" disable="1" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="deleteAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-add-editAction" name="editAction" disable="1" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="editAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-add-nextAction" name="nextAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="nextAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-add-prevAction" name="prevAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="prevAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-add-printAction" name="printAction" disable="1" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="printAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-add-returnAction" name="returnAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="returnAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-add-saveAction" name="saveAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="saveAction"/>
+          </buttons>
+        </state>
+        <state id="8d597299-3575-45af-9eb8-4da57d2e9297-browse" name="browse" isSystem="true" ts="2015-04-21 15:11:52" dr="0">
+          <buttons>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-browse-addAction" name="addAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="addAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-browse-batchDeleteAction" name="batchDeleteAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="batchDeleteAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-browse-cancelAction" name="cancelAction" disable="1" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="cancelAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-browse-configAction" name="configAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="configAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-browse-deleteAction" name="deleteAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="deleteAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-browse-editAction" name="editAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="editAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-browse-nextAction" name="nextAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="nextAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-browse-prevAction" name="prevAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="prevAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-browse-printAction" name="printAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="printAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-browse-returnAction" name="returnAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="returnAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-browse-saveAction" name="saveAction" disable="1" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="saveAction"/>
+          </buttons>
+        </state>
+        <state id="8d597299-3575-45af-9eb8-4da57d2e9297-edit" name="edit" isSystem="true" ts="2015-04-21 15:11:52" dr="0">
+          <buttons>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-edit-addAction" name="addAction" disable="1" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="addAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-edit-batchDeleteAction" name="batchDeleteAction" disable="1" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="batchDeleteAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-edit-cancelAction" name="cancelAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="cancelAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-edit-configAction" name="configAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="configAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-edit-deleteAction" name="deleteAction" disable="1" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="deleteAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-edit-editAction" name="editAction" disable="1" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="editAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-edit-nextAction" name="nextAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="nextAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-edit-prevAction" name="prevAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="prevAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-edit-printAction" name="printAction" disable="1" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="printAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-edit-returnAction" name="returnAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="returnAction"/>
+            <button id="8d597299-3575-45af-9eb8-4da57d2e9297-edit-saveAction" name="saveAction" disable="0" ts="2015-04-21 15:11:52" dr="0" entity="Toolbar" field="saveAction"/>
+          </buttons>
+        </state>
+      </states>
+    </viewmodel>
+  </application>
+</applications>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application name="CustomerApp" title="客户档案" moduleName="pu" symbol="pu.Customer" uiType="archives">
+  <references>
+    <reference name="../pu/CustomerAppVM.xml"/>
+  </references>
+  <view name="CustomerView" title="客户档案" layoutMode="Fluid" appId="pu.CustomerApp" viewModel="pu.CustomerApp.CustomerViewModel" screenSize="L" tplName="archives_L.tpl">
+    <container name="CustomerView_Body" title="客户档案列表表体" type="Grid">
+      <controls>
+        <control name="Customer_iPad" title="客户档案iPad" ctrlType="DataGrid" field="customers" entity="Customer">
+          <columns>
+            <column name="name" title="客户名称" field="name" ctrlType="TextBox" />
+            <column name="code" title="联系人姓名" field="code" ctrlType="TextBox" />
+            <column name="ccuscode_pk" title="单据编码" field="ccuscode_pk" ctrlType="TextBox" />
+            <column name="telephone" title="联系人电话" field="telephone" ctrlType="TextBox" />
+          </columns>
+        </control>
+      </controls>
+    </container>
+    <container name="Toolbar" type="Toolbar">
+      <controls>
+        <control name="addAction" title="增加" group="add" ctrlType="Button" css="add-icon" field="addAction" entity="Toolbar" />
+        <control name="editAction" title="修改" group="edit" ctrlType="Button" css="edit-icon" field="editAction" entity="Toolbar" />
+        <control name="batchAction" title="批改" group="edit" ctrlType="Button" css="batch-icon" field="batchAction" entity="Toolbar" />
+        <control name="deleteAction" title="删除" group="edit" ctrlType="Button" css="delete-icon" field="deleteAction" entity="Toolbar" />
+        <control name="mergeAction" title="并户" group="check" ctrlType="Button" css="merge-icon" field="mergeAction" entity="Toolbar" />
+        <control name="creditAction" title="信用" group="check" ctrlType="Button" css="credit-icon" field="creditAction" entity="Toolbar" />
+        <control name="checkAction" title="查重" group="check" ctrlType="Button" css="check-icon" field="checkAction" entity="Toolbar" />
+        <control name="printAction" title="打印" group="device" ctrlType="Button" css="print-icon" field="printAction" entity="Toolbar" />
+        <control name="outputAction" title="输出" group="device" ctrlType="Button" css="output-icon" field="outputAction" entity="Toolbar" />
+        <control name="bizAction" title="业务操作" group="biz" ctrlType="Button" css="biz-icon" field="bizAction" entity="Toolbar" />
+        <control name="filterAction" title="过滤" isNavigate="true" ctrlType="Button" css="filter-icon" field="filterAction" entity="Toolbar" />
+        <control name="refreshAction" title="刷新" isNavigate="true" ctrlType="Button" css="refresh-icon" field="refreshAction" entity="Toolbar" />
+        <control name="setAction" title="设置" isNavigate="true" ctrlType="Button" css="set-icon" field="setAction" entity="Toolbar" />
+      </controls>
+    </container>
+  </view>
+</application>

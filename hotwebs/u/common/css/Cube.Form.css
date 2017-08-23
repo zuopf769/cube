@@ -1,0 +1,783 @@
+﻿.cube-main
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 320px;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid #BFBFBF;
+    box-shadow: -4px 0px 5px #aaa;
+    -moz-box-shadow: -4px 0px 5px #aaa;
+}
+/********************页面Header样式  Start*****************************/
+.cube-main .cube-main-header
+{
+    font-family: '微软雅黑 Regular' , '微软雅黑';
+    font-size: 16px;
+    color: #157EFB;
+    vertical-align: middle; /*position: absolute;         top: 0;         right: 0;*/
+    width: 100%;
+    height: 10%;
+    line-height: 60px;
+    background: white;
+}
+
+.cube-main .master-part .cube-main-header
+{
+    width: 84%;
+}
+
+.cube-main .action-section
+{
+    background: #E4E4E4;
+    width: 84%;
+    height: 6%;
+    padding: 0;
+	clear:both;/*消除调试时错位*/
+	min-height:40px;
+}
+
+.cube-main .cube-main-header > label
+{
+    float: left;
+    width: 132px;
+    height: 24px;
+    font-family: '微软雅黑 Regular' , '微软雅黑';
+    font-weight: 400;
+    font-size: 18px;
+    color: #333;
+    padding-left: 20px;
+}
+
+.cube-main .cube-main-header div:first-child
+{
+    float: left;
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.cube-main .cube-main-header div:last-child
+{
+    float: right;
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+}
+/********************页面Header样式  End*****************************/
+
+.cube-main .cube-main-content
+{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    top: 10%;
+    background: #EFEFF4;
+    min-width: 320px;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.cube-main-content div:first-child[class*='ui-form-content']
+{
+    background: #FFF;
+    margin: 0 auto;
+    width: 98%;
+    height: 100%;
+    border-radius: .3em;
+    -webkit-border-radius: .3em;
+    -moz-border-radius: .3em;
+}
+
+.cube-main-content div:first-child[class*='ui-form-content'] .ui-form-contain
+{
+    margin-top: 20px;
+    height: 88%;
+}
+
+.cube-main-content .ui-head-content
+{
+    position: relative;
+    background: #FFF;
+    margin: 0 auto;
+    width: 98%;
+    height: 15%;
+    border-radius: .3em;
+    -webkit-border-radius: .3em;
+    -moz-border-radius: .3em;
+}
+
+.cube-main-content .ui-head-content > div
+{
+    float: left;
+    line-height: 40px;
+}
+
+.cube-main-content .ui-head-content > div.top-left
+{
+    width: 80%;
+}
+
+.cube-main-content .ui-head-content > div.top-right
+{
+    width: 20%;
+    text-align: right;
+}
+
+.cube-main-content .ui-head-content > div.top-right div
+{
+    margin-right: 1em;
+}
+
+.cube-main-content .ui-head-content > div.bottom-left
+{
+    width: 58%;
+}
+
+.cube-main-content .ui-head-content > div.bottom-right
+{
+    width: 42%;
+    text-align: right;
+}
+
+.cube-main-content .ui-head-content div .ui-field-contain
+{
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+}
+
+.cube-main-content .ui-head-content div .ui-field-contain > label
+{
+    float: left;
+    width: 5px;
+    margin: 0 2% 0 0;
+    font-family: '微软雅黑 Regular' , '微软雅黑';
+    font-size: 16px;
+    color: #666;
+    font-weight: normal;
+    text-align: left;
+    margin-left: 2em;
+    border: 10px;
+    padding-left: 10px;
+}
+
+.cube-main-content .ui-head-content div .ui-field-contain > div
+{
+    float: left;
+    width: 58%;
+}
+
+.cube-main-content .ui-head-content div .ui-field-contain input
+{
+    width: 95%;
+    border-width: 0px;
+    background: transparent;
+    font-family: '微软雅黑 Regular' , '微软雅黑';
+    font-size: 18px;
+    color: #000;
+    border-color: white;
+    outline-width: 0px;
+}
+
+.cube-main-content .ui-head-content div label.must-input
+{
+    border-left: 2px solid red;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.cube-main-content .ui-head-content div.top-left input[readonly='readonly'], .cube-main-content .ui-head-content div.top-left input[disabled='disabled']
+{
+    font-family: '微软雅黑 Bold' , '微软雅黑';
+    font-weight: 700;
+    font-size: 18px;
+    color: #333;
+}
+
+.cube-main-content .ui-head-content div.bottom-left input[readonly='readonly'], .cube-main-content .ui-head-content div.bottom-left input[disabled='disabled']
+{
+    font-family: '微软雅黑 Regular' , '微软雅黑';
+    font-size: 18px;
+    color: #666;
+}
+
+.cube-main-content .ui-head-content div.bottom-left input[data-controltype='NumberBox'][readonly='readonly'], .cube-main-content .ui-head-content div.bottom-left input[data-controltype='NumberBox'][disabled='disabled']
+{
+    color: #CC0000;
+}
+
+.cube-main-content .ui-head-content input
+{
+    width: 95%;
+    height: 40px;
+    border-width: 0px;
+    background: transparent;
+    font-family: '微软雅黑 Regular' , '微软雅黑';
+    font-size: 18px;
+    border-color: white;
+    outline-width: 0px;
+}
+
+.cube-main-content .ui-head-content div label.must-input
+{
+    display: inline;
+    border-left: 2px solid red;
+    height: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cube-main div[data-controltype='ImageButton']
+{
+    font-family: '微软雅黑 Regular' , '微软雅黑';
+    font-size: 14px;
+    color: #157EFB;
+}
+
+.cube-main div[data-controltype='Status'] > span:first-child {
+    margin: 0 5px -2px 0;
+}
+
+.cube-main div[data-controltype='Status'] > span:last-child {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-size: 14px;
+    color: #666666;
+}
+
+.cube-main div[data-controltype='Status'] > .img-free {
+    content: url("../images/u169.png");
+}
+
+.cube-main div[data-controltype='Status'] > .img-obsolete {
+    content: url("../images/u188.png");
+}
+
+.cube-main div[data-controltype='Status'] > .img-reviewed {
+    content: url("../images/u150.png");
+}
+
+.cube-main div[data-controltype='Status'] > .img-reviewing {
+    content: url("../images/u94.png");
+}
+
+.cube-main div[data-controltype='Status'] > .img-commit {
+    content: url("../images/u207.png");
+}
+
+/**************表单部分 Start****************/
+.ui-form-content
+{
+    position: relative;
+    background: #EFEFF4;
+    height: 80%;
+    overflow: hidden;
+}
+
+.ui-form-content div:first-child[class^='navbar']
+{
+    height: 6%;
+    margin-top: 1em;
+    margin-left: 2em;
+}
+
+.ui-form-content .ui-tab-content
+{
+    height: 90%;
+}
+
+.cube-main-content .ui-form-content .ui-form-contain
+{
+    position: relative;
+    background: #FFF;
+    margin: 0 auto;
+    width: 98%;
+    height: 100%;
+    border-radius: .3em;
+    -webkit-border-radius: .3em;
+    -moz-border-radius: .3em;
+}
+
+.cube-main-content .ui-form-content .ui-form-page
+,.cube-main-content .ui-form-content .ui-form-contain .ui-form-page
+{
+    height: 85%;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+.cube-main-content .ui-form-content .ui-form-contain .ui-form-table
+{
+    background: #EFEFF4;
+    height: 48px;
+    cursor: pointer;
+    border: 1px solid #EFEFF4;
+}
+
+.cube-main-content .ui-form-content .ui-form-contain .ui-form-table .ui-form-content
+{
+    margin-top: 5px;
+    width: 100%;
+    background: #FFF;
+    height: 35px;
+    line-height: 35px;
+}
+
+.cube-main-content .ui-form-content .ui-form-contain .ui-form-table span
+{
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+.ui-form-content .ui-field-contain,
+.ui-form-content .ui-form-contain .ui-field-contain
+{
+    height: 40px;
+    line-height: 40px;
+    margin: .5em 1.5em;
+    border-bottom: 1px solid #EFEFF4;
+}
+
+.ui-form-content .ui-field-contain:first-child
+,.ui-form-content .ui-form-contain .ui-field-contain:first-child
+{
+    margin-top: 0px;
+}
+
+.ui-form-content .ui-field-contain > label
+,.ui-form-content .ui-form-contain .ui-field-contain > label
+{
+    float: left;
+    width: 28%;
+    margin: 0 2% 0 0;
+    font-family: '微软雅黑 Regular' , '微软雅黑';
+    font-size: 16px;
+    color: #666;
+    font-weight: normal;
+    text-align: left;
+    margin-left: 2em;
+    border: 10px;
+    padding-left: 10px;
+}
+
+.ui-form-content .ui-field-contain > div,
+.ui-form-content .ui-form-contain .ui-field-contain > div
+{
+    float: left;
+    width: 58%;
+    height:40px;
+    line-height:40px;
+}
+
+.ui-form-content .ui-form-footer
+{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.ui-form-content .ui-form-contain div.ui-field-showmore
+{
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.ui-form-content .ui-form-contain .ui-field-showmore > span
+{
+    text-align: center;
+    font-family: '微软雅黑 Regular' , '微软雅黑';
+    font-size: 14px;
+    color: #999;
+}
+
+
+.ui-form-content .ui-field-contain input,
+.ui-form-content .ui-form-contain .ui-field-contain input
+{
+    width: 90%;
+    border-width: 0px;
+    background: transparent;
+    font-family: '微软雅黑 Regular' , '微软雅黑';
+    font-size: 18px;
+    color: #000;
+    border-color: white;
+    outline-width: 0px;
+}
+
+.ui-form-content .ui-field-contain label.must-input
+{
+    border-left: 2px solid red;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.cube-main .cube-search-content
+{
+    position: relative;
+    width: 99.5%;
+    height: 84%;
+    background: #FFF;
+    min-width: 320px;
+    overflow: hidden;
+    padding-top: 10px;
+}
+
+.cube-main .cube-search-content > div[data-controltype='ImageButton']
+{
+    height: 20px;
+}
+
+.cube-main .cube-search-content .ui-form-content
+{
+    background: #FFF;
+    height: 91%;
+}
+
+.cube-main .cube-search-content .ui-form-content .ui-form-contain
+{
+    background: #FFF;
+    margin: 0 auto;
+    width: 98%;
+    height: 90%;
+    border-radius: .3em;
+    -webkit-border-radius: .3em;
+    -moz-border-radius: .3em;
+}
+
+/**************表单部分 End****************/
+
+
+
+/**************通用参照 CheckBox  Start************/
+.ui-form-content .ui-field-contain,.ui-form-content .ui-form-contain .ui-field-contain {
+}
+.ui-form-content .ui-field-contain input[type=checkbox], .ui-form-content .ui-form-contain .ui-field-contain input[type=checkbox]{
+                 width: 25px;
+            height: 25px;
+            border:1px solid #666666;
+}
+ 
+/**************通用参照 Refer  End**************/
+
+/**************通用参照 下拉框  Start************/
+
+.ui-form-content .ui-field-contain select, .ui-form-content .ui-form-contain .ui-field-contain select{
+
+height: 100%;
+width: 96%;
+border: none;
+background-color:#ffffff;
+height:30px;
+float:left;
+}
+
+/**************通用参照 下拉框  End**************/
+
+/**************扩展页面布局  Start ********/
+.cube-extend
+{
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=75);
+    opacity: 0.75;
+    background: #000;
+}
+
+.cube-extend .cube-header-content
+{
+    position: relative;
+    color: white;
+    height: 80px;
+    line-height: 40px;
+    padding-left: 30px;
+}
+
+.cube-extend .cube-header-content .cube-header-left
+{
+    float: left;
+}
+
+.cube-extend .cube-header-content .cube-header-right
+{
+    float: right;
+}
+
+.cube-extend .cube-header-content .cube-header-left div:first-child
+{
+    font-family: '微软雅黑 Bold' , '微软雅黑';
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.cube-extend .cube-header-content .cube-header-left div:last-child
+{
+    font-family: '微软雅黑 Regular' , '微软雅黑';
+    font-size: 18px;
+}
+
+.cube-extend .cube-main-content .cube-field-content
+{
+    position: relative;
+    height: 300px;
+    border-top: 1px solid #666;
+    color: white;
+}
+
+.cube-extend .cube-header-content.cube-inline
+{
+    height: 60px;
+    line-height: 60px;
+}
+
+.cube-extend .cube-header-content.cube-inline .cube-header-left div
+{
+    float: left;
+}
+
+.cube-extend .cube-header-content.cube-inline .cube-header-left div:last-child
+{
+    padding-left: 10px;
+    font-family: '微软雅黑 Regular' , '微软雅黑';
+    font-size: 18px;
+    color: #ccc;
+}
+/**************扩展页面布局  End ***********************/
+@media screen and (min-width:600px) and (max-width:768px)
+{
+	.cube-main .cube-main-header div:last-child {
+		width: 45px;
+	}
+	.cube-main .action-section .search{
+		width:48%;
+	}
+	.ui-form-content .ui-field-contain > label
+    ,.ui-form-content .ui-form-contain .ui-field-contain > label{
+		width: 36%;
+	}
+    .ui-form-content .ui-field-contain
+	,.ui-form-content .ui-form-contain .ui-field-contain > div{
+		width: 50%;
+	}
+}
+
+@media screen and (min-height:600px) and (max-height:700px)
+{
+    .cube-main .cube-main-header
+    {
+        height: 10%;
+    }
+
+    .cube-main .cube-main-content
+    {
+        top: 10%;
+        height: 90%;
+    }
+    .cube-main .cube-search-content
+    {
+        top: 14%;
+        height: 94%;
+    }
+    .cube-main-content .ui-head-content
+    {
+        height: 15%;
+    }
+
+    .cube-main-content .ui-form-content .ui-form-page
+    ,.cube-main-content .ui-form-content .ui-form-contain .ui-form-page
+    {
+        height: 80%;
+    }
+}
+
+@media screen and (min-height:700px) and (max-height:900px)
+{
+    .cube-main .cube-main-header
+    {
+        height: 8%;
+    }
+
+    .cube-main .cube-main-content
+    {
+        top: 8%;
+        height: 92%;
+    }
+    .cube-main .cube-search-content
+    {
+        height: 96%;
+    }
+    .cube-main .action-section
+    {
+        height: 5%;
+    }
+    .cube-main .cube-search-content .ui-form-content
+    {
+        height: 94%;
+    }
+
+    .cube-main-content .ui-head-content
+    {
+        height: 12%;
+    }
+
+    .navbar-slide.ui-controlgroup-controls
+    {
+        height: 4% !important;
+    }
+
+    .ui-form-content
+    {
+        height: 84%;
+    }
+
+    .cube-main-content .ui-form-content .ui-form-page
+    ,.cube-main-content .ui-form-content .ui-form-contain .ui-form-page
+    {
+        height: 85%;
+    }
+}
+
+@media screen and (min-height:900px) and (max-height:1000px)
+{
+    .cube-main .cube-main-header
+    {
+        height: 8%;
+    }
+
+    .cube-main .cube-main-content
+    {
+        top: 8%;
+        height: 92%;
+    }
+
+    .cube-main-content .ui-head-content
+    {
+        height: 12%;
+    }
+
+    .navbar-slide.ui-controlgroup-controls
+    {
+        height: 4% !important;
+    }
+
+    .ui-form-content
+    {
+        height: 84%;
+    }
+
+    .cube-main-content .ui-form-content .ui-form-page
+    ,.cube-main-content .ui-form-content .ui-form-contain .ui-form-page
+    {
+        height: 89%;
+    }
+}
+
+@media screen and (min-height:1000px) and (max-height:1100px)
+{
+    .cube-main .cube-main-header
+    {
+        height: 6%;
+    }
+
+    .cube-main .cube-main-content
+    {
+        top: 6%;
+        height: 94%;
+    }
+
+    .cube-main-content .ui-head-content
+    {
+        height: 9%;
+    }
+
+    .navbar-slide.ui-controlgroup-controls
+    {
+        height: 3% !important;
+    }
+
+    .ui-form-content
+    {
+        height: 88%;
+    }
+
+    .cube-main-content .ui-form-content .ui-form-page
+    ,.cube-main-content .ui-form-content .ui-form-contain .ui-form-page
+    {
+        height: 91%;
+    }
+}
+
+@media screen and (min-height:1500px) and (max-height:1550px)
+{
+    .cube-main .cube-main-header
+    {
+        height: 4%;
+    }
+
+    .cube-main .cube-main-content
+    {
+        top: 4%;
+        height: 96%;
+    }
+
+    .cube-main-content .ui-head-content
+    {
+        height: 6%;
+    }
+
+    .navbar-slide.ui-controlgroup-controls
+    {
+        height: 2% !important;
+    }
+
+    .ui-form-content
+    {
+        height: 92%;
+    }
+
+    .cube-main-content .ui-form-content .ui-form-page
+    ,.cube-main-content .ui-form-content .ui-form-contain .ui-form-page
+    {
+        height: 91%;
+    }
+}
+
+@media screen and (min-height:2000px) and (max-height:2048px)
+{
+    .cube-main .cube-main-header
+    {
+        height: 3%;
+    }
+
+    .cube-main .cube-main-content
+    {
+        top: 3%;
+        height: 97%;
+    }
+
+    .cube-main-content .ui-head-content
+    {
+        height: 4%;
+    }
+
+    .navbar-slide.ui-controlgroup-controls
+    {
+        height: 1.5% !important;
+    }
+
+    .ui-form-content
+    {
+        height: 94.5%;
+    }
+
+    .cube-main-content .ui-form-content .ui-form-page
+    ,.cube-main-content .ui-form-content .ui-form-contain .ui-form-page
+    {
+        height: 91%;
+    }
+}

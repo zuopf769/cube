@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>敏感数据定义</title>
+    <link rel="stylesheet" type="text/css" href="apps/common/permission/permission.css" />
+    <link rel="stylesheet" type="text/css" href="pc/css/modal.css" />
+
+    <!--    <link rel="stylesheet" type="text/css" href="../../../kendoui/kendo.default.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../kendoui/kendo.common.min.css" />-->
+</head>
+
+<body>
+    <div id="sensidefinepage" data-viewmodel="SensiObjDefineViewModel" data-title="New敏感数据定义" data-page="common.permission.SensiObjDefineApp"
+        style="width: auto; height: 100%; overflow: scroll; overflow-y: hidden; overflow-x: scroll; margin-left: 50px; margin-right: 50px; border-left: 1px solid lightblue; border-right: 1px solid lightblue; padding: 5px;">
+        <h2 style="clear: both; font-family: 'Microsoft YaHei UI'; color: lightblue">敏感数据定义</h2>
+        <div style="height: 600px; overflow-y: scroll; border: 1px solid gray; background-color: white; width: 20%; min-width: 300px; float: left;">
+            <!--<h5>敏感数据</h5>-->
+            <ul data-propertyname="sensitiveObjList" data-controltype="PermissionPersonList" class="permissionul">
+            </ul>
+        </div>
+        <div style="border: 1px solid gray; background-color: white; height: 600px; width: 70%; float: left">
+            <div style="height: 100%;">
+                <div style="height: 40px;">
+                    <div id="field_div" style="float: left">数据映射对象</div>
+                    <div id="authority_div" style="float: left; display: none">敏感数据直接授权</div>
+                    <button id="field_testGridbtn" data-controltype="Button" data-propertyname="testBtn" style="float: right">TestGrid</button>
+                    <button id="field_addbtn" data-controltype="Button" data-propertyname="addSensitiveData" style="float: right">增加</button>
+                    <button id="field_delbtn" data-controltype="Button" data-propertyname="deleteSensitiveData" style="float: right">删除</button>
+                    <button id="authority_addbtn" data-controltype="Button" data-propertyname="addPerson" style="float: right; display: none">增加</button>
+                    <div style="clear: both"></div>
+                </div>
+
+                <div style="height: 530px;">
+                    <div id="field_grid" data-propertyname="fieldGrid" data-controltype="DataGrid">
+                    </div>
+                    <div id="authority_grid" data-propertyname="authorityGrid" data-controltype="DataGrid" style="display: none;">
+                    </div>
+                </div>
+                <div style="height: 40px;">
+                    <button style="float: right; display: none; position: relative; margin-bottom: 0px;" id="authority_savebtn" data-controltype="Button" data-propertyname="saveAuthority">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="jquery/jquery-ui.js"></script>
+    <script type="text/javascript" src="jquery/jquery.event.drag-2.2.js"></script>
+    <script type="text/javascript" src="common/js/Cube.js"></script>
+    <script type="text/javascript" src="pc/js/cube.pc.js"></script>
+    <script type="text/javascript" src="common/js/Cube.bindings.js"></script>
+    <script type="text/javascript" src="common/js/Control.js"></script>
+    <script type="text/javascript" src="common/js/CommonProxy.js"></script>
+    <script type="text/javascript" src="common/js/CommonCRUD.js"></script>
+    <script type="text/javascript" src="common/js/Button.js"></script>
+    <script data-config="Refer"></script>
+    <script data-config="TextBox"></script>
+    <script data-config="DataGrid"></script>
+    <script type="text/javascript" src="apps/common/permission/PermissionPersonList.js"></script>
+    <script type="text/javascript" src="apps/common/permission/SensiObjDefineApp_L.js"></script>
+    <script type="text/javascript" src="apps/common/permission/SensiObjDefineApp_Extend.js"></script>
+    <script>
+        cb.viewbinding.create("sensidefinepage");
+        //kendo.culture("zh-CN");
+    </script>
+</body>
+
+</html>

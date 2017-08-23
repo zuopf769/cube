@@ -1,0 +1,44 @@
+﻿<div data-controller="FeedbackController">
+    <div class="pages">
+        <div class="page navbar-fixed no-tabbar" data-page="aboutUOrderPage">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left"><a href="#" class="back link"><i class="icon icon-backgray"></i></a></div>
+                    <div class="center">意见反馈</div>
+                    <div class="right"><a href="#" class="link">提交</a></div>
+                </div>
+            </div>
+            <a href="#" class="floating-button color-pink">
+                <i class="icon icon-plus"></i>
+            </a>
+            <div class="page-content" style="padding-top:30px;">
+                <style scoped>
+                    .inputStyle {
+                        width: 100%;
+                        margin-top: 20px;
+                        padding: 10px 0;
+                        text-indent: 1em;
+                        border: none;
+                        font-size: 14px;
+                    }
+
+                    .btnUploadImg {
+                        display:block;
+                        height:60px;
+                        width:60px;
+                        background:url(/img/addFile.png) no-repeat;
+                    }
+                </style>
+                <textarea placeholder="亲爱的U订货用户:
+  请在这里直接填写您的意见与建议，您的意见对我们非常重要，使我们前进的动力（500字以内）。"
+                          style="min-height:200px;width:100%;padding: 10px 0px;border:none;" maxlength="500"></textarea>
+                <ul id="files"></ul>
+                <a href="#" class="btnUploadImg hidden" id="btnSelectFile"></a>
+                <input type="text" placeholder="建议您留下常用邮箱，以便我们及时与您联系。" class="inputStyle" />
+                <input type="text" placeholder="请您留下您的联系电话，以便我们及时与您联系（选填）。" class="inputStyle m-t-10" />
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/pages/FeedbackController.js"></script>
+</div>

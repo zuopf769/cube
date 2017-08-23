@@ -1,0 +1,58 @@
+﻿.ui-content .ui-list {
+    list-style: none;
+    width: 95%;
+    min-width: 380px;
+    height: 45px;
+    line-height: 45px;
+    margin-left: 10px;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.ui-content .ui-list > div {
+    height: 45px;
+    line-height: 45px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: #333333;
+}
+
+.ui-content .ui-list:hover {
+    background: #E3F0FC;
+}
+
+.ui-content .ui-list.ui-show > div {
+    color: #157DFB;
+}
+
+.ui-content .ui-list > .ui-left {
+    float: left;
+    cursor: pointer;
+    border: none;
+}
+
+.ui-content .ui-list > .ui-right {
+    float: right;
+    width: 50%;
+    border: none;
+    overflow: hidden;
+}
+
+.ui-content .ui-list span[class='move-icon'] {
+    content: url(../images/ImageButton/move.png);
+    width: 16px;
+    height: 16px;
+    margin: 0 10px -3px 0;
+}
+
+/**********************展开查询条件 control CSS Start********************/
+.controlCss {
+    margin-top: 10px;
+}
+
+.controlCss .CheckTextBox label {
+    width: 16%;
+}
+
+
+/**********************展开查询条件 control CSS End**********************/

@@ -1,0 +1,200 @@
+﻿/****************************PC 纯文本 ToolBar   Start********************************/
+div[data-controltype='ToolBar'] {
+    /*
+        padding: 0 10px;
+        */
+}
+
+div[data-controltype='ToolBar'].cube-bar-modeltxt {
+    height: 28px;
+    overflow: hidden;
+    margin: 12px 0;
+}
+
+    div[data-controltype='ToolBar'].cube-bar-modeltxt li {
+        float: left;
+        list-style: none;
+    }
+
+       div[data-controltype='ToolBar'].cube-bar-modeltxt li > div {
+        height: 28px;
+        color: #333333;
+        line-height: 28px;
+        text-align: center;
+        border: 1px solid #BBCBDF;
+        cursor: pointer;
+        padding:0 16px;
+        /*border-right-width: 0;*/
+        margin-right:-1px;
+    }
+    
+    div[data-controltype='ToolBar'].cube-bar-modeltxt li:last-child > div {
+        border-right-width: 1px;
+    }
+    
+    div[data-controltype='ToolBar'].cube-bar-modeltxt li > div[disabled="disabled"] {
+        cursor: auto;
+    }
+    
+    div[data-controltype='ToolBar'].cube-bar-modeltxt li > .separator-button {
+        border-width: 0;
+        border-left-width: 1px;
+        padding: 0 5px;
+        cursor: auto;
+    }
+
+    div[data-controltype='ToolBar'].cube-bar-modeltxt li span {
+        font-family: '微软雅黑 Regular', '微软雅黑';
+        font-weight: 400;
+        font-style: normal;
+        font-size: 14px;
+    }
+    
+    div[data-controltype='ToolBar'].cube-bar-modeltxt li > div[disabled="disabled"] span {
+        opacity: 0.3;
+    }
+
+    div[data-controltype='ToolBar'].cube-bar-modeltxt li > div.active {
+        background: #3E94FE;
+        width: 70px;
+        color: #FFF;
+    }
+/**************************PC 纯文本 ToolBar  End***************************************/
+
+/**************************PC 图标 ToolBar   Start***********************************/
+div[data-controltype='ToolBar'].cube-bar-modelicon {
+    float: right;
+    /*width: 20%;
+    min-width: 200px;*/
+    margin: 16px 0;
+}
+
+    div[data-controltype='ToolBar'].cube-bar-modelicon li {
+        float: left;
+        list-style: none;
+        padding: 0 10px;
+    }
+    
+    div[data-controltype='ToolBar'].cube-bar-modelicon li:first-child {
+        padding-left: 0;
+    }
+    
+    div[data-controltype='ToolBar'].cube-bar-modelicon li:last-child {
+        padding-right: 0;
+    }
+
+        div[data-controltype='ToolBar'].cube-bar-modelicon li > div {
+            /*width: 45px;*/
+            height: 19px;
+            line-height: 19px;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        div[data-controltype='ToolBar'].cube-bar-modelicon li > .separator-button {
+            border-width: 0;
+            border-left: 1px solid #999;
+            padding: 0;
+            cursor: auto;
+        }
+
+        div[data-controltype='ToolBar'].cube-bar-modelicon li span {
+            font-family: '微软雅黑 Regular', '微软雅黑';
+            font-weight: 400;
+            font-style: normal;
+            font-size: 14px;
+            color: #333333;
+        }
+
+            div[data-controltype='ToolBar'].cube-bar-modelicon li span:first-child {
+                height: 16px;
+                width: 16px;
+            }
+
+            div[data-controltype='ToolBar'].cube-bar-modelicon.scheme li span:first-child {
+                height: 23px;
+                width: 23px;
+            }
+
+            div[data-controltype='ToolBar'].cube-bar-modelicon li span:last-child {
+                /*width: 28px;
+                height: 19px;*/
+                display: none;
+            }
+            
+            div[data-controltype='ToolBar'].cube-bar-modelicon .cube-bar-open-container li:hover {
+                border-bottom: 0;
+            }
+/**************************PC 图标 ToolBar   End***********************************/
+
+ /**************************PC 图标&文字（单据） ToolBar   Start********************/
+    div[data-controltype='ToolBar'].cube-bar-modeltxticon {
+        height: 30px;
+        margin: 10px 0;
+    }
+
+    div[data-controltype='ToolBar'].cube-bar-modeltxticon li {
+        float: left;
+        /*margin-left: 10px;
+        margin-top: 20px;*/
+        list-style: none;
+    }
+
+        div[data-controltype='ToolBar'].cube-bar-modeltxticon li > div {                       
+            height: 28px;
+            color: #333333;
+            line-height: 28px;
+            text-align: left;
+            border: 1px solid #BBCBDF;
+            cursor: pointer;
+            padding:0 16px;
+            border-right-width: 0;
+        }
+        
+        div[data-controltype='ToolBar'].cube-bar-modeltxticon li:last-child > div {
+            border-right-width: 1px;
+        }
+        
+        div[data-controltype='ToolBar'].cube-bar-modeltxticon li > div[disabled="disabled"] {
+            cursor: auto;
+        }
+        
+        div[data-controltype='ToolBar'].cube-bar-modeltxt li > .separator-button {
+            border-width: 0;
+            border-left-width: 1px;
+            padding: 0 5px;
+            cursor: auto;
+        }
+
+        div[data-controltype='ToolBar'].cube-bar-modeltxticon li span {
+            font-family: '微软雅黑 Regular', '微软雅黑';
+            font-weight: 400;
+            font-style: normal;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+        
+        div[data-controltype='ToolBar'].cube-bar-modeltxticon li > div[disabled="disabled"] span {
+            opacity: 0.3;
+        }
+
+            div[data-controltype='ToolBar'].cube-bar-modeltxticon li span:first-child {
+              
+            }
+
+            div[data-controltype='ToolBar'].cube-bar-modeltxticon li span:last-child {
+                width: 28px;
+                height: 19px;
+            }
+            
+            div[data-controltype='ToolBar'].cube-bar-modeltxticon .cube-bar-open-container li:hover {
+                border-bottom: 0;
+            }
+/**************************PC 图标&文字（单据） ToolBar   End********************/
+
+div[data-controltype='Pagination'] {
+    height: 28px;
+    overflow: hidden;
+    margin: 12px 0;
+}

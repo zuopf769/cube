@@ -1,0 +1,97 @@
+<div data-controller="invoicePageController">
+    <div class="pages ">
+        <div data-page="invoice" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left"><a href="#" class="back"><i class="icon icon-backgray"></i></a></div>
+                    <div class="center">发票信息</div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="list-block m-t-0 addr-invoice">
+                    <ul id="invoice_form" class="invoice_form">
+                        <li class="type align-top">
+                            <div class="item-content">
+                                <div class="item-inner no-border">
+                                    <div class="item-title label">发票类型</div>
+                                    <div class="item-input checkdiv invoiceTypeContent">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">发票抬头</div>
+                                    <div class="item-input">
+                                        <input type="text" placeholder="请输入发票抬头" name="cInvoiceTitle">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">发票内容</div>
+                                    <div class="item-input">
+                                        <input type="text" placeholder="请输入发票内容" name="cInvoiceContent">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">纳税人识别号</div>
+                                    <div class="item-input">
+                                        <input type="text" placeholder="请输入纳税人识别码" name="cTaxNum">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="bankName">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">开户行选择</div>
+                                    <div class="item-input">
+                                        <input type="text" placeholder="请选择开户行" name="cBankName" readonly id="invoiceBankName">
+                                    </div>
+                                    <div class="item-after">
+                                        <i class="icon icon-chevron-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">支行名称</div>
+                                    <div class="item-input">
+                                        <input type="text" placeholder="请输入支行名称" name="cSubBankName">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">账号</div>
+                                    <div class="item-input">
+                                        <input type="number" placeholder="请输入开户行账号" name="cBankAccount">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <a class="button button-fill bg-green-u only-one-btn invoice_save" href="#">保存</a>
+                </div>
+            </div>
+        </div>
+        <script src="../js/pages/InvoicePageController.js"></script>
+    </div>
+</div>

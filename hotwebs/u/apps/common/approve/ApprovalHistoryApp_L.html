@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Control.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="ApprovalHistoryView" class="container" data-title="审批流程信息" data-page="common.approve.ApprovalHistoryApp" data-viewmodel="ApprovalHistoryViewModel">
+        <div class="row">
+
+
+           
+            <div class="col-lg-12" data-controltype="ProcessBar" data-propertyname="processbar">
+                <div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./jquery/jquery-ui.js" type="text/javascript"></script>
+    <script src="./common/js/Animation.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./pc/js/cube.pc.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/Label.js" type="text/javascript"></script>
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>
+    <script src="./pc/js/ProcessBar.js" type="text/javascript"></script>
+    <script src="./pc/js/RejectList.js" type="text/javascript"></script>
+    <script src="./common/js/CommonProxy.js" type="text/javascript"></script>
+    <script src="./jquery/jquery.event.drag-2.2.js" type="text/javascript"></script>
+    <script src="apps/common/approve/ApprovalHistoryApp_L.js" type="text/javascript"></script>
+    <script src="apps/common/approve/ApprovalHistoryApp_Extend.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        cb.viewbinding.create("ApprovalHistoryView");
+    </script>
+</body>
+</html>

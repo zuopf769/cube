@@ -1,0 +1,171 @@
+﻿<div data-controller="UserPageController">
+    <div class="pages">
+        <div data-page="user" class="page no-navbar">
+            <!--<div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center">我的</div>
+                </div>
+            </div>-->
+            <div class="page-content">
+                <div class="user-info">
+                    <a href="pages/userBaseInfor.html">
+                        {{#if userInfo.img}}
+                        <img class="avatar lazy" data-src="{{@root.serverhost}}{{userInfo.img.cUrl}}">
+                        {{else}}
+                        <img class="avatar lazy" data-src="./img/icon/avatar.png">
+                        {{/if}}
+                        <p class="username">{{userInfo.user.cUserName}}</p>
+                    </a>
+                    <div class="account">
+                        <dl class="account-infor">
+                            <dt>账户余额</dt>
+                            <dd>￥{{#if userInfo.order.accountBalance}}{{userInfo.order.accountBalance}}{{else}}0{{/if}}</dd>
+                        </dl>
+                        <dl class="account-infor btnFavorite">
+                            <dt>收藏商品</dt>
+                            <dd>{{#if userInfo.favoriteCount}}{{userInfo.favoriteCount}}{{else}}0{{/if}}</dd>
+                            
+                        </dl>
+                        <dl class="account-infor btnHistory">
+                            <dt>浏览记录</dt>
+                            <dd>{{#if userInfo.order.exploreCount}}{{userInfo.order.exploreCount}}{{else}}0{{/if}}</dd>
+                        </dl>
+                    </div>
+                    <span class="user-set"><i class="icon icon-user-set"></i></span>
+                </div>
+
+                <div class="user-list">
+                    <div class="list-block all-order  m-b-0">
+                        <ul>
+                            <li class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title"><i class="icon icon-my-order"></i> 我的订单</div>
+                                    <div class="item-after user-btn-OrderList">查看所有订单</div>
+                                </div>
+                            </li>
+                            <div class="user-btn-OrderType">
+                                <a class="my-order tb-confirm" data-filter="CONFIRMORDER">待确认{{#if userInfo.order.confirmOrder}}<span class="badge">{{userInfo.order.confirmOrder}}</span>{{/if}}</a>
+                                <a class="my-order tb-deliver" data-filter="DELIVERGOODS">待发货{{#if userInfo.order.deliveryCount}}<span class="badge">{{userInfo.order.deliveryCount}}</span>{{/if}}</a>
+                                <a class="my-order tb-receipt" data-filter="TAKEDELIVERY">待收货{{#if userInfo.order.takeDelivery}}<span class="badge">{{userInfo.order.takeDelivery}}</span>{{/if}}</a>
+                                <a class="my-order tb-pay" data-filter="PAYMONEY">待付款{{#if userInfo.order.pay}}<span class="badge">{{userInfo.order.pay}}</span>{{/if}}</a>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="list-block m-t-10 m-b-0">
+                        <ul>
+                            <li>
+                                <a href="pages/fund.html" class="item-link item-content moneyContent">
+                                    <div class="item-inner">
+                                        <div class="item-title"><i class="icon icon-my-capital "></i> 我的资金</div>
+                                        <div class="item-after"></div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-block m-t-10 m-b-0 hide">
+                        <ul>
+                            <li>
+                                <a href="pages/userBaseInfor.html" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">基本信息</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages/accountSafety.html" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">账户安全</div>
+                                        <div class="item-after"></div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-block m-t-10 m-b-0">
+                        <ul>
+                            <li>
+                                <a href="pages/clientInfor.html" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title"> <i class="icon icon-client-info "></i> 客户信息</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages/contacts.html" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title"><i class="icon icon-linkman"></i>  联系人</div>
+                                        <div class="item-after"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages/addrList.html" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title"><i class="icon icon-my-addr "></i> 收货地址</div>
+                                        <div class="item-after"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages/bankInfor.html" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title"><i class="icon icon-bank-info "></i> 银行账户信息</div>
+                                        <div class="item-after"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages/rebate.html" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">返利列表</div>
+                                        <div class="item-after"></div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-block m-t-10 m-b-0">
+                        <ul>
+                            <li class="hot-line">
+                                <a href="tel:{{servePhone}}" class="item-link item-content external">
+                                    <div class="item-inner no-bg">
+                                        <div class="item-title "><i class="icon icon-hot-line "></i>  客服 {{servePhone}}</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="list-block m-t-10 m-b-0 hide">
+                        <ul>
+                            <li>
+                                <a href="tel:{{servePhone}}" class="item-link item-content external">
+                                    <div class="item-inner">
+                                        <div class="item-title"><i class="icon icon-hot-line "></i>  客服热线 {{servePhone}}</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="pages/feedback.html" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">意见与建议</div>
+                                        <div class="item-after"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!--<li>
+                                <a href="pages/aboutUOrder.html" class="item-link item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title">关于U订货</div>
+                                        <div class="item-after"></div>
+                                    </div>
+                                </a>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pages/UserPageController.js"></script>
+</div>

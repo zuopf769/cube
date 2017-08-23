@@ -1,0 +1,45 @@
+﻿.toolbar{
+	left: 44px;
+    top: 80px;
+    z-index: 2;
+
+}
+.toolbar>a{
+    display: none;
+    padding: 0.625em 0;
+    text-align: right;
+    width: 100%;
+}
+.toolbar-body>li{
+		display:inline-block;
+		list-style:none;
+	}
+	.toolbar-body>li>a{
+		display:inline-block;
+		list-style:none;
+	}
+@media all and (max-width:760px){	
+	.toolbar{
+		left: 44px;
+		top: 80px;
+		z-index: 2;
+	position:fixed;
+	}
+	.toolbar>a{
+		display: block;
+	}
+	.toolbar>a.toolbar-active{
+		cursor: pointer;
+		display: block;
+		text-align: center;
+		text-decoration: none;
+	}
+	.toolbar-body>li{
+		display:list-item;
+		list-style:none;
+	}
+	.toolbar-hide{
+		display:none;
+	}
+
+}

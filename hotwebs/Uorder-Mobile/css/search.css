@@ -1,0 +1,93 @@
+﻿body {
+    background: #FFF;
+}
+
+i.icon-cancel {
+    width: 20px;
+    height: 20px;
+    background: url(../img/sprites.png) no-repeat;
+    background-position: -40px 0;
+    background-size: 200px 200px;
+}
+
+.search-container .searchbar input[type="search"] {
+    background: url("../img/icon/search-icon.png") no-repeat 10px center #e1e1e1;
+    background-size: 15px 15px;
+}
+
+.search-container .searchbar .searchbar-clear {
+    background: url("../img/icon/voice-icon.png") no-repeat 10px center;
+    background-size: 15px 15px;
+    opacity: 1;
+}
+
+.search-container .left {
+    display: none;
+}
+
+.search-container .searchbar-cancel {
+    font-size: 13px;
+    color: #999999;
+}
+
+.navbar, .searchbar {
+    background: #f6f6f6;
+}
+
+    .searchbar .searchbar-input input {
+        /*background: #e1e1e1;*/
+    }
+
+        .searchbar .searchbar-input input::-webkit-input-placeholder {
+            color: #959595;
+            font-size: 14px;
+        }
+
+.content-title_search {
+    /*border: 1px solid #E4E5E5;*/
+    margin-bottom: auto;
+    height: 35px;
+    line-height: 35px;
+    background: #f1f1f1;
+    color: #898989;
+    font-size: 12px;
+}
+
+    .content-title_search .link span {
+        color: #898989;
+    }
+
+i.icon-refresh {
+    width: 16px;
+    height: 16px;
+    background: url(../img/icon-cw.png) no-repeat;
+    background-size: 16px 16px;
+    margin-top: -2px;
+}
+
+.searchpage {
+    background: #f1f1f1;
+    margin: 0 auto;
+    min-height: 42px;
+}
+
+    .searchpage p {
+        text-align: center;
+        color: #666666;
+        font-size: 14px;
+        line-height: 42px;
+    }
+
+    .searchpage a {
+        display: inline-block;
+        border: 1px solid #cccccc;
+        padding: 0 10px;
+        border-radius: 3px;
+        margin: 5px;
+        text-align: center;
+        height: 24px;
+        line-height: 24px;
+        color: #666666;
+        font-size: 14px;
+        white-space: nowrap;
+    }

@@ -1,0 +1,50 @@
+﻿<div data-controller="ProductPageController">
+    <div class="pages">
+        <div data-page="protDetailPage" class="page no-tabbar no-toolbar navbar-fixed" style="background:transparent;">
+            <div class="content-block">
+                <p class="p-close">
+                    <a href="#" class="close-popup"> <i class="icon icon-colse-popup"></i></a>
+                </p>
+                <div class="popup-top">
+                    <div class="popup-img">
+                        <img src="{{product.productImgUrl}}" alt="" />
+                    </div>
+                    <div class="title-row">
+                        <div class="title">
+                            {{product.cName}}
+                        </div>
+                        <div class="subtitle">{{product.cCode}}</div>
+                    </div>
+                    <div class="popup-number priceStepContainer">
+                    </div>
+                </div>
+                <div class="popup-content">
+                    <div class="row popup-attrs">
+                        {{#each product.lsSpecs}}
+                        <p>{{cName}}</p>
+                        <div class="col-100">
+                            {{#each lsSpecItem}}
+                            <div class="attrItem">
+                                <input type="radio" name="attrItem_{{../id}}" value="{{id}}" {{#if @first}} checked {{/if}} />
+                                <span>{{cSpecItemName}}</span>
+                            </div>
+                            {{/each}}
+                        </div>
+                        {{/each}}
+                        <p>订购数量<span id="InventoryCount">库存 {{product.lInventoryCount}}</span></p>
+                        <div class="numberManage col-100">
+                            <i class="icon icon-cart-less disabled"></i>
+                            <input type="text" value="0" id="txtProSpecsCount" class="editControl" data-linventorycount="{{product.lInventoryCount}}">
+                            <i class="icon icon-cart-add"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-bottom">
+                    <span class="totalContainer">{{product.iQuantity}} <em>件</em>  {{js "this.product.iQuantity * this.product.fSalePrice"}} <em>元</em> </span>
+                    <a href="#" class="button btn-update-sku">加入购物车</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pages/ProductPageController.js"></script>
+</div>

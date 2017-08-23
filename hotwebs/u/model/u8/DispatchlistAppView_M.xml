@@ -1,0 +1,90 @@
+<application name="DispatchlistApp" title="发货单" moduleName="u8" symbol="u8.Dispatchlist" uiType="voucher">
+  <references reference="../u8/DispatchlistAppVM.xml" />
+  <view name="DispatchlistView" title="发货单" layoutMode="Fluid" appId="u8.DispatchlistApp" viewModel="u8.DispatchlistApp.DispatchlistViewModel" screenSize="M" tplName="voucher_M.tpl">
+    <container name="Abstract" title="概要" type="Card">
+      <controls>
+        <control name="ccusname" title="客户全称" placeHolder="true" ctrlType="TextBox" position="top-left" field="ccusname" entity="Dispatchlist" />
+        <control name="approvestatus" title="单据状态" ctrlType="Label" position="top-right" field="approvestatus" entity="Dispatchlist" />
+        <control name="creationtime" title="制单时间" placeHolder="true" ctrlType="TextBox" position="bottom-left" field="creationtime" entity="Dispatchlist" />
+        <control name="toolbar" title="工具栏" ctrlType="Button" position="bottom-right" />
+      </controls>
+    </container>
+    <container name="Toolbar" title="工具栏" type="Toolbar">
+      <controls>
+        <control name="editAction" title="编辑" ctrlType="Button" field="editAction" entity="Toolbar" css="tb-edit-icon" />
+        <control name="submitAction" title="提交" ctrlType="Button" field="submitAction" entity="Toolbar" css="submit-icon" />
+        <control name="withdrawAction" title="收回" ctrlType="Button" field="withdrawAction" entity="Toolbar" css="withdraw-icon" />
+        <control name="approveAction" title="审核" ctrlType="Button" field="approveAction" entity="Toolbar" css="approve-icon" />
+        <control name="unapproveAction" title="弃审" ctrlType="Button" field="unapproveAction" entity="Toolbar" css="unapprove-icon" />
+        <control name="deleteAction" title="删除" ctrlType="Button" field="deleteAction" entity="Toolbar" css="delete-icon" />
+        <control name="outboundAction" title="出库" ctrlType="Button" field="outboundAction" entity="Toolbar" css="outbound-icon" />
+        <control name="relatedAction" title="相关业务" ctrlType="Button" field="relatedAction" entity="Toolbar" css="related-icon" />
+        <control name="setAction" title="设置" ctrlType="Button" field="setAction" entity="Toolbar" css="set-icon" />
+        <control name="outputAction" title="输出" ctrlType="Button" field="outputAction" entity="Toolbar" css="output-icon" />
+        <control name="pullAction" title="拉单" ctrlType="Button" field="pullAction" entity="Toolbar" css="search-icon" />
+      </controls>
+    </container>
+    <container name="Tab" title="页签" type="Toolbar" mode="strip">
+      <controls>
+        <control name="baseinfo" title="基本信息" ctrlType="Button" />
+      </controls>
+    </container>
+    <container name="baseinfo" title="基本信息" type="TabPage">
+      <controls>
+        <control name="billno" title="单据号" ctrlType="TextBox" field="billno" entity="Dispatchlist" />
+        <control name="billdate" title="单据日期" ctrlType="DateTimeBox" field="billdate" entity="Dispatchlist" defaultValue="@SYSDATE" />
+        <control name="ccuscode" title="客户编码" ctrlType="Refer" field="ccuscode" entity="Dispatchlist" refId="customer" refRelation="ccusname=name,ccusabbname=ccusabbname,cvconperson=ccusperson,cvshipaddress=ccusoaddress" refShowMode="Code" />
+        <control name="ccusname" title="客户全称" ctrlType="TextBox" field="ccusname" entity="Dispatchlist" />
+        <control name="ccusabbname" title="客户简称" ctrlType="TextBox" field="ccusabbname" entity="Dispatchlist" />
+        <control name="pk_dept" title="部门" ctrlType="Refer" field="pk_dept" entity="Dispatchlist" refId="600905" refShowMode="Name" />
+        <control name="cpersoncode" title="业务员编码" ctrlType="Refer" field="cpersoncode" entity="Dispatchlist" refId="person" refShowMode="Code" />
+        <control name="cperson" title="业务员" ctrlType="TextBox" field="cperson" entity="Dispatchlist" />
+        <control name="cexch_name" title="币种" ctrlType="Refer" field="cexch_name" entity="Dispatchlist" refId="foreigncurrency" refShowMode="Name" />
+        <control name="iexchrate" title="汇率" ctrlType="NumberBox" field="iexchrate" entity="Dispatchlist" />
+        <control name="btax" title="报价是否含税" ctrlType="CheckBox" field="btax" entity="Dispatchlist" />
+        <control name="itaxrate" title="税率" ctrlType="TextBox" field="itaxrate" entity="Dispatchlist"  defaultValue="17" />
+        <control name="cmemo" title="备注" ctrlType="TextBox" field="cmemo" entity="Dispatchlist" />
+        
+		
+		
+		<control name="vtrantypecode" title="单据类型编码" ctrlType="TextBox" field="vtrantypecode" entity="Dispatchlist" />
+        <control name="vtrantype" title="发货单类型" ctrlType="Refer" field="vtrantype"  refRelation="vtrantypecode=pk_billtypecode"  entity="Dispatchlist" refId="4848" refShowMode="Name" />
+        <control name="busitype" title="业务流程" ctrlType="Refer" field="busitype" entity="Dispatchlist" refId="4849" refShowMode="Name" />
+        <control name="pk_group" title="集团" ctrlType="Refer" field="pk_group" entity="Dispatchlist" refId="600001" refShowMode="Name" />
+        <control name="pk_org" title="组织" ctrlType="Refer" field="pk_org" entity="Dispatchlist" refId="600015" refShowMode="Name" />
+        <control name="pk_org_v" title="组织版本" ctrlType="Refer" field="pk_org_v" entity="Dispatchlist" refId="600700" refShowMode="Name" />
+        
+		
+		<control name="pk_dept_v" title="部门版本" ctrlType="Refer" field="pk_dept_v" entity="Dispatchlist" refId="600949" refShowMode="Name" />
+        <control name="billmaker" title="制单人" ctrlType="Refer" field="billmaker" entity="Dispatchlist" refId="600026" refShowMode="Name" />
+        <control name="approver" title="审批人" ctrlType="Refer" field="approver" entity="Dispatchlist" refId="600026" refShowMode="Name" />
+        <control name="approvestatus" title="单据状态" ctrlType="ComboBox" field="approvestatus" entity="Dispatchlist"  defaultValue="-1"/>
+        <control name="approvedate" title="审批时间" ctrlType="DateTimeBox" field="approvedate" entity="Dispatchlist" />
+        <control name="srcbilltype" title="来源单据类型" ctrlType="Refer" field="srcbilltype" entity="Dispatchlist" refId="4848" refShowMode="Name" />
+        <control name="srcbillid" title="来源单据" ctrlType="TextBox" field="srcbillid" entity="Dispatchlist" />
+        <control name="creator" title="创建人" ctrlType="Refer" field="creator" entity="Dispatchlist" refId="600026" refShowMode="Name" />
+        <control name="creationtime" title="制单时间" ctrlType="DateTimeBox" field="creationtime" entity="Dispatchlist" />
+        <control name="modifier" title="修改人" ctrlType="Refer" field="modifier" entity="Dispatchlist" refId="600026" refShowMode="Name" />
+        <control name="modifiedtime" title="修改时间" ctrlType="DateTimeBox" field="modifiedtime" entity="Dispatchlist" />
+        <control name="billcloser" title="关闭人" ctrlType="Refer" field="billcloser" entity="Dispatchlist" refId="600026" refShowMode="Name" />
+        <control name="billclosetime" title="关闭自然时间" ctrlType="DateTimeBox" field="billclosetime" entity="Dispatchlist" />
+        <control name="lastprintor" title="最近打印人" ctrlType="Refer" field="lastprintor" entity="Dispatchlist" refId="600026" refShowMode="Name" />
+        <control name="lastprinttime" title="最近打印时间" ctrlType="DateTimeBox" field="lastprinttime" entity="Dispatchlist" />
+         <control name="cvconperson" title="客户联系人" ctrlType="TextBox" field="cvconperson" entity="Dispatchlist" />
+        <control name="cvshipaddress" title="联系地址" ctrlType="TextBox" field="cvshipaddress" entity="Dispatchlist" />
+        <control name="ioutstate" title="出库状态" ctrlType="ComboBox" field="ioutstate" entity="Dispatchlist" />
+        <control name="ddispdate" title="表头预发货日期" ctrlType="DateTimeBox" field="ddispdate" entity="Dispatchlist" />
+        <control name="pk_dispatchlist_b" title="表体_发货单子表" ctrlType="DataGrid" field="pk_dispatchlist_b" entity="Dispatchlist">
+          <columns>
+            <column name="cinvname" title="存货名称" field="cinvname" ctrlType="TextBox" position="leftTop" />
+			 <column name="crowno" title="行号" field="crowno" ctrlType="TextBox" position="rightTop" />
+             <column name="iquantity" title="数量" field="iquantity" ctrlType="TextBox" position="leftBottom" />
+			 <column name="isum" title="价税合计" field="isum" ctrlType="TextBox" position="rightBottom" />
+		  </columns>
+        </control>
+        <control name="cancelAction" title="取消" ctrlType="Button" css="cancel-icon" field="cancelAction" entity="Toolbar" />
+        <control name="saveAction" title="保存" ctrlType="Button" css="search-icon" field="saveAction" entity="Toolbar" />
+      </controls>
+    </container>
+  </view>
+</application>

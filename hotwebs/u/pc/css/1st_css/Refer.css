@@ -1,0 +1,75 @@
+﻿.Refer
+{
+  border:1px solid #cccccc;  
+  /*display: inline-block;    
+  color: black;  
+  padding: 6px 12px;
+    padding-right: 24px;
+
+  height:34px;
+  background-image: url("../images/Ref.png");
+  background-position: 98% 50%;
+  background-repeat:no-repeat;
+  vertical-align: middle;*/
+  height: 32px;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+}
+
+.Refer-focus
+{  
+  border:1px solid #FFD42C;  
+
+}
+.Refer-focus, .Refer:focus{
+    border-color: #66AFE9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}
+/*
+.Refer-focus[readonly], .Refer[readonly]:focus{
+   border: 1px solid #cccccc;
+    box-shadow: none;
+    outline: 0 none;
+}
+*/
+.Refer-arrow
+{
+   cursor:pointer;
+}
+
+
+.Refer Input {
+    margin-left:1px;
+    /*margin-right:10px;*/
+	border: 0;	
+	outline:none;	        
+    color: black;    
+    /*height:100%;*/
+    height:22px;
+    width:100%;
+    width:100%;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;    
+}
+.Refer[readonly],.Refer Input[readonly]
+{
+  background-color:#f7f7f7;
+  cursor: auto;  
+}
+.Refer[disabled],.Refer Input[disabled]
+{
+  background-color:#f7f7f7;
+  cursor: not-allowed;  
+}
+.parentdiv-noinput
+{
+border:1px solid red;
+}
+
+.Refer div img[tag="close"] {
+    padding-right:3px;
+    visibility:hidden;
+}

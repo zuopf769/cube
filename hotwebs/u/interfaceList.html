@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>接口服务列表</title>
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+	<script src="./jquery/jquery-ui.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		
+		$(document).ready( $(function (){
+        	getServiceList(1);
+    	}));
+		function getServiceList(pageIndex){
+			var obj = null;
+			var errobj = null;
+			var token = getUrlVar("token");
+			var name = document.getElementById('serviceName').value;
+			if(!name) name = "";
+			if(!pageIndex) pageIndex = 1;
+			
+			var strUrl = location.protocol + "//" + location.host+"/";
+			strUrl += "classes/InterFaceTest/UAP/LoadServiceList?token=" + token;
+			jQuery.ajax({ 
+	   			url:strUrl, async : false,type: "POST",
+	   			data:"{\"pageIndex\":"+pageIndex+",\"name\":"+ "\"" + name + "\"" + "}",
+				contentType:"application/json; charset=utf-8",
+	       		success: function(response) {
+	       			if(response.data==''||response.data==null){
+			   		}else{	   
+						obj = response.data.success;
+					}
+	       		},
+				error: function(e){
+					//debugger;
+					errobj = e;
+				}
+	 		});
+			if(obj != null){
+				var objarray = new Array();
+				objarray = obj.currentPageData;
+				setTable(objarray.length,objarray);
+				createPageHtml(obj);
+			}else if(errobj != null){
+				var jsonStr = JSON.stringify(errobj);
+				$("#resultdata").html(jsonStr);
+			}else{
+				$("#resultdata").html(null);
+				$("#pager").html(null);
+			}
+		}
+		function getUrlVars(){
+    		var vars = [], hash;
+    		var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    		for(var i = 0; i < hashes.length; i++)
+    		{
+     	 		hash = hashes[i].split('=');
+      			vars.push(hash[0]);
+      			vars[hash[0]] = hash[1];
+    		}
+    		return vars;
+  		}
+  		function getUrlVar(name){
+    		return getUrlVars()[name];
+  		}
+  		function getColumnDetail(column){ 
+			column.style.color = "blue"; //将被点击的单元格设置为蓝色 
+			alert(column.innerHTML); //弹出被点单元格里的内容 
+		}
+		//trLineNumber为动态表格行数，tdData为动态表格每行单元格的数据，数据类型为数组
+		function setTable(trLineNumber,tdData){ 
+			$("#table").html(null);
+			var _table = document.getElementById("table"); 
+			var _row;
+			var _cell;
+			_row = document.createElement("tr");
+			document.getElementById("table").appendChild(_row);
+			_cell = document.createElement("td");
+			_cell.innerText = "序号";
+			_cell.width = "40";
+			_row.appendChild(_cell);
+			
+			_cell = document.createElement("td");
+			_cell.innerText = "服务名称";
+			_cell.width = "500";
+			_row.appendChild(_cell);
+			
+			_cell = document.createElement("td");
+			_cell.innerText = "开发人"; 
+			_cell.width = "100";
+			_row.appendChild(_cell);
+			
+			_cell = document.createElement("td");
+			_cell.innerText = "操作";
+			_cell.width = "200";
+			_row.appendChild(_cell);
+			
+			for (var i = 0; i < trLineNumber; i++) {
+				var count = i + 1;
+				_row = document.createElement("tr");
+				document.getElementById("table").appendChild(_row);
+				_cell = document.createElement("td");
+				_cell.innerText = count;
+				_row.appendChild(_cell);
+				
+				_cell = document.createElement("td");
+				_cell.innerText = tdData[i].serviceDesc;
+				_row.appendChild(_cell);
+				
+				_cell = document.createElement("td");
+				_cell.innerText = tdData[i].serviceAuthor;
+				_row.appendChild(_cell);
+				
+				_cell = document.createElement("td");
+				var openUrl = "./interfaceTest.html?token=" + getUrlVar("token") + "&id=" + tdData[i].id;
+				//var strHtml = '<a href="'+ openUrl + '">查看</a>'
+				//_cell.innerText = strHtml; 
+				var a = document.createElement('a');
+				a.href = openUrl;
+				a.innerText="进入接口"+ count +"的测试页面";
+				_cell.appendChild(a);
+				_row.appendChild(_cell);
+			}
+		}
+		
+		function createPageHtml(obj){
+			var prePage = 0;
+			var nextPage = 0;
+			if(obj.pageIndex-1>1){
+				prePage = obj.pageIndex-1;
+			}else{
+				prePage = 1;
+			}
+			if(obj.pageIndex+1>obj.pageCount){
+				nextPage = obj.pageCount;
+			}else{
+				nextPage = obj.pageIndex+1;
+			}
+			var name = document.getElementById('serviceName').value;
+			var pageHtml = "共<span id='totalcount' style='color: #f00;font-weight:bold;'>"+obj.totalCount+"</span>条记录 当前第<span id='pageIndex' style='color: #f00;font-weight:bold;'>"+obj.pageIndex+"</span>/<span id='pageCount' style='color: #f00;font-weight:bold;'>"+obj.pageCount+"</span>页";
+			pageHtml = pageHtml + "&nbsp&nbsp<a href='#' onclick='javascript:doSearch(1)'>首页</a>";
+			pageHtml = pageHtml + "|<a href='#' onclick='javascript:doSearch("+prePage+")' >上一页</a>";
+			pageHtml = pageHtml + "|<a href='#' onclick='javascript:doSearch("+nextPage+")' >下一页</a>";
+			pageHtml = pageHtml + "|<a href='#' onclick='javascript:doSearch("+obj.pageCount+")' >末页</a>";
+			$("#pager").html(pageHtml);
+		}
+		function  doSearch(pageIndex){
+			getServiceList(pageIndex);
+		}
+  	</script>
+  	<style type="text/css">
+	table
+	{
+		border-collapse:collapse;
+	}
+	table, td, th
+	{
+		border:1px solid black;
+	}
+    </style>
+</head>
+<body>
+<h1>接口服务列表</h1>
+<hr/>
+<div id="search" style="width:300px; float:left; padding: 100;">
+    <input type="text" name="serviceName" id="serviceName" size="30" placeholder="请输入服务名称搜索"  value=""/>
+    <input type="button" name="search" id="search" value="搜索" onClick="doSearch(1)"/>
+</div>
+<div id="pager" style="width:400px; float:left;"></div>
+
+<br>
+<br>
+<div id="resultdata" style="width:1000px; float:left;">
+<table style="border:1px solid black"> 
+	<tbody id="table">
+</table>
+</div>
+</body>
+</html>

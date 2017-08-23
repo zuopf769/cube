@@ -1,0 +1,94 @@
+<div data-controller="OrderStatusPayController">
+    <div class="pages">
+        <div data-page="OrderStatusPay" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar no-border">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a class="back link" href="#">
+                            <i class="icon icon-return-arrow"></i>
+                        </a>
+                    </div>
+                    <div class="center">
+                        账单信息
+                    </div>
+                    <div class="right">
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="pay-content">
+                    <div class="pay-header">
+                        <p>{{#if oPaymentStatus}}{{oPaymentStatus.statusName}}{{/if}}</p>
+                        <h3>￥{{iAmount}}</h3>
+                    </div>
+                    <ul class="pay-content-form list-block">
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">支付方式 </div>
+                                    <div class="item-input">
+                                        {{oPayType.cName}}
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">结算方式 </div>
+                                    <div class="item-input">
+                                        {{cSettlementWay}}
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li >
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label ">汇款  </div>
+                                    <div class="item-input">
+                                        <i class="icon icbc-icon"></i>
+                                        <div>
+                                            {{cAgentBank}}{{cAgentBankBranch}}
+                                            <span>{{cAgentBankCartNo}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label ">收款  </div>
+                                    <div class="item-input">
+                                        <i class="icon cmbc-icon"></i>
+                                        <div>
+                                            {{cCorpBank}}{{cCorpBankBranch}}
+                                            <span>{{cCorpBankCartNo}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">备注 ：</div>
+                                    <div class="item-input">
+                                        无
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <div class="img-area">
+                            {{#each lsPaymentAttachments}}
+                            <img src="{{@root.serverUrl}}{{cFolder}}{{cFileName}}" alt="" />
+                            {{/each}}
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/pages/OrderStatusPayController.js"></script>
+</div>

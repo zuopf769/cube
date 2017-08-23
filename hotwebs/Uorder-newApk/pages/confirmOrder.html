@@ -1,0 +1,249 @@
+﻿<div data-controller="ConfirmOrderController">
+    <div class="pages">
+        <div data-page="confirmOrder" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a class="back  link" href="#"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center">
+                        订单确认
+                    </div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="list-block media-list orderInfo m-t-10">
+                    <ul class="confirmOrderContent">
+                        <li class="align-top addressContent" data-link="pages/addrList.html?source=order" data-key="address">
+                        </li>
+                        <li class="align-top baseInfoContent" data-link="pages/baseInfo.html" data-key="baseInfo">
+                        </li>
+                        <li class="align-top invoiceContent" data-link="pages/invoice.html" data-key="invoice">
+                        </li>
+                        <li class="more-list btn-isShowMore">
+                        	收起更多
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-block media-list confirmList m-b-0">
+                    <ul class="confirm_ul">
+                        <li>
+                            <a href="#" class="item-link item-content productsList title-border-bottom">
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title productDetailContainer-title">商品清单</div>
+                                        <!--<div class="item-after">
+                                            <p> <span class="quantity"></span>个</p>
+                                        </div>-->
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="list-block media-list m-t-0 cartList m-b-0">
+                                <ul class="no-border productDetailContainer"></ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-block m-t-10 m-b-0 confirmList-rabeta">
+                    <ul>
+                        <li>
+                            <a href="#" class="item-link item-content">
+                                <div class="item-media"><i class="icon icon-rebate"></i></div>
+                                <div class="item-inner no-bg">
+                                    <div class="item-title">可用 <span id="spanUseableM"></span> 元返利<span></div>
+                                    <div class="item-after rebate-balance">
+                                        余额:<span id="spanSurplusM"></span></span>
+                                    </div>
+                                </div>
+                            </a>
+                            <p class="rabate-tip"></p>
+                        </li>
+                        <li class="hidden">
+                            <a href="#" class="item-link item-content">
+                                <div class="item-media"><i class="icon icon-accessory"></i></div>
+                                <div class="item-inner ">
+                                    <div class="item-title">附件(0) </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="item-link item-content">
+                                <div class="item-media"><i class="icon icon-note"></i></div>
+                                <div class="item-inner no-bg">
+                                    <div class="item-title">
+                                        <input type="text" placeholder="给商家留言" class="input-orderMsg-container" />
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="m-t-10 statistic">
+                    <dl>
+                        <dt class="color-333">商品金额</dt>
+                        <dd class="ProPriceContainer"></dd>
+                    </dl>
+                    <dl>
+                        <dt>优惠</dt>
+                        <dd>-  ￥<span id="spanPromotion">0.00</span></dd>
+                    </dl>
+                    <dl>
+                        <dt>返利</dt>
+                        <dd>-  ￥<span id="spanRebateA">0.00</span></dd>
+                    </dl>
+                    <dl>
+                        <dt>已付</dt>
+                        <dd>-  ￥<span id="spanTocash">0.00</span></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="toolbar-inner row">
+                    <div class="col-66 pay-info">
+                        <p>实付款:  <em>￥</em><em class="totalPriceContainer"></em></p>
+                        <p class="color-999 totalTypeContainer"></p>
+                    </div>
+                    <a class="button button-fill bg-green-u col-33 confirmOrderSaveBtn" href="#">提交订单</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/template7" id="addrListTpl">
+        <a href="#" class="item-link item-content">
+            <div class="item-media"><i class="icon order-addr"></i></div>
+            <div class="item-inner bg-arrow">
+                <div class="item-title-row">
+                    <div class="item-title">{{cReceiver}}</div>
+                    <div class="item-after">{{cReceiveMobile}}</div>
+                </div>
+                <div class="item-text">{{cReceiveAddress}}</div>
+            </div>
+        </a>
+    </script>
+    <script type="text/template7" id="baseInfoTpl">
+        <a href="#" class="item-link item-content">
+            <div class="item-media"><i class="icon order-pay"></i></div>
+            <div class="item-inner bg-arrow">
+                <div class="item-title-row">
+                    <div class="item-title">{{agentName}}</div>
+                </div>
+                <div class="item-text">
+                    下单时间：{{dConfirmDate}} <br />
+                    交货时间：{{dSendDate}}<br />
+                    联系人：{{cReceiveContacter}}<br />
+                    联系电话：{{cReceiveContacterPhone}}
+                </div>
+            </div>
+        </a>
+    </script>
+    <script type="text/template7" id="paymentTpl">
+        <div class="item-inner">
+            <div class="item-title-row">
+                <div class="item-title">支付及发运方式</div>
+                <div class="item-after">
+                    <input type="text" name="payWay" value="{{#if oPayWayName}}{{oPayWayName}}{{else}}无{{/if}}" readonly class="no-border" />
+                    <input type="text" name="settleWay" value="{{#if oSettlementWayName}}{{oSettlementWayName}}{{else}}无{{/if}}" readonly class="no-border" />
+                    <input type="text" name="shipping" value="{{#if oShippingChoiceName}}{{oShippingChoiceName}}{{else}}无{{/if}}" readonly class="no-border" />
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/template7" id="invoiceTpl">
+        <a href="#" class="item-link item-content">
+            <div class="item-media"><i class="icon order-invoice"></i></div>
+            <div class="item-inner bg-arrow">
+                <div class="item-title-row">
+                    <div class="item-title">发票信息 </div>
+                    <div class="item-after">{{cInvoiceName}}</div>
+                </div>
+                {{#js_compare "this.cInvoiceType!='NONE'"}}
+                <div class="item-text">
+                    发票名称：{{cInvoiceTitle}}<br />
+                    纳税人识别号：{{cTaxNum}}<br />
+                    开户行及账号：{{cBankName}}{{cSubBankName}}<br />
+                    <span class="m-l-90">{{cBankAccount}}</span><br />
+                    发票内容：{{cInvoiceContent}}
+                </div>
+                {{/js_compare}}
+            </div>
+        </a>
+    </script>
+    <script id="productDetailTpl" type="text/template7">
+        {{#each detailData}}
+        {{#if cOrderProductType}}
+        <li class="no-border">
+            <div class="label-checkbox item-content">
+                <div class="item-media">
+                    <img data-src="{{cImgUrl}}" width="62" class="lazy">
+                </div>
+                <div class="item-inner  no-border ">
+                    <div class="item-title-row no-bg">
+                        <div class="item-text">{{cName}}</div>
+                    </div>
+                    {{#if oOrderProductApportions.length}}
+                    <div class="item-subtitle">
+                        <span class="promo-type col-1 p-0">折</span>
+                        <span class="promo-type col-2  p-0">促</span>
+                        <span class="promo-type col-3 p-0">赠</span>
+                        <span class="m-l-10 discountDescContainer" data-productid="{{iProductId}}">优惠说明 <i class="icon arrow-down"></i></span>
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+            <ul>
+                {{#each SkuSpecItems}}
+                <li class="no-border">
+                    <div class="label-checkbox item-content">
+                        <div class="item-inner no-border">
+                            <div class="item-title-row no-bg p-r-0">
+                                <div class="item-title">
+                                    {{#each lsSkuSpecItems}}
+                                    <span>{{cName}}:</span>{{cSpecItemName}}
+                                    <br>
+                                    {{/each}}
+                                    <span>单价:￥{{fSalePrice}}/{{cProductUnitName}}</span>
+                                </div>
+                                <div class="item-price">
+                                    {{#if apportionMoney}}
+                                    <span class="font-12">促销已优惠{{apportionMoney.toFixed(2)}}元</span>
+                                    {{/if}}
+                                    <span class="font-13">X{{iQuantity}}</span>
+
+                                    <span class="price del">￥{{js "upTool.numMulti(this.fSalePrice,this.iQuantity)"}}</span>
+
+                                    <span class="price">￥{{fSalePayMoney}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </li>
+        {{else}}
+        <li class="none-border no-border gift">
+            <div class="label-checkbox item-content">
+                <div class="item-media">
+                    <img src="{{cImgUrl}}" width="62">
+                    <span><i class="icon icon-gift"></i></span>
+                </div>
+                <div class="item-inner  no-border">
+                    <div class="item-title-row no-bg p-r-0">
+                        <div class="item-text">
+                            {{cName}}<br />
+                            <div class="item-title">{{#each SkuSpecItems}}{{cName}}{{cSpecItemName}}{{/each}}</div>
+                        </div>
+                        <div class="item-after">
+                            <span>￥{{fSalePrice.toFixed(2)}}</span><br />
+                            <span>X{{iQuantity}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        {{/if}}
+        {{/each}}
+    </script>
+    <script src="../js/pages/ConfirmOrderController.js"></script>
+</div>

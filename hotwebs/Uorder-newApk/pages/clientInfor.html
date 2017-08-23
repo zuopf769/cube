@@ -1,0 +1,155 @@
+﻿<div data-controller="ClientInforController">
+    <div class="pages">
+        <div data-page="clientInfoPage" class="page no-tabbar">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="back link"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center">客户信息</div>
+                    <div class="right clientInfo-btn-submit"><a href="#">保存</a></div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="user-list">
+                    <div class="list-block all-order  m-b-0">
+                        <form id="form-clientInfo">
+                            <ul>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">
+                                            客户编码
+                                        </div>
+                                        <div class="item-input">
+                                            <input type="text" value="{{agentInfo.cCode}}" placeholder="请输入客户编码" name="cCode" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">客户名称</div>
+                                        <div class="item-input">
+                                            <input type="text" value="{{agentInfo.cName}}" placeholder="请输入客户名称" name="cName">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">客户分类</div>
+                                        <div class="item-input">
+                                            <input type="text" value="{{#if agentInfo.oAgentCategory}}{{agentInfo.oAgentCategory.cName}}{{/if}}" placeholder="请选择客户分类" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">客户区域</div>
+                                        <div class="item-input">
+                                            <input type="text" placeholder="请选择客户区域" value="{{#if agentInfo.oAgentArea}}{{agentInfo.oAgentArea.cName}}{{/if}}" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">客户级别</div>
+                                        <div class="item-input">
+                                            <input type="text" value="{{#if agentInfo.oAgentLevel}}{{agentInfo.oAgentLevel.cName}}{{/if}}" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">客户行业</div>
+                                        <div class="item-input">
+                                            <input type="text" value="{{#if agentInfo.oAgentIndustry}}{{agentInfo.oAgentIndustry.cName}}{{/if}}" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">专管业务员</div>
+                                        <div class="item-input">
+                                            <input type="text" value="{{#if agentInfo.oCorprationContact}}{{agentInfo.oCorprationContact.cFullName}}{{/if}}" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </li>                              
+                            </ul>
+                            <ul class="m-t-10">
+                            	  <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">信用额度</div>
+                                        <div class="item-input">
+                                            <input type="text" value="{{agentInfo.iCusCreLine}}" placeholder="" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </li>
+                                  <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">信用余额</div>
+                                        <div class="item-input">
+                                            <input type="text" value="{{agentInfo.iCreditworthiness}}" placeholder="" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="m-t-10">
+                            	  <li class="item-content item-link ">
+                                    <div class="item-inner">
+                                        <div class="item-title label">结算方式</div>
+                                        <div class="item-input" data-back-on-select="true" data-page-title="结算方式">
+                                            <input type="text" value="{{#if agentInfo.oSettlementWay}}{{agentInfo.oSettlementWay.cName}}{{/if}}" placeholder="请选择结算方式" name="oSettlementWay" id="picker-clientInfo-oSettlementWay" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content item-link ">
+                                    <div class="item-inner">
+                                        <div class="item-title label">发运方式</div>
+                                        <div class="item-input" data-back-on-select="true" data-page-title="发运方式">
+                                            <input type="text" value="{{#if agentInfo.oShippingChoice}}{{agentInfo.oShippingChoice.cName}}{{/if}}" placeholder="请选择发运方式" name="oShippingChoice" id="picker-clientInfo-oShippingChoice" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">税号</div>
+                                        <div class="item-input">
+                                            <input type="text" value="{{agentInfo.cTaxNo}}" placeholder="请输入税号" name="cTaxNo">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content item-link ">
+                                    <div class="item-inner">
+                                        <div class="item-title label">所在地区</div>
+                                        <div class="item-input" data-back-on-select="true" data-page-title="选择地区">
+                                            <input type="text" readonly placeholder="请选择所在区域" name="oAddress" value="{{#if agentInfo.oAddress}}{{agentInfo.oAddress.cCountry}} {{agentInfo.oAddress.cProvince}} {{agentInfo.oAddress.cCity}} {{agentInfo.oAddress.cArea}}{{/if}}" id="picker-clientInfo-oAddress" readonly="readonly">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">详细地址</div>
+                                        <div class="item-input">
+                                            <textarea placeholder="请输入详细地址" name="cAddress" maxlength="255">
+                                                {{#if agentInfo.oAddress}}{{agentInfo.oAddress.cAddress}}{{/if}}
+                                            </textarea>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">邮编</div>
+                                        <div class="item-input">
+                                            <input type="text" name="cZipCode" value="{{#if agentInfo.oAddress}}{{agentInfo.oAddress.cZipCode}}{{/if}}" placeholder="请输入邮编">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pages/ClientInforController.js"></script>
+</div>

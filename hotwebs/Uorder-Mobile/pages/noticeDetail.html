@@ -1,0 +1,57 @@
+﻿<div data-controller="NoticeDetailController">
+    <div class="pages">
+        <div class="page navbar-fixed no-tabbar" data-page="noticeDetailPage">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left"><a href="#" class="back link"><i class="icon icon-backgray"></i></a></div>
+                    <div class="center">公告</div>
+                </div>
+            </div>
+            <a href="#" class="floating-button color-pink">
+                <i class="icon icon-plus"></i>
+            </a>
+            <div class="page-content">
+                <style scoped>
+                    header {
+                        font-size: 16px;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+
+                    section {
+                        text-align: right;
+                        padding: 10px;
+                        color: #666666;
+                    }
+
+                    article,
+                    footer {
+                        padding: 10px;
+                    }
+                </style>
+                <header>{{noticeInfo.cTitle}}</header>
+                <section>{{noticeInfo.dCreated}}</section>
+                <article>
+                    {{noticeInfo.oNoticeDetail.cContent}}
+                </article>
+                {{#if noticeInfo.hasFile}}
+                <footer class="hidden">
+                    <div class="content-block-title">附件:</div>
+                    <div class="list-block">
+                        <ul>
+                            {{#each noticeInfo.oAttachments}}
+                            <li class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title">{{this.cOriginalName}}</div>
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </footer>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pages/NoticeDetailController.js"></script>
+</div>

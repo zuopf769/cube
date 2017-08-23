@@ -1,0 +1,71 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>全景菜单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="./pc/css/accondion.pc.css" rel="stylesheet" />    
+    <link href="./pc/css/Panorama.pc.css" rel="stylesheet" />            
+    <link href="./common/css/cube.Control.css" rel="stylesheet" type="text/css" />       
+    <link href="./pc/css/cube.icon.css" rel="stylesheet" type="text/css" />       
+    <link href="./pc/css/PanoramaMenuView.css" rel="stylesheet" type="text/css" />            
+</head>
+<body>
+    <div id="SysHomeViewModel" data-page="common.home.SysHomeApp" data-viewmodel="SysHomeViewModel">
+        <div class="PanoramaMenuView" style="position:relative;padding: 0 0 0 24px;">
+            <div data-propertyname="controlTreeAction" data-controltype="ImageButton" style="position:absolute;left: 0px;z-index: 2;"><span class="menu-icon"></span></div>
+
+            <div class="nav col-lg-3">
+                <div class="tree">
+                    <div class="accondion-wrapper">
+                        <div class="accondion" data-controltype="Accondion" data-propertyname="MenuTree">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="super-content col-lg-9 p-l-0 p-r-0" style="border-left: 1px solid #ccc;">
+                <div>
+                    <div data-controltype="TabContent" class="navbar-pc-openclose" data-propertyname="tabMenu1" style="width: 100%;background:none;">
+                    </div>
+                </div>
+
+                <div class="home-tab-content" data-related="tabMenu1">
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>   
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>    
+    <script src="./common/js/Button.js" type="text/javascript"></script>    
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>    
+    <script data-config="TextBox"></script>
+    <script src="./common/js/accondion.js" type="text/javascript"></script>
+    <script src="./common/js/SearchBox.js" type="text/javascript"></script>
+    <script src="./common/js/CommonProxy.js" type="text/javascript"></script>
+
+    <script src="./common/js/Animation.js" type="text/javascript"></script>
+
+    <script src="./common/js/Panorama.js" type="text/javascript"></script>
+
+    
+
+
+
+    <script type="text/javascript" src="./jquery/iscroll-probe.js"></script>
+
+    <script src="apps/common/home/SysHomeApp_L.js" type="text/javascript"></script>
+    <script src="apps/common/home/SysHomeApp_Extend.js" type="text/javascript"></script>
+    <script src="apps/common/menu/FakeData.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        cb.viewbinding.create("SysHomeViewModel");
+    </script>
+</body>
+</html>

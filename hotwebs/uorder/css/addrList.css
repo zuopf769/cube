@@ -1,0 +1,155 @@
+﻿/*统一调整底部导航颜色*/
+/*.navbar{
+	background: #32a075;
+	color: #FFFFFF;
+}*/
+/*统一修改单选多选框背景颜色为红色*/
+label.label-checkbox input[type=checkbox]:checked+.item-media i.icon-form-checkbox,
+label.label-checkbox input[type=radio]:checked+.item-media i.icon-form-checkbox{
+	background-color: #ff0000;
+}
+.confirmList{
+	margin: 0 auto;
+	margin-bottom: 49px;
+}
+.confirmList ul{
+	background: #f1f1f1;
+}
+.confirmList ul li{
+	background: #FFFFFF;
+	margin-top: 10px;
+	border-bottom: 1px solid #e1e1e1;
+	border-top: 1px solid #e1e1e1;
+}
+.confirmList .item-inner:after{
+	height: 0;
+}
+.confirmList .item-text{
+	height: auto!important;
+}
+.confirmList .item-title{
+	position: relative;
+	display: table-cell;
+	width: 100%;
+}
+.confirmList .item-title p{
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	color: #666666;
+}
+
+.confirmList .item-after{
+	height: auto!important;
+	line-height: 21px;
+	max-height: 100%;
+	display: inline-block;
+	text-align: right;
+}
+.confirmList .item-after p{
+	color: #000000;
+	font-size: 13px;
+}
+.confirmList p{
+	margin: 4px auto;
+	font-size: 13px;
+}
+.confirmList ul li.addrList{
+	background: #fefaf3;
+	border:3px solid transparent;
+	-webkit-border-image:url(../img/icon/addr-bg.png) 113 0  round; /* Safari 5 */
+	-o-border-image:url(../img/icon/addr-bg.png) 113 0 round; /* Opera */
+	border-image:url(../img/icon/addr-bg.png) 113 0 round;
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+.addr-content{
+	font-size: 13px !important;
+}
+.addr-content .item-text{
+	font-size: 13px;
+	word-break: break-all;
+}
+.addr-content .item-text .default-addr{
+	background: #FF4400;
+	color: #fff;
+	-webkit-font-size-adjust: none;
+	font-size: 9px !important;
+	display: inline-block;
+	text-align: center;
+	padding: 0 3px;
+	border-radius: 2px;
+	height: 12px;
+	line-height: 12px;
+}
+.addr-content .addr-edit{
+	border-left: 1px solid #E1E1E1;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.addr-new,
+.addr-new input[type=text],
+.addr-new select{
+	font-size: 13px !important;
+}
+
+/*订单详情部分*/
+.confirmList ul li.infoTitle{
+	background-color: #5f6b85;
+	color: #fff;
+	font-size: 13px;
+	padding: 10px;
+}
+.confirmList ul li.infoTitle .title{
+	font-size: 17px;
+}
+.confirmList ul li .infoContent{
+	font-size: 13px;
+	padding: 10px;
+	color: #666666;
+	border-bottom: 1px solid #e1e1e1;
+	margin: auto 5px;
+}
+.confirmList ul li .infoContent .title{
+	font-size: 17px;
+	color: #222222;
+}
+
+/**/
+.orderNone{
+	background: url(../img/icon/orderNone.png) no-repeat center 30%;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-size: 88px 104px;
+	position: relative;
+}
+.orderNone-info{
+	position: absolute;
+	top: 45%;
+	width: 100%;
+}
+.orderNone-info h5{
+	font-size: 18px;
+	color: #666666;
+	margin: 0 auto;
+}
+.orderNone-info p{
+	font-size: 13px;
+	color: #A1A1A1;
+	margin: 5px auto 10px auto;
+}
+.orderNone-btn{
+	width: 102px;
+	height: 35px;
+	line-height: 35px;
+	background: #FFFFFF;
+	border-radius: 4px;
+	color: #666666;
+	border: 1px solid #666666;
+	margin: 20px auto;
+}

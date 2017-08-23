@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<applications>
+  <application name="inventoryclassListApp" title="存货大类树" moduleName="u8" tplName="catalogs_min.tpl">
+    <viewmodel name="inventoryclassListViewModel" extendName="inventoryclassListViewModel_Extend" title="存货大类树">
+      <entity name="inventoryclassList" title="存货大类树" isMain="true">
+        <fields>
+          <field name="inventoryclasss" title="存货大类集合" modelType="SimpleModel" ctrlType="Tree" refEntity="inventoryclass"  treeFunctionId="U8100113" />
+        </fields>
+      </entity>
+      <entity name="inventoryclass" title="存货大类" isMain="true">
+        <fields>
+          <field name="pk_inventoryclass" title="存货大类pk" modelType="SimpleModel" ctrlType="TextBox" isNecessary="true" isVisible="true" isKey="true" iLength="20"/>
+          <field name="code" title="存货大类编码" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="name" title="存货大类名称" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="iinvcgrade" title="编码级次" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="0" iScale="0" iPrecision="0"/>
+          <field name="binvcend" title="是否末级" modelType="SimpleModel" ctrlType="CheckBox" isVisible="true" iLength="1"/>
+          <field name="cbarcode" title="对应条形码" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="pk_group" title="集团" modelType="SimpleModel" ctrlType="Refer" isNecessary="true" isVisible="true" iLength="20" refId="600001" refKey="pk_group" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="pk_org" title="组织" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600015" refKey="pk_org" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="pk_org_v" title="组织版本" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600700" refKey="pk_vid" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="creator" title="创建人" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name"/>
+          <field name="creationtime" title="创建时间" modelType="SimpleModel" ctrlType="DateTimeBox" isVisible="true" iLength="19"/>
+          <field name="modifier" title="修改人" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name"/>
+          <field name="modifiedtime" title="修改时间" modelType="SimpleModel" ctrlType="DateTimeBox" isVisible="true" iLength="19"/>
+          <field name="def1" title="自定义项1" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def2" title="自定义项2" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def3" title="自定义项3" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def4" title="自定义项4" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def5" title="自定义项5" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="dr" title="删除标记" modelType="SimpleModel" ctrlType="TextBox" isNecessary="true" isReadOnly="true" isVisible="false"/>
+          <field name="ts" title="时间戳" modelType="SimpleModel" ctrlType="DateTimeBox" isNecessary="true" isReadOnly="true" isSyncKey="true" isVisible="false"/>
+        </fields>
+      </entity> 
+       <entity name="Toolbar" title="功能">
+        <fields>
+          <field name="addAction" title="增加" modelType="SimpleModel" ctrlType="Button" />
+          <field name="editAction" title="编辑" modelType="SimpleModel" ctrlType="Button" />
+          <field name="deleteAction" title="删除" modelType="SimpleModel" ctrlType="Button" />
+          <field name="cancelAction" title="取消" modelType="SimpleModel" ctrlType="Button" />
+          <field name="saveAction" title="保存" modelType="SimpleModel" ctrlType="Button" />
+        </fields>
+      </entity>
+      <actions>
+        <action name="catalogBeforeExpand" entity="inventoryclassList" field="inventoryclasss" eventName="beforeExpand" functionName="catalogBeforeExpand" defaultImpl="//默认实现"/>
+        <action name="catalogClick" entity="inventoryclassList" field="inventoryclasss" eventName="click" functionName="catalogClick" defaultImpl="//默认实现"/>
+        <action name="catalogMoreClick" entity="inventoryclassList" field="inventoryclasss" eventName="moreClick" functionName="catalogMoreClick" defaultImpl="//默认实现"/>
+        <action name="addAction" entity="Toolbar" field="addAction" eventName="click" functionName="addAction" defaultImpl="//默认实现"/>
+        <action name="editAction" entity="Toolbar" field="editAction" eventName="click" functionName="editAction" defaultImpl="Edit"/>
+        <action name="deleteAction" entity="Toolbar" field="deleteAction" eventName="click" functionName="deleteAction" defaultImpl="delete"/>
+        <action name="cancelAction" entity="Toolbar" field="cancelAction" eventName="click" functionName="cancelAction" defaultImpl="Cancel"/>
+        <action name="saveAction" entity="Toolbar" field="saveAction" eventName="click" functionName="saveAction" defaultImpl="Save"/>
+      </actions>     
+    </viewmodel>
+  </application>
+</applications>

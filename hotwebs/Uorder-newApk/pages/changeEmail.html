@@ -1,0 +1,66 @@
+﻿<div data-controller="ChangeEmailsController">
+    <div class="pages">
+        <div data-page="changeEmailPage" class="page no-tabbar">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="back link"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center">验证邮箱</div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="user-list">
+                    <div class="list-block all-order  m-b-0 changeEmailPage-main-container">
+                        <form id="form-changeEmailPage">
+                            <ul>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">
+                                            邮箱
+                                        </div>
+                                        <div class="item-input">
+                                            <input type="text" placeholder="请输入邮箱地址" value="" name="email">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">
+                                            验证码
+                                        </div>
+                                        <div class="item-input">
+                                            <input type="text" placeholder="请输入验证码" value="" name="captcha">
+                                        </div>
+                                        <div class="item-after">
+                                            <img width="71" class="img-changeEmail-verification" />
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">
+                                            校验码
+                                        </div>
+                                        <div class="item-input">
+                                            <input type="text" placeholder="请输入校验码" name="validCode">
+                                        </div>
+                                        <div class="item-after">
+                                            <a class="TestGetCode changeEmailPage-btn-getCode">获取验证码</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+                        
+                    </div>
+                    <div class="content-block-title color-red m-t-10 changeEmailPage-error-container"></div>
+                     <a class="button button-fill new-button p-lr-25 only-one-btn changeEmailPage-btn-submit">立即验证</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pages/ChangeEmailController.js"></script>
+</div>

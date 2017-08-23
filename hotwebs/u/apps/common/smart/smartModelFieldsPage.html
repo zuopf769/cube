@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>smartModelFieldsPage</title>
+    <link rel="stylesheet" href="styles/kendo.common.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../kendoui/trial/styles/kendo.bootstrap.min.css" rel="stylesheet" />
+
+
+    <script src="../../../jquery/jquery-1.11.1.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+	<script src="token.js"></script>
+	<script src="function.js"></script>
+	<script src="parameterEdit.js"></script>
+	<script src="smartModelFieldsPage.js"></script>
+</head>
+<body>
+	<div id="Container">
+		<div id="Header">
+			<div id="titlediv"><strong style="clear: both; font-family: 'Microsoft YaHei UI'; color: lightblue;font-size:20px">语义模型设计向导</strong></div>
+			<div id="metaDBWindow" style="display: none">
+				<div id="metaDBTree"></div>
+				<div id="metaDBGrid"></div>
+				<div class="Clear"><!--如何你上面用到float,下面布局开始前最好清除一下。--></div>
+				<div id="metaDBFooter">
+					<button id="clearLink" style="width:100px">清除关联</button>
+					<button id="metaDBSave" class="k-primary" style="width:50px">确定</button>
+					<button id="metaDBCancle" style="width:50px">取消</button>
+				</div>
+			</div>
+			<div id="editWindow" style="display: none">
+				<div id="refWindow" style="display: none">
+					<div id="refTree"></div>
+					<div id="refButtons">
+						<button id="refSave" class="k-primary" style="width:50px">确定</button>
+						<button id="refCancle" style="width:50px">取消</button>
+					</div>
+				</div>
+				<div id="operationCodeWindow" style="display: none">
+					<div id="operationCodeGrid"></div>
+					<div id="operationCodeButtons">
+						<button id="operationCodeSave" class="k-primary" style="width:50px">确定</button>
+						<button id="operationCodeCancle" style="width:50px">取消</button>
+					</div>
+				</div>
+				<table width="880">
+					<tr>
+						<td><label for="fldname">字段名:</label></td>
+						<td><input id="fldname" type="textBox"></input></td>
+						<td><label for="caption">显示名:</label></td>
+						<td><input id="caption" type="textBox"></input></td>
+						<td><label for="precision">位数:</label></td>
+						<td><input id="precision" type="textBox"></input></td>
+					</tr>
+					<tr>
+						<td><label for="scale">精度:</label></td>
+						<td><input id="scale" type="textBox"></input></td>
+						<td><label for="isPK">主键:</label></td>
+						<td><input id="isPK" type="textBox"></input></td>
+						<td><label for="linkStr">关联:</label></td>
+						<td><input id="linkStr" type="textBox"></input></td>
+					</tr>
+					<tr>
+						<td><label for="isEnablePermission">权限:</label></td>
+						<td><input id="isEnablePermission" type="textBox"></input></td>
+						<td><label for="resourceCode">资源实体:</label></td>
+						<td><input id="resourceCode" type="textBox" onclick="openPermissionResourceRef()"></input></td>
+						<td><label for="operationCode">使用场景:</label></td>
+						<td><input id="operationCode" type="textBox" onclick="openOperationCodeRef()"></input></td>
+					</tr>
+				</table>
+				<div id="parameterWindow" style="display: none">
+					<div id="parameterGrid"></div>
+					<div id="parameterButton">
+						<button id="parameter_saveButton" class="k-primary">确定</button>
+						<button id="parameter_cancleButton">取消</button>
+					</div>
+				</div>
+				<div id="macroWindow" style="display: none">
+					<div id="macroGrid"></div>
+					<div id="macroButton">
+						<button id="macro_saveButton" class="k-primary">确定</button>
+						<button id="macro_cancleButton">取消</button>
+					</div>
+				</div>
+				<div id="metaWindow" style="display: none">
+					<div id="metaTree"></div>
+					<div id="metaButton">
+						<button id="meta_saveButton" class="k-primary">确定</button>
+						<button id="meta_cancleButton">取消</button>
+					</div>
+				</div>
+				<p>
+					<textarea id="expression" style="height:50px;width:830px"></textarea>
+				</p>
+				<div id="entityGrid"></div>
+				<div id="attrGrid"></div>
+				<div id="functionTree"></div>
+				<div id="symbolArea">
+					<p>
+						<button id="jia" style="width:50px">+</button>
+						<button id="jian" style="width:50px">-</button>
+						<button id="cheng" style="width:50px">*</button>
+						<button id="chu" style="width:50px">/</button>
+					</p>
+					<p>
+						<button id="zuokuo" style="width:50px">(</button>
+						<button id="youkuo" style="width:50px">)</button>
+						<button id="huo" style="width:50px">||</button>
+						<button id="shangDan" style="width:50px">'</button>
+					</p>
+					<p>
+						<button id="xiaDan" style="width:50px">,</button>
+						<button id="one" style="width:50px">1</button>
+						<button id="two" style="width:50px">2</button>
+						<button id="three" style="width:50px">3</button>
+					</p>
+					<p>
+						<button id="four" style="width:50px">4</button>
+						<button id="five" style="width:50px">5</button>
+						<button id="six" style="width:50px">6</button>
+						<button id="seven" style="width:50px">7</button>
+					</p>
+					<p>
+						<button id="eight" style="width:50px">8</button>
+						<button id="nine" style="width:50px">9</button>
+						<button id="zeor" style="width:50px">0</button>
+						<button id="dian" style="width:50px">.</button>
+					</p>
+					<p>
+						<button id="ling" style="width:50px">NULL</button>
+						<input id="editType" type="hidden"></button>
+					</p>
+				</div>
+				<div class="Clear"><!--如何你上面用到float,下面布局开始前最好清除一下。--></div>
+				<div id="windowFooter">
+					<button id="editWindowSaveButton" class="k-primary">保存</button>
+					<button id="editWindowCancleButton">取消</button>
+				</div>
+			</div>
+			<div id="topbuttons">
+				<button id="providerButton" style="width:80px">选择表</button> <img align="center" style="height:18px" src="icon/a.ico"></img>
+				<button id="joinButton" style="width:80px">连接条件</button> <img align="center" style="height:18px" src="icon/a.ico"></img>
+				<button id="fieldButton" class="k-primary" style="width:80px">选择字段</button> <img align="center" style="height:18px" src="icon/a.ico"></img>
+				<button id="descriptorButton" style="width:80px">描述器</button> <img align="center" style="height:18px" src="icon/a.ico"></img>
+				<button id="otherButton" style="width:80px">其他</button>
+			</div>
+		</div>
+		<div id="Center">
+			<div id="buttons">
+				<br></br>
+				<p>
+					<button id="addButton" class="editButton">增加</button>
+				</p>
+				<p>
+					<button id="editButton" class="editButton">修改</button>
+				</p>
+				<p>
+					<button id="delButton" class="editButton">删除</button>
+				</p>
+				<p>
+					<button id="fkButton" class="editButton">关联</button>
+				</p>
+				<p>
+					<button id="upButton" class="editButton">上移</button>
+				</p>
+				<p>
+					<button id="downButton" class="editButton">下移</button>
+				</p>
+			</div>
+			<div id="gridArea">
+				<div id="grid"></div>
+			</div>
+		</div>
+		<div id="Footer">
+			<button id="nextButton" style="width:70px">下一步</button>
+			<button id="saveButton" style="width:70px">保存</button>
+			<button id="cancleButton" style="width:70px">取消</button>
+			<button id="finishButton" style="width:70px">完成</button>
+		</div>
+	</div>
+	<style scoped>
+		#Container{
+			width:100%;
+			margin:0 auto;/*设置整个容器在浏览器中水平居中*/
+		}
+		#Header {
+			margin:10px;
+			overflow:hidden;
+		}
+		#titlediv {
+			width:20%
+			text-align: left;
+			float:left;
+		}
+		#topbuttons {
+			width:75%
+			text-align: right;
+			float:right;
+		}
+		#Center {
+			/*处理左右多列等高*/
+			overflow:hidden;
+			margin-right:10px;
+			border:1px solid #d3d3d3;
+		}
+		#buttons {
+		    width:8%;
+		    float:right;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+			text-align: center;
+		}
+		#gridArea{
+			width:92%;
+			float:right;
+		}
+		#grid {   
+		    margin:10px;/*设置元素跟其他元素的距离为20像素*/
+		    /*设置浮动，实现多列效果，div+Css布局中很重要的*/
+		}
+		#Footer {
+			margin:10px;
+			text-align: right;
+			padding-top:10px;/*本div上边距100*/
+		}
+		#entityGrid {
+			height:300px;
+			width:150px;
+		    margin:15px;/*设置元素跟其他元素的距离为20像素*/
+		    float:left;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+			/*background:#00C;*/
+		}
+		#attrGrid {
+			height:300px;
+			width:150px;
+		    margin:15px;/*设置元素跟其他元素的距离为20像素*/
+		    float:left;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+			/*background:#00C;*/
+		}
+		#functionTree {
+			height:300px;
+			width:200px;
+		    margin:15px;/*设置元素跟其他元素的距离为20像素*/
+		    float:left;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+			/*background:#00C;*/
+		}
+		#symbolArea {
+			height:300px;
+			width:250px;
+		    margin:15px;/*设置元素跟其他元素的距离为20像素*/
+		    float:left;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+			/*background:#00C;*/
+		}
+		#windowFooter {
+			width:820px;
+		    margin:15px;/*设置元素跟其他元素的距离为20像素*/
+			text-align: right;
+			/*background:#00C;*/
+		}
+		#metaDBTree {
+			height:300px;
+			width:260px;
+		    margin:10px;/*设置元素跟其他元素的距离为20像素*/
+		    float:left;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+			/*background:#00C;*/
+		}
+		#metaDBGrid {
+			height:300px;
+			width:260px;
+		    margin:10px;/*设置元素跟其他元素的距离为20像素*/
+		    float:left;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+			/*background:#00C;*/
+		}
+		#metaDBFooter {
+		    margin:15px;/*设置元素跟其他元素的距离为20像素*/
+			text-align: right;
+			/*background:#00C;*/
+		}
+		#refTree {
+			height:300px;
+			width:350px;
+		    margin:15px;/*设置元素跟其他元素的距离为20像素*/
+			/*background:#00C;*/
+		}
+		#refButtons {
+		    margin:15px;/*设置元素跟其他元素的距离为20像素*/
+			text-align: right;
+			/*background:#00C;*/
+		}
+		#operationCodeGrid {
+			height:300px;
+			width:350px;
+		    margin:15px;/*设置元素跟其他元素的距离为20像素*/
+			/*background:#00C;*/
+		}
+		#operationCodeButtons {
+		    margin:15px;/*设置元素跟其他元素的距离为20像素*/
+			text-align: right;
+			/*background:#00C;*/
+		}
+		#parameterGrid{
+			width:550px;
+			height:400px;
+			margin:10px;
+		}
+		#parameterButton {
+		    margin:10px;/*设置元素跟其他元素的距离为20像素*/
+		    float:right;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+		}
+		#macroGrid{
+			width:550px;
+			height:400px;
+			margin:10px;
+		}
+		#macroButton {
+		    margin:10px;/*设置元素跟其他元素的距离为20像素*/
+		    float:right;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+		}
+		#metaTree{
+			width:550px;
+			height:400px;
+			margin:10px;
+		}
+		#metaButton {
+		    margin:10px;/*设置元素跟其他元素的距离为20像素*/
+		    float:right;/*设置浮动，实现多列效果，div+Css布局中很重要的*/
+		}
+	</style>
+</body>
+</html>

@@ -1,0 +1,75 @@
+﻿<div data-controller="BaseInfoController">
+    <div class="pages">
+        <div data-page="BaseInfo" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a href="#" class="back link"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center">基本信息</div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="list-block m-t-0 baseInfo-block">
+                    <form id="baseInfo">
+                        <div class="content-block">
+                            <div class="content-block-inner">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">客户名称</div>
+                                        <div class="item-input">
+                                            <input type="text" name="agentName" value="" readonly class="no-border" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">订单日期</div>
+                                        <div class="item-input">
+                                            <input type="text" name="dConfirmDate" value="" readonly class="no-border" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-block">
+                            <div class="content-block-inner">
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">联系人</div>
+                                        <div class="item-input">
+                                            <input type="text" name="cReceiveContacter" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">联系电话</div>
+                                        <div class="item-input">
+                                            <input type="text" name="cReceiveContacterPhone" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">交货日期</div>
+                                        <div class="item-input">
+                                            <input type="text" placeholder="请输入交货日期" readonly id="calendar-default" name="dDeliveryDate">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <a class="button button-fill bg-green-u only-one-btn baseInfo-submit">确定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pages/BaseInfoController.js"></script>
+</div>

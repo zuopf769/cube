@@ -1,0 +1,376 @@
+﻿.page{
+	  background: #efefef;
+}
+.navbar{
+    background: #fbfbfb;
+}
+.navbar:after{
+	background-color: #D8D8D8;
+}
+.list-block .item-inner:after{
+	background-color: #E5E5E5;
+}
+.list-block .item-inner{
+	padding-top: 3px;
+	padding-bottom: 2px;
+}
+.login-screen-content {
+    padding: 10%;
+    background:url(../img/login-bg.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+/*@media only screen and (min-height: 628px) and (max-height: 736px) {
+	.login-screen-content{
+		padding-top: 30%;
+	}
+}*/
+.login-avatar {
+    width: 200px;
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+    margin: 50px auto;
+}
+
+    .login-avatar img {
+        text-align: center;
+        width: 78px;
+    		height: 78px;
+        padding: 0;
+        margin: 0;
+    }
+
+.login-screen-content .item-content{
+    border: 1px solid rgba(204,204,204,.5);
+    background-color: #fff;
+    border-radius: 6px;
+    padding-left: 10px;
+    margin-top: 15px;
+}
+
+ ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #cccccc;
+    font-size: 15px !important;
+}
+ :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #cccccc;
+    font-size: 15px !important;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #cccccc;
+    font-size: 15px !important;
+}
+ :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #cccccc;
+    font-size: 15px !important;
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    color: #333333;
+}
+
+#mylogin input{
+    color: #333333;
+    font-size: 15px !important;
+}
+.login-btuuon {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+    .login-btuuon .button {
+        border-radius: 24px;
+        margin: 0 auto;
+        height: 47px;
+    		line-height: 47px;
+        font-size: 17px;
+        width: 100%;
+    }
+
+.value-clear,
+.list-onOff{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    border-radius: 50%;
+    margin-top: -13px;
+    line-height: 0;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+
+/*忘记密码*/
+ .forgetPwd ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #cccccc;
+    font-size: 14px !important;
+}
+.forgetPwd  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #cccccc;
+    font-size: 14px !important;
+}
+.forgetPwd ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #cccccc;
+    font-size: 14px !important;
+}
+ .forgetPwd :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #cccccc;
+    font-size: 14px !important;
+}
+
+.forgetPwd,
+.register {
+    box-sizing: border-box;
+    color: #fff;
+    height: 100%;
+    /*padding: 10px 32px;*/
+}
+.forgetPwd .list-block{
+	margin: 0;
+}
+.forgetPwd p{
+	margin: 20px 0;
+}
+.forgetPwd .list-block ul:before,
+.forgetPwd .list-block ul:after{
+	height: 1px;
+	background-color:#d8d8d8;
+}
+.forgetPwd .button{
+	font-size: 16px;
+}
+.forgetPwd.step-two .icon-radio{
+	background-position: left bottom;
+}
+.forgetPwd.step-two .checked .icon-radio{
+	background-position: left top;
+}
+
+.forgetPwd.step-two .item-input input{
+	font-size: 14px;
+	color: #999999;
+}
+.forgetPwd.step-two .checked .item-input input{
+	color: #333;
+}
+
+.forgetPwd .content-block-title{
+	  margin: 0;
+	  text-align: left;
+	  font-size: 12px;
+	  color: #999;
+	  padding-left: 20px;
+	  padding-bottom: 5px;
+}
+.forgetPwd.step-three .item-inner span{
+	margin-right: 15px;
+}
+
+.forgetPwd.step-three .content-block-title{
+	padding-left: 50px;
+	box-sizing: border-box;
+	padding-top: 10px;
+  padding-bottom: 0
+	
+}
+
+
+
+    .forgetPwd .list-block .item-content,
+    .register .list-block .item-content {
+        min-height: 45px;
+        /*line-height: 55px;*/
+        position: relative;
+    }
+
+.security {
+    width: 97px;
+    height: 36px;
+    background: url(../img/security.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.forgetPwd .item-input i,
+.register .item-input i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -12px;
+}
+.forgetPwd .list-block .item-content ul.sub-menu {
+    position: absolute;
+    left: 50px;
+    top: 55px;
+    padding: 0;
+    background: #FFFFFF;
+    z-index: 99;
+    width: 70%;
+}
+
+    .forgetPwd .list-block .item-content ul.sub-menu li {
+        line-height: 35px;
+        height: 35px;
+        padding-left: 5px;
+        border: 1px solid #EAEAEA;
+        border-top: none;
+        color: #a9a9a9;
+    }
+
+.forgetPwd .list-block .item-content .item-inner {
+    padding-right: 0;
+}
+
+.forgetPwd .item-input i:hover + .phone-email {
+    display: inline-block;
+}
+
+.btn-code {
+    font-size: 13px;
+    color: #19c4b3;
+    border: 1px solid #19c4b3;
+    background-color: #eafcfa;
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+.btn-code a{
+	color: #19c4b3;
+}
+.forgetPwd-infor {
+    background-color: #fff;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+    .forgetPwd-infor .infor {
+        margin-top: 60%;
+        text-align: center;
+        font-size: 19px;
+        color: #03bfff;
+        width: 100%;
+        display: block;
+    }
+
+        .forgetPwd-infor .infor .desc {
+            color: #666666;
+            font-size: 16px;
+        }
+
+        .forgetPwd-infor .infor .retern-btn {
+            width: 140px;
+            height: 39px;
+            line-height: 39px;
+            margin: 0 auto;
+            padding: 4px 10px;
+            border: solid 1px #03bfff;
+            border-radius: 40px;
+            background-color: #FFFFFF;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 20px;
+            display: inline-block;
+            color: #03bfff;
+        }
+
+.forgetPwd-success {
+    background: url(../img/icon/succeed.png) no-repeat center 20% #fff;
+    background-size: 93px 93px;
+    display: none;
+}
+
+.forgetPwd-failure {
+    background: url(../img/icon/failure.png) no-repeat center 20% #fff;
+    background-size: 93px 93px;
+    display: none;
+}
+.list-login{
+	display: none;
+	  position: absolute;
+    left: -48px;
+    right: -1px;
+    top: 41px;
+    z-index: 3;
+    background: #fff;
+    padding-top: 4px;
+    border-radius: 0 0 6px 6px;
+    border: 1px solid rgba(204,204,204,.5);
+    max-height: 185px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-top: none;
+}
+.list-login ul{
+	padding: 0;
+	margin: 0;
+	padding-left: 0 !important;
+}
+.list-login ul li{
+	position: relative;
+	height: 45px;
+	line-height: 45px;
+	font-size: 15px;
+	color: #333333;
+	padding-left: 47px;
+}
+.list-login ul li:before{
+	content: " ";
+	position: absolute;
+	height: 1px;
+	width: 100%;
+	background: #ececec;
+	left: 0;
+	top: 0;
+	z-index: 15;
+	
+}
+html.pixel-ratio-2 .list-login ul li:before {
+	-webkit-transform: scaleY(0.5);
+	transform: scaleY(0.5);
+}
+html.pixel-ratio-3 .list-login ul li:before {
+	-webkit-transform: scaleY(0.33);
+	transform: scaleY(0.33);
+}
+
+@-webkit-keyframes rtv {
+    from {
+        margin:50px auto;
+    }
+    to {
+        margin:0px auto;
+    }
+}
+
+@keyframes rtv {
+    from {
+        margin:50px auto;
+    }
+    to {
+        margin:0px auto;
+    }
+}
+
+.renderVIPositon {
+    -moz-animation-name: rtv;
+    -o-animation-name: rtv;
+    -webkit-animation-name: rtv;
+    animation-name: rtv;
+    -moz-animation-duration: 0.5s;
+    -o-animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -moz-animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+}
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application name="closebillApp" title="收款单主表" moduleName="u8" symbol="u8.closebill" uiType="voucher">
+  <references reference="../u8/closebillAppVM.xml"/>
+  <view name="closebillView" title="收款单主表" layoutMode="Fluid" appId="u8.closebillApp" viewModel="u8.closebillApp.closebillViewModel" screenSize="M" tplName="voucher_M.tpl" ayoutMode="Fluid">
+    <container name="Abstract" title="概要" type="Card">
+      <controls>
+        <control name="billno" title="单据号" placeHolder="true" ctrlType="TextBox" position="top-left" field="billno" entity="closebill"/>
+        <control name="approvestatus" title="单据状态" ctrlType="Label" position="top-right" field="approvestatus" entity="closebill"/>
+        <control name="billdate" title="单据日期" placeHolder="true" ctrlType="TextBox" position="bottom-left" field="billdate" entity="closebill"/>
+        <control name="toolbar" title="工具栏" ctrlType="Button" position="bottom-right" entity="Toolbar"/>
+      </controls>
+    </container>
+    <container name="Toolbar" title="工具栏" type="Toolbar">
+      <controls>
+        <control name="editAction" title="编辑" ctrlType="Button" field="editAction" entity="Toolbar" css="tb-edit-icon"/>
+        <control name="submitAction" title="提交" ctrlType="Button" field="submitAction" entity="Toolbar" css="submit-icon"/>
+        <control name="withdrawAction" title="收回" ctrlType="Button" field="withdrawAction" entity="Toolbar" css="withdraw-icon"/>
+        <control name="approveAction" title="审核" ctrlType="Button" field="approveAction" entity="Toolbar" css="approve-icon"/>
+        <control name="unapproveAction" title="弃审" ctrlType="Button" field="unapproveAction" entity="Toolbar" css="unapprove-icon"/>
+        <control name="deleteAction" title="删除" ctrlType="Button" field="deleteAction" entity="Toolbar" css="delete-icon"/>
+        <control name="outboundAction" title="出库" ctrlType="Button" field="outboundAction" entity="Toolbar" css="outbound-icon"/>
+        <control name="relatedAction" title="相关业务" ctrlType="Button" field="relatedAction" entity="Toolbar" css="related-icon"/>
+        <control name="setAction" title="设置" ctrlType="Button" field="setAction" entity="Toolbar" css="set-icon"/>
+        <control name="outputAction" title="输出" ctrlType="Button" field="outputAction" entity="Toolbar" css="output-icon"/>
+      </controls>
+    </container>
+    <container name="Tab" title="页签" type="Toolbar" mode="strip">
+      <controls>
+        <control name="baseinfo" title="基本信息" ctrlType="Button"/>
+      </controls>
+    </container>
+    <container name="baseinfo" title="基本信息" type="TabPage">
+      <controls>
+        <control name="pk_ap_closebill" title="收款单主表pk" ctrlType="TextBox" iLength="20" field="pk_ap_closebill" entity="closebill"/>
+        <control name="billno" title="单据号" ctrlType="TextBox" iLength="50" field="billno" entity="closebill"/>
+        <control name="vtrantypecode" title="单据类型编码" ctrlType="TextBox" iLength="50" field="vtrantypecode" entity="closebill"/>
+        <control name="vtrantype" title="收款单类型" ctrlType="Refer" iLength="20" refId="4848" refKey="pk_billtypeid" refName="billtypename" refCode="pk_billtypecode" refShowMode="Name" field="vtrantype" entity="closebill"/>
+        <control name="billdate" title="单据日期" ctrlType="DateTimeBox" iLength="19" field="billdate" entity="closebill"/>
+        <control name="busitype" title="业务流程" ctrlType="Refer" iLength="20" refId="4849" refKey="pk_busitype" refName="businame" refCode="busicode" refShowMode="Name" field="busitype" entity="closebill"/>
+        <control name="pk_group" title="集团" ctrlType="Refer" iLength="20" refId="600001" refKey="pk_group" refName="name" refCode="code" refShowMode="Name" field="pk_group" entity="closebill"/>
+        <control name="pk_org" title="组织" ctrlType="Refer" iLength="20" refId="600015" refKey="pk_org" refName="name" refCode="code" refShowMode="Name" field="pk_org" entity="closebill"/>
+        <control name="pk_org_v" title="组织版本" ctrlType="Refer" iLength="20" refId="600700" refKey="pk_vid" refName="name" refCode="code" refShowMode="Name" field="pk_org_v" entity="closebill"/>
+        <control name="pk_dept" title="部门" ctrlType="Refer" iLength="20" refId="600905" refKey="pk_dept" refName="name" refCode="code" refShowMode="Name" field="pk_dept" entity="closebill"/>
+        <control name="pk_dept_v" title="部门版本" ctrlType="Refer" iLength="20" refId="600949" refKey="pk_vid" refName="name" refCode="code" refShowMode="Name" field="pk_dept_v" entity="closebill"/>
+        <control name="billmaker" title="制单人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="billmaker" entity="closebill"/>
+        <control name="approver" title="审批人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="approver" entity="closebill"/>
+        <control name="approvestatus" title="单据状态" ctrlType="TextBox" iLength="50" field="approvestatus" entity="closebill"/>
+        <control name="approvedate" title="审批时间" ctrlType="DateTimeBox" iLength="19" field="approvedate" entity="closebill"/>
+        <control name="creator" title="创建人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="creator" entity="closebill"/>
+        <control name="creationtime" title="制单时间" ctrlType="DateTimeBox" iLength="19" field="creationtime" entity="closebill"/>
+        <control name="modifier" title="修改人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="modifier" entity="closebill"/>
+        <control name="modifiedtime" title="修改时间" ctrlType="DateTimeBox" iLength="19" field="modifiedtime" entity="closebill"/>
+        <control name="billcloser" title="关闭人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="billcloser" entity="closebill"/>
+        <control name="billclosetime" title="关闭自然时间" ctrlType="DateTimeBox" iLength="19" field="billclosetime" entity="closebill"/>
+        <control name="lastprintor" title="最近打印人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="lastprintor" entity="closebill"/>
+        <control name="lastprinttime" title="最近打印时间" ctrlType="DateTimeBox" iLength="19" field="lastprinttime" entity="closebill"/>
+        <control name="ccuscode" title="客户编码" ctrlType="Refer" iLength="20" refId="customer" refKey="ccuscode_pk" refName="name" refCode="code" refShowMode="Name" field="ccuscode" entity="closebill"/>
+        <control name="ccusname" title="客户全称" ctrlType="TextBox" iLength="50" field="ccusname" entity="closebill"/>
+        <control name="ccusabbname" title="客户简称" ctrlType="TextBox" iLength="50" field="ccusabbname" entity="closebill"/>
+        <control name="cvconperson" title="客户联系人" ctrlType="TextBox" iLength="50" field="cvconperson" entity="closebill"/>
+        <control name="cvshipaddress" title="联系地址" ctrlType="TextBox" iLength="50" field="cvshipaddress" entity="closebill"/>
+        <control name="cpersoncode" title="业务员编码" ctrlType="Refer" iLength="20" refId="person" refKey="person_pk" refName="name" refCode="code" refShowMode="Name" field="cpersoncode" entity="closebill"/>
+        <control name="cperson" title="业务员" ctrlType="TextBox" iLength="50" field="cperson" entity="closebill"/>
+        <control name="cexch_name" title="币种" ctrlType="Refer" iLength="20" refId="foreigncurrency" refKey="id" refName="name" refCode="code" refShowMode="Name" field="cexch_name" entity="closebill"/>
+        <control name="iexchrate" title="汇率" ctrlType="NumberBox" iLength="28" iScale="8" iPrecision="28" field="iexchrate" entity="closebill"/>
+        <control name="srcbilltype" title="来源单据类型" ctrlType="Refer" iLength="20" refId="4848" refKey="pk_billtypeid" refName="billtypename" refCode="pk_billtypecode" refShowMode="Name" field="srcbilltype" entity="closebill"/>
+        <control name="srcbillid" title="来源单据id" ctrlType="TextBox" iLength="50" field="srcbillid" entity="closebill"/>
+        <control name="cmemo" title="备注" ctrlType="TextBox" iLength="50" field="cmemo" entity="closebill"/>
+        <control name="idispstate" title="发货状态" ctrlType="TextBox" iLength="50" field="idispstate" entity="closebill"/>
+        <control name="ioutstate" title="出库状态" ctrlType="TextBox" iLength="50" field="ioutstate" entity="closebill"/>
+        <control name="ddispdate" title="表头预发货日期" ctrlType="DateTimeBox" iLength="19" field="ddispdate" entity="closebill"/>
+        <control name="approvenstr" title="审批批语" ctrlType="TextBox" iLength="50" field="approvenstr" entity="closebill"/>
+        <control name="ts" title="时间戳" ctrlType="DateTimeBox" field="ts" entity="closebill"/>
+        <control name="pk_ap_closebill_b" title="收款单表体" ctrlType="DataGrid" field="pk_ap_closebill_b" entity="closebill">
+          <columns>
+            <column name="pk_ap_closebill_b" title="收款单表体pk" field="pk_ap_closebill_b" ctrlType="TextBox" position="leftTop" entity="closebill"/>
+            <column name="crowno" title="行号" field="crowno" ctrlType="TextBox" position="rightTop" entity="closebill"/>
+            <column name="iquantity" title="数量" field="iquantity" ctrlType="TextBox" position="leftBottom" entity="closebill"/>
+            <column name="iamount_f" title="原币金额" field="iamount_f" ctrlType="TextBox" position="rightBottom" entity="closebill"/>
+          </columns>
+        </control>
+        <control name="cancelAction" title="取消" field="cancelAction" entity="Toolbar" ctrlType="Button" css="cancel-icon"/>
+        <control name="saveAction" title="保存" field="saveAction" entity="Toolbar" ctrlType="Button" css="search-icon"/>
+      </controls>
+    </container>
+  </view>
+</application>

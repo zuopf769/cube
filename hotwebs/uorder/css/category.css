@@ -1,0 +1,138 @@
+/* Your app custom files in this file */
+/** {
+    font-family: sans-serif,Arial,Verdana,"Trebuchet MS","Microsoft YaHei","STXihei";
+}*/
+.category-tab {
+  float: left;
+  width: 90px;
+  min-width: 90px;
+  overflow-y: auto;
+  min-height: 100%;
+}
+
+.category-content {
+  width: -webkit-calc(100% - 90px);
+  width: -moz-calc(100% - 90px);
+  width: -ms-calc(100% - 90px);
+  width: calc(100% - 90px);
+  float: right;
+}
+
+.category-tab ul, 
+.category-tab li,
+.category-content ul,
+.category-content li{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+    .category-content ul {
+    padding-top:10px;
+    }
+.category-tab ul{
+	width: 90px;
+    padding-top:5px;
+}
+
+.category-tab li {
+	height: 49px;
+	line-height: 49px;
+	border-bottom: 1px solid #e0e0e0;
+	border-right: 1px solid #e0e0e0;
+	background: #f3f4f6;
+	text-align: center;
+	font-size: 0;
+	overflow: hidden;
+}
+
+.category-tab li.cur {
+	border-right: 1px solid #fff;
+    background: #fff;
+}
+
+.category-tab li a {
+	display: inline-block;
+	width: 100%;
+	/* height: 49px; */
+	line-height: 24px;
+	text-decoration: none;
+	font-size: 13px;
+	color: #252525;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/* white-space: nowrap; */
+	vertical-align: middle;
+}
+ .category-tab li.cur{
+ 	border-left: 3px solid #32A075;
+ }   
+.category-tab li.cur a {
+	
+	border-right: 1px solid #fff;
+    background: #fff;
+    color: #32A075;
+}
+
+#category_wapper{
+	overflow: hidden;
+}
+
+#category_wapper ul{
+	-webkit-transition: translateY 0.2s ease-out;
+}
+
+.category-content .category-div{
+	margin:0 13px 0 13px;
+}
+
+.category-content h4{
+	font-size: 12px;
+    margin: 0;
+    padding: 10px 0 0 0;
+    line-height: 1em;
+    color: #888;
+}
+
+.category-style-1 {
+	
+}
+
+.category-style-1 li{
+	width: 32.8%;
+    height: 90px;
+    float: left;
+    text-align: center;
+}
+
+.category-style-1 a {
+    text-decoration: none;
+    color: #252525;
+}
+
+.category-style-1 img {
+    width: 62px;
+    height: 62px;
+    border: 0;
+}
+
+.category-style-1 span {
+    font-size: 12px;
+    display: block;
+    margin: 5px 0 9px;
+    line-height: 1.1em;
+    height: 1.1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.category-style-1:after {
+    content: "";
+    display: inline-block;
+    height: 0;
+    width: 100%;
+    clear: both;
+    font-size: 0;
+    line-height: 0;
+}

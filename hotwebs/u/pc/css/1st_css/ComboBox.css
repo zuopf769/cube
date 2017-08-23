@@ -1,0 +1,67 @@
+﻿.ComboBox
+{
+    border: 1px solid #cccccc;
+    display: inline-block;
+    color: black;
+    hidefocus: true;
+    outline: none;
+	padding: 6px 12px;
+    padding-right: 24px;
+    height:34px;
+
+    background-image: url("../images/dropdown.gif");
+	background-position: 98% 50%;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+	cursor: pointer;  
+}
+
+.ComboBox-focus
+{
+    border: 1px solid #FFD42C;
+}
+.ComboBox-focus, .ComboBox:focus{
+    border-color: #66AFE9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}
+/*
+.ComboBox-focus[readonly], .ComboBox[readonly]:focus{
+   border: 1px solid #cccccc;
+    box-shadow: none;
+    outline: 0 none;
+}
+*/
+.ComboBox-arrow
+{
+    cursor: pointer;
+}
+
+
+.ComboBox Input
+{
+    /*margin:1px;*/
+	    margin-left:1px;
+    margin-right:10px;
+
+    border: 0;
+    outline: none;
+    color: black;
+    width: 100%;
+    height:22px;
+    /*vertical-align: middle;*/
+}
+
+.ComboBox[readonly],.ComboBox Input[readonly]
+{
+background-color:#f7f7f7;
+  cursor: auto;  
+}
+.ComboBox[disabled],.ComboBox Input[disabled]
+{
+    background-color:#f7f7f7;
+  cursor: not-allowed;  
+}

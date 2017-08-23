@@ -1,0 +1,36 @@
+﻿.button
+{
+    -moz-user-select: none;
+    background-image: none;
+	background-color:#fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+	font-family: inherit;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+	border-color: #adadad;
+	color:#333;
+  
+}
+.button:hover,.button:active ,.button:focus{
+    background-color: #ebebeb;
+    border-color: #adadad;
+    color: #333;
+	text-decoration:none;
+}
+.button:disabled {
+	color:#FFF;
+	cursor:not-allowed;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff));
+    background: -moz-linear-gradient(top, #ededed, #fff);
+    background: -ms-linear-gradient(top, #ededed, #fff);
+    background: -o-linear-gradient(top, #ededed, #fff);	
+}
+

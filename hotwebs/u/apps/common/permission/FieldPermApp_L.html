@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>字段权限</title>
+    <link rel="stylesheet" type="text/css" href="../../../pc/css/Cube.Tab.css" />
+    <link rel="stylesheet" type="text/css" href="pc/css/permission.css" />
+    <link data-config="DataGrid" />
+</head>
+<body>
+    <div id="fieldpermpage" data-viewmodel="FieldPermViewModel" data-title="字段权限" data-page="common.permission.FieldPermApp"
+        style="height: 600px; margin-left: 50px; margin-right: 50px;">
+        <h2 style="clear: both; font-family: 'Microsoft YaHei UI'; color: lightblue">字段权限</h2>
+        <div style="height: 540px; min-height: 500px; max-height: 600px; border-right: 1px solid lightblue; width: 20%; min-width: 216px; float: left;">
+            <!--<h5>用户及角色</h5>-->
+            <div style="height: 100%" data-propertyname="roleuserlist" data-controltype="TreeView"></div>
+        </div>
+        <div style="background-color: white; margin-left: 10px; height: 540px; width: 800px; float: left">
+            <div>
+                <div style="width: 100%; margin-bottom: 2px;" class="navbar-pc-strip" data-propertyname="tabMenu" data-controltype="TabContent">
+                    <li class="ui-text" data-content="sensitiveObj">敏感数据</li>
+                    <li class="ui-text" data-content="busField">业务对象</li>
+                </div>
+            </div>
+            <div data-related="tabMenu" style="height: 500px; overflow: auto;">
+                <div class="cube-detail-content" data-content="sensitiveObj">
+                    <div style="margin-top: 1px; line-height: 30px; height: 30px;">
+                        <button style="height: 30px;" data-propertyname="setSensiAuthority" data-controltype="KendoButton">编辑</button>
+                        <button style="height: 30px;" data-propertyname="saveSensitiveAuth" data-controltype="KendoButton">保存</button>
+                    </div>
+                    <div id="sensitiveObj" style="height: 465px; margin-top: 2px;">
+                        <div style="height: 100%" data-propertyname="sensitiveObjects" data-controltype="DataGrid"></div>
+                    </div>
+                </div>
+                <div class="cube-detail-content" data-content="busField">
+                    <div style="height: 35px;">
+                        <div style="float: left" data-propertyname="busObjList" data-controltype="ComboBox"></div>
+                        <div style="margin-left: 10px; margin-top: 0px; height: 26px; line-height: 26px; float: left">
+                            <div style="height: 26px; padding-top: 0px; padding-bottom: 0px; float: left" data-propertyname="defaultAuth" data-controltype="CheckBox">
+                                <input type="checkbox" />
+                            </div>
+                            <div style="height: 26px; padding-top: 0px; padding-bottom: 0px; float: left" data-propertyname="roleAuth" data-controltype="CheckBox">
+                                <input type="checkbox" />
+                            </div>
+                            <div style="height: 26px; padding-top: 0px; padding-bottom: 0px; float: left" data-propertyname="sensitiveAuth" data-controltype="CheckBox">
+                                <input type="checkbox" />
+                            </div>
+                        </div>
+                        <button style="height: 30px; float: right" data-propertyname="saveBusAuth" data-controltype="KendoButton">保存</button>
+                        <button style="height: 30px; float: right" data-propertyname="setBusAuth" data-controltype="KendoButton">编辑</button>
+
+                    </div>
+                    <div id="busField" style="height: 459px; min-height: 400px;">
+                        <div style="height: 100%" data-propertyname="busFields" data-controltype="DataGrid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="jquery/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="jquery/jquery-ui.js"></script>
+    <script type="text/javascript" src="jquery/jquery.event.drag-2.2.js"></script>
+    <script type="text/javascript" src="common/js/Cube.js"></script>
+    <script type="text/javascript" src="pc/js/cube.pc.js"></script>
+    <script type="text/javascript" src="common/js/Cube.bindings.js"></script>
+    <script type="text/javascript" src="common/js/Control.js"></script>
+    <script type="text/javascript" src="common/js/CommonProxy.js"></script>
+    <script type="text/javascript" src="common/js/Button.js"></script>
+    <script data-config="CheckBox"></script>
+    <script data-config="TextBox"></script>
+    <script data-config="Tree"></script>
+    <script data-config="ComboBox"></script>
+    <script type="text/javascript" src="./pc/js/TabContent.js"></script>
+    <script data-config="DataGrid"></script>
+    <script type="text/javascript" src="./kendoui/commercial/src/js/kendo.button.js"></script>
+    <script type="text/javascript" src="./pc/js/kendoctrl/Button.js"></script>
+    <script type="text/javascript" src="apps/common/permission/RoleUserList.js"></script>
+    <script type="text/javascript" src="apps/common/permission/FieldPermApp_L.js"></script>
+    <script type="text/javascript" src="apps/common/permission/FieldPermApp_Extend.js"></script>
+
+    <script>
+        cb.viewbinding.create("fieldpermpage");
+    </script>
+</body>
+</html>

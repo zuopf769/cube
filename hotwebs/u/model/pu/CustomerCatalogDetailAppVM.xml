@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<applications>
+  <application name="CustomerCatalogDetailApp" title="客户分类详情" moduleName="pu" tplName="catalog_min.tpl">
+    <viewmodel name="CustomerCatalogDetailViewModel" extendName="CustomerCatalogDetailViewModel_Extend" title="客户分类详情">
+      <entity name="CustomerCatalogDetail" title="客户分类详情" isMain="true">
+        <fields>
+          <field name="ts" title="时间戳" modelType="SimpleModel" ctrlType="DateTimeBox" isNecessary="true" isReadOnly="true" isSyncKey="true" />
+          <field name="dr" title="删除标记" modelType="SimpleModel" ctrlType="CheckBox" isNecessary="true" isReadOnly="true" />
+          <field name="pk_customerclass" title="主键" modelType="SimpleModel" ctrlType="TextBox" isNullable="false" isKey="true" isNecessary="true" />
+          <field name="code" title="分类编码" modelType="SimpleModel" ctrlType="TextBox" />
+          <field name="name" title="分类名称" modelType="SimpleModel" ctrlType="TextBox" />
+        </fields>
+      </entity>
+      <entity name="Toolbar" title="功能">
+        <fields>
+          <field name="addAction" title="增加" modelType="SimpleModel" ctrlType="Button" />
+          <field name="editAction" title="编辑" modelType="SimpleModel" ctrlType="Button" />
+          <field name="deleteAction" title="删除" modelType="SimpleModel" ctrlType="Button" />
+          <field name="cancelAction" title="取消" modelType="SimpleModel" ctrlType="Button" />
+          <field name="saveAction" title="保存" modelType="SimpleModel" ctrlType="Button" />
+        </fields>
+      </entity>
+      <actions>
+        <action name="addAction" entity="Toolbar" field="addAction" eventName="click" functionName="addAction" defaultImpl="//默认实现"/>
+        <action name="editAction" entity="Toolbar" field="editAction" eventName="click" functionName="editAction" defaultImpl="//默认实现"/>
+        <action name="deleteAction" entity="Toolbar" field="deleteAction" eventName="click" functionName="deleteAction" defaultImpl="//默认实现"/>
+        <action name="cancelAction" entity="Toolbar" field="cancelAction" eventName="click" functionName="cancelAction" defaultImpl="//默认实现"/>
+        <action name="saveAction" entity="Toolbar" field="saveAction" eventName="click" functionName="saveAction" defaultImpl="//默认实现"/>
+      </actions>
+    </viewmodel>
+  </application>
+</applications>

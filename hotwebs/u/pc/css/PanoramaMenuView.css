@@ -1,0 +1,70 @@
+﻿.PanoramaMenuView {
+    width:100%;
+}
+
+.PanoramaMenuView .nav {
+    width:200px;
+    height: 700px;
+    float:left;
+    padding-left:5px;
+    background-color:rgb(247,247,247);
+    border:1px rgb(204,204,204) solid;
+}
+
+.PanoramaMenuView .nav .search div {
+    height:30px;        
+    line-height:25px;
+}
+
+.PanoramaMenuView .nav .search input{ border:none; background-color:transparent;color: #157DFB;}
+
+.PanoramaMenuView .lastOperation{
+    height:40px;
+    line-height:40px;
+    overflow:hidden;
+    border-bottom-width:1px;
+    border-bottom-style:solid;
+    border-bottom-color:rgb(228,228,228);
+    font-size:14px;
+    font-weight:bold;
+    cursor:pointer;
+ }
+
+/*
+.PanoramaMenuView .lastOperation span{
+    background-image:url(../images/lastOpt.png);    
+    background-position-x:left;
+    background-repeat:no-repeat;        
+    background-position-y:center;
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top: 12px;
+    margin-left: 4px;
+}
+    */
+
+.PanoramaMenuView .lastOperation label{       
+    text-indent: 6px;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.PanoramaMenuView .lastOperation input{
+    border:none;
+}
+
+.PanoramaMenuView .tree{
+    margin-top:10px;
+    height:86%;    
+}
+
+.PanoramaMenuView .content {
+    overflow-y:hidden;
+    overflow-x:auto;
+    height:700px;
+}
+
+    .PanoramaMenuView .accondion .header[level="1"] .arrow {
+    background: url(../images/dot.png) no-repeat center center;
+}

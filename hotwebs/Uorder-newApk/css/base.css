@@ -1,0 +1,348 @@
+﻿/*基础样式*/
+.m-t-0 {
+    margin-top: 0 !important;
+}
+
+.m-b-0 {
+    margin-bottom: 0 !important;
+}
+
+.m-t-5 {
+    margin-top: 5px;
+}
+
+.m-t-10 {
+    margin-top: 10px !important;
+}
+
+.m-t-20 {
+    margin-top: 20px;
+}
+
+.m-t-25 {
+    margin-top: 25px;
+}
+
+.m-t-35 {
+    margin-top: 35px;
+}
+
+.m-r-5 {
+    margin-right: 5px;
+}
+
+.m-r-10 {
+    margin-right: 10px;
+}
+
+.p-t-0 {
+    padding-top: 0 !important;
+}
+
+.p-t-5 {
+    padding-top: 5px;
+}
+
+.p-r-0 {
+    padding-right: 0 !important;
+}
+
+.p-r-5 {
+    padding-right: 5px !important;
+}
+
+.p-l-0 {
+    padding-left: 0 !important;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.p-lr-25 {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+}
+
+.height-auto {
+    height: auto !important;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+/**/
+/*html,body{
+	font-family:Helvetica,"microsoft yahei";
+}*/
+
+
+/*字体颜色*/
+.color-orange-u {
+    color: #ff5400 !important;
+}
+
+.color-red {
+    color: #ff0000;
+}
+
+.color-green-u {
+    color: #03bfff;
+}
+
+.color-gray-u {
+    color: #1a1a1a;
+}
+
+.color-lightgray-u {
+    color: #505050;
+}
+
+.color-lightergray-u {
+    color: #666 !important;
+}
+
+.color-lightestgray-u {
+    color: #999;
+}
+
+.color-2b {
+    color: #2b2b2b;
+}
+
+/*边框颜色*/
+.border-lightergray-u {
+    border: 1px solid #666;
+}
+
+.border-orange-u {
+    border: 1px solid #ff5400;
+}
+
+.border-lightestgray-u {
+    border: 1px solid #e1e1e1;
+}
+
+.border-green-u {
+    border: 1px solid #03bfff;
+}
+
+.border-none {
+    border: 0 !important;
+}
+/*背景颜色*/
+.bg-orange-u {
+    background: #ff5400 !important;
+    color: #FFFFFF;
+}
+
+.bg-green-u {
+    background: #06c1ae !important;
+}
+/*字体大小*/
+.font-20 {
+    font-size: 20px  !important;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+.font-16 {
+    font-size: 16px !important;
+}
+
+.font-14 {
+    font-size: 14px  !important;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.hid {
+    display: none;
+}
+
+/*底部按钮区域*/
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    height: 49px;
+    line-height: 49px;
+    background: #fff;
+    width: 100%;
+    font-size: 14px;
+    color: #666666;
+    z-index: 99;
+}
+
+    .bottom-bar label div {
+        display: inline-block;
+        font-size: 18px;
+        margin-left: 10px;
+        color: #2b2b2b;
+    }
+
+        .bottom-bar label div + div {
+            margin-left: 0px;
+        }
+
+    .bottom-bar .button {
+        margin: 7px auto;
+    }
+/*统一调整底部导航颜色*/
+/*.navbar{
+	background: #32a075;
+	color: #FFFFFF;
+}*/
+/*统一修改单选多选框背景颜色为红色*/
+label.label-checkbox input[type=checkbox]:checked + .item-media i.icon-form-checkbox,
+label.label-checkbox input[type=radio]:checked + .item-media i.icon-form-checkbox {
+    background-color: #ff0000;
+}
+
+.welcome {
+    width: 100%;
+    height: 100%;
+    background: #fff url(../img/welcome-bg.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+
+    .welcome .footerTitle {
+        position: fixed;
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        color: #a1a1a1;
+        font-size: 10px;
+        text-align: center;
+    }
+
+
+
+
+.list-block.media-list .item-link .item-title-row {
+    background-image: none;
+}
+
+.page-content img {
+    max-width: 100%;
+}
+
+
+/*==========================new 10-20=================================*/
+.m-t-42 {
+    margin-top: 42px;
+}
+
+.p-t-10 {
+    padding-top: 10px !important;
+}
+
+.font-13 {
+    font-size: 13px;
+}
+
+.none-border {
+    border: none !important;
+}
+
+.no-border:after,
+.no-border:before {
+    height: 0 !important;
+}
+
+.p-b-42 {
+    padding-bottom: 42px;
+}
+
+.color-999 {
+    color: #999999;
+}
+
+.m-l-10 {
+    margin-left: 10px !important;
+}
+
+.p-lr-10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.p-lr-5 {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+/*换行显示*/
+.wordBreak {
+    -ms-word-break: break-all;
+    word-break: break-all;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis; /*兼容opera*/
+    text-overflow: ellipsis; /*这就是省略号喽*/
+    overflow: hidden; /*设置超过的隐藏*/
+}
+
+.m-l-70 {
+    margin-left: 70px !important;
+}
+
+.m-l-90 {
+    margin-left: 90px !important;
+}
+.bg-white{
+	background: #FFFFFF;
+}
+/*通用导航右上角链接颜色*/
+.navbar .right a {
+    color: #06C1AE;
+    font-size: 15px;
+}
+
+.color-red2 {
+    color: #f15b5c;
+}
+.color-333{
+	color: #333!important;
+}
+.m-l-0{
+	margin-left: 0!important;
+}
+.m-l-5{
+	margin-left: 5px !important;
+}
+.m-t-5{
+	margin-top: 5px !important;
+}
+.font-23{
+	font-size: 25px !important;
+}
+.font-18{
+	font-size: 18px !important;
+}
+.invoice_save,
+.baseInfo-submit,
+.newAddr-button,
+.payment_save,
+.userBaseInfo-btn-save,
+.serBaseInfo-btn-save {
+    background-color: #FF9E06 !important;
+    width: 96%;
+    height: 36px;
+    line-height: 36px;
+}
+.bottom-60{
+	bottom: 60px !important;
+}
+.col-45{
+	width: 45%;
+}
+

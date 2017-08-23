@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application id="cb1277eb-1ba5-4835-9d61-40c36890763c" name="warehouseApp" title="u8warehouse" domainName="uap" moduleName="u8" symbol="u8.warehouse" ts="2015-04-17 15:38:22" dr="0" tplName_viewModel="documents" tplName="documents_L.tpl">
+  <references>
+    <reference name="../u8/warehouseApp.documents.VM.xml"/>
+  </references>
+  <view id="2148e27a-f7ba-4a39-a4f8-f3c34bd573e0" name="warehouseApp_TreeGrid" title="仓库档案" viewModelId="cb1277eb-1ba5-4835-9d61-40c36890763c" layoutMode="Fluid" screenSize="L" tplName="documents_L.html.tpl" viewModel="warehouseAppViewModel_documents" isDefault="true" ts="2015-04-17 15:39:32" dr="0" appId="u8.warehouseApp_TreeGrid">
+    <container id="bf248f9b-ea3f-4c22-9968-8e838140eea0" name="Toolbar" title="工具栏" type="Toolbar" iCols="0" ts="2015-04-17 15:38:52" dr="0">
+      <control entity="Toolbar" id="55bfce09-25ac-4b32-b0b9-4dfb52e200db" name="addAction" title="增加" field="addAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-17 15:38:52" dr="0" vmfield="addAction"/>
+      <control entity="Toolbar" id="83f61da2-b535-46f8-b142-c7bfb3cbebf8" name="editAction" title="编辑" field="editAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-17 15:38:52" dr="0" vmfield="editAction"/>
+      <control entity="Toolbar" id="fea7d1d0-3c8c-4149-a66e-bd51a0ef324f" name="batchDeleteAction" title="删除" field="batchDeleteAction" ctrlType="Button" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-17 15:38:52" dr="0" vmfield="batchDeleteAction"/>
+      <control entity="Toolbar" id="09a3bdbc-1468-4cb9-acf9-319abea0feab" name="configAction" title="设置" field="configAction" ctrlType="DropDownButton" isNullable="false" isReadOnly="false" isVisible="true" isPlaceHolder="false" ts="2015-04-17 15:38:52" dr="0" vmfield="configAction"/>
+    </container>
+    <container id="0512f887-9ebc-4c20-9812-61358c70a117" name="Grid" title="表格" type="Grid" iCols="0" ts="2015-04-17 15:38:52" dr="0">
+      <control entity="warehouse" id="94834747-b79a-4662-a24a-148958defa8b" name="warehouseApp_List" title="u8warehouse列表" field="warehouseApp_List" ctrlType="DataGrid" isNullable="true" isVisible="true" isPlaceHolder="false" ts="2015-04-17 15:38:52" dr="0" dsMode="Local" supportPagination="false" vmfield="warehouseApp_List"/>
+    </container>
+  </view>
+</application>

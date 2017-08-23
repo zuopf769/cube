@@ -1,0 +1,150 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>业务日志</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="pc/css/kendoctrl/Cube.Control.css" rel="stylesheet"/>
+        <link href="pc/css/modal.css" rel="stylesheet" type="text/css" />
+     <link href="pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="pc/css/Cube.ToolBar.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link data-config="MessageBox" />
+	<style>
+		.input{
+			font-family:'微软雅黑 Regular', '微软雅黑';
+			font-size:12px;
+			//font-weight:500;
+			color:#333333;
+		}
+		.label{
+			font-family:'微软雅黑 Regular', '微软雅黑';
+			font-size:12px;
+			//font-weight:500;
+			color:#999999;
+		}
+	</style>
+</head>
+<body>
+<div id="BusiConditionView" data-page="common.sysmanager.BusiConditionApp" data-title="业务日志" data-viewmodel="BusiConditionViewModel"style="height:380px;">
+      <div class="row">
+			<div class="col-lg-12 p-0"style="margin-top:50px;margin-left:20px">
+				<div class="col-lg-2">
+                    <input data-propertyname="BusiObjType_textbox" data-controltype="TextBox"  class="label"/>
+				</div>
+				<div class="col-lg-3 p-0 combobox">
+                    <input data-propertyname="BusiObjType_combobox" data-controltype="ComboBox" class="input">
+				</div>
+				<div class="col-lg-3 p-0" data-propertyname="BusiObjType_refer" data-controltype="Refer">
+					<input type="text" class="input"/>
+				   <div>
+						<img src="pc/images/Ref-close.png" />
+						<img src="pc/images/Ref.png" />
+				   </div>
+				</div>
+			</div>
+            <div class="col-lg-12 p-0 m-t-10 m-l-20">
+				<div class="col-lg-2">
+                    <input data-propertyname="OperaDate_textbox" data-controltype="TextBox"style="text-align:center;" class="label"/>
+				</div>
+				<div class="col-lg-3 p-0 combobox">
+                    <input data-propertyname="OperaDate_combobox" data-controltype="ComboBox" class="input"/>
+				</div>
+				<div class="col-lg-3 p-0 datebox m-0">
+                    <input data-propertyname="OperaDate_datebox" data-controltype="DateBox" class="input"/>
+				</div>
+                <div class="col-lg-3 p-0 datebox m-0">
+                    <input data-propertyname="OperaDate_datebox1" data-controltype="DateBox" class="input"/>
+				</div>
+			</div>
+			<div class="col-lg-12 p-0 m-t-10 m-l-20">
+				<div class="col-lg-2">
+                    <input data-propertyname="BusiObjCode_textbox" data-controltype="TextBox"style="text-align:center;" class="label"/>
+				</div>
+				<div class="col-lg-3 p-0 combobox">
+                    <input data-propertyname="BusiObjCode_combobox" data-controltype="ComboBox" class="input"/>
+				</div>
+				<div class="col-lg-3 p-0">
+                    <input data-propertyname="BusiObjCode_textbox1" data-controltype="TextBox" class="input"/>
+				</div>
+			</div>
+            <div class="col-lg-12 p-0 m-t-10 m-l-20">
+				<div class="col-lg-2">
+                    <input data-propertyname="ClientIP_textbox" data-controltype="TextBox" style="text-align:center;" class="label"/>
+				</div>
+				<div class="col-lg-3 p-0 combobox">
+                    <input data-propertyname="ClientIP_combobox" data-controltype="ComboBox" class="input"/>
+				</div>
+				<div class="col-lg-3 p-0">
+                    <input data-propertyname="ClientIP_textbox1" data-controltype="TextBox" class="input"/>
+				</div>
+			</div>
+			<div class="col-lg-12 p-0 m-t-10 m-l-20">
+				<div class="col-lg-2">
+                    <input data-propertyname="BusiOrg_textbox" data-controltype="TextBox"style="text-align:center;" class="label"/>
+				</div>
+				<div class="col-lg-3 p-0 combobox">
+                    <input data-propertyname="BusiOrg_combobox" data-controltype="ComboBox" class="input"/>
+				</div>
+				<div class="col-lg-3 p-0" data-propertyname="BusiOrg_refer" data-controltype="Refer">
+					<input type="text" class="input"/>
+					<div>
+						<img src="pc/images/Ref-close.png" />
+						<img src="pc/images/Ref.png" />
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12 p-0 m-t-10 m-l-20">
+				<div class="col-lg-2">
+                    <input data-propertyname="OperaName_textbox" data-controltype="TextBox"style="text-align:center;" class="label"/>
+				</div>
+				<div class="col-lg-3 p-0 combobox">
+                    <input data-propertyname="OperaName_combobox" data-controltype="ComboBox" class="input"/>
+				</div>
+				<div class="col-lg-3 p-0" data-propertyname="OperaName_refer" data-controltype="Refer">
+					<input type="text" class="input"/>
+					<div>
+						<img src="pc/images/Ref-close.png" />
+						<img src="pc/images/Ref.png" />
+					</div>
+				</div>
+			</div>
+ <div data-propertyname="leftToolbar" data-controltype="ToolBar" class="cube-bar-modeltxt col-lg-12" style="margin-top:30px;overflow:inherit">
+                   <li class="col-lg-2 m-t-3"style="float:right">
+                        <div data-propertyname="cancelAction" data-controltype="ImageButton">
+                            <span></span>
+                            <span>取消</span>
+                        </div>
+                    </li>                         
+                    <li class="col-lg-2 m-t-3" style="float:right">
+                          <div data-propertyname="confirmAction" data-controltype="ImageButton">
+                               <span></span>
+                               <span>确认</span>
+                           </div>
+                    </li> 
+                    </div>
+       </div>
+ </div>
+<script src="jquery/jquery-1.11.1.js" type="text/javascript"></script>
+<script src="jquery/jquery-ui.js" type="text/javascript"></script>
+<script src="common/js/Animation.js" type="text/javascript"></script>
+<script src="common/js/Cube.js" type="text/javascript"></script>
+<script src="common/js/Button.js" type="text/javascript"></script>
+<script src="common/js/ImageButton.js" type="text/javascript"></script>
+<script src="common/js/Cube.bindings.js" type="text/javascript"></script>
+<script src="common/js/Control.js" type="text/javascript"></script>
+<script data-config="Refer"></script>
+<script src="common/js/ToolBar.js" type="text/javascript"></script>
+<script data-config="DateBox"></script>
+<script data-config="TextBox"></script>
+<script src="pc/js/cube.pc.js" type="text/javascript"></script>
+<script data-config="MessageBox"></script>
+<script src="apps/common/sysmanager/BusiCondition_L.js"></script>
+<script src="apps/common/sysmanager/BusiCondition_Extend.js"></script>
+<script type="text/javascript">
+    cb.viewbinding.create("BusiConditionView");
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>参照设计器定位弹窗</title>
+	<style>
+		*{ margin:0; padding:0;}
+		li{ list-style: none;}
+		.popup{ width:330px; height: 220px; /* border:2px solid #5199e5; */ padding: 10px; }
+		.popup_droplist span { padding:10px; width:100%; height: 100%; }
+		.popup_droplist select { margin: 5px; width:180px; height:30px; display: inline-block;}
+		.popup_choice { width:100%; height:40px; border:1px solid #c6cacd; margin-top:33px;}
+		.popup_choice ul{ line-height: 40px; }
+		.popup_choice li{ display: inline-block; }
+		.popup_choice input{ margin-left: 8px; }
+		.popup_choice .leftTop{ position: relative; top:-22px; left: 5px; padding-right:12px; background: #fff;  }
+		.popup_btn {  margin:35px 0 0 80px; }
+		.popup_btn input{  padding: 2px; margin-right: 5px; width:88px; height:24px; }
+	</style>
+</head>
+<body>
+	<div class="popup" >
+		<div class="popup_droplist">
+			<ul>
+				<li>
+					<span>查找内容:</span>
+					<select name="" id="popup_selectContent">
+						<option value="组织形态">组织形态</option>
+						<option value="隶属法人组织">隶属法人组织</option>
+						<option value="上级行政组织">上级行政组织</option>
+					</select>
+				</li>
+				<li>
+					<span>查找属性:</span>
+					<select name="" id="">
+						<option value="名称">名称</option>
+						<option value="编码">编码</option>
+					</select>
+				</li>
+			</ul>
+		</div>
+
+		<div class="popup_choice">
+			<ul>
+				<li class="leftTop">选项:</li>
+				<li><input type="checkbox">部分字符串匹配</li>
+				<li><input type="checkbox">匹配大小写</li>
+			</ul>
+		</div>
+		<div class="popup_btn">
+			<input type="button" value="查找下一个(f)">
+			<input type="button" value="关闭(X)">
+		</div>
+	</div>
+	<script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+	<script>
+		/*var treeList = viewModel.TreeList;
+		var _arr = [];
+	    for(var i=0, len = treeList.length; i<len; i++){
+	       _arr.push('<option value="'+treeList[i].code+'">'+treeList[i].name+'</option>') ;
+	    };
+	    $("#popup_selectContent").html(_arr.join(""));*/
+	</script>
+</body>
+</html>

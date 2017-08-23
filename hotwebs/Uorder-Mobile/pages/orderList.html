@@ -1,0 +1,109 @@
+﻿<div data-controller="OrderListController">
+    <div class="pages">
+        <div data-page="orderLists" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <!-- Search bar overlay-->
+            <div class="searchbar-overlay"></div>
+            <div class="navbar">
+                <div class="navbar-inner" id="barNoSearch">
+                    <div class="left">
+                        <a href="#" class="back link"><i class="icon icon-backgray"></i></a>
+                    </div>
+                    <div class="center">
+                        <a href="#" class="link open-popover popover-orders-links" style="color:#999;" data-ordertype="salesOrder">销售订单</a>
+                    </div>
+                    <div class="right">
+                        <a href="#" class="link" id="btnSearchOrder"><i class="icon icon-search"></i></a>
+                    </div>
+                </div>
+                <div class="navbar-inner" id="barSearch" style="display:none;">
+                    <div class="left"></div>
+                    <div class="center">
+                        <div class="searchbar">
+                            <div class="searchbar-input">
+                                <input type="search" style="color:#000;" id="txtSearchOrder" placeholder="订单号">
+                                <a href="#" class="searchbar-clear"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                    </div>
+                </div>
+                <div class="subnavbar" style="background-color:#FFF;">
+                    <div class="buttons-row row orderlist-filter">
+                        <a href="#" data-filter="all" class="col-20 nav-bar tab-link active">全部</a>
+                        <a href="#" data-filter="CONFIRMORDER" class="col-20 nav-bar tab-link ">待确认</a>
+                        <a href="#" data-filter="PAYMONEY" class="col-20 nav-bar tab-link">待付款</a>
+                        <a href="#" data-filter="DELIVERGOODS" class="col-20 nav-bar tab-link">待发货</a>
+                        <a href="#" data-filter="TAKEDELIVERY" class="col-20 nav-bar tab-link">待收货</a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content infinite-scroll pull-to-refresh-content orderList-container" data-distance="50" data-ptr-distance="55" style="margin:3rem auto;background-color:#F1F1F1;">
+                <div class="pull-to-refresh-layer">
+                    <div class="preloader"></div>
+                    <div class="pull-to-refresh-arrow"></div>
+                </div>
+                <div class="order-list">
+                </div>
+                <div class="infinite-scroll-preloader">
+                    <div class="preloader"></div>
+                </div>
+            </div>
+            <div class="shade" id="shade"></div>
+        </div>
+    </div>
+    <script type="text/template7" id="orderItemTpl">
+        {{#each data.orders}}        
+            <div class="list-wrap" {{#js_compare "this.cNextStatus == 'OPPOSE'"}} style="margin-bottom:0.4rem;" {{/js_compare}}>
+                <a href="pages/orderInfo.html?oid={{cOrderNo}}" class="orderItem">
+                <ul class="order-info">
+                    <h4 class="clear"><strong class="fl">{{dOrderDate}}</strong><em class="fr"> {{cNextStatusName}}</em></h4>
+                    <li>
+                        <span>{{cOrderNo}} </span>
+                    </li>
+                </ul>
+                 <div class="order-detail">
+                    	 <dl>
+	                    	<dt>总金额(元)</dt>
+	                    	<dd class="price">￥{{fTotalMoney}}</dd>
+	                    </dl>
+	                    <dl>
+	                    	<dt>数量(件)</dt>
+	                    	<dd>{{oOrderDetails.length}}</dd>
+	                    </dl>                    	
+                    </div>
+                    </a>
+                {{#js_compare "this.cNextStatus != 'OPPOSE'"}}
+                <div class="order-btn">
+                    <div class="fr" data-oid="{{cOrderNo}}">
+                        <a href="pages/logisticsInfo.html?oid={{cOrderNo}}" class="btn " data-btntype="logistics" style="display:none;">查看物流</a>
+                        {{#js_compare "this.cNextStatus == 'CONFIRMORDER'"}}
+                        <a href="#" class="btn " data-btntype="del">删除订单</a>
+                        {{/js_compare}}
+                        {{#js_compare "this.cNextStatus == 'DELIVERGOODS' && !this.isDeliverying"}}
+                        <a href="#" class="btn " data-btntype="payfor" style="display:none;">付款</a>
+                        {{/js_compare}}
+                        <!--收货-->
+                        {{#js_compare "this.cNextStatus == 'TAKEDELIVERY' || this.isDeliverying"}}
+                        <a href="#" class="btn btn-red" data-btntype="received">查看发货单</a>
+                        {{/js_compare}}
+                        {{#js_compare "this.cNextStatus == 'ENDORDER'"}}
+                        <!--<a href="#" class="btn btn-red" data-btntype="SaleReturn">退货</a>-->
+                        {{/js_compare}}
+                    </div>
+                </div>
+                {{/js_compare}}                
+                <span class="finish"> <i class="icon icon-finish-red"></i></span>
+            </div>        
+        {{else}}
+        <div class="orderNone">
+            <div class="orderNone-info">
+                <h5>您还没有相关订单</h5>
+                <p>可以看看有没有想买的</p>
+                <a href="#" class="button orderNone-btn">随便逛逛</a>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script type="text/javascript" src="../js/pages/OrderListController.js"></script>
+</div>

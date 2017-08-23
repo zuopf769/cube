@@ -1,0 +1,180 @@
+<div data-controller="CartPageController">
+    <div class="pages navbar-through">
+        <div data-page="cart" class="page">
+            {{#if data.data.length}}
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left"></div>
+                    <div class="center">
+                        购物车
+                    </div>
+                    <div class="right">
+                        <span class="link-u" id="cart-edit">编辑</span>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="list-block media-list cart-list">
+                    <ul>
+                        {{#each data.data}}
+                        <li class="row rootLi" data-id="{{id}}">
+                            <label class="label-checkbox col-15" id="checkbox">
+                                <input type="checkbox" name="my-checkbox">
+                                <div class="item-media  label-div">
+                                    <i class="icon icon-form-checkbox"></i>
+                                </div>
+                            </label>
+                            <a href="pages/productDetail.html?pid={{iProductId}}" class="col-85 item-content beforEdit link">
+                                <div class="item-media border-lightestgray-u" style="height: 80px; width: 80px; overflow: hidden">
+                                    {{#if oSKU.oProduct.oDefaultAlbum}}
+                                    <img data-src="{{@root.serverhost}}{{oSKU.oProduct.oDefaultAlbum.cFolder}}s_{{oSKU.oProduct.oDefaultAlbum.cImgName}}" width="80" class="lazy lazy-fadeIn">
+                                    {{else}}
+                                    <img data-src="../img/nopic.jpg" width="80" class="lazy lazy-fadeIn">
+                                    {{/if}}
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-text color-gray-u">{{oSKU.oProduct.cName}}</div>
+                                    </div>
+                                    <div class="item-text font-12">
+                                        <span class="font-12 ">{{oSKU.oProduct.cCode}}</span>
+                                        <p class="property">
+                                            {{#each oSKU.lsSkuSpecItems}}
+                                            <span class="font-12">{{oSpec.cName}}:{{cSpecItemName}}</span>
+                                            {{/each}}
+                                        </p>
+                                    </div>
+                                    <div class="item-price ">
+                                        <span class="color-orange-u">￥{{fSalePrice}}</span>
+                                        <span class="number font-12 quantity">X{{iQuantity}}</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="col-85 item-content afterEdit">
+                                <div class="item-media border-lightestgray-u" style="height: 80px; width: 80px; overflow: hidden">
+                                    {{#if oSKU.oProduct.oDefaultAlbum}}
+                                    <img data-src="{{@root.serverhost}}{{oSKU.oProduct.oDefaultAlbum.cFolder}}s_{{oSKU.oProduct.oDefaultAlbum.cImgName}}" width="80" class="lazy lazy-fadeIn">
+                                    {{else}}
+                                    <img data-src="../img/nopic.jpg" width="80" class="lazy lazy-fadeIn">
+                                    {{/if}}
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title item-number1 row">
+                                            <i class="icon icon-less col-20 reduceNumber"></i>
+                                            <input type="number" value="{{iQuantity}}" class="col-60">
+                                            <i class="icon icon-add col-20 addNumber"></i>
+                                        </div>
+                                    </div>
+                                    {{#if oSKU.hasSKU}}
+                                    <div class="item-text font-12 item-title-row m-t-25 shoppingCart_property" >
+                                        <br />
+                                        <p class="property font-12">
+                                            {{#each oSKU.lsSkuSpecItems}}
+                                            <label style="margin-right: 5px;">
+                                                <span class="cName">{{oSpec.cName}}</span>
+                                                <span>:</span>
+                                                <span class="propertySpan">{{cSpecItemName}}</span>
+                                            </label>
+                                            {{/each}}
+                                        </p>
+                                        <div class="item-after">
+                                            <i class="icon icon-arrow linkToDetail m-t-12"></i>
+                                        </div>
+                                    </div>
+                                    {{/if}}
+                                </div>
+                                <div class="bg-orange-u cart-del-div">
+                                    <a href="#" class="cart-del">删除</a>
+                                </div>
+                            </div>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="bottom-bar row">
+                    <label class="label-checkbox item-content col-33">
+                        <input type="checkbox" name="my-checkbox" value="all" id="all">
+                        <div class="item-media">
+                            <i class="icon icon-form-checkbox"></i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">全选</div>
+                        </div>
+                    </label>
+                    <span class="col-33">合计:<span class="color-orange-u" id="finalPrice">￥0.00</span>
+                    </span>
+                    <a class="button button-fill bg-green-u col-33 shopping-count">立即结算</a>
+                    <a class="button button-fill bg-green-u col-33 shoppingDel_btn" style="display:none">删除</a>
+                </div>
+            </div>
+            {{else}}
+             <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left"></div>
+                    <div class="center">
+                        购物车
+                    </div>
+                    <div class="right">
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                 <div class="logistics-infor-none shopingcar-none">
+                        <div class="infor">
+                            <p>购物车空空如也</p>
+                            <p class="desc">赶紧去逛逛吧</p>
+                            <p><a href="#" class="retern-btn shoppingCart">随便逛逛</a></p>
+                        </div>
+                    </div>
+            </div>
+                
+            </div>
+            {{/if}}
+        </div>
+        <script type="text/template7" id="linkToDetail">
+            <div data-page="productProperty" class="page no-tabbar  toolbar-fixed productProperty">
+                <div class="page-content hide-toolbar-on-scroll" style="background: #fff;">
+                    <div class="row product-title">
+                        <div class="col-25">
+                             {{#if data.oDefaultAlbum}}
+                            <img src='{{@root.serverhost}}{{data.oDefaultAlbum.cFolder}}s_{{data.oDefaultAlbum.cImgName}}' width="75" height="75">
+                              {{else}}
+                              <img data-src="../img/nopic.jpg" width="80" class="lazy lazy-fadeIn">
+                               {{/if}}
+                        </div>
+                        <div class="col-75">
+                            <p>
+                                {{data.cName}}
+                            </p>
+                            <p class="color-lightestgray-u">{{data.cCode}}</p>
+                            <p class="color-orange-u ">￥{{data.fSalePrice}}</p>
+                        </div>
+                    </div>
+                    <div class="row attrs">
+                        {{#each data.lsSpecs}}
+                        <div class='col-100  row'>
+                            <div class="col-40 cName">{{cName}}</div>
+                            <div class="col-60">
+                                {{#each lsSpecItem}}
+                                <div class="attrItem">
+                                    <input type="radio" name="{{iSpecId}}" value="{{id}}" />
+                                    <span>{{cSpecItemName}}</span>
+                                </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="toolbar">
+                    <div class="toolbar-inner producttoolbar">
+                        <a href="#" class="button updateCancel  close-popup">取消</a>
+                        <a href="#" class="button  close-popup updateOk">确定</a>
+                    </div>
+                </div>
+            </div>
+        </script>
+        <script type="text/javascript" src="../js/pages/CartPageController.js"></script>
+    </div>
+</div>

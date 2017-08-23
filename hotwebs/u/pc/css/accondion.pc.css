@@ -1,0 +1,40 @@
+﻿.accondion { width: auto; height: auto; }
+.accondion ul {list-style: none;padding:0px;margin:0px; }
+.accondion li{list-style: none;}
+.accondion .header {height: 25px;  line-height: 25px;  cursor: pointer;  }
+
+.accondion .header > span {display: block;}
+.accondion .header .txt {float: left; color: #000;}
+.accondion .header .arrow {float: left; width: 35px; height: 25px; background: url(../images/arrow-r.png) no-repeat center center;}
+.accondion li> .arrow {float: left;width: 35px; height: 25px; background: url(../images/arrow-r.png) no-repeat center center;}
+
+.accondion li[leaf="1"] {width: 100%; height: 25px; line-height: 25px;cursor:pointer;}
+.accondion li[leaf="0"] {width: 100%; height: auto; overflow: hidden;  }
+
+.accondion li > div:hover {background: #eee;}
+
+/*.accondion li:hover ul{background: white;}*/
+
+.accondion li.firstChild {border:0px;}
+.accondion li[leaf="1"] span {display: block;  }
+.accondion li ul {display: none; width: 100%; height: auto;}   
+
+/*.accondion .header.menu-show {background-color: rgb(242,242,242) }*/
+.accondion .header.menu-show .arrow {background-image: url(../images/arrow-d.png);}
+.accondion .more { height:30px;line-height:30px;text-align:center;background:#EFEFF4;cursor:pointer }
+
+.accondion .selected{
+    background: #eee;
+}
+
+.accondion-wrapper {
+    height: 100%;
+    bottom:0px;
+    overflow: hidden;
+}
+
+.accondion-wrapper > .accondion-scroller {
+    overflow: hidden;
+}
+
+    

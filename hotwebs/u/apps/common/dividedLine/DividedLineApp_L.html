@@ -1,0 +1,73 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>拆分设置</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./bootstrap/css/bootstrap.css" rel="Stylesheet" type="text/css" />
+    <link href="./pc/css/modal.css" rel="stylesheet" type="text/css" />
+    <link href="./pc/css/kendoctrl/Cube.Control.css" rel="stylesheet" type="text/css" />
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="DividedLineViewModel" class="container" data-title="拆分设置" data-page="common.dividedLine.DividedLineApp" data-viewmodel="DividedLineViewModel">
+        <div class="row">
+            <label title="拆分栏目" class="col-lg-1 m-l-50">拆分栏目</label>
+                <div class="col-lg-4">
+                    <input data-propertyname="divideCol" style=" border: none; height: 70%;" data-controltype="ComboBox" />
+                </div>
+            <div>
+            </div>
+        </div>
+        <div class="row">
+            <div data-propertyname="lineDivdieType" style="width:30px;" class="col-lg-1 m-10" data-controltype="Radio">
+            </div>
+            <label title="行数拆分" class="col-lg-1 " style="min-width:40px">行数拆分</label>
+            <div class="col-lg-3 m-l-6" style="width: 204px;">
+                <input type="text" data-propertyname="lineDivide" placeholder="请输入拆分行数" style="border: 1px solid #ccc; line-height: 2.4em; border: 1px; height: 70%; padding-left: 0px;" data-controltype="TextBox" />
+            </div>
+        </div>
+        <div class="row">
+            <div data-propertyname="numberDivdieType" class="col-lg-1 m-10" style="width:30px;" data-controltype="Radio">
+            </div>
+            <label title="数值拆分" class="col-lg-1 " style="min-width:40px">数值拆分</label>
+            <div class="col-lg-3 m-l-6" style="width: 204px;">
+                <input type="text" data-propertyname="numberDivide" placeholder="请输入拆分数值" style="border: 1px solid #ccc; line-height: 2.4em; border: 1px; height: 70%; padding-left: 0px; " data-controltype="TextBox" />
+            </div>
+        </div>
+        <div class="common-list ui-table row">
+        </div>
+        <div class="common-list ui-footer row">
+            <div class="ui-footer-right">
+                <div data-controltype="ImageButton" data-propertyname="submitAction"><span></span><span>确定</span></div>
+                <div data-controltype="ImageButton" data-propertyname="cancelAction"><span></span><span>取消</span></div>
+            </div>
+            <div class="ui-footer-left">
+            </div>
+        </div>
+    </div>
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./jquery/jquery-ui.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/Button.js" type="text/javascript"></script>
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>
+    <script data-config="TextBox"></script>
+    
+    <script src="./common/js/SearchBox.js" type="text/javascript"></script>
+    <script data-config="ComboBox"></script>
+    <script src="./common/js/Radio.js" type="text/javascript"></script>
+    <script src="./common/js/CommonProxy.js" type="text/javascript"></script>
+    <script src="apps/common/dividedLine/DividedLineApp_Extend.js" type="text/javascript"></script>
+    <script src="apps/common/dividedLine/DividedLineApp_L.js" type="text/javascript"></script>
+    <script src="./jquery/jquery.event.drag-2.2.js" type="text/javascript"></script>
+   
+
+
+    <script type="text/javascript">
+        cb.viewbinding.create("DividedLineViewModel");
+    </script>
+</body>
+</html>

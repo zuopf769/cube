@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<applications>
+  <application name="closebillApp" title="收款单主表卡片" moduleName="u8" symbol="u8.closebill">
+    <viewmodel name="closebillViewModel" extendName="closebillViewModel_Extend" title="收款单主表卡片" tplName="voucher_min.js.tpl">
+      <entity name="closebill" title="收款单主表" isMain="true">
+        <fields>
+          <field name="pk_ap_closebill" title="收款单主表pk" modelType="SimpleModel" ctrlType="TextBox" isNecessary="true" isVisible="true" isKey="true" iLength="20"/>
+          <field name="pk_ap_closebill_b" title="收款单子表pk" modelType="Model3D" ctrlType="DataGrid" isVisible="true" iLength="0" refKey="pk_ap_closebill_b" refEntity="ap_closebills"/>
+          <field name="billno" title="单据号" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="vtrantypecode" title="单据类型编码" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="vtrantype" title="收款单类型" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="4848" refKey="pk_billtypeid" refName="billtypename" refCode="pk_billtypecode" refShowMode="Name"/>
+          <field name="billdate" title="单据日期" modelType="SimpleModel" ctrlType="DateTimeBox" isNecessary="true" isVisible="true" iLength="19"/>
+          <field name="busitype" title="业务流程" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="4849" refKey="pk_busitype" refName="businame" refCode="busicode" refShowMode="Name"/>
+          <field name="pk_group" title="集团" modelType="SimpleModel" ctrlType="Refer" isNecessary="true" isVisible="true" iLength="20" refId="600001" refKey="pk_group" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="pk_org" title="组织" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600015" refKey="pk_org" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="pk_org_v" title="组织版本" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600700" refKey="pk_vid" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="pk_dept" title="部门" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600905" refKey="pk_dept" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="pk_dept_v" title="部门版本" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600949" refKey="pk_vid" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="billmaker" title="制单人" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name"/>
+          <field name="approver" title="审批人" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name"/>
+          <field name="approvestatus" title="单据状态" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="approvedate" title="审批时间" modelType="SimpleModel" ctrlType="DateTimeBox" isVisible="true" iLength="19"/>
+          <field name="creator" title="创建人" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name"/>
+          <field name="creationtime" title="制单时间" modelType="SimpleModel" ctrlType="DateTimeBox" isVisible="true" iLength="19"/>
+          <field name="modifier" title="修改人" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name"/>
+          <field name="modifiedtime" title="修改时间" modelType="SimpleModel" ctrlType="DateTimeBox" isVisible="true" iLength="19"/>
+          <field name="billcloser" title="关闭人" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name"/>
+          <field name="billclosetime" title="关闭自然时间" modelType="SimpleModel" ctrlType="DateTimeBox" isVisible="true" iLength="19"/>
+          <field name="lastprintor" title="最近打印人" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name"/>
+          <field name="lastprinttime" title="最近打印时间" modelType="SimpleModel" ctrlType="DateTimeBox" isVisible="true" iLength="19"/>
+          <field name="ccuscode" title="客户编码" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="customer" refKey="ccuscode_pk" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="ccusname" title="客户全称" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="ccusabbname" title="客户简称" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="cvconperson" title="客户联系人" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="cvshipaddress" title="联系地址" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="cpersoncode" title="业务员编码" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="person" refKey="person_pk" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="cperson" title="业务员" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="cexch_name" title="币种" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="foreigncurrency" refKey="id" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="iexchrate" title="汇率" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="btax" title="报价是否含税" modelType="SimpleModel" ctrlType="CheckBox" isVisible="true" iLength="1"/>
+          <field name="itaxrate" title="税率" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="srcbilltype" title="来源单据类型" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="4848" refKey="pk_billtypeid" refName="billtypename" refCode="pk_billtypecode" refShowMode="Name"/>
+          <field name="srcbillid" title="来源单据id" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="cmemo" title="备注" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="idispstate" title="发货状态" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="ioutstate" title="出库状态" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="ddispdate" title="表头预发货日期" modelType="SimpleModel" ctrlType="DateTimeBox" isVisible="true" iLength="19"/>
+          <field name="def1" title="自定义项1" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def2" title="自定义项2" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def3" title="自定义项3" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def4" title="自定义项4" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def5" title="自定义项5" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="approvenstr" title="审批批语" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="dr" title="删除标记" modelType="SimpleModel" ctrlType="TextBox" isNecessary="true" isReadOnly="true" isVisible="false"/>
+          <field name="ts" title="时间戳" modelType="SimpleModel" ctrlType="DateTimeBox" isNecessary="true" isReadOnly="true" isSyncKey="true" isVisible="false"/>
+        </fields>
+      </entity>
+      <entity name="ap_closebills" title="收款单表体">
+        <fields>
+          <field name="pk_ap_closebill_b" title="收款单表体pk" modelType="SimpleModel" ctrlType="TextBox" isNecessary="true" isVisible="true" isKey="true" iLength="20"/>
+          <field name="crowno" title="行号" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="50"/>
+          <field name="pk_group" title="集团" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600001" refKey="pk_group" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="pk_org" title="组织" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="600015" refKey="pk_org" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="iquantity" title="数量" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="ccuscode" title="客户编码" modelType="SimpleModel" ctrlType="Refer" isVisible="true" iLength="20" refId="customer" refKey="ccuscode_pk" refName="name" refCode="code" refShowMode="Name"/>
+          <field name="iamount_f" title="原币金额" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="iamount" title="本币金额" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="irquantity" title="数量余额" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="iramount_f" title="原币余额" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="iramount" title="本币余额" modelType="SimpleModel" ctrlType="NumberBox" isVisible="true" iLength="28" iScale="8" iPrecision="28"/>
+          <field name="def1" title="自定义项1" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def2" title="自定义项2" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def3" title="自定义项3" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def4" title="自定义项4" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="def5" title="自定义项5" modelType="SimpleModel" ctrlType="TextBox" isVisible="true" iLength="101"/>
+          <field name="dr" title="删除标记" modelType="SimpleModel" ctrlType="TextBox" isNecessary="true" isReadOnly="true" isVisible="false"/>
+          <field name="ts" title="时间戳" modelType="SimpleModel" ctrlType="DateTimeBox" isNecessary="true" isReadOnly="true" isSyncKey="true" isVisible="false"/>
+        </fields>
+      </entity>
+      <entity name="Toolbar" title="功能">
+        <fields>
+          <field name="addAction" title="增加" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="copyAction" title="复制" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="draftAction" title="草稿" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="editAction" title="编辑" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="submitAction" title="提交" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="getorderAction" title="拉单" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="withdrawAction" title="收回" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="approveAction" title="审核" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="unapproveAction" title="弃审" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="deleteAction" title="删除" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="outboundAction" title="出库" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="relatedAction" title="相关业务" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="setAction" title="设置" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="printAction" title="打印" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="outputAction" title="输出" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="cancelAction" title="取消" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="saveAction" title="保存" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="insertLineAction" title="插行" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="copyLineAction" title="复制行" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="divideLineAction" title="拆分行" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="deleteLineAction" title="删行" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="batchEditAction" title="批改" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="stockAction" title="存量" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="priceAction" title="价格" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="discountAction" title="折扣" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="creditAction" title="信用" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="optionalPopAction" title="POP选配" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="setLineAction" title="设置" modelType="SimpleModel" ctrlType="Button"/>
+        </fields>
+      </entity>
+      <actions>
+        <action name="addAction" entity="Toolbar" field="addAction" eventName="click" functionName="addAction"/>
+        <action name="copyAction" entity="Toolbar" field="copyAction" eventName="click" functionName="copyAction" defaultImpl="Copy"/>
+        <action name="draftAction" entity="Toolbar" field="draftAction" eventName="click" functionName="draftAction"/>
+        <action name="editAction" entity="Toolbar" field="editAction" eventName="click" functionName="editAction" defaultImpl="Edit"/>
+        <action name="submitAction" entity="Toolbar" field="submitAction" eventName="click" functionName="submitAction" defaultImpl="Submit"/>
+        <action name="getorderAction" entity="Toolbar" field="getorderAction" eventName="click" functionName="getorderAction"/>
+        <action name="withdrawAction" entity="Toolbar" field="withdrawAction" eventName="click" functionName="withdrawAction" defaultImpl="WithDraw"/>
+        <action name="approveAction" entity="Toolbar" field="approveAction" eventName="click" functionName="approveAction" defaultImpl="Approve"/>
+        <action name="unapproveAction" entity="Toolbar" field="unapproveAction" eventName="click" functionName="unapproveAction" defaultImpl="UnApprove"/>
+        <action name="deleteAction" entity="Toolbar" field="deleteAction" eventName="click" functionName="deleteAction" defaultImpl="Delete"/>
+        <action name="outboundAction" entity="Toolbar" field="outboundAction" eventName="click" functionName="outboundAction"/>
+        <action name="relatedAction" entity="Toolbar" field="relatedAction" eventName="click" functionName="relatedAction"/>
+        <action name="setAction" entity="Toolbar" field="setAction" eventName="click" functionName="setAction"/>
+        <action name="printAction" entity="Toolbar" field="printAction" eventName="click" functionName="printAction"/>
+        <action name="outputAction" entity="Toolbar" field="outputAction" eventName="click" functionName="outputAction"/>
+        <action name="cancelAction" entity="Toolbar" field="cancelAction" eventName="click" functionName="cancelAction" defaultImpl="Cancel"/>
+        <action name="saveAction" entity="Toolbar" field="saveAction" eventName="click" functionName="saveAction" defaultImpl="Save"/>
+        <action name="insertLineAction" entity="Toolbar" field="insertLineAction" eventName="click" functionName="insertLineAction" defaultImpl="InsertLine"/>
+        <action name="copyLineAction" entity="Toolbar" field="copyLineAction" eventName="click" functionName="copyLineAction" defaultImpl="CopyLine"/>
+        <action name="divideLineAction" entity="Toolbar" field="divideLineAction" eventName="click" functionName="divideLineAction"/>
+        <action name="deleteLineAction" entity="Toolbar" field="deleteLineAction" eventName="click" functionName="deleteLineAction" defaultImpl="DeleteLine"/>
+        <action name="batchEditAction" entity="Toolbar" field="batchEditAction" eventName="click" functionName="batchEditAction"/>
+        <action name="stockAction" entity="Toolbar" field="stockAction" eventName="click" functionName="stockAction"/>
+        <action name="priceAction" entity="Toolbar" field="priceAction" eventName="click" functionName="priceAction"/>
+        <action name="discountAction" entity="Toolbar" field="discountAction" eventName="click" functionName="discountAction"/>
+        <action name="creditAction" entity="Toolbar" field="creditAction" eventName="click" functionName="creditAction"/>
+        <action name="optionalPopAction" entity="Toolbar" field="optionalPopAction" eventName="click" functionName="optionalPopAction"/>
+        <action name="setLineAction" entity="Toolbar" field="setLineAction" eventName="click" functionName="setLineAction"/>
+      </actions>
+      <states>
+        <state name="add">
+          <buttons>
+            <button name="addAction" entity="Toolbar" field="addAction" disable="1"/>
+          </buttons>
+        </state>
+        <state name="edit">
+          <buttons>
+            <button name="deleteAction" entity="Toolbar" field="deleteAction" disable="1"/>
+          </buttons>
+        </state>
+      </states>
+    </viewmodel>
+  </application>
+</applications>

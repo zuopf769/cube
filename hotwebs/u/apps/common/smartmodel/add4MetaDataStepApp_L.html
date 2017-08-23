@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator" content=
+    "HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+
+    <title>增加字段</title>
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link href="./pc/css/SlickGridWrapper.css" rel="stylesheet" />
+    <link href="./pc/css/SlickGridSource.css" rel="stylesheet" />
+    <link href="./apps/common/smartmodel/css/SmartModelGenral.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="add4MetaDataStepAppView" data-page="common.smartmodel.add4MetaDataStepApp" data-viewmodel=
+    "add4MetaDataStepAppViewModel">
+        <div class="cube-main">
+            <div class="cube-main-content">
+                <div class="common-list ui-header">
+                    <div>
+                        增加字段
+                    </div>
+
+                    <div data-controltype="ImageButton" data-propertyname="closeAction" style="margin: -10px 0 5px;">
+                        <span class="close-icon">1</span> <span style="display:none;">关闭</span>
+                    </div>
+                </div>
+
+                <div class="common-list ui-content">
+                    <div class="minorFrame">
+                        <!--参数面板-->
+
+                        <div class="cube-detail-content">
+                            <div class="cube-detail-left">
+                                <div class="ui-field-contain" style="width:50%">
+                                    <label>显示名</label>
+
+                                    <div>
+                                        <input type="text" data-propertyname="vbillno" data-controltype="TextBox" />
+                                    </div>
+                                </div>
+
+                                <div class="ui-field-contain" style="width:50%">
+                                    <label>编码</label>
+
+                                    <div>
+                                        <input type="text" data-propertyname="vbillno" data-controltype="TextBox" />
+                                    </div>
+                                </div>
+
+                                <div class="ui-field-contain" style="width:100%;height=64px">
+                                    <label style="line-height=64px">表达式</label>
+
+                                    <div>
+                                        <input type="text" data-propertyname="vbillno" data-controltype="TextBox" />
+                                    </div>
+                                </div>
+
+                                <div class="ui-field-contain" style="width:100%">
+                                    <label>备注</label>
+
+                                    <div>
+                                        <input type="text" data-propertyname="vbillno" data-controltype="TextBox" />
+                                    </div>
+                                </div>
+
+                                <div class="ui-field-contain">
+                                    <label>过滤</label>
+
+                                    <div>
+                                        <div style="height: 20%;" data-controltype="Radio" data-propertyname="filterType">
+                                            <input type="text" data-propertyname="vbillno" data-controltype="TextBox" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						</div>
+
+                        <div class="mainFrame">
+                            <div class="block">
+                                <label style="clear:right,height:3%">表:</label>
+
+                                <div class="accondion-wrapper" style="height:97%">
+                                    <!--表树-->
+
+                                    <div class="accondion" data-controltype="Accondion" data-propertyname="formTree"></div>
+                                </div>
+                            </div>
+
+                            <div class="block">
+                                <label style="clear:right,height:3%">字段:</label>
+
+                                <div data-controltype="Panorama" data-propertyname="formParameter" style="height:97%">
+                                    <!--表树-->
+                                </div>
+                            </div>
+
+                            <div class="block">
+                                <!--函数和符号-->
+
+                                <div data-propertyname="metaDataFootToolBar" data-controltype="TabContent" class="navbar-pc-slide"
+                                style="width:90%">
+                                    <!--参数页签头-->
+
+                                    <div class="cube-bar-open-container">
+                                        <ul>
+                                            <li class="ui-text active" data-content="functions">函数</li>
+
+                                            <li class="ui-text" data-content="codes">符号</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div data-related="metaDataFootToolBar" class="mainTable">
+                                    <!--参数页签体-->
+
+                                    <div data-content="functions" data-propertyname="functions">
+                                        <!--函数树-->
+
+                                        <div class="accondion-wrapper">
+                                            <div class="accondion" data-controltype="Accondion" data-propertyname="functionTree">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div data-content="codes" data-propertyname="codes">
+                                        <!--符号面板-->
+
+                                        <div class="codesPanel">
+                                            <div class="codeButton" data-controltype="ImageButton" data-propertyname="plusButton">
+                                                <span>+</span>
+                                            </div>
+
+                                            <div class="codeButton" data-controltype="ImageButton" data-propertyname="subButton">
+                                                <span>-</span>
+                                            </div>
+
+                                            <div class="codeButton" data-controltype="ImageButton" data-propertyname="multiButton">
+                                                <span>*</span>
+                                            </div>
+
+                                            <div class="codesPanel">
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "divisionButton">
+                                                    <span>/</span>
+                                                </div>
+
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "lbButton">
+                                                    <span>(</span>
+                                                </div>
+
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "rbButton">
+                                                    <span>)</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="codesPanel">
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "connectionButton">
+                                                    <span>||</span>
+                                                </div>
+
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "sqButton">
+                                                    <span>&#39;</span>
+                                                </div>
+
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "commaButton">
+                                                    <span>,</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="codesPanel">
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "oneButton">
+                                                    <span>1</span>
+                                                </div>
+
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "twoButton">
+                                                    <span>2</span>
+                                                </div>
+
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "threeButton">
+                                                    <span>3</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="codesPanel">
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "fourButton">
+                                                    <span>4</span>
+                                                </div>
+
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "fiveButton">
+                                                    <span>5</span>
+                                                </div>
+
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "sixButton">
+                                                    <span>6</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="codesPanel">
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "sevenButton">
+                                                    <span>7</span>
+                                                </div>
+
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "eightButton">
+                                                    <span>8</span>
+                                                </div>
+
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "nineButton">
+                                                    <span>9</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="codesPanel">
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "zeroButton">
+                                                    <span>0</span>
+                                                </div>
+
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "pointButton">
+                                                    <span>.</span>
+                                                </div>
+
+                                                <div class="codeButton" data-controltype="ImageButton" data-propertyname=
+                                                "nullButton">
+                                                    <span>null</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="common-list ui-footer">
+                        <div data-propertyname="footToolbar" data-controltype="ToolBar" class="footToolBar" style="height:50px">
+                            <ul>
+                                <li class="button">
+                                    <div data-propertyname="addButton" data-controltype="ImageButton">
+                                        <span>增加</span>
+                                    </div>
+                                </li>
+
+                                <li class="button">
+                                    <div data-propertyname="saveButton" data-controltype="ImageButton">
+                                        <span>确定</span>
+                                    </div>
+                                </li>
+
+                                <li class="button">
+                                    <div data-propertyname="cancelButton" data-controltype="ImageButton">
+                                        <span>取消</span>
+                                    </div>
+                                </li>
+
+                                <li class="button">
+                                    <div data-propertyname="clearButton" data-controltype="ImageButton">
+                                        <span>清除</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><script src="./jquery/jquery-1.11.1.js" type="text/javascript">
+</script> <script src="./jquery/jquery-ui.js" type="text/javascript">
+</script> <script src="./common/js/Animation.js" type="text/javascript">
+</script> <script src="./common/js/Cube.js" type="text/javascript">
+</script> <script src="./pc/js/cube.pc.js" type="text/javascript">
+</script> <script src="./common/js/Cube.bindings.js" type="text/javascript">
+</script> <script src="./common/js/Control.js" type="text/javascript">
+</script> <script src="./common/js/Button.js" type="text/javascript">
+</script> <script src="./common/js/ImageButton.js" type="text/javascript">
+</script> <script src="./common/js/ToolBar.js" type="text/javascript">
+</script> <script src="./pc/js/TabContent.js" type="text/javascript">
+</script> <script src="./common/js/CommonProxy.js" type="text/javascript">
+</script> <script src="./jquery/jquery.event.drag-2.2.js" type="text/javascript">
+</script> <script src="./pc/js/SlickGridSource.js" type="text/javascript">
+</script> <script src="./pc/js/SlickGridWrapper.js" type="text/javascript">
+</script> <script src="apps/common/smartmodel/add4MetaDataStepApp_L.js" type="text/javascript">
+</script> <script src="apps/common/smartmodel/add4MetaDataStepApp_Extend.js" type="text/javascript">
+</script> <script type="text/javascript">
+//<![CDATA[
+            cb.viewbinding.create("add4MetaDataStepAppView");
+            //]]>
+            </script>
+        </div>
+    </div>
+</body>
+</html>

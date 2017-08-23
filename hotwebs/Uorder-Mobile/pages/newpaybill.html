@@ -1,0 +1,107 @@
+<div data-controller="NewPaybillController">
+    <div class="pages">
+        <div data-page="NewPaybill" class="page no-tabbar navbar-fixed toolbar-fixed">
+            <div class="navbar no-border">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <a class="back link" href="#"><i class="icon icon-return-arrow"></i></a>
+                    </div>
+                    <div class="center">
+                        新增支付单
+                    </div>
+                    <div class="right">
+                    </div>
+                </div>
+            </div>
+            <div class="page-content">
+                <div class="list-block pay-bill">
+                    <ul>
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">支付金额</div>
+                                    <div class="item-input">
+                                        <input type="text" class="input-money" value="￥0" />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="align-top">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">支付方式</div>
+                                    <div class="item-input checkdiv payTypeContainer">
+                                        <div class="pay-style">
+                                            <input type="radio" name="payType" value="1" checked>
+                                            <span>在线支付</span>
+                                        </div>
+                                        <div class="pay-style">
+                                            <input type="radio" name="payType" value="2">
+                                            <span>线下支付</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list-block pay-bill media-list offline">
+                        <li class="align-top">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label" style="width: 20%;">结算方式 </div>
+                                    <div class="item-input checkdiv SettlementWaysContainer">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#" data-id="0" class="item-link item-content popup-AgentFinancials">
+                                <div class="item-title label">汇款 </div>
+                                <div class="item-media"></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">无卡</div>
+                                    </div>
+                                    <div class="item-subtitle"> </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-id="0" class="item-link item-content  popup-CorprationFinancials">
+                                <div class="item-title label">收款 </div>
+                                <div class="item-media"></div>
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">无卡</div>
+                                    </div>
+                                    <div class="item-subtitle"> </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="alwaysShow">
+                            <div class="item-content">
+                                <div class="item-inner" style="display: flex;">
+                                    <div class="item-title label">备注 </div>
+                                    <div class="item-input">
+                                        <input type="text" placeholder="25字以内 " class="input-payRemork">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="upload-img">
+                                <span class="upload"></span>
+                                <p class="upload-tip">
+                                    建议上传付款凭证
+                                    <br />(如汇款单等)
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <p><a href="#" class="button button-big active btn-paySubmit">去预付 </a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/pages/NewPaybillController.js"></script>
+</div>

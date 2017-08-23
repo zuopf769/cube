@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="./pc/css/kendoctrl/Cube.Control.css" rel="stylesheet" type="text/css" />
+    <script data-config="Refer"></script>
+</head>
+<body>
+    <%if(content==null){%>
+        <label class="col-lg-4" title="<%=title%>"><%=title%>:</label>
+    <%}else{%>
+    <%content%>
+    <label class="col-lg-4" title="<%=title%>" data-content="<%=content%>"><%=title%>:</label>
+    <%}%>
+    <%var showMode=refShowMode||"";%>
+    <div class="col-lg-8 p-0" data-propertyname="<%=field%>" data-controltype="Refer" data-showmode="<%=showMode%>">
+        <input type="text" />
+        <div>
+            <img src="pc/images/Ref-close.png" />
+            <img src="pc/images/Ref.png" />
+        </div>
+    </div>
+</body>
+</html>

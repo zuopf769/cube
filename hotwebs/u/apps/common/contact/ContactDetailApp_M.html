@@ -1,0 +1,119 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>联系人详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./common/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="./common/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./common/css/Cube.ToolBar.css" rel="stylesheet" />
+    <link href="./common/css/Cube.Icon.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="ContactDetailView" data-page="common.contact.ContactDetailApp" data-viewmodel="ContactDetailViewModel">
+	    <div class="cube-main">
+            <div class="cube-main-header">
+                <div data-propertyname="returnAction" data-controltype="ImageButton"><span class="back-icon"></span><span>返回</span></div>
+                <label>联系人详情</label>
+                <div data-propertyname="editAction" data-controltype="ImageButton"><span class="edit-icon"></span><span>编辑</span></div>
+            </div>
+            <div class="cube-main-content">
+                <div class="ui-form-content">
+                    <div data-role="ControlGroup" class="navbar-strip ui-controlgroup-controls" data-propertyname="tabMenu1" data-controltype="TabContent">
+                        <div class="ui-menu">
+                            <div class="ui-btn ui-text" data-touchable="true" data-content="baseinfo">基本信息</div>
+                            <div class="ui-btn ui-text" data-touchable="true" data-content="linkman">联系方式</div>
+                        </div>
+                    </div>
+                    <div>
+                    <div data-related="tabMenu1" class="ui-form-contain" data-content="baseinfo">
+                        <div class="ui-form-page">
+                            <div class="ui-field-contain">
+                                <label>所属客户</label>
+                                <div>
+                                    <input type="text" value="北京缘发生茂科技有限公司" />
+                                </div>
+                            </div>
+                            <div class="ui-field-contain">
+                                <label>联系人编码</label>
+                                <div>
+                                    <input type="text" value="203" />
+                                </div>
+                            </div>
+                            <div class="ui-field-contain">
+                                <label>性别</label>
+                                <div>
+                                    <input type="text" value="男" />
+                                </div>
+                            </div>
+                            <div class="ui-field-contain">
+                                <label>直接上级</label>
+                                <div>
+                                    <input type="text" value="李四" />
+                                </div>
+                            </div>
+                            <div class="ui-field-contain">
+                                <label>币种</label>
+                                <div>
+                                    <input type="text" value="人民币" />
+                                </div>
+                            </div>
+                            <div class="ui-field-contain">
+                                <label>籍贯</label>
+                                <div>
+                                    <input type="text" value="内蒙呼和浩特" />
+                                </div>
+                            </div>
+                            <div class="ui-field-contain">
+                                <label>生日</label>
+                                <div>
+                                    <input type="text" value="1988-12-21" />
+                                </div>
+                            </div>
+                            <div class="ui-field-contain">
+                                <label>爱好</label>
+                                <div>
+                                    <input type="text" value="网球" />
+                                </div>
+                            </div>
+                            <div class="ui-field-contain">
+                                <label>婚姻状况</label>
+                                <div>
+                                    <input type="text" value="已婚" />
+                                </div>
+                            </div>
+                            <div class="ui-field-contain">
+                                <label>主要联系人</label>
+                                <div>
+                                    <input type="text" value="是" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ui-form-footer">
+                            <div class="cube-bar-container">
+                                <div data-propertyname="cancelAction" data-controltype="ImageButton" title="取消"><span class="cancel-icon"></span><span>取消</span></div>
+                                <div data-propertyname="saveAction" data-controltype="ImageButton" title="保存" class="active"><span class="search-icon"></span><span>保存</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./jquery/iscroll-probe.js" type="text/javascript"></script>
+    <script src="./common/js/Animation.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/Button.js" type="text/javascript"></script>
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>
+    <script src="./common/js/TabContent.js" type="text/javascript"></script>
+	<script src="apps/common/contact/ContactDetailApp_M.js" type="text/javascript"></script>
+	<script src="apps/common/contact/ContactDetailApp_Extend.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		cb.viewbinding.create("ContactDetailView");
+	</script>
+</body>
+</html>

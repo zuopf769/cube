@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<applications>
+  <application name="DispatchlistListApp" title="发货单" moduleName="u8" symbol="u8.Dispatchlist">
+    <viewmodel name="DispatchlistListViewModel" extendName="DispatchlistListViewModel_Extend" title="发货单列表" tplName="vouchers_min.js.tpl">
+      <entity name="DispatchlistList" title="发货单列表" isMain="true">
+        <fields>
+          <field name="dispatchlists" title="发货单集合" modelType="Model3D" ctrlType="DataGrid" refEntity="Dispatchlist" columnCode="u8_dispatchlists"/>
+        </fields>
+      </entity>
+      <entity name="Dispatchlist" title="发货单">
+        <fields>
+          <field name="billno" title="单据号" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="vtrantypecode" title="单据类型编码" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="vtrantype" title="发货单类型" iLength="20" refKey="pk_billtypeid" refCode="pk_billtypecode" refName="billtypename" modelType="SimpleModel" ctrlType="Refer" refId="4848" refShowMode="Name"/>
+          <field name="billdate" title="单据日期" isNullable="false" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="busitype" title="业务流程" iLength="20" refKey="pk_busitype" refCode="busicode" refName="businame" modelType="SimpleModel" ctrlType="Refer" refId="4849" refShowMode="Name"/>
+          <field name="pk_group" title="集团" iLength="20" isNullable="false" refKey="pk_group" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="600001" refShowMode="Name"/>
+          <field name="pk_org" title="组织" iLength="20" refKey="pk_org" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="600015" refShowMode="Name"/>
+          <field name="pk_org_v" title="组织版本" iLength="20" refKey="pk_vid" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="600700" refShowMode="Name"/>
+          <field name="pk_dept" title="部门" iLength="20" refKey="pk_dept" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="600905" refShowMode="Name"/>
+          <field name="pk_dept_v" title="部门版本" iLength="20" refKey="pk_vid" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="600949" refShowMode="Name"/>
+          <field name="billmaker" title="制单人" iLength="20" isReadOnly="true" refKey="cuserid" refCode="user_code" refName="user_name" modelType="SimpleModel" ctrlType="Refer" refId="600026" refShowMode="Name"/>
+          <field name="approver" title="审批人" iLength="20" isReadOnly="true" refKey="cuserid" refCode="user_code" refName="user_name" modelType="SimpleModel" ctrlType="Refer" refId="600026" refShowMode="Name"/>
+          <field name="approvestatus" title="单据状态" iLength="50" modelType="SimpleModel" ctrlType="ComboBox" enumType="uap.BillstatusEnum"/>
+          <field name="approvedate" title="审批时间" isReadOnly="true" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="srcbilltype" title="来源单据类型" iLength="20" refKey="pk_billtypeid" refCode="pk_billtypecode" refName="billtypename" modelType="SimpleModel" ctrlType="Refer" refId="4848" refShowMode="Name"/>
+          <field name="srcbillid" title="来源单据id" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="creator" title="创建人" iLength="20" isReadOnly="true" refKey="cuserid" refCode="user_code" refName="user_name" modelType="SimpleModel" ctrlType="Refer" refId="600026" refShowMode="Name"/>
+          <field name="creationtime" title="制单时间" isReadOnly="true" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="modifier" title="修改人" iLength="20" isReadOnly="true" refKey="cuserid" refCode="user_code" refName="user_name" modelType="SimpleModel" ctrlType="Refer" refId="600026" refShowMode="Name"/>
+          <field name="modifiedtime" title="修改时间" isReadOnly="true" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="billcloser" title="关闭人" iLength="20" refKey="cuserid" refCode="user_code" refName="user_name" modelType="SimpleModel" ctrlType="Refer" refId="600026" refShowMode="Name"/>
+          <field name="billclosetime" title="关闭自然时间" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="lastprintor" title="最近打印人" iLength="20" refKey="cuserid" refCode="user_code" refName="user_name" modelType="SimpleModel" ctrlType="Refer" refId="600026" refShowMode="Name"/>
+          <field name="lastprinttime" title="最近打印时间" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="ccuscode" title="客户编码" iLength="20" refKey="ccuscode_pk" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="customer" refShowMode="Code" refRelation="ccusname=name,ccusabbname=ccusabbname,cvconperson=ccusperson,cvshipaddress=ccusoaddress"/>
+          <field name="ccusname" title="客户全称" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="ccusabbname" title="客户简称" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="cvconperson" title="客户联系人" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="cvshipaddress" title="联系地址" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="cpersoncode" title="业务员编码" iLength="20" refKey="person_pk" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="person" refShowMode="Code"/>
+          <field name="cperson" title="业务员" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="cexch_name" title="币种" iLength="20" refKey="id" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="foreigncurrency" refShowMode="Name"/>
+          <field name="iexchrate" title="汇率" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="btax" title="报价是否含税" iLength="1" defaultValue="false" modelType="SimpleModel" ctrlType="CheckBox"/>
+          <field name="itaxrate" title="税率" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="cmemo" title="备注" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="ioutstate" title="出库状态" iLength="50" modelType="SimpleModel" ctrlType="ComboBox" enumType="u8.ioutstateEnum"/>
+          <field name="ddispdate" title="表头预发货日期" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="def1" title="自定义项1" iLength="101" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def2" title="自定义项2" iLength="101" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def3" title="自定义项3" iLength="101" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def4" title="自定义项4" iLength="101" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="def5" title="自定义项5" iLength="101" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          
+		  <field name="ts" title="时间戳" modelType="SimpleModel" ctrlType="DateTimeBox" isNecessary="true" isReadOnly="true" isSyncKey="true" isVisible="false"/>
+          <field name="dr" title="删除标记" modelType="SimpleModel" ctrlType="CheckBox" isNecessary="true" isReadOnly="true" isVisible="false"/>
+          <field name="pk_dispatchlist" title="发货单主表pk" iLength="20" isNullable="false" modelType="SimpleModel" ctrlType="TextBox" isKey="true" isNecessary="true" isVisible="false"/>
+          <field name="pk_dispatchlist_b" title="发货单子表pk" iLength="0" refKey="pk_dispatchlistdetails" modelType="Model3D" ctrlType="DataGrid" refEntity="Dispatchlistdetails" isVisible="false"/>
+          
+		  <field name="pk_dispatchlist_b_ts" title="时间戳" modelType="SimpleModel" ctrlType="DateTimeBox" isNecessary="true" isReadOnly="true" isSyncKey="true" isVisible="false"/>
+          <field name="pk_dispatchlist_b_dr" title="删除标记" modelType="SimpleModel" ctrlType="CheckBox" isNecessary="true" isReadOnly="true"/>
+          <field name="pk_dispatchlist_b_pk_dispatchlistdetails" title="发货单表体pk" iLength="20" isNullable="false" modelType="SimpleModel" ctrlType="TextBox" isKey="true" isNecessary="true" isVisible="false"/>
+          <field name="pk_dispatchlist_b_crowno" title="行号" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="pk_dispatchlist_b_pk_group" title="集团" iLength="20" refKey="pk_group" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="600001" refShowMode="Code"/>
+          <field name="pk_dispatchlist_b_pk_org" title="组织" iLength="20" refKey="pk_org" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="600015" refShowMode="Code"/>
+          <field name="pk_dispatchlist_b_cinvcode" title="存货编码" iLength="20" refKey="pk_inventory" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="inventory" refShowMode="Code"/>
+          <field name="pk_dispatchlist_b_cinvname" title="存货名称" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="pk_dispatchlist_b_iquantity" title="数量" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_cbaseunit" title="核算单位" iLength="20" refKey="id" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="Computation" refShowMode="Name"/>
+          <field name="pk_dispatchlist_b_ibasequantity" title="核算数量" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_inum" title="件数" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_cunitcode" title="辅助计量单位" iLength="20" refKey="id" refCode="code" refName="name" modelType="SimpleModel" ctrlType="Refer" refId="Computation" refShowMode="Name"/>
+          <field name="pk_dispatchlist_b_iinvexchrate" title="换算率" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_iquounitprice" title="报价" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_brtax" title="报价行是否含税" iLength="1" modelType="SimpleModel" ctrlType="CheckBox"/>
+          <field name="pk_dispatchlist_b_iunitprice" title="无税单价" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_itaxunitprice" title="含税单价" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_imoney" title="无税金额" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_itax" title="税金" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_isum" title="价税合计" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_idiscountrate" title="扣率" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_idiscount" title="折扣" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_inatunitprice" title="无税本币单价" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_inattaxunitprice" title="含税本币单价" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_inatmoney" title="无税本币金额" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_inattax" title="本币税金" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_inatsum" title="本币价税合计" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_inatdiscount" title="本币折扣" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_drowplandispdate" title="计划发货日期" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="pk_dispatchlist_b_ioutqty" title="累计出库数量" iScale="8" modelType="SimpleModel" ctrlType="NumberBox" iPrecision="28"/>
+          <field name="pk_dispatchlist_b_dminoutdate" title="最早出库日期" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="pk_dispatchlist_b_pk_somaindetails" title="订单表体pk" iLength="20" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="pk_dispatchlist_b_somaindetailsrowno" title="订单行号" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="pk_dispatchlist_b_somainbillno" title="订单号" iLength="50" modelType="SimpleModel" ctrlType="TextBox"/>
+          <field name="pk_dispatchlist_b_somainbilltype" title="订单类型" iLength="20" refKey="pk_billtypeid" refCode="pk_billtypecode" refName="billtypename" modelType="SimpleModel" ctrlType="Refer" refId="4848" refShowMode="Code"/>
+          <field name="pk_dispatchlist_b_somaints" title="订单表头时间戳" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="pk_dispatchlist_b_somaindetailts" title="订单表体时间戳" modelType="SimpleModel" ctrlType="DateTimeBox"/>
+          <field name="pk_dispatchlist_b_def1" title="自定义项1" iLength="101" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="pk_dispatchlist_b_def2" title="自定义项2" iLength="101" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="pk_dispatchlist_b_def3" title="自定义项3" iLength="101" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="pk_dispatchlist_b_def4" title="自定义项4" iLength="101" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+          <field name="pk_dispatchlist_b_def5" title="自定义项5" iLength="101" modelType="SimpleModel" ctrlType="TextBox" isVisible="false"/>
+		
+		</fields>
+      </entity>
+      <entity name="Toolbar" title="功能">
+        <fields>
+          <field name="qryAction" title="查询方案" modelType="SimpleModel" ctrlType="Button" powerAction=""/>
+          <field name="configAction" title="设置栏目" modelType="SimpleModel" ctrlType="Button" powerAction=""/>
+          <field name="sortAction" title="排序" modelType="SimpleModel" ctrlType="Button" powerAction=""/>
+          <field name="addFromPU02Action" title="按报价单生单" modelType="SimpleModel" ctrlType="Button" powerAction=""/>
+          <field name="deleteAction" title="删除单据" modelType="SimpleModel" ctrlType="Button" powerAction=""/>
+          <field name="addAction" title="增加" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="submitAction" title="提交" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="withdrawAction" title="收回" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="approveAction" title="审核" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="unapproveAction" title="弃审" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="closeAction" title="终止" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="inventoryAction" title="供货安排" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="deliveryAction" title="发货" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="outboundAction" title="出库" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="deleteAction" title="删除" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="bizAction" title="业务操作" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="printAction" title="打印" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="outputAction" title="输出" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="sortAction" title="排序" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="filterAction" title="过滤" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="setAction" title="设置" modelType="SimpleModel" ctrlType="Button"/>
+          <field name="refreshAction" title="刷新" modelType="SimpleModel" ctrlType="Button"/>
+        </fields>
+      </entity>
+      <actions>
+        <action name="qryActionclick" entity="Toolbar" field="qryAction" eventName="click" functionName="qryAction" />
+        <action name="clickrow" entity="dispatchlistList" field="dispatchlists" eventName="clickrow" functionName="itemClick" />
+        <action name="dblclickrow" entity="dispatchlistList" field="dispatchlists" eventName="dblclickrow" functionName="activeRowClick" defaultImpl="activeRowClick"/>
+		
+		<action name="changePage" entity="dispatchlistList" field="dispatchlists" eventName="changePage" functionName="changePage" />
+    
+
+		<action name="addAction" entity="Toolbar" field="addAction" eventName="click" functionName="addAction"/>
+		<action name="submitAction" entity="Toolbar" field="submitAction" eventName="click" functionName="submitAction" defaultImpl="batchSubmit"/>
+        <action name="withdrawAction" entity="Toolbar" field="withdrawAction" eventName="click" functionName="withdrawAction" defaultImpl="batchWithDraw"/>
+        <action name="approveAction" entity="Toolbar" field="approveAction" eventName="click" functionName="approveAction" defaultImpl="batchApprove"/>
+        <action name="unapproveAction" entity="Toolbar" field="unapproveAction" eventName="click" functionName="unapproveAction" defaultImpl="batchUnApprove"/>
+        <action name="closeAction" entity="Toolbar" field="closeAction" eventName="click" functionName="closeAction" />
+        <action name="inventoryAction" entity="Toolbar" field="inventoryAction" eventName="click" functionName="inventoryAction" />
+        <action name="deliveryAction" entity="Toolbar" field="deliveryAction" eventName="click" functionName="deliveryAction" />
+        <action name="outboundAction" entity="Toolbar" field="outboundAction" eventName="click" functionName="outboundAction" />
+        <action name="deleteAction" entity="Toolbar" field="deleteAction" eventName="click" functionName="deleteAction" defaultImpl="batchDelete"/>
+        <action name="bizAction" entity="Toolbar" field="bizAction" eventName="click" functionName="bizAction" />
+        <action name="printAction" entity="Toolbar" field="printAction" eventName="click" functionName="printAction" />
+        <action name="outputAction" entity="Toolbar" field="outputAction" eventName="click" functionName="outputAction" />
+        <action name="sortAction" entity="Toolbar" field="sortAction" eventName="click" functionName="sortAction" />
+        <action name="filterAction" entity="Toolbar" field="filterAction" eventName="click" functionName="filterAction" />
+        <action name="setAction" entity="Toolbar" field="setAction" eventName="click" functionName="setAction" defaultImpl="config"/>
+        <action name="refreshAction" entity="Toolbar" field="refreshAction" eventName="click" functionName="refreshAction" defaultImpl="refresh"/>
+      </actions>
+      <proxies>
+        <proxy name="QueryScheme" url="service/u8services?actionID=E75A222E-E032-464A-9072-F3D3A170F2E8&amp;queryTemplateID=0001ZZ10000000003HBL" method="Post"/>
+        <proxy name="Read" url="service/u8services?actionID=A42AB463-9D07-44DF-B3C8-1CC9D0CCFED8" method="Post"/>
+      </proxies>
+    </viewmodel>
+  </application>
+</applications>

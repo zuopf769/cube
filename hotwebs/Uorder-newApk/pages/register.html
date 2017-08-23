@@ -1,0 +1,154 @@
+﻿<div data-controller="RegisterController">
+    <div class="pages navbar-through">
+        <div data-page="Register" class="page no-tabbar">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left"><a href="#" class="link forgetPwd-back"><i class="icon icon-backgray"></i></a></div>
+                    <div class="center">
+                        注册
+                    </div>
+                    <div class="right"></div>
+                </div>
+            </div>
+            <div id="reg1" class="page-content login-screen-content">
+                <div class="login-avatar">
+                    <img data-src="img/regIndexImg.png" class="lazy" />
+                </div>
+                <form id="mylogin">
+                    <div class="list-block">
+                        <ul>
+                            <li class="item-content">
+                                <div class="item-media">
+                                    <i class="icon icon-username"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input type="text" name="username" id="txtUserName" placeholder="手机号/邮箱" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item-content p-l-0">
+                                <div class="item-inner p-r-0">
+                                    <a href="#" id="btnGetCode" class="button border-lightestgray-u btn-space">获取校验码</a>
+                                </div>
+                            </li>
+                            <li class="item-content">
+                                <div class="item-media">
+                                    <i class="icon icon-password"></i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-input">
+                                        <input type="text" name="ValidCode" id="txtValidCode" placeholder="请输入校验码" />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="login-btuuon">
+                        <p>
+                            <a href="#" class="button button-fill bg-green-u submit" id="btnRegister">注  册</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+            <div class="page-content" id="reg2" style="display:none;">
+                <div class="user-list">
+                    <div class="list-block all-order  m-b-0">
+                        <form id="form-RegPage">
+                            <ul>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">登录账号</div>
+                                        <div class="item-input">
+                                            <input type="text" name="cUserName" placeholder="设置用户名" readonly>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li style="padding:2px 0px;"></li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">登录密码</div>
+                                        <div class="item-input">
+                                            <input type="password" name="cPassword" placeholder="设置登录密码">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">再次确认</div>
+                                        <div class="item-input">
+                                            <input type="password" placeholder="再次确认你的登录密码" name="cPassword2">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">公司名称</div>
+                                        <div class="item-input">
+                                            <input type="text" placeholder="请输入公司名称" name="cName">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">英文名称</div>
+                                        <div class="item-input">
+                                            <input type="text" placeholder="请输入公司英文名称" name="cAlias">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content" id="liEmail" style="display:none;">
+                                    <div class="item-inner">
+                                        <div class="item-title label">邮箱</div>
+                                        <div class="item-input">
+                                            <input type="text" placeholder="请输入邮箱" name="cEmail">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content" id="liPhone" style="display:none;">
+                                    <div class="item-inner">
+                                        <div class="item-title label">手机</div>
+                                        <div class="item-input">
+                                            <input type="text" placeholder="请输入手机号码" name="cMobile">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">联系人</div>
+                                        <div class="item-input">
+                                            <input type="text" placeholder="请输入联系人姓名" name="cFullName">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="login-btuuon m-t-20">
+                                <p>
+                                    <a href="#" class="button button-fill bg-green-u submit m-t" id="btnRegisterComplate">完成注册</a>
+                                </p>
+                            </div>
+                            <p class="regTip">英文名称会作为客户登录订货端账号的后缀来体现其唯一性</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="page-content" id="reg3" style="display:none; background-color:#fff; ">
+                <div style="height: 100px;padding: 20% 10px 4px 18%;">
+                    <div style="padding-top:30px;width:23%;float:left;" id="btnBackToHome">
+                        <img data-src="img/icon/succeed.png" class="lazy" style="width:55px;" />
+                    </div>
+                    <div><p class="regSucTip">恭喜您</p></div>
+                    <div><p style="padding-left:20px;font-size:16px;">您已开通U订货免费版</p></div>
+                </div>
+                <div><p style="font-size: 16px;padding-bottom: 20px;padding-left: 80px;" id="coprNameP">公司: 德国胡赫公司</p></div>
+                <div><p style="font-size:16px;padding-left: 80px;" id="accountP">账号: 234234@qq.com</p></div>
+                <div class="login-btuuon">
+                    <p>
+                        <a href="#" class="button btn-blur-space" id="btnExperience">立即体验</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/pages/RegisterController.js"></script>
+</div>

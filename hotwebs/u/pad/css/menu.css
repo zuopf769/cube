@@ -1,0 +1,123 @@
+﻿.menu-wrapper {
+    overflow: hidden;
+}
+
+    .menu-wrapper > .menu-scroller {
+        width: 200%;
+    }
+
+        .menu-wrapper > .menu-scroller > div {
+            width: 50%;
+            float: left;
+        }
+
+.content-wrapper {
+    overflow: hidden;
+}
+
+    .content-wrapper > .content-scroller {
+        width: 200%;
+    }
+
+        .content-wrapper > .content-scroller > div {
+            width: 50%;
+            float: left;
+        }
+
+.menu .subMenu {
+    margin: auto;
+    border: 1px solid rgb(215,215,215);
+    height: auto;
+    width: 400px;
+    overflow: auto;
+    position: relative;
+}
+
+.menu .title, .subMenu .title {
+    height: 10%;
+}
+
+    .menu .title > a {
+        border: none;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        float: right;
+        background: url(../images/MenuAdd.png) no-repeat right;
+    }
+
+    .menu .title > div {
+        position: relative;
+        top: 20px;
+        left: 10px;
+    }
+
+.menu .search,
+.subMenu .search {
+    background-color: rgb(228,228,228);
+    height: 40px;
+    text-align: center;
+}
+
+.menu .content {
+    position: relative;
+}
+
+
+.newMenu {
+    height: 100%; /*display:none;*/
+    border: 1px solid rgb(228,228,228);
+}
+
+    .newMenu > div {
+        height: 40px;
+        margin-top: 10px;
+        text-align: center;
+        border-bottom: 1px solid rgb(228,228,228);
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 5px;
+    }
+
+    .newMenu div input,
+    .navMenu div label {
+        width: 40%;
+        display: inline-block;
+        border: none;
+        outline: none;
+    }
+
+    .newMenu > div:last-child {
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0px;
+        height: auto;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        bottom: 41px;
+        left: 0px;
+    }
+
+    .newMenu .show {
+        display: block;
+    }
+
+
+@media screen and (min-height:600px) and (max-height:700px) {
+    .menu .title, .subMenu .title {
+        height: 10%;
+    }
+}
+
+@media screen and (min-height:700px) and (max-height:900px) {
+    .menu .title, .subMenu .title {
+        height: 8%;
+    }
+}
+
+@media screen and (min-height:1000px) and (max-height:1100px) {
+     .menu .title, .subMenu .title {
+        height: 6%;
+    }
+}

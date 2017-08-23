@@ -1,0 +1,78 @@
+﻿<html>
+<head>
+    <meta charset="utf-8">
+    <title>系统启用</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="pc/css/kendoctrl/Cube.Control.css" rel="stylesheet"/>
+     <link href="pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="pc/css/Cube.ToolBar.css" rel="stylesheet" />
+    <link href="pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link data-config="MessageBox" />
+    <style>
+       div[data-viewmodel*="UseSystemViewModel"] .k-treeview .k-checkbox {
+        margin-top:.6em;
+        }
+    </style>
+</head>
+<body>
+<div id="UseSystemView" data-page="common.sysmanager.UseSystemApp" data-title="系统启用" data-viewmodel="UseSystemViewModel">
+    <div class="row" style="margin:0px">
+        <div class="col-lg-2 p-0">
+             <div data-propertyname="GroupTree" data-controltype="TreeView" class="col-lg-12"></div>
+        </div>
+        <div class="col-lg-10  p-0" style="min-height:500px;border: 1px solid #d3d3d3">
+                                <div data-propertyname="leftToolbar" data-controltype="ToolBar" class="cube-bar-modeltxt col-lg-4">
+                                        <li>
+                                            <div data-propertyname="editAction" data-controltype="ImageButton" data-name="edit">
+                                                <span></span>
+                                                <span>增补模块</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div data-propertyname="saveAction" data-controltype="ImageButton">
+                                                <span></span>
+                                                <span>保存</span>
+                                            </div>
+                                        </li>
+                                          <li>
+                                            <div data-propertyname="cancelAction" data-controltype="ImageButton">
+                                                <span></span>
+                                                <span>取消</span>
+                                            </div>
+                                        </li>
+                                    </div>
+                                <div class="col-lg-4 m-0 p-0 m-t-8 m-r-4" style="float:right">    
+                                    <label class="col-lg-4 m-0 p-0" title="启用日期" style="text-align:center">启用日期:</label>
+                                    <div class="col-lg-8 m-0 p-0 datetimebox">
+                                        <input data-propertyname="createcalendar" data-controltype="DateBox" />
+                                    </div>
+                                </div>
+                                <div data-propertyname="ModuleTree" data-controltype="TreeView" class="col-lg-12"></div>
+         </div>
+        </div>
+ </div>
+<script src="jquery/jquery-1.11.1.js" type="text/javascript"></script>
+<script src="jquery/jquery-ui.js" type="text/javascript"></script>
+<script src="common/js/Animation.js" type="text/javascript"></script>
+<script src="common/js/Cube.js" type="text/javascript"></script>
+<script src="common/js/Button.js" type="text/javascript"></script>
+<script src="common/js/ImageButton.js" type="text/javascript"></script>
+<script src="common/js/Cube.bindings.js" type="text/javascript"></script>
+<script src="common/js/Control.js" type="text/javascript"></script>
+<script src="common/js/ToolBar.js" type="text/javascript"></script>
+<script src="common/js/TimeLine.js" type="text/javascript"></script>
+<script src="pc/js/TabContent.js" type="text/javascript"></script>
+<script data-config="Tree"></script>
+<script data-config="DateBox"></script>
+<script src="pc/js/cube.pc.js" type="text/javascript"></script>
+<script data-config="MessageBox"></script>
+<script src="apps/common/sysmanager/UseSystemViewModel.js"></script>
+<script src="apps/common/sysmanager/UseSystemViewModel_Extend.js"></script>
+<script type="text/javascript">
+    cb.viewbinding.create("UseSystemView");
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<div data-controller="OrderInfoController">
+	<div class="pages">
+		<div data-page="orderInfo" class="page no-tabbar navbar-fixed toolbar-fixed">
+			<div class="navbar">
+				<div class="navbar-inner">
+					<a class="back  left" href="#"><i class="icon icon-backgray"></i></a>
+					<div class="center">订单详情</div>
+					<div class="right"></div>
+				</div>
+			</div>			
+			<div class="page-content ">
+				<div class="list-block media-list confirmList ">
+					<ul>
+						<li class="infoTitle ">
+                            <a href="pages/orderStatus.html?orderId={{orderDetail.cOrderNo}}" style="color:#FFF;">
+                                <p class="title ">{{orderDetail.cNextStatusName}}</p>
+                                <p>订单号：{{orderDetail.cOrderNo}}</p>
+                                <p>下单时间：{{orderDetail.dOrderDate}}</p>
+                            </a>
+						</li>
+						<li class="addrList ">
+							<a href="#" class="item-link item-content">
+								<div class="item-inner ">
+								    <div class="item-title-row ">
+								       <div class="item-text ">
+								          <p >
+								            <span class="color-2b "><i class="icon icon-addr-name "></i> {{orderDetail.cReceiveContacter}}</span>
+								            <span class="color-2b "><i class="icon icon-addr-phone "></i> {{orderDetail.cReceiveContacterPhone}}</span>
+								          </p>
+								          <p class="color-lightergray-u ">{{orderDetail.cReceiveAddress}}</p>
+								       </div>
+								    </div>
+								</div>
+							</a>
+					    </li>
+						<li>
+							<div class="infoContent ">
+                                <a href="pages/logisticsInfo.html?oid={{orderDetail.cOrderNo}}" style="color:#000;">
+                                    <p class="title ">物流信息</p>
+                                    <p>您的货物已经到达 北京朝阳站点 正在安排配送</p>
+                                    <p>2015-03-09 19:36</p>
+                                </a>
+							</div>
+							<div class="infoContent ">
+								<p class="title ">发票信息</p>
+								<p>发票抬头：{{orderDetail.cInvoiceTitle}}</p>
+								<p>发票内容：{{orderDetail.cInvoiceContent}}</p>
+							</div>
+							<div class="infoContent ">
+								<p class="title ">支付及配送方式</p>
+								<p>支付方式：{{#if orderDetail.oPayWayCode}}{{orderDetail.oPayWayCode.cName}}{{else}}无{{/if}}</p>
+								<p>配送方式：{{#if orderDetail.oShippingChoice}}{{orderDetail.oShippingChoice.cName}}{{else}}无{{/if}}</p>
+							</div>
+							<div class="infoContent ">
+								<p class="title ">备注</p>
+								<p>{{#if orderDetail.cremark}}{{orderDetail.cremark}}{{else}}无{{/if}}</p>
+							</div>
+							<div class="infoContent ">
+								<p class="title ">付款信息</p>
+								<p>{{orderDetail.cOrderPaymentStatusName}}：<span class="color-orange-u ">￥{{orderDetail.fTotalMoney}}</span></p>
+							</div>
+						</li>
+						<li>
+							<a href="#" class="item-link item-content product-listpage">
+								<div class="item-inner ">
+								     <div class="item-title-row ">
+								     	<div class="item-title ">商品清单</div>
+								        <div class="item-after ">
+								            <p>{{orderDetail.oOrderDetails.length}}件</p>
+										</div>
+								      </div>
+								 </div>
+							</a>
+						</li>
+						<li>
+							<a href="list-product.html " class="item-link item-content ">
+								<div class="item-inner ">
+								     <div class="item-title-row ">
+								     	<div class="item-title ">附件信息</div>
+								        <div class="item-after ">
+								            <p>{{orderDetail.oAttachments.length}}件</p>
+										</div>
+								      </div>
+								 </div>
+							</a>
+						</li>
+					</ul>
+				 </div>
+			</div>			
+			<div class="toolbar ">
+                <!--<div class="toolbar-inner row orderInfo-btngroup" >-->
+                    <!--<div class="fr">
+                        <a class="button color-lightergray-u border-lightergray-u" data-btnType="del">删除订单</a>
+                        <a class="button color-lightergray-u border-lightergray-u" data-btntype="">查看物流</a>
+                        <a class="button color-lightergray-u border-lightergray-u" data-btntype="payfor">付 款</a>
+                        <a class="button  button-fill bg-green-u" data-btntype="received">收货确认</a>
+                    </div>-->
+                    <div class="order-btn fr m-t-10" data-orderNo="{{orderDetail.cOrderNo}}">
+                        	<a class="btn btn-red" data-btntype="received">收货确认</a>
+                       		<a class="btn" data-btntype="payfor">付 款</a>
+                        	<a class="btn " data-btntype="">查看物流</a>
+                    		<a class="btn " data-btnType="del">删除订单</a>
+              		 </div>
+                <!--</div>-->
+			</div>
+		</div>
+   </div>
+   <script src="../js/pages/OrderInfoController.js "></script>
+</div>

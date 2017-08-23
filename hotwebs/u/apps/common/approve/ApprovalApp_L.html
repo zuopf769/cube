@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Control.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="ApprovalView" class="container" data-title="审批" data-page="common.approve.ApprovalApp" data-viewmodel="ApprovalViewModel">
+        
+        <div class="row">
+                    
+                <div class="col-lg-10 m-20 m-l-0" data-controltype="Radio" data-propertyname="approvalview">
+                </div>
+            <div class="col-lg-6">
+                <label class="col-lg-3">驳回列表</label>
+                <div class="col-lg-9 p-0 combobox">
+                    <input data-propertyname="rejectCombo" data-controltype="ComboBox" />
+                </div>
+            </div>
+            <div class ="col-lg-12">
+                <input type="text" data-propertyname="approvalcomments" data-controltype="TextBox" placeholder="请输入审批意见..." />
+
+            </div>
+         
+            <div class="col-lg-1 col-lg-offset-11 ">
+                <div data-controltype="ImageButton" data-propertyname="submitAction" class="active" style="margin-top: 0px; height: 30px; margin:6px;padding:4px; background: #157EFB; color: #FFF;">
+                    <span></span><span>确定</span>
+                </div>
+            </div>
+            <div class="col-lg-12 ui-title">
+                <span></span>审批流程信息
+            </div>
+            <div class="col-lg-12" data-controltype="ProcessBar" data-propertyname="processbar">
+                <div></div>
+            </div>
+        </div>
+     
+    </div>
+
+  
+    <script src="./jquery/jquery-1.11.1.js" type="text/javascript"></script>
+    <script src="./jquery/jquery-ui.js" type="text/javascript"></script>
+    <script src="./common/js/Animation.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.js" type="text/javascript"></script>
+    <script src="./pc/js/cube.pc.js" type="text/javascript"></script>
+    <script src="./common/js/Cube.bindings.js" type="text/javascript"></script>
+    <script src="./common/js/Control.js" type="text/javascript"></script>
+    <script src="./common/js/Button.js" type="text/javascript"></script>
+    <script data-config="TextBox"></script>
+    <script src="./common/js/Label.js" type="text/javascript"></script>
+    <script src="./common/js/ImageButton.js" type="text/javascript"></script>
+    <script src="./common/js/Radio.js" type="text/javascript"></script>
+    <script src="./pc/js/ProcessBar.js" type="text/javascript"></script>
+    <script src="./pc/js/RejectList.js" type="text/javascript"></script>
+    <script src="./common/js/CommonProxy.js" type="text/javascript"></script>
+    <script src="./jquery/jquery.event.drag-2.2.js" type="text/javascript"></script>
+    <script src="apps/common/approve/ApprovalApp_L.js" type="text/javascript"></script>
+    <script src="apps/common/approve/ApprovalApp_Extend.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        cb.viewbinding.create("ApprovalView");
+    </script>
+</body>
+</html>

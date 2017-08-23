@@ -1,0 +1,43 @@
+﻿/***********控件 线形样式 Start********/
+.inline span.k-widget,
+.inline span.k-widget.k-header {
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: 1px solid #CCC;
+}
+
+
+    .inline span.k-widget span,
+    .inline span.k-widget.k-header span,
+    .inline span.k-widget span.k-state-default span,
+    .inline span.k-widget span.k-state-default input.k-input,
+    .inline span.k-widget.k-header input.k-input {
+        border: 0;
+        box-shadow: none;
+    }
+
+        .inline span.k-widget.k-header input.k-input:focus {
+            outline: none;
+        }
+
+.inline input.k-textbox {
+    border: 0px;
+    border-radius: 0;
+    border-bottom: 1px solid #CCC;
+}
+
+    .inline input.k-textbox:focus {
+        outline: none;
+    }
+
+.inline div[data-controltype='Refer'],
+.inline .Refer {
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #CCC;
+}
+
+    .inline .Refer input {
+        border: none;
+    }
+/***********控件 线形样式 End********/

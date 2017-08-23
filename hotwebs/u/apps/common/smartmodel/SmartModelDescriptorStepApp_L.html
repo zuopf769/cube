@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator" content=
+    "HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>语义模型设计器</title>
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link href="./pc/css/SlickGridWrapper.css" rel="stylesheet" />
+    <link href="./pc/css/SlickGridSource.css" rel="stylesheet" />
+    <link href="./pc/css/SmartModelGenral.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="SmartModelDescriptorStepAppView" data-page="common.smartmodel.SmartModelDescriptorStepAppApp" data-viewmodel=
+    "SmartModelDescriptorStepAppViewModel">
+        <div class="ui-head-content">
+            <div data-propertyname="descriptorTab" data-controltype="TabContent" class="navbar-pc-slide">
+                <!--主页签头-->
+
+                <div class="cube-bar-open-container">
+                    <!--展开页签-->
+
+                    <ul>
+                        <li class="ui-text active" data-content="FilterDesc" data-remote="true">筛选</li>
+
+                        <li class="ui-text" data-content="LimitRowDesc" data-remote="true">排序</li>
+
+                        <li class="ui-text" data-content="DistinctDesc" data-remote="true">其他</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div data-related="descriptorTab" class="mainTable" style="height:500px">
+            <!--主页签体-->
+
+            <div data-content="FilterDesc" data-propertyname="FilterDesc">
+                <!--筛选-->
+
+                <div class="ui-head-content">
+                    <div data-propertyname="type" data-controltype="TabContent" class="navbar-pc-slide">
+                        <!--筛选页签头-->
+
+                        <div class="cube-bar-open-container">
+                            <!--展开页签-->
+
+                            <ul>
+                                <li class="ui-text active" data-content="classicMode" data-remote="true">典型模式</li>
+
+                                <li class="ui-text active" data-content="expertMode" data-remote="true">高级模式</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+				
+				<div data-related="type">
+					<div data-related="classicMode" data-propertyname="classicMode">
+						
+					</div>
+					<div data-related="expertMode" data-propertyname="expertMode">
+					
+					</div>
+				</div>
+            </div>
+
+            <div data-content="LimitRowDesc" data-propertyname="LimitRowDesc">
+                <!--排序-->
+            </div>
+
+            <div data-content="DistinctDesc" data-propertyname="DistinctDesc">
+                <!--其他-->
+            </div>
+        </div>
+
+        <div class="dataTable">
+            <div class="grid-wrapper">
+                <!--选择表-表格-->
+
+                <div data-propertyname="metaDataForm" data-controltype="DataGrid" class="grid"></div>
+
+                <div class="grid-pager"></div>
+            </div>
+        </div>
+
+        <div class="buttonGroup">
+            <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="addMetaDataButton">
+                <span>增加</span>
+            </div>
+
+            <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="updateMetaDataButton">
+                <span>修改</span>
+            </div>
+
+            <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="deleteMetaDataButton">
+                <span>删除</span>
+            </div>
+
+            <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="upMetaDataButton">
+                <span>上移</span>
+            </div>
+
+            <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="downMetaDataButton">
+                <span>下移</span>
+            </div>
+
+            <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="roofMetaDataButton">
+                <span>置顶</span>
+            </div>
+
+            <div class="smartModelButton" data-controltype="ImageButton" data-propertyname="floorMetaDataButton">
+                <span>置底</span>
+            </div>
+        </div>
+    </div><script src="./jquery/jquery-1.11.1.js" type="text/javascript">
+</script> <script src="./jquery/jquery-ui.js" type="text/javascript">
+</script><script src="./common/js/accondion.js" type="text/javascript">
+</script> <script src="./common/js/Animation.js" type="text/javascript">
+</script> <script src="./common/js/Cube.js" type="text/javascript">
+</script> <script src="./pc/js/cube.pc.js" type="text/javascript">
+</script> <script src="./common/js/Cube.bindings.js" type="text/javascript">
+</script> <script src="./common/js/Control.js" type="text/javascript">
+</script> <script src="./common/js/Button.js" type="text/javascript">
+</script> <script src="./common/js/ImageButton.js" type="text/javascript">
+</script> <script src="./common/js/ToolBar.js" type="text/javascript">
+</script> <script src="./pc/js/TabContent.js" type="text/javascript">
+</script> <script src="./common/js/CommonProxy.js" type="text/javascript">
+</script> <script src="./jquery/jquery.event.drag-2.2.js" type="text/javascript">
+</script> <script src="./pc/js/SlickGridSource.js" type="text/javascript">
+</script> <script src="./pc/js/SlickGridWrapper.js" type="text/javascript">
+</script> <script src="apps/common/smartmodel/SmartModelDescriptorStepAppApp_L.js" type="text/javascript">
+</script> <script src="apps/common/smartmodel/SmartModelDescriptorStepAppApp_Extend.js" type="text/javascript">
+</script> <script type="text/javascript">
+//<![CDATA[
+        cb.viewbinding.create("SmartModelDescriptorStepAppView");
+        //]]>
+    </script>
+</body>
+</html>

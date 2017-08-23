@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application name="CustomerCatalogDetailApp" title="客户分类详情" moduleName="pu" symbol="pu.CustomerCatalog" uiType="catalog">
+  <references>
+    <reference name="../pu/CustomerCatalogDetailAppVM.xml"/>
+  </references>
+  <view name="CustomerCatalogDetailView" title="客户分类详情" layoutMode="Fluid" appId="pu.CustomerCatalogDetailApp" viewModel="pu.CustomerCatalogDetailApp.CustomerCatalogDetailViewModel" screenSize="M" tplName="catalog_M.tpl">
+    <container name="Toolbar" title="工具栏" type="Toolbar">
+      <controls>
+        <control name="editAction" title="编辑" ctrlType="Button" css="tb-edit-icon" field="editAction" entity="Toolbar" />
+        <control name="deleteAction" title="删除" ctrlType="Button" css="delete-icon" field="deleteAction" entity="Toolbar" />
+      </controls>
+    </container>
+    <container name="baseinfo" title="基本信息" type="Card">
+      <controls>
+        <control name="code" title="分类编码" field="code" ctrlType="TextBox" entity="CustomerCatalogDetail" />
+        <control name="name" title="分类名称" field="name" ctrlType="TextBox" entity="CustomerCatalogDetail" />
+        <control name="cancelAction" title="取消" ctrlType="Button" css="cancel-icon" field="cancelAction" entity="Toolbar" />
+        <control name="saveAction" title="保存" ctrlType="Button" css="search-icon" field="saveAction" entity="Toolbar" />
+      </controls>
+    </container>
+  </view>
+</application>

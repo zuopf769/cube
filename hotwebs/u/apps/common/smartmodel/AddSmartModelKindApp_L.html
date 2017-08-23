@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="generator" content=
+    "HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+
+    <title>新增语义模型分类</title>
+    <link href="./pc/css/Cube.Form.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Tab.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Control.css" rel="stylesheet" />
+    <link href="./pc/css/Cube.Icon.css" rel="stylesheet" />
+    <link href="./pc/css/SlickGridWrapper.css" rel="stylesheet" />
+    <link href="./pc/css/SlickGridSource.css" rel="stylesheet" />
+    <link href="./apps/common/smartmodel/css/SmartModelGenral.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="AddSmartModelKindView" data-page="common.smartmodel.AddSmartModelKindApp" data-viewmodel=
+    "AddSmartModelKindViewModel">
+        <div class="cube-main" style="z-index:500;">
+            <div class="cube-main-content">
+                <div class="common-list ui-header">
+                    <div>
+                        新增语义模型分类
+                    </div>
+
+                    <div data-controltype="ImageButton" data-propertyname="closeAction" style="margin: -10px 0 5px;">
+                        <span class="close-icon">1</span> <span style="display:none;">关闭</span>
+                    </div>
+                </div>
+
+                <div class="common-list ui-content">
+				<div class="mainFrame">
+                <div class="ui-field-contain">
+                    <label>名称</label>
+                    <div>
+                        <input type="text" data-propertyname="name" data-controltype="TextBox" />
+                    </div>
+                </div>
+                <div class="ui-field-contain">
+                    <label>上级分类</label>
+                    <div>
+                        <input type="text" data-propertyname="upperLevel" data-controltype="TextBox" />
+                    </div>
+                </div>
+                <div class="ui-field-contain">
+                    <label>序号</label>
+                    <div>
+                        <input type="text" data-propertyname="code" data-controltype="TextBox" />
+                    </div>
+                </div>
+            </div>
+            <div class="minorFrame">
+				<div style="clear:both;font: status-bar;line-height:300%;font-style: italic;">审计信息</div>                
+                <div class="ui-field-contain" style="width:50%;float:left">
+                    <label>创建人</label>
+                    <div>
+                        <input type="text" data-propertyname="creator" data-controltype="TextBox" />
+                    </div>
+                </div>
+				<div class="ui-field-contain" style="width:50%;float:left">
+                    <label>修改人</label>
+                    <div>
+                        <input type="text" data-propertyname="modifier" data-controltype="TextBox" />
+                    </div>
+                </div>
+				<div class="ui-field-contain" style="width:50%;float:left">
+                    <label>创建时间</label>
+                    <div>
+                        <input type="date" data-propertyname="createdtTime" data-controltype="DateTimeBox" />
+                    </div>
+                </div>
+				<div class="ui-field-contain" style="width:50%;float:left">
+                    <label>修改时间</label>
+                    <div>
+                        <input type="date" data-propertyname="modifiedTime" data-controltype="DateTimeBox" />
+                    </div>
+                </div>
+                <div class="ui-field-contain" style="width:50%;float:left">
+                    <label>所属集团</label>
+                    <div>
+                        <input type="text" data-propertyname="group" data-controltype="TextBox" />
+                    </div>
+                </div>
+				<div class="ui-field-contain" style="width:50%;float:left">
+                    <label>所属组组</label>
+                    <div>
+                        <input type="text" data-propertyname="organization" data-controltype="TextBox" />
+                    </div>
+                </div>
+            </div>
+                </div>
+
+                <div class="common-list ui-footer">
+                    <div class="ui-form-content">
+                        <!--toolbar-->
+
+                        <div data-propertyname="footToolbar" data-controltype="ToolBar" class="footToolBar" style=
+                        "margin: -20px 0 5px;height:50px">
+                            <ul>
+                                <li class="button">
+                                    <div data-propertyname="save" data-controltype="ImageButton">
+                                        <span>确定</span>
+                                    </div>
+                                </li>
+
+                                <li class="button">
+                                    <div data-propertyname="cancel" data-controltype="ImageButton">
+                                        <span>取消</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><script src="./jquery/jquery-1.11.1.js" type="text/javascript">
+</script> <script src="./jquery/jquery-ui.js" type="text/javascript">
+</script> <script src="./common/js/Animation.js" type="text/javascript">
+</script> <script src="./common/js/Cube.js" type="text/javascript">
+</script> <script src="./pc/js/cube.pc.js" type="text/javascript">
+</script> <script src="./common/js/Cube.bindings.js" type="text/javascript">
+</script> <script src="./common/js/TextBox.js" type="text/javascript">
+</script> <script src="./common/js/DateTimeBox.js" type="text/javascript">
+</script> <script src="./common/js/Control.js" type="text/javascript">
+</script> <script src="./common/js/Button.js" type="text/javascript">
+</script> <script src="./common/js/ImageButton.js" type="text/javascript">
+</script> <script src="./common/js/ToolBar.js" type="text/javascript">
+</script> <script src="./common/js/CommonProxy.js" type="text/javascript">
+</script> <script src="./pc/js/TabContent.js" type="text/javascript">
+</script> <script src="./jquery/jquery.event.drag-2.2.js" type="text/javascript">
+</script> <script src="./pc/js/SlickGridSource.js" type="text/javascript">
+</script> <script src="./pc/js/SlickGridWrapper.js" type="text/javascript">
+</script> <script src="apps/common/smartmodel/AddSmartModelKindApp_L.js" type="text/javascript">
+</script> <script src="apps/common/smartmodel/AddSmartModelKindApp_Extend.js" type="text/javascript">
+</script> <script type="text/javascript">
+        cb.viewbinding.create("AddSmartModelKindView");
+        </script>
+    </div>
+</body>
+</html>

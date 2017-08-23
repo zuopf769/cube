@@ -1,0 +1,296 @@
+.grid-wrapper {
+    height: 100%;
+}
+
+.grid {
+    background: white;
+    outline: 0;
+    border: 1px solid #e3e3e3;
+    width: 100%;
+    /*height: 300px;*/
+    /*zhangxub height: 90%;*/
+    height: 85%;
+}
+
+.grid-remote {
+    /*height: 500px;*/
+}
+
+.grid-display-none {
+    display: none;
+}
+
+.slick-cell-checkboxsel {
+    background: #f0f0f0;
+    border-right-color: silver;
+    border-right-style: solid;
+}
+
+.contact-card-cell {
+    border-color: transparent !important;
+}
+
+.cell-inner {
+    height: 80px;
+    margin: 10px;
+    padding: 10px;
+    background: #fafafa;
+    border: 1px solid gray;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-box-shadow: 1px 1px 5px silver;
+    -webkit-box-shadow: 1px 1px 5px silver;
+    -webkit-transition: all 0.5s;
+}
+
+    .cell-inner:hover {
+        background: #f0f0f0;
+    }
+
+.cell-left {
+    width: 40px;
+    height: 100%;
+    float: left;
+    border-right: 1px dotted gray;
+    background: url("../images/user_identity.gif") no-repeat top center;
+}
+
+.cell-main {
+    margin-left: 50px;
+}
+
+/* Slick.Editors */
+
+.editor-textbox, .editor-numberbox, .editor-datetimebox, .editor-textarea, .editor-checkbox {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.editor-combobox, .editor-refer {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /*padding-right: 20px;*/
+}
+
+/* ************************************************************ */
+
+/* Slick.Controls.Header */
+
+.grid-header .toolbar-title {
+    font-weight: bold;
+    margin: 4px 4px auto 6px;
+}
+
+.grid-header .toolbar-icon {
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    margin: 4px 4px auto 6px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+    .grid-header .toolbar-icon.toolbar-state-hover {
+        background-color: white;
+    }
+
+.grid-header .toolbar-icon-setcollapsed {
+    background-image: url("../images/actions.gif");
+}
+
+.grid-header .toolbar-icon-addrow {
+    background-image: url("../images/addrow.png");
+}
+
+.grid-header .toolbar-icon-insertrow {
+    background-image: url("../images/insertrow.png");
+}
+
+.grid-header .toolbar-icon-deleterow {
+    background-image: url("../images/deleterow.png");
+}
+
+.grid-header .toolbar-icon-cardview {
+    background-image: url("../images/expand.gif");
+}
+
+.grid-header .toolbar-icon-columnpicker {
+    background-image: url("../images/info.gif");
+}
+
+/* ************************************************************ */
+
+/* Slick.Controls.Pager */
+
+.slick-pager {
+    width: 100%;
+    height: 48px;
+    padding: 8px;
+    border: 1px solid #e3e3e3;
+    border-top: 0;
+    background-color: #f5f5f5;
+    /*background: url('../images/header-columns-bg.gif') repeat-x center bottom;*/
+    vertical-align: middle;
+    border-radius: 0px 0px 4px 4px;
+    margin-top: -2px;
+}
+
+    .slick-pager .slick-pager-status {
+        display: inline-block;
+        padding: 6px;
+    }
+
+    .slick-pager .ui-icon-container {
+        display: inline-block;
+        margin: 2px;
+        border-color: gray;
+    }
+
+    .slick-pager .slick-pager-nav {
+        display: inline-block;
+        float: right;
+        padding: 2px;
+    }
+
+    .slick-pager .slick-pager-settings {
+        display: block;
+        float: left;
+        padding: 2px;
+    }
+
+        .slick-pager .slick-pager-settings * {
+            vertical-align: middle;
+        }
+
+        .slick-pager .slick-pager-settings a {
+            padding: 2px;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+/* ************************************************************ */
+
+/* Slick.Controls.ColumnPicker */
+
+.slick-columnpicker {
+    border: 1px solid #718BB7;
+    background: #f0f0f0;
+    padding: 6px;
+    -moz-box-shadow: 2px 2px 2px silver;
+    -webkit-box-shadow: 2px 2px 2px silver;
+    box-shadow: 2px 2px 2px silver;
+    min-width: 100px;
+    cursor: default;
+}
+
+    .slick-columnpicker li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background: none;
+    }
+
+    .slick-columnpicker input {
+        margin: 4px;
+    }
+
+    .slick-columnpicker li a {
+        display: block;
+        padding: 4px;
+        font-weight: bold;
+    }
+
+        .slick-columnpicker li a:hover {
+            background: white;
+        }
+
+/* ************************************************************ */
+
+/* Slick.Plugins.HeaderButtons */
+
+.slick-column-name,
+.slick-sort-indicator {
+    /**
+   * This makes all "float:right" elements after it that spill over to the next line
+   * display way below the lower boundary of the column thus hiding them.
+   */
+    display: inline-block;
+    float: left;
+    margin-bottom: 100px;
+}
+
+.slick-header-button {
+    display: inline-block;
+    float: right;
+    vertical-align: top;
+    margin: 1px;
+    /**
+  * This makes all "float:right" elements after it that spill over to the next line
+  * display way below the lower boundary of the column thus hiding them.
+  */
+    margin-bottom: 100px;
+    height: 15px;
+    width: 15px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+.slick-header-button-hidden {
+    width: 0;
+    -webkit-transition: 0.2s width;
+    -ms-transition: 0.2s width;
+    transition: 0.2s width;
+}
+
+.slick-header-column:hover > .slick-header-button {
+    width: 15px;
+}
+
+.icon-grouping-off,
+.icon-grouping-on {
+    background-image: url(../images/bullet_blue.png);
+}
+
+.icon-grouping-off {
+    opacity: 0.5;
+}
+
+/* ************************************************************ */
+
+.sort-col {
+    height: 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    .sort-col > .icon-container > .sort-icon,
+    .sort-col > .icon-container > .sort-icon-up,
+    .sort-col > .icon-container > .sort-icon-down {
+        display: inline-block;
+        width: 25px;
+        height: 100%;
+        background-size: 25px;
+        margin-bottom: -5px;
+        -webkit-transition: all 500ms ease 0;
+        -moz-transition: all 500ms ease 0;
+        -ms-transition: all 500ms ease 0;
+        -o-transition: all 500ms ease 0;
+        transition: all 500ms ease 0;
+        background-image: url('../images/noSorting.png');
+    }
+
+    .sort-col > .icon-container > .sort-icon-up {
+        background-image: url('../images/ascending.png') !important;
+    }
+
+    .sort-col > .icon-container > .sort-icon-down {
+        background-image: url('../images/descending.png') !important;
+    }

@@ -1,0 +1,38 @@
+﻿.taskheader {
+    margin: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.leftheader {
+    float: left;
+    border-bottom: 2px solid blue;
+}
+
+.rightheader {
+    float: right;
+}
+
+.taskul {
+    list-style-type: none;
+}
+
+.taskli {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.cleardiv {
+    clear: both;
+}
+
+.footer2btns {
+    float: left;
+    width: 45%;
+    margin: 2px;
+}
+
+.footer1btn {
+    margin: 2px;
+    float: left;
+    width: 100%;
+}

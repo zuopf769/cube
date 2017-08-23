@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application name="inventoryApp" title="存货" moduleName="u8" symbol="u8.inventory">
+  <references reference="../u8/inventoryAppVM.xml"/>
+  <view name="inventoryView" title="存货" layoutMode="Fluid" appId="u8.inventoryApp" viewModel="u8.inventoryApp.inventoryViewModel" screenSize="L" tplName="archive_L.html.tpl">
+    <container name="Toolbar" title="工具栏" type="Toolbar">
+      <control name="editAction" title="编辑" ctrlType="Button" css="tb-edit-icon" field="editAction" entity="Toolbar" />
+      <control name="copyAction" title="复制" ctrlType="Button" css="copy-icon" field="copyAction" entity="Toolbar"/>
+      <control ctrlType="separator"/>
+      <control name="saveAction" title="保存" ctrlType="Button" css="search-icon" field="saveAction" entity="Toolbar" />
+      <control name="cancelAction" title="取消" ctrlType="Button" css="cancel-icon" field="cancelAction" entity="Toolbar" />
+      <control ctrlType="separator"/>
+      <control name="deleteAction" title="删除" ctrlType="Button" css="delete-icon" field="deleteAction" entity="Toolbar" />
+      <control name="prevAction" title="上一条" isNavigate="true" css="prev-icon" ctrlType="Button" field="prevAction" entity="Toolbar" />
+      <control name="nextAction" title="下一条" isNavigate="true" css="next-icon" ctrlType="Button" field="nextAction" entity="Toolbar" />
+    </container>
+    <container name="Abstract" title="概要" type="Abstract">
+      <control name="billno" title="单据号" placeHolder="true" ctrlType="TextBox" position="top" field="billno" entity="closebill"/>
+      <control name="billdate" title="单据日期" placeHolder="true" ctrlType="TextBox" position="bottom" field="billdate" entity="closebill"/>
+    </container>
+    <container name="baseinfo" title="基本信息" type="TabPage">
+      <container name="baseinfo" title="基本信息" type="Group" css="base-info">
+        <control name="pk_inventory" title="存货pk" ctrlType="TextBox" iLength="20" field="pk_inventory" entity="inventory"/>
+        <control name="code" title="存货编码" ctrlType="TextBox" iLength="50" field="code" entity="inventory"/>
+        <control name="name" title="存货名称" ctrlType="TextBox" iLength="50" field="name" entity="inventory"/>
+        <control name="maketime" title="制单时间" ctrlType="DateTimeBox" iLength="19" field="maketime" entity="inventory"/>
+        <control name="pk_group" title="集团" ctrlType="Refer" iLength="20" refId="600001" refKey="pk_group" refName="name" refCode="code" refShowMode="Name" field="pk_group" entity="inventory"/>
+        <control name="pk_org" title="所属权限组" ctrlType="Refer" iLength="20" refId="600015" refKey="pk_org" refName="name" refCode="code" refShowMode="Name" field="pk_org" entity="inventory"/>
+        <control name="pk_org_v" title="组织版本" ctrlType="Refer" iLength="20" refId="600700" refKey="pk_vid" refName="name" refCode="code" refShowMode="Name" field="pk_org_v" entity="inventory"/>
+        <control name="creator" title="创建人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="creator" entity="inventory"/>
+        <control name="creationtime" title="创建时间" ctrlType="DateTimeBox" iLength="19" field="creationtime" entity="inventory"/>
+        <control name="modifier" title="修改人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="modifier" entity="inventory"/>
+        <control name="modifiedtime" title="修改时间" ctrlType="DateTimeBox" iLength="19" field="modifiedtime" entity="inventory"/>
+        <control name="cinvstd" title="规格型号" ctrlType="TextBox" iLength="50" field="cinvstd" entity="inventory"/>
+        <control name="cinvaddcode" title="存货代码" ctrlType="TextBox" iLength="50" field="cinvaddcode" entity="inventory"/>
+        <control name="cinvmnemcode" title="助记码" ctrlType="TextBox" iLength="50" field="cinvmnemcode" entity="inventory"/>
+        <control name="cinvccode" title="存货大类" ctrlType="Refer" iLength="20" refId="inventoryclass" refKey="pk_inventoryclass" refName="name" refCode="code" refShowMode="Name" field="cinvccode" entity="inventory"/>
+        <control name="bsale" title="是否内销" ctrlType="CheckBox" iLength="1" field="bsale" entity="inventory"/>
+        <control name="bservice" title="是否应税劳务" ctrlType="CheckBox" iLength="1" field="bservice" entity="inventory"/>
+        <control name="itaxrate" title="项税率%" ctrlType="NumberBox" iLength="28" iScale="8" iPrecision="28" field="itaxrate" entity="inventory"/>
+        <control name="iinvweight" title="净重" ctrlType="NumberBox" iLength="28" iScale="8" iPrecision="28" field="iinvweight" entity="inventory"/>
+        <control name="ivolume" title="单位体积" ctrlType="NumberBox" iLength="28" iScale="8" iPrecision="28" field="ivolume" entity="inventory"/>
+        <control name="iinvrcost" title="计划价/售价" ctrlType="NumberBox" iLength="28" iScale="8" iPrecision="28" field="iinvrcost" entity="inventory"/>
+        <control name="iinvsprice" title="参考成本" ctrlType="NumberBox" iLength="28" iScale="8" iPrecision="28" field="iinvsprice" entity="inventory"/>
+        <control name="bpurchase" title="是否采购" ctrlType="CheckBox" iLength="1" field="bpurchase" entity="inventory"/>
+        <control name="iinvscost" title="参考售价" ctrlType="NumberBox" iLength="28" iScale="8" iPrecision="28" field="iinvscost" entity="inventory"/>
+        <control name="iinvlscost" title="最低售价" ctrlType="NumberBox" iLength="28" iScale="8" iPrecision="28" field="iinvlscost" entity="inventory"/>
+        <control name="iinvncost" title="最新成本" ctrlType="NumberBox" iLength="28" iScale="8" iPrecision="28" field="iinvncost" entity="inventory"/>
+        <control name="binvbatch" title="是否批次管理" ctrlType="CheckBox" iLength="1" field="binvbatch" entity="inventory"/>
+        <control name="binvquality" title="是否保质期管理" ctrlType="CheckBox" iLength="1" field="binvquality" entity="inventory"/>
+        <control name="dsdate" title="启用日期" ctrlType="DateTimeBox" iLength="19" field="dsdate" entity="inventory"/>
+        <control name="dedate" title="停用日期" ctrlType="DateTimeBox" iLength="19" field="dedate" entity="inventory"/>
+        <control name="binvtype" title="是否折扣" ctrlType="CheckBox" iLength="1" field="binvtype" entity="inventory"/>
+        <control name="ccreateperson" title="建档人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="ccreateperson" entity="inventory"/>
+        <control name="dinvcreatedatetime" title="建档日期" ctrlType="DateTimeBox" iLength="19" field="dinvcreatedatetime" entity="inventory"/>
+        <control name="cmodifyperson" title="变更人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="cmodifyperson" entity="inventory"/>
+        <control name="dmodifydate" title="变更日期" ctrlType="DateTimeBox" iLength="19" field="dmodifydate" entity="inventory"/>
+        <control name="foutexcess" title="出库超额上限" ctrlType="NumberBox" iLength="28" iScale="8" iPrecision="28" field="foutexcess" entity="inventory"/>
+        <control name="imassdate" title="保质期" ctrlType="NumberBox" iLength="0" iScale="0" iPrecision="0" field="imassdate" entity="inventory"/>
+        <control name="iexpiratdatecalcu" title="有效期推算方式" ctrlType="TextBox" iLength="50" field="iexpiratdatecalcu" entity="inventory"/>
+        <control name="iwarndays" title="保质期预警天数" ctrlType="NumberBox" iLength="0" iScale="0" iPrecision="0" field="iwarndays" entity="inventory"/>
+        <control name="cbarcode" title="对应条形码" ctrlType="TextBox" iLength="50" field="cbarcode" entity="inventory"/>
+        <control name="bspecchang" title="是否特定换算" ctrlType="CheckBox" iLength="1" field="bspecchang" entity="inventory"/>
+        <control name="cgroupcode" title="计量单位组" ctrlType="Refer" iLength="20" refId="ComputationGroup" refKey="id" refName="name" refCode="code" refShowMode="Name" field="cgroupcode" entity="inventory"/>
+        <control name="igrouptype" title="计量单位组类别" ctrlType="TextBox" iLength="50" field="igrouptype" entity="inventory"/>
+        <control name="ccomunitcode" title="主计量单位" ctrlType="Refer" iLength="20" refId="Computation" refKey="id" refName="name" refCode="code" refShowMode="Name" field="ccomunitcode" entity="inventory"/>
+        <control name="csacomunitcode" title="销售默认计量单位" ctrlType="Refer" iLength="20" refId="Computation" refKey="id" refName="name" refCode="code" refShowMode="Name" field="csacomunitcode" entity="inventory"/>
+        <control name="cstcomunitcode" title="库存默认计量单位" ctrlType="Refer" iLength="20" refId="Computation" refKey="id" refName="name" refCode="code" refShowMode="Name" field="cstcomunitcode" entity="inventory"/>
+        <control name="forderuplimit" title="订货超额上限" ctrlType="NumberBox" iLength="28" iScale="8" iPrecision="28" field="forderuplimit" entity="inventory"/>
+        <control name="finvoutuplimit" title="发货允超上限" ctrlType="NumberBox" iLength="28" iScale="8" iPrecision="28" field="finvoutuplimit" entity="inventory"/>
+      </container>
+      <container name="otherInfo" title="其它信息" type="Group" css="attachment-info">
+        <control name="cdefwarehouse" title="默认仓库" ctrlType="Refer" iLength="20" refId="warehouse" refKey="wh_pk" refName="name" refCode="code" refShowMode="Name" field="cdefwarehouse" entity="inventory"/>
+      </container>     
+      <container name="extendinfo" title="扩展信息" type="Group" css="attachment-info">
+        <control name="def1" title="自定义项1" ctrlType="TextBox" iLength="101" field="def1" entity="inventory"/>
+        <control name="def2" title="自定义项2" ctrlType="TextBox" iLength="101" field="def2" entity="inventory"/>
+        <control name="def3" title="自定义项3" ctrlType="TextBox" iLength="101" field="def3" entity="inventory"/>
+        <control name="def4" title="自定义项4" ctrlType="TextBox" iLength="101" field="def4" entity="inventory"/>
+        <control name="def5" title="自定义项5" ctrlType="TextBox" iLength="101" field="def5" entity="inventory"/>
+        <control name="def6" title="自定义项6" ctrlType="TextBox" iLength="101" field="def6" entity="inventory"/>
+        <control name="def7" title="自定义项7" ctrlType="TextBox" iLength="101" field="def7" entity="inventory"/>
+        <control name="def8" title="自定义项8" ctrlType="TextBox" iLength="101" field="def8" entity="inventory"/>
+        <control name="def9" title="自定义项9" ctrlType="TextBox" iLength="101" field="def9" entity="inventory"/>
+        <control name="def10" title="自定义项10" ctrlType="TextBox" iLength="101" field="def10" entity="inventory"/>
+        <control name="def11" title="自定义项11" ctrlType="TextBox" iLength="101" field="def11" entity="inventory"/>
+        <control name="def12" title="自定义项12" ctrlType="TextBox" iLength="101" field="def12" entity="inventory"/>
+        <control name="def13" title="自定义项13" ctrlType="TextBox" iLength="101" field="def13" entity="inventory"/>
+        <control name="def14" title="自定义项14" ctrlType="TextBox" iLength="101" field="def14" entity="inventory"/>
+        <control name="def15" title="自定义项15" ctrlType="TextBox" iLength="101" field="def15" entity="inventory"/>
+        <control name="def16" title="自定义项16" ctrlType="TextBox" iLength="101" field="def16" entity="inventory"/>
+        <control name="bfree1" title="@存货.自由项1" ctrlType="TextBox" iLength="101" field="bfree1" entity="inventory"/>
+        <control name="bfree2" title="@存货.自由项2" ctrlType="TextBox" iLength="101" field="bfree2" entity="inventory"/>
+        <control name="bfree3" title="@存货.自由项3" ctrlType="TextBox" iLength="101" field="bfree3" entity="inventory"/>
+        <control name="bfree4" title="@存货.自由项4" ctrlType="TextBox" iLength="101" field="bfree4" entity="inventory"/>
+        <control name="bfree5" title="@存货.自由项5" ctrlType="TextBox" iLength="101" field="bfree5" entity="inventory"/>
+        <control name="bfree6" title="@存货.自由项6" ctrlType="TextBox" iLength="101" field="bfree6" entity="inventory"/>
+        <control name="bfree7" title="@存货.自由项7" ctrlType="TextBox" iLength="101" field="bfree7" entity="inventory"/>
+        <control name="bfree8" title="@存货.自由项8" ctrlType="TextBox" iLength="101" field="bfree8" entity="inventory"/>
+        <control name="bfree9" title="@存货.自由项9" ctrlType="TextBox" iLength="101" field="bfree9" entity="inventory"/>
+        <control name="bfree10" title="@存货.自由项10" ctrlType="TextBox" iLength="101" field="bfree10" entity="inventory"/>
+        <control name="dr" title="删除标记" ctrlType="TextBox" field="dr" entity="inventory"/>
+        <control name="ts" title="时间戳" ctrlType="DateTimeBox" field="ts" entity="inventory"/>
+      </container>  
+      <container name="imageinfo" title="图片信息" type="Group" css="image-list">
+        <control name="imageList" title="图片信息" field="images" ctrlType="ImageList" entity="inventory" />
+      </container>
+      <container name="attachmentinfo" title="附件信息" type="Group" css="attachment-info">
+        <control name="u8invfile" title="存货附件" field="pictureguid" ctrlType="AttachmentList" entity="inventory">
+          <column name="pk_file" title="存货pk" ctrlType="TextBox" iLength="20" field="pk_file" entity="u8invfile"/>
+          <column name="invfiletype" title="存货附件类型" ctrlType="TextBox" iLength="50" field="invfiletype" entity="u8invfile"/>
+          <column name="name" title="文件名" ctrlType="TextBox" iLength="50" field="name" entity="u8invfile"/>
+          <column name="filesize" title="文件大小" ctrlType="NumberBox" iLength="0" iScale="0" iPrecision="0" field="filesize" entity="u8invfile"/>
+          <column name="filetype" title="存货pk" ctrlType="TextBox" iLength="50" field="filetype" entity="u8invfile"/>
+          <column name="filedesc" title="存货pk" ctrlType="TextBox" iLength="50" field="filedesc" entity="u8invfile"/>
+          <column name="dr" title="删除标记" ctrlType="TextBox" field="dr" entity="u8invfile"/>
+          <column name="ts" title="时间戳" ctrlType="DateTimeBox" field="ts" entity="u8invfile"/>
+        </control>
+      </container>
+    </container>
+    <container name="InvComputationExchb" title="换算率" type="TabPage">
+    	<control name="insertLineAction" title="插行" group="line" ctrlType="Button" css="insert-icon" field="insertLineAction" entity="Toolbar"/>
+      <control name="copyLineAction" title="复制行" group="line" ctrlType="Button" css="copy-icon" field="copyLineAction" entity="Toolbar"/>
+      <control name="divideLineAction" title="拆分行" group="line" ctrlType="Button" css="divide-icon" field="divideLineAction" entity="Toolbar"/>
+      <control name="deleteLineAction" title="删行" group="line" ctrlType="Button" css="delete-icon" field="deleteLineAction" entity="Toolbar"/>
+    	<control name="pk_inventory_b" title="换算率" type="DataGrid" field="pk_inventory_b" entity="inventory">
+		    <column name="pk_invcomputationexch" title="存货pk" ctrlType="TextBox" iLength="20" field="pk_invcomputationexch" entity="InvComputationExchb"/>
+		    <column name="ccomunitscode" title="计量单位" ctrlType="Refer" iLength="20" refId="Computation" refKey="id" refName="name" refCode="code" refShowMode="Name" field="ccomunitscode" entity="InvComputationExchb"/>
+		    <column name="ichangrate" title="换算率" ctrlType="TextBox" iLength="20" field="ichangrate" entity="InvComputationExchb"/>
+		    <column name="ccomunittcode" title="目标计量单位" ctrlType="Refer" iLength="20" refId="Computation" refKey="id" refName="name" refCode="code" refShowMode="Name" field="ccomunitscode" entity="InvComputationExchb"/>
+		    <column name="ichangtype" title="换算类型" ctrlType="TextBox" iLength="50" field="ichangtype" entity="InvComputationExchb"/>
+		    <column name="ichangacc" title="换算精度" ctrlType="NumberBox" iLength="0" iScale="0" iPrecision="0" field="ichangacc" entity="InvComputationExchb" />
+		    <column name="def1" title="自定义项1" ctrlType="TextBox" iLength="101" field="def1" entity="InvComputationExchb" />
+		    <column name="def2" title="自定义项2" ctrlType="TextBox" iLength="101" field="def2" entity="InvComputationExchb" />
+		    <column name="def3" title="自定义项3" ctrlType="TextBox" iLength="101" field="def3" entity="InvComputationExchb" />
+		    <column name="def4" title="自定义项4" ctrlType="TextBox" iLength="101" field="def4" entity="InvComputationExchb" />
+		    <column name="def5" title="自定义项5" ctrlType="TextBox" iLength="101" field="def5" entity="InvComputationExchb" />
+		    <column name="dr" title="删除标记" ctrlType="TextBox" field="dr" entity="InvComputationExchb" />
+		    <column name="ts" title="时间戳" ctrlType="DateTimeBox" field="ts" entity="InvComputationExchb" />
+	    </control>
+    </container>
+  </view>
+</application>

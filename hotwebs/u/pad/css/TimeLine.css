@@ -1,0 +1,55 @@
+﻿.timeline-container {
+    position: relative;
+    width: 0;
+    height: 90%;
+    border: 2px solid #E4E4E4;
+}
+
+.timeline-container > .start-point, .end-point {
+    width: 32px;
+    height: 32px;
+    padding-left: 8px;
+    padding-top: 8px;
+    margin-left: -16px;
+    margin-top: -6px;
+    background-image: url(../images/u142.png);
+}
+
+.timeline-container > .start-point > .start-point-heart {
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/u144.png);
+}
+
+.timeline-container > .middle-point {
+    margin-left: -6px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.timeline-container > .end-point {
+    position: absolute;
+    top: 100%;
+}
+
+.timeline-container > .middle-point .img-common {
+    content: url("../images/u118.png");
+}
+
+.timeline-container > .middle-point .img-today {
+    content: url("../images/u110.png");
+}
+
+.timeline-container > .middle-point .img-yesterday {
+    content: url("../images/u114.png");
+}
+
+.timeline-container > .middle-point .text {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-size: 10px;
+    color: #999999;
+    line-height: 12px;
+    display: block;
+    margin-top: 2px;
+    margin-left: 2px;
+}

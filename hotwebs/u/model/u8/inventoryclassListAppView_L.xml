@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application name="inventoryclassListApp" title="存货大类树" moduleName="u8" symbol="u8.inventoryclass" uiType="catalogs">
+  <references reference="../u8/inventoryclassListAppVM.xml"/>
+  <view name="inventoryclassListView" title="存货大类树" layoutMode="Fluid" appId="u8.inventoryclassListApp" viewModel="u8.inventoryclassListApp.inventoryclassListViewModel" screenSize="L" tplName="catalogs_L.tpl">
+    <container name="inventoryclassListView_body" title="存货大类树" type="Tree" isMain="true">
+      <controls>        
+            <control name="inventoryclasss" title="存货大类树" ctrlType="Tree" field="inventoryclasss" entity="inventoryclassList" />          
+      </controls>
+    </container>
+    <container name="Toolbar" title="工具栏" type="Toolbar">
+      <controls>
+        <control name="addAction" title="增加" group="add" ctrlType="Button" css="add-icon" field="addAction" entity="Toolbar" />
+        <control name="editAction" title="修改" group="edit" ctrlType="Button" css="edit-icon" field="editAction" entity="Toolbar" />
+        <control name="deleteAction" title="删除" group="edit" ctrlType="Button" css="delete-icon" field="deleteAction" entity="Toolbar" />
+        <control name="saveAction" title="保存" group="edit" ctrlType="Button" css="save-icon" field="saveAction" entity="Toolbar" />
+        <control name="cancelAction" title="取消" group="edit" ctrlType="Button" css="cancel-icon" field="cancelAction" entity="Toolbar" />
+      </controls>
+    </container>
+    <container name="baseinfo" title="基本信息" type="Card">
+      <controls>
+        <control name="pk_inventoryclass" title="存货大类pk" ctrlType="TextBox" iLength="20" field="pk_inventoryclass" entity="inventoryclass"/>
+        <control name="code" title="存货大类编码" ctrlType="TextBox" iLength="50" field="code" entity="inventoryclass"/>
+        <control name="name" title="存货大类名称" ctrlType="TextBox" iLength="50" field="name" entity="inventoryclass"/>
+        <control name="iinvcgrade" title="编码级次" ctrlType="NumberBox" iLength="0" iScale="0" iPrecision="0" field="iinvcgrade" entity="inventoryclass"/>
+        <control name="binvcend" title="是否末级" ctrlType="CheckBox" iLength="1" field="binvcend" entity="inventoryclass"/>
+        <control name="cbarcode" title="对应条形码" ctrlType="TextBox" iLength="50" field="cbarcode" entity="inventoryclass"/>
+        <control name="pk_group" title="集团" ctrlType="Refer" iLength="20" refId="600001" refKey="pk_group" refName="name" refCode="code" refShowMode="Name" field="pk_group" entity="inventoryclass"/>
+        <control name="pk_org" title="组织" ctrlType="Refer" iLength="20" refId="600015" refKey="pk_org" refName="name" refCode="code" refShowMode="Name" field="pk_org" entity="inventoryclass"/>
+        <control name="pk_org_v" title="组织版本" ctrlType="Refer" iLength="20" refId="600700" refKey="pk_vid" refName="name" refCode="code" refShowMode="Name" field="pk_org_v" entity="inventoryclass"/>
+        <control name="creator" title="创建人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="creator" entity="inventoryclass"/>
+        <control name="creationtime" title="创建时间" ctrlType="DateTimeBox" iLength="19" field="creationtime" entity="inventoryclass"/>
+        <control name="modifier" title="修改人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="modifier" entity="inventoryclass"/>
+        <control name="modifiedtime" title="修改时间" ctrlType="DateTimeBox" iLength="19" field="modifiedtime" entity="inventoryclass"/>
+        <control name="def1" title="自定义项1" ctrlType="TextBox" iLength="101" field="def1" entity="inventoryclass"/>
+        <control name="def2" title="自定义项2" ctrlType="TextBox" iLength="101" field="def2" entity="inventoryclass"/>
+        <control name="def3" title="自定义项3" ctrlType="TextBox" iLength="101" field="def3" entity="inventoryclass"/>
+        <control name="def4" title="自定义项4" ctrlType="TextBox" iLength="101" field="def4" entity="inventoryclass"/>
+        <control name="def5" title="自定义项5" ctrlType="TextBox" iLength="101" field="def5" entity="inventoryclass"/>
+        <control name="dr" title="删除标记" ctrlType="TextBox" field="dr" entity="inventoryclass"/>
+        <control name="ts" title="时间戳" ctrlType="DateTimeBox" field="ts" entity="inventoryclass"/>
+      </controls>
+    </container>
+  </view>
+</application>

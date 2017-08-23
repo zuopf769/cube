@@ -1,0 +1,93 @@
+﻿/****************label 样式 Start***********************/
+ .cube-main-content .ui-query-content .cube-detail-content .ui-field-contain label,
+    .cube-main .cube-main-content .cube-content-page .ui-query-content .ui-field-contain label,
+    .cube-content-page .cube-content-content .cube-detail-content .ui-field-contain label {
+font-size: 14px;
+font-family: 宋体;
+font-weight:400;
+color: #666666;
+text-align: left;
+text-decoration: none;
+white-space: nowrap;
+vertical-align: middle;
+overflow: hidden;
+text-overflow: clip;
+padding: 0.2em 0 .3em 0;
+padding-right: 5px;
+}
+/****************label 样式 End***********************/
+
+
+.cube-main-content .ui-query-content .cube-detail-content .cube-detail-left,
+    .cube-main-content .cube-content-page .cube-content-content .cube-detail-content .cube-detail-left {
+       margin:0 0 15px 0;
+        float: left;
+        width: 82%;
+    }
+
+    .cube-main-content .ui-query-content .cube-detail-content .ui-field-contain > label,
+    .cube-main .cube-main-content .cube-content-page .ui-query-content .ui-field-contain > label,
+    .cube-content-page .cube-content-content .cube-detail-content .ui-field-contain > label {
+        float: left;
+        width: 25%;
+       /*min-width: 60px;*/
+        min-width: 70px;
+    }
+
+
+	.cube-main div[data-controltype='ImageButton'] span[class*='oc-open-icon'] {
+    content: url(../../../pc/images/ImageButton/oc-open.png);
+    width: 24px;
+    height: 24px;
+    margin-bottom: -8px;
+}
+
+
+.cube-main div[data-controltype='ToolBar'].cube-bar-modeltxt {
+    float: left;
+    width: 55%;
+    height: 38px;
+    overflow: hidden;
+    margin: 14px 0px 5px;
+}
+
+
+ .cube-main div[data-controltype='ToolBar'].cube-bar-modeltxt li > div {
+        height: 28px;
+        color: #333333;
+        line-height: 28px;
+        text-align: center;
+        border: 1px solid #BBCBDF;
+        cursor: pointer;
+        padding:0 16px;
+        margin-right:6px;
+    }
+
+	/**************************PC 图标 ToolBar   Start***********************************/
+.cube-main div[data-controltype='ToolBar'].cube-bar-modelicon {
+    float: right;
+    /*width: 20%;
+    min-width: 200px;*/
+    height: 40px;
+    margin: 16px 25px 0;
+}
+
+
+  .cube-main div[data-controltype='ToolBar'].cube-bar-modelicon li > div {
+            /*width: 45px;*/
+            float: left;
+            height: 19px;
+            line-height: 19px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .cube-main div[data-controltype='ToolBar'].cube-bar-modelicon li span {
+            font-family: '微软雅黑 Regular', '微软雅黑';
+            font-weight: 400;
+            font-style: normal;
+            font-size: 14px;
+            color: #157DFB;
+        }
+
+

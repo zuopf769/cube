@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application name="closebillApp" title="收款单主表" moduleName="u8" symbol="u8.closebill">
+  <references reference="../u8/closebillAppVM.xml"/>
+  <view name="closebillView" title="收款单主表" layoutMode="Fluid" appId="u8.closebillApp" viewModel="u8.closebillApp.closebillViewModel" screenSize="L" tplName="voucher_L.html.tpl">
+    <container name="Toolbar" title="工具栏" type="Toolbar">
+      <control name="addAction" title="增加" ctrlType="DropDownButton" css="add-icon" field="addAction" entity="Toolbar"/>
+      <control ctrlType="separator"/>
+      <control name="copyAction" title="复制" ctrlType="Button" css="copy-icon" field="copyAction" entity="Toolbar"/>
+      <control name="draftAction" title="草稿" ctrlType="Button" css="draft-icon" field="draftAction" entity="Toolbar"/>
+      <control ctrlType="separator"/>
+      <control name="editAction" title="修改" ctrlType="Button" css="tb-edit-icon" field="editAction" entity="Toolbar"/>
+      <control name="deleteAction" title="删除" ctrlType="Button" css="delete-icon" field="deleteAction" entity="Toolbar"/>
+      <control name="cancelAction" title="放弃" ctrlType="Button" css="cancel-icon" field="cancelAction" entity="Toolbar"/>
+      <control ctrlType="separator"/>
+      <control name="saveAction" title="保存" ctrlType="Button" css="save-icon" field="saveAction" entity="Toolbar"/>
+      <control name="relatedAction" title="业务操作" ctrlType="Button" css="related-icon" field="relatedAction" entity="Toolbar"/>
+      <control ctrlType="separator"/>
+      <control name="submitAction" title="提交" ctrlType="Button" css="submit-icon" field="submitAction" entity="Toolbar"/>
+      <control name="withdrawAction" title="收回" ctrlType="Button" css="withdraw-icon" field="withdrawAction" entity="Toolbar"/>
+      <control name="approveAction" title="审批" ctrlType="Button" css="check-icon" field="approveAction" entity="Toolbar"/>
+      <control name="unapproveAction" title="弃审" ctrlType="Button" css="unapprove-icon" field="unapproveAction" entity="Toolbar"/>
+      <control ctrlType="separator"/>
+      <control name="outboundAction" title="出库" ctrlType="Button" css="send-icon" field="outboundAction" entity="Toolbar"/>
+      <control ctrlType="separator"/>
+      <control name="printAction" title="打印" ctrlType="Button" css="print-icon" field="printAction" entity="Toolbar"/>
+      <control name="outputAction" title="输出" ctrlType="Button" css="output-icon" field="outputAction" entity="Toolbar"/>
+      <control ctrlType="separator"/>
+      <control name="setAction" title="设置" ctrlType="Button" css="set-icon" field="setAction" entity="Toolbar"/>
+      <control name="prevAction" title="上一条" isNavigate="true" css="prev-icon" ctrlType="Button" field="prevAction" entity="Toolbar" />
+      <control name="nextAction" title="下一条" isNavigate="true" css="next-icon" ctrlType="Button" field="nextAction" entity="Toolbar" />
+    </container>
+    <container name="Abstract" title="概要" type="Abstract">
+      <control name="billno" title="单据号" placeHolder="true" ctrlType="TextBox" position="top" field="billno" entity="closebill"/>
+      <control name="billdate" title="单据日期" placeHolder="true" ctrlType="TextBox" position="bottom" field="billdate" entity="closebill"/>
+      <control name="approvestatus" title="单据状态" ctrlType="Status" defaultValue="-1" position="status" field="approvestatus" entity="closebill"/>
+    </container>
+    <container name="baseinfo" title="基本信息" type="TabPage">
+      <container name="header" title="表头" type="Card" iCols="3">
+        <control name="pk_ap_closebill" title="收款单主表pk" ctrlType="TextBox" iLength="20" field="pk_ap_closebill" entity="closebill"/>
+        <control name="billno" title="单据号" ctrlType="TextBox" iLength="50" field="billno" entity="closebill"/>
+        <control name="vtrantypecode" title="单据类型编码" ctrlType="TextBox" iLength="50" field="vtrantypecode" entity="closebill"/>
+        <control name="vtrantype" title="收款单类型" ctrlType="Refer" iLength="20" refId="4848" refKey="pk_billtypeid" refName="billtypename" refCode="pk_billtypecode" refShowMode="Name" field="vtrantype" entity="closebill"/>
+        <control name="billdate" title="单据日期" ctrlType="DateTimeBox" iLength="19" field="billdate" entity="closebill" defaultValue="@SYSDATE" />
+        <control name="busitype" title="业务流程" ctrlType="Refer" iLength="20" refId="4849" refKey="pk_busitype" refName="businame" refCode="busicode" refShowMode="Name" field="busitype" entity="closebill"/>
+        <control name="pk_group" title="集团" ctrlType="Refer" iLength="20" refId="600001" refKey="pk_group" refName="name" refCode="code" refShowMode="Name" field="pk_group" entity="closebill"/>
+        <control name="pk_org" title="组织" ctrlType="Refer" iLength="20" refId="600015" refKey="pk_org" refName="name" refCode="code" refShowMode="Name" field="pk_org" entity="closebill"/>
+        <control name="pk_org_v" title="组织版本" ctrlType="Refer" iLength="20" refId="600700" refKey="pk_vid" refName="name" refCode="code" refShowMode="Name" field="pk_org_v" entity="closebill"/>
+        <control name="pk_dept" title="部门" ctrlType="Refer" iLength="20" refId="600905" refKey="pk_dept" refName="name" refCode="code" refShowMode="Name" field="pk_dept" entity="closebill"/>
+        <control name="pk_dept_v" title="部门版本" ctrlType="Refer" iLength="20" refId="600949" refKey="pk_vid" refName="name" refCode="code" refShowMode="Name" field="pk_dept_v" entity="closebill"/>
+        <control name="approvestatus" title="单据状态" ctrlType="TextBox" iLength="50" field="approvestatus" entity="closebill"/>
+        <control name="creator" title="创建人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="creator" entity="closebill"/>
+        <control name="ccuscode" title="客户编码" ctrlType="Refer" iLength="20" refId="customer" refKey="ccuscode_pk" refName="name" refCode="code" refShowMode="Name" field="ccuscode" entity="closebill"/>
+        <control name="ccusname" title="客户全称" ctrlType="TextBox" iLength="50" field="ccusname" entity="closebill"/>
+        <control name="ccusabbname" title="客户简称" ctrlType="TextBox" iLength="50" field="ccusabbname" entity="closebill"/>
+        <control name="cvconperson" title="客户联系人" ctrlType="TextBox" iLength="50" field="cvconperson" entity="closebill"/>
+        <control name="cvshipaddress" title="联系地址" ctrlType="TextBox" iLength="50" field="cvshipaddress" entity="closebill"/>
+        <control name="cpersoncode" title="业务员编码" ctrlType="Refer" iLength="20" refId="person" refKey="person_pk" refName="name" refCode="code" refShowMode="Name" field="cpersoncode" entity="closebill"/>
+        <control name="cperson" title="业务员" ctrlType="TextBox" iLength="50" field="cperson" entity="closebill"/>
+        <control name="cexch_name" title="币种" ctrlType="Refer" iLength="20" refId="foreigncurrency" refKey="id" refName="name" refCode="code" refShowMode="Name" field="cexch_name" entity="closebill"/>
+        <control name="iexchrate" title="汇率" ctrlType="NumberBox" iLength="28" iScale="8" iPrecision="28" field="iexchrate" entity="closebill"/>
+        <control name="srcbilltype" title="来源单据类型" ctrlType="Refer" iLength="20" refId="4848" refKey="pk_billtypeid" refName="billtypename" refCode="pk_billtypecode" refShowMode="Name" field="srcbilltype" entity="closebill"/>
+        <control name="srcbillid" title="来源单据id" ctrlType="TextBox" iLength="50" field="srcbillid" entity="closebill"/>
+        <control name="cmemo" title="备注" ctrlType="TextBox" iLength="50" field="cmemo" entity="closebill"/>
+        <control name="idispstate" title="发货状态" ctrlType="TextBox" iLength="50" field="idispstate" entity="closebill"/>
+        <control name="ioutstate" title="出库状态" ctrlType="TextBox" iLength="50" field="ioutstate" entity="closebill"/>
+        <control name="ddispdate" title="表头预发货日期" ctrlType="DateTimeBox" iLength="19" field="ddispdate" entity="closebill"/>
+        <control name="approvenstr" title="审批批语" ctrlType="TextBox" iLength="50" field="approvenstr" entity="closebill"/>
+        <control name="ts" title="时间戳" ctrlType="DateTimeBox" field="ts" entity="closebill"/>
+      </container>
+      <container name="pk_ap_closebill_b" title="收款单表体" type="Grid">
+        <control name="insertLineAction" title="插行" group="line" ctrlType="Button" css="insert-icon" field="insertLineAction" entity="Toolbar"/>
+        <control name="copyLineAction" title="复制行" group="line" ctrlType="Button" css="copy-icon" field="copyLineAction" entity="Toolbar"/>
+        <control name="divideLineAction" title="拆分行" group="line" ctrlType="Button" css="divide-icon" field="divideLineAction" entity="Toolbar"/>
+        <control name="deleteLineAction" title="删行" group="line" ctrlType="Button" css="delete-icon" field="deleteLineAction" entity="Toolbar"/>
+        <control name="batchEditAction" title="批改" group="batch" ctrlType="Button" css="edit-icon" field="batchEditAction" entity="Toolbar"/>
+        <control name="stockAction" title="存量" group="biz" ctrlType="Button" css="stock-icon" field="stockAction" entity="Toolbar"/>
+        <control name="priceAction" title="价格" group="biz" ctrlType="Button" css="price-icon" field="priceAction" entity="Toolbar"/>
+        <control name="discountAction" title="折扣" group="biz" ctrlType="Button" css="discount-icon" field="discountAction" entity="Toolbar"/>
+        <control name="creditAction" title="信用" isNavigate="biz" ctrlType="Button" css="credit-icon" field="creditAction" entity="Toolbar"/>
+        <control name="optionalPopAction" title="POP选配" group="biz" ctrlType="Button" css="pop-icon" field="optionalPopAction" entity="Toolbar"/>
+        <control name="setLineAction" title="设置" group="set" ctrlType="Button" css="set-icon" field="setLineAction" entity="Toolbar"/>
+        <control name="pk_ap_closebill_b" title="收款单表体" ctrlType="DataGrid" field="pk_ap_closebill_b" entity="closebill">
+          <column name="pk_ap_closebill_b" title="收款单表体pk" field="pk_ap_closebill_b" ctrlType="TextBox" position="leftTop" entity="closebill"/>
+          <column name="crowno" title="行号" field="crowno" ctrlType="TextBox" position="rightTop" entity="closebill"/>
+          <column name="iquantity" title="数量" field="iquantity" ctrlType="TextBox" position="leftBottom" entity="closebill"/>
+          <column name="iamount_f" title="原币金额" field="iamount_f" ctrlType="TextBox" position="rightBottom" entity="closebill"/>
+        </control>
+      </container>
+      <container name="footer" title="表尾" type="Card" iCols="4">
+        <control name="billmaker" title="制单人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="billmaker" entity="closebill"/>
+        <control name="creationtime" title="制单时间" ctrlType="DateTimeBox" iLength="19" field="creationtime" entity="closebill"/>
+        <control name="approver" title="审批人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="approver" entity="closebill"/>
+        <control name="approvedate" title="审批时间" ctrlType="DateTimeBox" iLength="19" field="approvedate" entity="closebill"/>
+        <control name="modifier" title="修改人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="modifier" entity="closebill"/>
+        <control name="modifiedtime" title="修改时间" ctrlType="DateTimeBox" iLength="19" field="modifiedtime" entity="closebill"/>
+        <control name="billcloser" title="关闭人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="billcloser" entity="closebill"/>
+        <control name="billclosetime" title="关闭自然时间" ctrlType="DateTimeBox" iLength="19" field="billclosetime" entity="closebill"/>
+        <control name="lastprintor" title="最近打印人" ctrlType="Refer" iLength="20" refId="600026" refKey="cuserid" refName="user_name" refCode="user_code" refShowMode="Name" field="lastprintor" entity="closebill"/>
+        <control name="lastprinttime" title="最近打印时间" ctrlType="DateTimeBox" iLength="19" field="lastprinttime" entity="closebill"/>
+      </container>
+    </container>
+    <container name="history" title="历史状态" type="TabPage" content="common.historystatus.Status"></container>
+    <container name="logistics" title="物流信息" type="TabPage"></container>
+    <container name="business" title="商务信息" type="TabPage"></container>
+    <container name="collaboration" title="协作" type="TabPage"></container>
+  </view>
+</application>
